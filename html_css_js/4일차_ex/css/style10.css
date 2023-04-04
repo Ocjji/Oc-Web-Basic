@@ -1,0 +1,24 @@
+.con-box {
+    width: 520px;
+    height: 510px;
+    background-color: #eeeeee;
+
+    padding: 40px 40px 20px 30px;
+    margin: auto;
+}
+.con-box h2 {
+    font-size: 32px;
+    word-break: keep-all;
+    margin-bottom: 110px;
+    
+}
+.con-box h2 span {
+    border-bottom: 1px solid #000;
+}
+.con-box h2 span .eng {letter-spacing: -0.9px;}
+.con-box p {
+    font-size: 18px;
+    text-align: left;
+    word-break: keep-all;
+    line-height: 1.8;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+
+        let name = '', height = 0, weight = 0;
+        let resultHeight = 0;
+        let avgWeight = 0;
+        let result = '';
+        let bmi = 0;
+
+        name = prompt('이름 입력');
+        height = prompt('키 입력');
+        weight = prompt('몸무게 입력');
+
+        resultHeight = (height / 100);
+        bmi = (weight / (resultHeight * resultHeight)).toFixed(2);
+
+        if (bmi <= 18.5) {
+            result = '저체중';
+        } else if ( 18.5 < bmi && bmi <= 22.9 ) {
+            result = '정상';
+        } else if ( 22.9 < bmi && bmi <= 24.9 ) {
+            result = '과체중';
+        } else {
+            result = '비만';
+        }
+
+        document.write('키 : ' , height , '<br>');
+        document.write('몸무게 : ' , weight , '<br>');
+           
+        document.write(name , '의 BMI 수치는 : ' , bmi , ' 입니다<br>');
+        document.write(name , '은 ' , result , ' 입니다');
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

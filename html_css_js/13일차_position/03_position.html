@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .con-box {
+            width: 400px;
+            height: 500px;
+            border: 1px solid #000;
+            margin: auto;
+
+            position: relative;
+        }           
+        .con-box div {
+            width: 80px; height: 80px;
+            font-size: 40px; text-align: center;
+            line-height: 2;
+            color: blue;
+            
+            position: absolute;
+            left: 0; top: 0;
+            /* 주의가 필요함 */
+        }
+        /* left: 0 ~ 300 / top:0~400  */
+        .con-box div:nth-child(1) {background: red; 
+            left: 40px; top: 100px;}
+        .con-box div:nth-child(2) {background: pink;
+            left: auto; top: auto; right: 200px; top: 400px;} 
+            /* 
+            기존 값에서 left와 top을 정의했기 때문에 초기화 작업을 통해 설정이 필요하다!
+            left: auto; 와 top: auto;
+            */
+
+        .con-box div:nth-child(3) {background: lime;
+            left: 100px; bottom: 150px;} 
+        .con-box div:nth-child(4) {background: skyblue;
+            left: 300px; top: 40px;}
+    </style>    
+</head>
+<body>
+    <!-- div.con-box>div{$}*4 -->
+    <div class="con-box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    
+
+    <pre>
+        position:absolute는 
+        부모가 ( 조상 )
+       
+        position 이면 기준이되면 
+        부모가 position 없으면 
+        body가 기준이된다 
+
+        position:absolute
+        예)
+        이미지 여러장 겹칠때 ( 배너 )
+        아래에 있는 마크업이 화면상 위로 올라올경우
+        양쪽 화살표 ( 배너 )
+
+    </pre>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            font-size: 50px;
+            text-align: center;
+            line-height: 2;
+            color: #FFF;
+
+            position: absolute;
+        }
+
+        /* 기준 body */
+        div:nth-child(1) {background: red;
+            left: 0; top: 0;}
+        div:nth-child(2) {background: green;
+            right: 0; top: 0;}
+        div:nth-child(3) {background: blue;
+            right: 0; bottom: 0;}
+        div:nth-child(4) {background: pink;
+            left: 0; bottom: 0;}
+        div:nth-child(5) {background: hotpink; 
+            left: 50%; top: 50%;}
+    </style>    
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    
+</body>
+</html>

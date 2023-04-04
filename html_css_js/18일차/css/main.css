@@ -1,0 +1,514 @@
+#wrap {
+    width: 100%;
+    min-width: 1600px;
+}
+
+/* 공통 */
+.inner {
+    width: 1180px;
+    margin: auto;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#header {
+    width: 100%;
+    display: none;
+}
+
+#header .inner {
+    height: 120px;
+}
+
+#header h1 {
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+#header h1 a {}
+
+#header h1 a img {}
+
+#header .top-menu {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    margin-right: 60px;
+}
+
+#header .top-menu li {
+    display: inline-block;
+    margin-left: 30px;
+    position: relative;
+}
+
+#header .top-menu li:last-child {
+    margin-left: 40px;
+    font-weight: 700;
+}
+
+#header .top-menu li:first-child::after {
+    content: "";
+
+    display: block;
+    width: 2px;
+    height: 18px;
+    background: #000;
+
+    position: absolute;
+    right: -19px;
+    top: 3px;
+}
+
+#header .top-menu li a {}
+
+#header .nav {
+    position: absolute;
+    left: 50%;
+    top: 55px;
+    transform: translateX(-50%);
+}
+
+#header .nav .gnb {}
+
+#header .nav .gnb li {
+    display: inline-block;
+    margin: 0 30px;
+}
+
+#header .nav .gnb li a {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+#visual {
+    width: 100%;
+    position: relative;
+    height: 720px;
+    background: #EEA;
+    display: none;
+}
+
+#container {}
+
+#content {}
+
+.main {}
+
+.main .con-box {
+    width: 100%;
+}
+
+.main .con-box .inner {
+    padding: 120px 0;
+}
+
+.main .con-box h2 {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.main .con-box h2+p {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #000;
+}
+
+.main .con1 {
+    background: #AEE;
+}
+
+.main .con1 .inner {
+    padding: 25px 0;
+    height: 80px;
+    background: #6DD;
+}
+
+.main .con2 {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: url(../images/mainCon1_bg.jpg);
+    background-size: cover;
+}
+
+.main .con2 .inner {}
+
+.main .con2 .inner h2 {
+    color: #FFF;
+}
+
+.main .con2 .inner p {
+    color: #FFF;
+}
+
+.main .con2 .inner ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .con2 .inner ul li {
+    width: 574px;
+}
+
+.main .con2 .inner ul li a {
+    display: block;
+    position: relative;
+}
+
+.main .con2 .inner ul li a::after {
+    content: "";
+
+    display: block;
+    width: 574px;
+    height: 500px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    border: 1px solid #FFF;
+    transition: 0.5s ease-in;
+    opacity: 0;
+}
+
+.main .con2 .inner ul li a:hover::after {
+    opacity: 1;
+}
+
+.main .con2 .inner ul li a img {
+    display: block;
+}
+
+.main .con2 .inner ul li a strong {
+    display: block;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    padding: 20px 0;
+    color: #FFF;
+}
+
+.main .con3 {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: url(../images/mainCon2_bg.jpg);
+    background-size: cover;
+}
+
+.main .con3 .inner h2 {}
+
+.main .con3 .inner p {}
+
+.main .con3 .inner ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .con3 .inner ul li {
+    transition: all 0.4s ease;
+}
+
+.main .con3 .inner ul li:hover {
+    box-shadow: 13px 13px 20px rgba(0, 0, 0, 0.4);
+}
+
+.main .con3 .inner ul li:hover a strong {
+    background: rgb(19, 137, 95);
+    color: #FFF;
+}
+
+.main .con3 .inner ul li a {}
+
+.main .con3 .inner ul li a img {}
+
+.main .con3 .inner ul li a strong {
+    display: block;
+
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    padding: 20px 0;
+    background: #FFF;
+
+    transition: 0.4s;
+}
+
+.main .con4 {}
+
+.main .con4 .inner {}
+
+.main .con4 .large {
+    width: 1170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .con4 .large .co1 {
+    width: 574px;
+    height: 400px;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 1px solid #DDD;
+}
+
+.main .large .co1 .sosik {
+    position: relative;
+    border-bottom: 1px solid #DDD;
+}
+
+.main .large .co1 .sosik h3 {
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.main .large .co1 .sosik p {
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 60px;
+}
+
+.main .large .co1 .sosik p a {}
+
+.main .large .co1 .sosik span {
+    display: block;
+    padding-bottom: 20px;
+}
+
+.main .large .co1 .sosik>a {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.main .large .co1 .sosik a strong {
+    padding-right: 10px;
+}
+
+.main .large .co1 .sosik a img {
+    display: inline-block;
+    padding-top: 2px;
+}
+
+
+.main .large .co1 .ad {}
+
+.main .large .co1 .ad ul {
+    padding-top: 25px;
+}
+
+.main .large .co1 .ad ul li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .large .co1 .ad ul li a {}
+
+.main .large .co1 .ad ul li a strong {
+    display: inline-block;
+
+    font-size: 18px;
+    letter-spacing: -1px;
+    width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Sans-serif;
+}
+
+.main .large .co1 .ad ul li a strong:hover {
+    text-decoration: underline;
+}
+
+.main .large .co2 {
+    width: 574px;
+    height: 400px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main .large .co2 a {
+    text-align: center;
+}
+
+.main .large .co2 a .qa {
+    width: 275px;
+    height: 190px;
+    box-sizing: border-box;
+}
+
+.main .large .co2 a .qa {
+    border: 1px solid #DDD;
+}
+
+.main .large .co2 a .qa img {
+    padding-top: 40px;
+}
+
+.main .large .co2 a .qa span {
+    padding-top: 20px;
+    display: block;
+    font-weight: 600;
+}
+
+.main .large .co2 a .load {
+    width: 275px;
+    height: 190px;
+    box-sizing: border-box;
+}
+
+.main .large .co2 a .load {
+    border: 1px solid #DDD;
+}
+
+.main .large .co2 a .load img {
+    padding-top: 40px;
+}
+
+.main .large .co2 a .load span {
+    padding-top: 20px;
+    display: block;
+    font-weight: 600;
+}
+
+.main .co2 .wed {
+    width: 574px;
+    height: 190px;
+    margin-top: 20px;
+    background-image: url(../images/mainCon3_banner.jpg);
+}
+
+.main .co2 .wed p {
+    padding-top: 35px;
+    padding-left: 40px;
+    color: #FFF;
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+.main .co2 .wed a {
+    display: inline-block;
+    padding-top: 20px;
+    padding-left: 40px;
+}
+
+.main .co2 .wed a span {
+    color: #FFF;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.main .co2 .wed a img {
+    padding-left: 15px;
+    top: 50%;
+    transform: translateY(50%);
+}
+
+#footer {
+    width: 100%;
+    
+    border-top: 1px solid #DDD;
+    
+}
+
+#footer .inner {}
+
+#footer p {padding-top: 55px;}
+#footer p span { padding-right: 12px; }
+#footer p span a {}
+#footer .inner p span:nth-child(4) a {
+    color: rgb(252, 54, 54);
+}
+
+#footer .inner p:nth-child(1)::after {
+    content: "";
+
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #DDD;
+    margin-top: 30px;
+}
+#footer .inner p:nth-child(2) {
+    padding-top: 30px;
+    
+}
+#footer .inner p:nth-child(2) span {
+    display: inline-block;
+    position: relative;
+}
+#footer .inner p:nth-child(2) span:first-child::after {
+    content: "";
+
+    display: block;
+    width: 1px;
+    height: 12px;
+    background: #DDD;
+    position: absolute; 
+    right: 0; top: 50%; transform: translateY(-50%);
+}
+#footer .inner p:nth-child(2) span:last-child {
+    margin-left: 8px;
+}
+#footer .inner p:nth-child(3) {
+    font-size: 15px;
+    padding: 0;
+}
+#footer .inner p:nth-child(3) span{
+    margin-left: 8px;
+    position: relative;
+}
+#footer .inner p:nth-child(3) span:first-child {
+    margin-left: 0;
+}
+#footer .inner p:nth-child(3) span::after {
+    content: "";
+
+    display: block;
+    width: 1px;
+    height: 12px;
+    background: #DDD;
+    position: absolute; 
+    right: 0; top: 50%; transform: translateY(-50%);
+}
+#footer .inner p:nth-child(3) span:last-child::after {
+    display: none;
+}
+
+#footer .inner p:nth-child(4) {
+    font-size: 15px;
+    padding-top: 30px;
+    padding-bottom: 100px;
+}
+#footer .inner p:nth-child(4) span {
+    font-size: 12px;
+}
+
+#footer .inner .go-top {
+    position: absolute; right: 0; top: 0;
+    
+    transform: translateY(-110%);
+}
+
+#footer .family {}
+#footer .family ul {
+    
+    position: absolute; right: 0; top: 43%;
+    
+}   
+#footer .family ul select {padding-left: 20px;
+    font-size: 15px;}
+#footer .family ul select li {}
+#footer .family ul select li a {}
+#footer .family ul select li a option {}

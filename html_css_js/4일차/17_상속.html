@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .box {
+            background-color: pink;
+            width: 300px;
+            height: 150px;
+            border: 1px solid #000;
+            margin: 20px;
+            padding: 20px;
+            /* 위 내용은 상속되지 않는다 */
+
+            font-size: 20px;
+            font-weight: 700;
+            color: blueviolet;
+            text-align: center;
+        }
+        .box a {
+            color: blueviolet;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>제목: <span>이젠</span></h2>
+        <div>
+            <p>테스트</p>
+            <a href="#">네이버</a>
+        </div>
+    </div>
+
+
+    <pre>
+        
+        
+        <hr>
+
+        ########################    상속     ########################
+
+        <hr>
+        
+        부모요소에 css를 적용하면,
+        자식(자손)에게 그 속성이 적용된다
+
+        * 상속안되는것 *
+        너비, 높이
+        마진, 패딩, 보더
+        배경처리
+        위치
+
+    </pre>
+</body>
+</html>

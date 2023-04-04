@@ -1,0 +1,129 @@
+#wrap { width: 100%; }
+#header { width: 100%; background: #F8BBD0; }
+#header .inner { width: 1300px; height: 150px;margin: auto; background: #F06292; }
+
+#visual { background: #8E24AA; width: 100%; height: 800px;}
+
+#container {}
+#content {}
+
+/* 첫페이지 시작 */
+.main {}
+.main .con-box { width: 100%; }
+.main .con-box .inner { width: 1300px; margin: auto; padding: 100px 0; box-sizing: border-box;}
+
+/* con1안에 해보기  */
+.main .con1 { background: #fff3e6; }
+.main .con1 h2 {font-size: 40px; text-align:center; font-weight: 700; margin-bottom: 40px; }
+.main .con1 .list {}
+.main .con1 .list > li {padding: 40px 0; border-bottom: 1px solid #9999; display: flex;}
+.main .con1 .list > li:first-child {border-top: 3px solid #000;}
+.main .con1 .list li strong {display: block; width: 320px; font-size: 25px; font-weight: 700; line-height: 1; color: #9d7c57;}
+.main .con1 .list li ul {width: 980px;}
+.main .con1 .list li ul li {}
+.main .con1 .list li ul li::before {
+    content: ""; display: inline-block; width: 2px; height: 2px; border-radius: 50%; background: #999; vertical-align: middle; margin-right: 6px;}
+.main .con1 .list li:nth-child(1) ul li::before,
+.main .con1 .list li:nth-child(2) ul li::before {
+    display: none;
+}
+.main .con1 .inner .care {
+    text-align: center;
+    margin-top: 60px;
+}
+.main .con1 .inner .care a {
+    display: inline-block;
+
+    width: 250px; height: 65px;
+    background: #9d7c57;
+    font-size: 18px; color: #FFF;
+    line-height: 65px;
+}
+/* .main .con1 {}
+.main .con1 h2 {}
+.main .con1 .list {}
+.main .con1 .list li {}
+.main .con1 .list li strong {}
+.main .con1 .list li ul {}
+.main .con1 .list li ul li {}
+.main .con1 .list li ul li::before {}
+.main .con1 .list li:nth-child(1) ul li::before,
+.main .con1 .list li:nth-child(2) ul li::before {} */
+
+.main .con2 {}
+.main .con2 h2 {font-size: 35px; text-align: center; font-weight: 700; padding-top: 100px; margin-bottom: 70px; line-height: 1.4;}
+.main .con2 .info {background: #eeeeee;}
+.main .con2 .info .inner {
+    display: flex; justify-content: space-between;
+}
+.main .con2 .info .inner h3 {width: 400px;}
+.main .con2 .info .inner h3 img {}
+.main .con2 .info .inner h3 span {
+    font-size: 28px; padding-left: 6px;}
+
+    /* div에 클래스명을 넣어서 경로 설정도 가능 */
+
+/* not 써보기 연습 */
+.main .con2 .info div:not(.inner) {width: 900px;}
+.main .con2 .info div:not(.inner) p {
+    font-size: 16px; margin-bottom: 45px; 
+    letter-spacing: -0.2px; word-break: keep-all;
+}
+.main .con2 .info div:not(.inner) strong {
+    display: block; font-weight: 700;font-size: 20px;border-top: 1px solid #cccccc; padding-top: 30px;
+}
+/* 
+.main .con2 .info .inner h3 + div {width: 910px;}
+.main .con2 .info .inner h3 + div p {}
+.main .con2 .info .inner h3 + div strong {} */
+.main .con3 {text-align: center;}
+.main .con3 .inner {width: 1300px;}
+.main .con3 .inner h2{
+    font-size: 40px; 
+    font-weight: 700;
+    line-height: 1;
+}
+.main .con3 .inner span {
+    font-size: 40px; font-weight: 700;
+    color: #9d7c57;}
+.main .con3 .inner p {font-size: 18px; padding: 40px 0;}
+.main .con3 .inner ul {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.main .con3 .inner ul li {
+    width: 325px; height: 110px;
+    border: 1px solid #cccccc;
+    border-top: none;
+    border-right: none;
+    padding: 0 50px;
+    box-sizing: border-box;
+    display: flex; align-items:center;
+    justify-content: space-between;
+}
+.main .con3 .inner ul li:nth-child(1),
+.main .con3 .inner ul li:nth-child(2),
+.main .con3 .inner ul li:nth-child(3),
+.main .con3 .inner ul li:nth-child(4)
+{
+    border-top: 1px solid #000;
+}
+
+.main .con3 .inner ul li:nth-child(4),
+.main .con3 .inner ul li:nth-child(8),
+.main .con3 .inner ul li:nth-child(12) {
+    border-right: 1px solid #cccccc;
+}
+
+.main .con3 .inner ul li em {font-size: 18px; color: #616161;}
+.main .con3 .inner ul li span {
+    width: 100px; height: 50px; 
+}
+.main .con3 .inner ul li span img {}
+
+
+
+/* footer */
+#footer { width: 100%; background: #333;}
+#footer .inner { width: 1300px; height: 250px; margin: auto; background: #666;}

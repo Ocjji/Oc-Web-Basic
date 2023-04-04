@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+        
+
+        function add(x, y, callback) {
+            callback(x + y);
+        }
+
+        function addResult(sum) {
+            document.write(`두수의 합 : ${sum}`);
+        }
+
+        add(10, 20, addResult);
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

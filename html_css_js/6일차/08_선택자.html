@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .list { margin: 20px; }
+        .list li {
+            width: 250px;
+            height: 80px;
+            border: 1px solid #000;
+            margin-bottom: 5px;
+            text-align: center;
+            line-height: 80px;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+        
+        /* .list li:nth-child(n+1) {
+            background: tan;
+        }
+        .list li:nth-child(n+3) {
+            background: thistle;
+        }
+        .list li:nth-child(n+6) {
+            background: aquamarine;
+            width: 300px;
+        } */
+
+        .list li:nth-child(-n+5) {
+            background: tan;
+        }
+        .list li:nth-child(-n+3) {
+            background: thistle;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ul.list>li{list$}*10 -->
+    <ul class="list">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+        <li>list5</li>
+        <li>list6</li>
+        <li>list7</li>
+        <li>list8</li>
+        <li>list9</li>
+        <li>list10</li>
+    </ul>
+
+
+    <pre>
+        ------------------
+
+        선택자 : first-child {}
+        선택자 : last-child {}
+        선택자 : nth-child() {}
+                 () 안에는
+                    1. 순서 1~N
+                    2. odd : 홀수 , even : 짝수
+                    3. ?n + 순서
+                       3n + 1 : 3개씩 잘라서 첫번째
+                       3n + 2 : 3개씩 잘라서 두번째
+                    4. n+?번째
+                       해당 ?번째부터 아래로 적용
+                    5. -n+?번째
+                       해당 ?번째부터 위로   
+    </pre>
+</body>
+</html>

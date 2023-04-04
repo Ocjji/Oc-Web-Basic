@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">​
+
+    <style>
+        p { margin: 20px; width: 1000px; font-size: 18px;}
+
+
+        .txt1 span {margin-right: 10px;}
+        .txt1 span::after {
+            content: "";
+
+            display: inline-block;
+            width: 1px; height: 15px;
+            background: #000;
+            margin-left: 15px;
+            margin-bottom: -1px;
+        }
+
+
+        .txt2 span {margin-right: 25px; position: relative;}
+        .txt2 span::after {
+            content: "";
+
+            display: inline-block;
+            width: 1px; height: 15px;
+            background: #000;
+
+            position: absolute; right: -15px; top: 50%;
+            transform: translateY(-50%);
+        }
+
+    </style>    
+</head>
+<body>
+    <p class="txt1">
+        <span>(주)유니테크</span>
+        <span>경기도 안산시 단원구 별망로459번길 45(반월공단 3B 34)</span>
+        <span>대표전화 031-495-8072</span>
+    </p>
+    <p class="txt2">
+        <span>(주)유니테크</span>
+        <span>경기도 안산시 단원구 별망로459번길 45(반월공단 3B 34)</span>
+        <span>대표전화 031-495-8072</span>
+    </p>
+
+    <pre>
+    
+    </pre>
+</body>
+</html>

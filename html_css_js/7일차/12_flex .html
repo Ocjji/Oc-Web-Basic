@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .con-box {
+            width: 1000px;
+            padding: 10px;
+            border: 1px solid #000;
+            
+            display: flex;
+            /* 부모에서 정의하기! */
+            
+            flex-direction: row;
+            /* flex-wrap: nowrap; 이 기본값 */
+            /* flex-wrap: nowrap; */
+            flex-wrap: wrap;
+
+        }
+        .con-box .box {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 30px;
+        }
+        .con-box .box1 {
+            background: tan;
+        }
+        .con-box .box2 {
+            background: thistle;
+        }
+        .con-box .box3 {
+            background: cadetblue;
+        }
+        .con-box .box4 {
+            background: brown;
+        }
+        .con-box .box5 {
+            background: tan;
+        }
+        .con-box .box6 {
+            background: thistle;
+        }
+        .con-box .box7 {
+            background: cadetblue;
+        }
+        .con-box .box8 {
+            background: brown;
+        }
+        .con-box .box9 {
+            background: tan;
+        }
+        .con-box .box10 {
+            background: thistle;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <!-- div.con-box>div.box.box${$}*4 -->
+    <div class="con-box">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box box7">7</div>
+        <div class="box box8">8</div>
+        <div class="box box9">9</div>
+        <div class="box box10">10</div>
+    </div>
+
+    <pre>
+        ------------------
+
+        flex : 옆으로 나열
+        주축(기준축) / 교차축
+        부모( container )에 display:flex 를 해주면,
+        자식 item들이 옆으로 나열된다
+        높이값이 없으면 기본값 : stretch
+
+        * 주축 변경
+        flex-direction: row , column
+    </pre>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+
+    </style>
+    <script>
+        'use strict';
+
+        function fn1(num) {
+            return ret1(num);
+        }
+
+        function ret1(x) {
+            return x;
+        }
+
+        document.write(fn1(10), '<br>');
+
+        ////////////////////////////////////////////////
+        document.write('<hr>');
+
+        function fn2() {
+            return '결과';
+        }
+
+        document.write(fn2(), '<br>');
+        document.write(fn2, '<br>');
+
+        ////////////////////////////////////////////////
+        document.write('<hr>');
+
+        function fn3(num) {
+            return function ret2() {
+                return num;
+            }();
+        }
+
+        document.write(fn3(10), '<br>');
+
+    </script>
+
+</head>
+
+<body>
+    <pre>
+        <hr>
+
+        고차함수 : 
+        함수를 인자로 받는 함수
+        함수를 반환하는 함수
+
+        함수를 전달받거나
+        함수를 결과로 반환하는 함수
+
+    </pre>
+
+</body>
+
+</html>

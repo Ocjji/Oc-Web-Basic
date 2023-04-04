@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+        
+        function make(x, y, callback) {
+            const result = callback(x, y);
+            document.write(`두수의 결과 : ${result}<br>`);
+        }
+        
+        make(10, 20, function(a, b) {
+            return a + b;
+        });
+
+        make(50, 15 , function(a ,b) {
+            return a - b;
+        });
+
+        function mul (a, b) {
+            return a * b;
+        }
+
+        function div (a, b) {
+            return parseInt(a / b);
+        }
+        
+        function mod (a, b) {
+            return a % b;
+        }
+
+        make(4, 3, mul);
+        make(10, 3, div);
+        make(10, 3, mod);
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

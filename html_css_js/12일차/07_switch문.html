@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+
+        let day, dayName, msg;
+
+        day = Number(prompt('0:일요일 ~ 6:토요일 입력해주세요 ( 0 ~ 6 )'));
+
+
+        
+
+        switch ( day ) {
+            case  0 : 
+                dayName = '일요일';                
+                break;
+            case  1 : 
+                dayName = '월요일';
+                break;
+            case  2 : 
+                dayName = '화요일';
+                break;
+            case  3 : 
+                dayName = '수요일';
+                break;
+            case  4 : 
+                dayName = '목요일';
+                break;
+            case  5 : 
+                dayName = '금요일';
+                break;
+            case  6 : 
+                dayName = '토요일';
+                break;
+            default :
+                dayName = ''
+                alert('해당번호는 존재하지 않습니다.');
+        }
+        if ( dayName ) {
+            msg = '입력한 '+ day + '번은 ' + dayName + '입니다.';
+            document.write(msg);
+        }
+
+    </script>
+
+</head>
+<body>
+    <pre>
+
+        day , dayName , msg
+        day 변수 : 0 ~ 6까지 입력
+        0:일, 1:월 ~ 6:토
+        dayName = 일요일
+        dayName = 월요일
+        msg = 입력한 0번은 일요일 입니다
+        결과 : document
+        입력한 0번은 일요일 입니다 / 경고메세지 : 해당번호는 존재하지 않습니다.
+
+    </pre>
+</body>
+</html>

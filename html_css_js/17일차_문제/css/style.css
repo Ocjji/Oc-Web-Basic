@@ -1,0 +1,71 @@
+.con-box {width: 100%;}
+.con-box .inner {width: 1300px; min-width: 1300px; margin: auto; box-sizing: border-box;}
+
+.con-box .inner .high {display: flex;}
+
+.high .con {margin-top: 25px; padding-right: 50px;}
+.high .con > img { margin-bottom: 30px;}
+.high h3 {font-size: 26px; font-weight: 500; letter-spacing: 7px;margin-bottom: 10px;}
+.high strong {font-size: 14px; font-weight: 500;}
+.high p {font-size: 14px; font-weight: 500; color: #888;}
+.high ul {margin-top: 24px; padding-bottom: 15px; border-bottom: 1px solid #DDD;}
+.high ul li a {}
+
+
+.kairos {margin-left: 60px; border-right: 1px solid #DDD;}
+.kairos img {}
+.kairos h3 {}
+.kairos strong {}
+.kairos p {}
+.kairos ul {position: relative;}
+.kairos ul li {display: inline-block; margin-right: 60px; position: relative;}
+.kairos ul li:first-child::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 15px;
+    background: #DDD;
+
+    position: absolute; right: -33px; top: 30%; transform: translateY(-50%);
+}
+.kairos ul li a {}
+.kairos ul li a img {}
+
+.smart {padding-left: 50px; border-right: 1px solid #DDD;}
+.smart img {}
+.smart h3 {}
+.smart h3 span{color: rgb(19,96,172);}
+.smart strong {}
+.smart p {}
+.smart a {}
+.smart a img {}
+
+
+.box {padding-left: 50px;}
+.box h3 {font-size: 22px; font-weight: 500;letter-spacing: -2px; margin-bottom: 20px;}
+.box ul {border-bottom: none;}
+.box ul li {font-size: 13px; padding-bottom: 18px; font-weight: 400; }
+
+.box .news {border-bottom: 1px solid #DDD; padding-right: 80px;}
+.box .news h3 {}
+.box .news ul {}
+.box .news ul li:last-child {padding-bottom: 15px;}
+
+.box .event {}
+.box .event h3 {margin-top: 24px;}
+.box .event ul {padding-bottom: 0; border-bottom: none;}
+.box .event ul li:last-child {padding-bottom: 0;}
+
+.low {width: 1300px; padding:0 60px 60px 60px; margin: auto; box-sizing: border-box; 
+    display: flex; justify-content: space-between;
+border-bottom: 1px solid #DDD;}
+.low .box1 { margin-top: 70px;}
+.low .box1 h3 {font-size: 22px; font-weight: 600;}
+.low .box1 p {font-size: 13px; color: #888;}
+
+.low .box2 {width: 720px;
+    margin-top: 70px;
+    display: flex; justify-content: space-between;}
+.low .box2 li {display: inline; text-align: center;}
+.low .box2 li img {display: inline-block;margin-bottom: 15px;}
+.low .box2 li span {display: block; font-size: 13px; color: #000;}

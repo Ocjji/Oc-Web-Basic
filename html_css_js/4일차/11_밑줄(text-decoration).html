@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .box {
+            width: 390px;
+            margin: 20px;
+            font-size: 20px;
+        }
+        .box1 {
+            text-decoration: underline;
+            font-size: 40px;
+        }
+        .box2 {
+            text-decoration: overline;
+        }
+        .box3 {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">Lorem, ipsum dolor.</div>
+    <div class="box box2">Lorem, ipsum dolor.</div>
+    <div class="box box3">Lorem, ipsum dolor.</div>
+
+
+
+    <pre>
+        
+        
+        <hr>
+
+        ######################## text-decoration ########################
+
+        <hr>
+        
+        text-decoration
+        https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration
+
+        text-decoration: underline;
+        -> 디자인적으로 사용하지 않는다
+        -> 폰트크기에 따라 선도 굵어지기 때문에
+            디자인상에서는 border를 사용하여 밑줄처럼 표시한다
+
+        text-decoration: none; 자주사용
+
+        * 접근성 *
+        포털사이트(네이버,네이트,다음 등)
+        마우스 올렸을 때 밑줄 표시됨, hover
+
+        일반사이트 : X
+
+        링크:a (기본값이 '파란색'에 '밑줄'이 들어가 있음)
+        text-decoration: none;   해야함
+        a는 '컬러가 상속되지 않는다'
+        반드시 a에 '컬러값을 변경'한다
+        
+
+    </pre>
+</body>
+</html>

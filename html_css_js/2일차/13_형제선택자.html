@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- link:css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        div {}
+        div h2 {}
+        div h2 ul {}
+        div h2 ul li {}
+
+        article {}
+        article dl {}
+        article dl dt { background-color: pink; }
+        article dl dt + dd { background-color: yellow; }
+        article dl dd {background: green;}
+
+        /* 문제1 첫번째 p css 적용해보기 */
+        div + p {background-color: skyblue; font-size: 30px; color: blue; }
+
+        /* 문제2 마지막 p css 적용해보기 */
+        article + p { background-color: red; font-size: 20px; color: orange; }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h2>제목2</h2>
+        <ul>
+            <li>list1</li>
+            <li>list2</li>
+            <li>list3</li>
+            <li>list4</li>
+        </ul>
+    </div>
+    <p>Lorem ipsum dolor sit.</p>
+    <!-- article>dl>(dt{용어$}+dd{설명$}*6) -->
+    <article>
+        <dl>
+            <dt>용어1</dt>
+            <dd>설명1</dd>
+            <dd>설명2</dd>
+            <dd>설명3</dd>
+            <dd>설명4</dd>
+            <dd>설명5</dd>
+            <dd>설명6</dd>
+        </dl>
+    </article>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, aliquid?</p>
+
+
+    <pre>
+        //////////////////////////////////////
+        
+        형제 선택자
+        + : 형제선택자 바로 아래 1개만 선택
+            ( 많이 사용한다 )
+            잘 사용하면 매우 유용한다
+        형식)
+        경로 + 요소 {}
+        A B C + D {}
+        D는 경로를 작성하지 않는다 ( 대상 요소만 작성 )
+
+        <A>
+            <B>
+                <C>제목</C>
+                <D>형제1</D>
+                <D>형제2</D>
+            </B>
+        </A>
+        
+    </pre>
+
+</body>
+</html>

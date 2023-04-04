@@ -1,0 +1,49 @@
+.con-box {
+    background-color: #dadada;
+}
+
+.con-box .inner {
+    background: #f1f1f1;
+
+    width: 570px;
+    margin: auto;
+    padding: 15px 15px;
+}
+
+.con-box .inner strong {
+    display: block;
+
+    font-size: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(196, 196, 196);
+    font-weight: 600;
+    margin-bottom: 30px;
+
+}
+
+.con-box .inner strong span {} 
+/* ex8에서는 필요했으나, ex7에서는 정의하지 않음 */
+
+.con-box .inner h3 {
+    font-size: 21px;
+    font-weight: 700;
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
+
+.con-box .inner em {
+    display: block;
+
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.con-box .inner img {
+    margin-top: 45px;
+    text-align: center;
+}
+
+.con-box .inner p {
+    margin-bottom: 10px;
+}

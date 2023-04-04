@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .con-box {
+            width: 800px;
+            margin: auto;
+        }
+        .con-box .box {
+            width: 250px;
+            height: 100px;
+            border: 1px solid #000;
+            text-align: center;
+            line-height: 100px;
+            margin: 40px;
+            display : inline-block;
+
+            font-size: 40px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .con-box .box1 {
+            box-shadow: 5px 5px 3px pink;
+            text-shadow: 2px 2px 0 greenyellow;
+        }
+        .con-box .box2 {
+            box-shadow: -10px -10px 10px #dadada;
+            text-shadow: 2px 2px 5px red;
+        }
+        .con-box .box3 {
+           box-shadow: 0 0 15px #333;
+           text-shadow: 0 0 3px red;
+        }
+        .con-box .box4 {
+            box-shadow: 5px 5px 0 red,
+                        10px 10px 0 green,
+                        15px 15px 0 purple;
+            text-shadow: 2px 2px 0 red,
+                         4px 4px 0 green,
+                         6px 6px 0 purple;
+        }
+        .con-box .box5 {
+            /* box-shadow: inset 5px 5px 0 #dcdcdc; */
+            /* box-shadow: inset 0 0 10px #333; */
+            /* box-shadow: 0 0 0 15px #dcdcdc; */
+            box-shadow: inset 0 0 15px 15px #dedede;
+
+            border-radius: 30px;
+        }
+        .con-box .box6 {
+            box-shadow: rgb(85, 91, 255) 0px 0px 0px 2px, rgb(31, 193, 27) 0px 0px 0px 4px, rgb(255, 217, 19) 0px 0px 0px 6px, rgb(255, 156, 85) 0px 0px 0px 8px, rgb(255, 85, 85) 0px 0px 0px 10px;
+        }
+        .con-box .box7 {
+            box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+        }
+        .con-box .box8 {
+            box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+        }
+    </style>
+</head>
+<body>
+     <!-- div.con-box>div.box.box$*6 -->
+     <div class="con-box">
+        <div class="box box1">test</div>
+        <div class="box box2">test</div>
+        <div class="box box3">test</div>
+        <div class="box box4">test</div>
+        <div class="box box5">test</div>
+        <div class="box box6">test</div>
+        <div class="box box7">test</div>
+        <div class="box box8">test</div>
+     </div>
+    <pre>
+        ------------------
+        
+        box-shadow / text-shadow
+
+        * box-shadow *
+        가로거리 세로거리 블러 색상
+        (px, %, 양수, 음수 가능)
+        가로거리 세로거리 블러 그림자크기 색상
+
+    </pre>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .box {
+            width: 200px; height: 100px;
+            border: 3px solid #000;
+            margin: 15px auto;  /* m:a 마진 오토 */
+        }
+        .box1 {
+            background-color: #b39afd;
+            border-color: rgba(200,50,100,0.4);
+        }
+        .box2 {
+            background-color: hsla(60,80%,70%);
+            border-color: hsl(130, 100%, 70%);
+        }
+    </style>
+</head>
+<body>
+    
+     <!-- div.box.box$*6 -->
+     <div class="box box1"></div>
+     <div class="box box2"></div>
+     <div class="box box3"></div>
+     <div class="box box4"></div>
+     <div class="box box5"></div>
+     <div class="box box6"></div>
+
+
+    <pre>
+        
+        
+        <hr>
+
+        ######################## 컬러 ########################
+
+        <hr>
+        
+        1. 16진수 표기법 사용
+           # 6자리
+           FF    FF    FF
+           Red Green Blue
+           
+           #FFFFFF 
+           0~9 / A~F
+
+        2. #3자리
+           #336699 - 두자리씩 같을 경우, #369 로 사용할 수 있다
+           #ffffff - #fff
+           #000000 - #000
+
+        3. 키워드
+           red, green, blue, ....
+           약 170개 정도
+
+        4. rgb(255,255,255)
+           rgba(255,255,255,alpha)
+           alpha : 0 ~ 1 (투명도) -> 0% ~ 100%
+
+        5. hsl(), hsla()
+           hsl(색상, 채도, 밝기)
+           hsl(0~360, 0%~100%, 0%~100%)
+
+           hsla(색상, 채도, 밝기, 투명도(alpha))
+
+    </pre>
+</body>
+</html>

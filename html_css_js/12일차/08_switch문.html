@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+
+        let position = '';
+
+        position = prompt('직급을 입력하세요 (사원, 주임, 대리, 과장, 부장)');
+
+        switch ( position ) {
+            case  '사원' : 
+                alert('월급 : 200만원');
+                break;
+            case  '주임' : 
+                alert('월급 : 250만원');
+                break;
+            case  '대리' : 
+                alert('월급 : 300만원');
+                break;
+            case  '과장' : 
+                alert('월급 : 350만원');
+                break;
+            case  '부장' : 
+                alert('월급 : 400만원');
+                break;
+            default :
+                alert('사원, 주임, 대리, 과장, 부장으로만 입력하세요');
+        }
+
+    </script>
+
+</head>
+<body>
+    <pre>
+
+        day , dayName , msg
+        day 변수 : 0 ~ 6까지 입력
+        0:일, 1:월 ~ 6:토
+        dayName = 일요일
+        dayName = 월요일
+        msg = 입력한 0번은 일요일 입니다
+        결과 : document
+        입력한 0번은 일요일 입니다 / 경고메세지 : 해당번호는 존재하지 않습니다.
+
+    </pre>
+</body>
+</html>

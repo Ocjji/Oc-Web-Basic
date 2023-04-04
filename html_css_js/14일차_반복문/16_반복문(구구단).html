@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+
+
+        let dan;
+        
+
+        dan = prompt('구구단 몇 단입니까?');
+        
+
+        if ( isNaN(dan) === true || dan === '' ) {
+            alert('올바른 형식이 아닙니다.');
+        } else if ( dan < 2 || dan > 9 ){
+            alert('범위를 초과했습니다.');
+        } else if ( dan % 1 > 0 ){
+            alert('정수로 입력해주세요.');
+        } else {
+            for( let i = 1; i <= 9; i++ ) {
+                document.write(dan + ' x ' + i + ' = ' + dan*i + '</br>');
+            }
+        }
+    
+    </script>
+
+</head>
+<body>
+    <pre>
+        2단 ~ 9단
+
+        2단 = 2 x 1 ~ 2 x 9
+        ......
+        9단 = 9 x 1 ~ 9 x 9
+
+    </pre>
+</body>
+</html>

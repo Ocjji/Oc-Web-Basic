@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+
+        let scoreExcel = 0;
+        let scoreAccess = 0;
+
+        scoreExcel = Number(prompt('엑셀 점수를 입력하세요'));
+        scoreAccess = Number(prompt('액세스 점수를 입력하세요'));
+
+
+        if ( scoreExcel >= 70 && scoreAccess >= 70 ) {
+            alert('합격');
+        } else {
+            alert('불합격');
+        }
+
+    </script>
+
+</head>
+<body>
+        
+    사용자에게 엑셀과 액세스점수를 각각 입력받아,
+    둘다 70점이상이면 [합격],
+    그렇지 않으면 [불합격]경고창을 반환하시오. 
+    
+</body>
+</html>

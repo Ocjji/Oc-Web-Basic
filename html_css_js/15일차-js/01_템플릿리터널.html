@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+
+        let name = '홍길동';
+        let age = 20;
+        let addr = '인천시 구월동';
+        let tel = '010-1234-5678';
+
+        let msg = '이름은 ' + name + '이고, 나이는 ' + age + '이며, 주소는 ' + addr + '이고, 전화번호는 ' + tel + '입니다.';
+
+        document.write(msg, '<br>');
+
+
+        msg = `이름은 ${name}이고, 나이는 ${age}이며, 주소는 ${addr}이고, 전화번호는 ${tel}입니다.`;
+
+        document.write(msg, '<br>');
+
+    </script>
+
+</head>
+
+<body>
+    
+
+
+    <pre>
+
+
+        템플릿 리터널
+        백틱 : ``
+        1. 멀티 라인 개행이 자유롭다
+        2. 보간법 사용 ( 유동적인 값을 작성 )
+         $ { 변수 }
+         $ { 수식 }
+         $ { 값 }
+
+         예) `${변수} 문자열 내용작성`
+        
+        3. 작은따옴표, 이중따옴표가 자유롭다
+
+    </pre>
+</body>
+</html>

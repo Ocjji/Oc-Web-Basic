@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+
+    <script>
+        'use strict';
+
+        let name, kor, eng, mat, sum, avg, grade;
+
+        name = prompt('이름입력');
+        kor = prompt('국어입력');
+        eng = prompt('영어입력');
+        mat = prompt('수학입력');
+
+        sum = Number(kor) + Number(eng) + Number(mat);
+        avg = sum / 3;
+        if ( avg >= 90 ) {
+            grade = 'A';
+        } else if ( avg >= 80 ) {
+            grade = 'B';
+        } else if ( avg >= 70 ) {
+            grade = 'C';
+        } else if ( avg >= 60 ) {
+            grade = 'D';
+        } else {
+            grade = 'F';
+        }
+
+        document.write(name,'평균점수는',avg.toFixed(2),'점이고 학점은 ', grade , '입니다.');
+
+
+
+        
+
+    </script>
+
+</head>
+
+<body>
+    <pre>
+        이름 : name 국어 : kor 영어 : eng 수학 : mat
+        -----------
+        총점 : sum 평균 : avg 학점 : grade
+        평균 90점 이상이면 A
+        평균 80점 이상이면 B
+        평균 70점 이상이면 C
+        평균 60점 이상이면 D
+        그외 F
+        결과 : 단 평균점수는 소수점 2자리까지만 출력
+        홍길동의 평균점수는 80점이고 학점은 B 입니다. xxx의 평균점수는 xx점이고 학점은 xx 입니다.
+    </pre>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+
+    <style>
+        .box {
+            width: 184px;
+            height: 250px;
+            margin: 50px auto;
+
+            position: relative;
+        }
+
+        .box strong {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            color: #FFF;
+
+        }
+
+        .box div {
+            width: 184px;
+            height: 250px;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .box div span {
+            display: block;
+            position: absolute;
+
+            background: blue;
+            transition: .4s;
+        }
+
+
+        .box div span:nth-child(1) {
+            left: 0;
+            top: 0;
+            width: 0px;
+            height: 3px;
+        }
+
+        .box:hover div span:nth-child(1) {
+            width: 184px;
+        }
+
+        .box div span:nth-child(2) {
+            right: 0;
+            top: 0;
+            width: 3px;
+            height: 0px;
+        }
+
+        .box:hover div span:nth-child(2) {
+            height: 250px;
+        }
+
+        .box div span:nth-child(3) {
+            right: 0;
+            bottom: 0;
+            width: 0px;
+            height: 3px;
+        }
+
+        .box:hover div span:nth-child(3) {
+            width: 184px;
+        }
+
+
+        .box div span:nth-child(4) {
+            left: 0;
+            bottom: 0;
+            width: 3px;
+            height: 0px;
+
+        }
+
+        .box:hover div span:nth-child(4) {
+            height: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- div.box>img+strong+div>span*4 -->
+    <div class="box">
+        <img src="images/m0.jpg" alt="0효진"><strong>배우 : 공효진</strong>
+        <div><span></span><span></span><span></span><span></span></div>
+    </div>
+</body>
+
+</html>

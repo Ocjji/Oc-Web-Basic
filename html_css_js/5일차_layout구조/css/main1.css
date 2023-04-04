@@ -1,0 +1,27 @@
+#wrap { width: 100%; }
+
+/* 공통부분 */
+.inner {width: 1170px; margin: auto;}
+/* 빼서 따로 작성할 수 있음 */
+
+#header { width: 100%; background: #eeeeee; margin: auto;}
+#header .inner { height: 120px; background: #dadada;}
+
+#visual {width: 100%;background-color: skyblue;}
+#visual .inner {height: 720px; background: rgb(88, 182, 219);}
+
+#content {}
+#content .con1 {width: 100%; background-color: violet; margin: auto;}
+#content .con1 .inner {height: 90px; background: purple;}
+
+#content .con2 {width: 100%; background-color: rgb(219, 255, 120); margin: auto;}
+#content .con2 .inner { height: 940px; background: rgb(189, 161, 68);}
+
+#content .con3 {width: 100%; background: #fa9c9c; margin: auto;}
+#content .con3 .inner { height: 710px; background: #ad5656;}
+
+#content .con4 {width: 100%; background: #3ca84b; margin: auto;}
+#content .con4 .inner { height: 720px; background: #77ffff;}
+
+#footer {width: 100%; background: #fff2a6; margin: auto;}
+#footer .inner { height: 320px; background: #e2a784;}

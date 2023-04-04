@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        /* div공통 */
+        div {
+            width : 100px;
+            height: 100px;
+            background-color: skyblue;
+            margin: 20px;
+        }
+
+        .box1 {}
+        .box2 { padding: 20px; }
+        .box3 { padding: 20px; box-sizing: border-box; }
+        .box4 { padding: 20px; box-sizing: content-box; } 
+        /* content-box : 기본과 동일하여 사용하지 않음 */
+
+    </style>
+</head>
+
+<body>
+    <!-- div.box$*4{test} -->
+    <div class="box1">test</div>
+    <div class="box2">test</div>
+    <div class="box3">test</div>
+    <div class="box4">test</div>
+
+    <pre>
+        padding : 컨텐츠 너비와 높이가 변경된다
+
+        예)
+        너비 100 / 높이 100 : 디자인상
+        패딩 20
+        총 너비 : 140 ( 100 + 20 +20 )
+
+        ? 해결 - 디자인과 동일하게 작업하기 위해서
+        너비 60 / 높이 60
+        패딩 20   ( 순수 계산 )
+        ---------- > 위 방법은 너무 번거롭기 때문에
+
+        box-sizing : border-box 사용한다
+        너비와 높이 안에 (100/100)
+        '패딩, 보더' 를 포함한다
+
+    </pre>
+
+</body>
+
+</html>

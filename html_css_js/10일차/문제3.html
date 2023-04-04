@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict'
+
+        let sales_Jan = 0, sales_Feb = 0, sales_Mar = 0;
+        let sum = 0;
+
+        sales_Jan = prompt('1분기 1월 매출값을 입력해주세요 (단위 : 원)');
+        sales_Feb = prompt('1분기 2월 매출값을 입력해주세요 (단위 : 원)');
+        sales_Mar = prompt('1분기 3월 매출값을 입력해주세요 (단위 : 원)');
+
+
+        document.write('결과<br>');
+        document.write('1월 매출 : ',sales_Jan,'원<br>');
+        document.write('2월 매출 : ',sales_Feb,'원<br>');
+        document.write('3월 매출 : ',sales_Mar,'원<br>');
+        
+        sales_Jan = Number(sales_Jan);
+        sales_Feb = Number(sales_Feb);
+        sales_Mar = Number(sales_Mar);
+        
+        sum = sales_Jan + sales_Feb + sales_Mar;
+        
+        document.write('1분기 전체 매출 : ', sum ,'원<br>');
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

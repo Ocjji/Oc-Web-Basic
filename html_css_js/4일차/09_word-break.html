@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .box {
+            width: 390px;
+            border: 1px solid #000;
+            margin: 20px;
+            font-size: 20px;
+        }
+        .box1 {
+            /* word-break: break-all; */
+            word-break: keep-all; /* 영어의 기본값 */
+        }
+        
+        .box2 {
+            /* word-break: keep-all; */
+            word-break: break-all; /* 한글의 기본값 */
+        }
+    </style>
+</head>
+<body>
+     <div class="box box1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum possimus corporis quidem id impedit voluptas non facilis corrupti est mollitia illum rem neque, natus itaque eveniet ad unde velit minus.
+    </div>
+
+    <div class="box box2">
+        그들의 아름답고 길을 끝까지 인생을 시들어 이는 약동하다. 바로 것은 실현에 옷을 그들의 이것이다. 이것이야말로 앞이 천고에 우리의 천하를 대중을 이상의 있는 봄바람이다.
+    </div>
+
+
+    <pre>
+        
+        
+        <hr>
+
+        ######################## word-break ########################
+
+        <hr>
+        
+        word-break
+        https://developer.mozilla.org/ko/docs/Web/CSS/word-break
+
+        word-break: break-all; 한글표기처럼 단어가 잘리고 Enter 처리됨
+        
+        *** word-break: keep-all; 한 줄의 끝 단어가 끊기지 않게 내려감 ***
+        
+
+    </pre>
+</body>
+</html>

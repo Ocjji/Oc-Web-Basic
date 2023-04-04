@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        .box {
+            width: 1920px;
+            height: 800px;
+            position: relative;
+            background-image: url(images/bg.jpg);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+
+        }
+
+        
+        .box .topic1 {
+            position: absolute;
+            
+            left: 50%;
+            transform: translateX(-50%);
+            top: 31%;
+            
+            animation: ani1 linear 0.3s;
+        }
+
+        .box .topic2 {
+            position: absolute;
+            left: 27%;
+            top: 44%;
+            transform-origin: 50% 50%;
+
+            animation: ani2 ease-out 1s
+        }
+        .box .red {
+            position: absolute;
+            left: 17%;
+            top: 56%;
+
+            animation: ani3 ease-out 1.2s;
+        }
+
+        .box .white {
+            position: absolute;
+            right: 0;
+            top: 0;
+            animation: ani4 ease-out 1.1s;
+            
+        }
+        @keyframes ani1 {
+            0% {
+                opacity: 0;
+            }
+            100% {opacity: 1;
+            }
+        }
+
+        @keyframes ani2 {
+            0% {
+                opacity: 0;
+                transform: scale(2);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        @keyframes ani3 {
+            0% {
+                opacity: 0;
+            }
+            40% {
+                opacity: 0;
+                transform-origin: -150px 200px;
+                transform: rotate(-45deg);
+            }
+            100% {
+                opacity: 1;
+                transform-origin: -150px 200px;
+                transform: rotate(0);
+            }
+        }
+        @keyframes ani4 {
+            0% {
+                opacity: 0;
+            }
+            30% {
+                opacity: 0;
+                transform-origin: 90% 0%;
+                transform: rotate(45deg);
+            }
+            100% {
+                opacity: 1;
+                transform-origin: 90% 0%;
+                transform: rotate(0);
+            }
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        <img class="topic1" src="images/txt1.png" alt="단 7일, 시선을 빼앗는 순간">
+        <img class="topic2" src="images/txt2.png" alt="THE한.페스타">
+        <img class="red" src="images/flower1.png" alt="빨간꽃">
+        <img class="white" src="images/flower2.png" alt="하얀꽃">
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+.box {
+    width: 770px;
+    background-color: #dadada;
+    margin: auto;
+    padding: 11px 18px;
+    box-sizing: border-box;
+}
+.box h3 {
+    font-size: 18px;
+    margin-bottom: 19px;
+}
+.box p {
+    font-size: 15px;
+    margin-bottom: 7px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        p {
+            width: 300px;
+
+            margin: 20px;
+            border: 1px solid #000;
+
+            white-space: nowrap;
+            overflow: hidden;
+            /* overflow-x: scroll; */
+            text-overflow: ellipsis;
+        }
+        div {
+            width: 300px;
+            height: 75px;
+
+            margin: 20px;
+            border: 1px solid #000;
+
+            
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, vero consequatur! Atque soluta eligendi amet accusamus! Distinctio facere ut obcaecati natus sint quis at. Aliquam harum similique dolores non aut!</p>
+    <div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae recusandae aliquid corrupti inventore, necessitatibus numquam nobis? Maiores placeat facere sit veniam, at ex obcaecati, eum officia saepe doloribus nostrum perspiciatis.
+    </div>
+    <a href="#">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla enim tempore autem facere, laboriosam ut quibusdam eveniet vero neque! Est sapiente ea consequatur fugit nostrum rerum ex eius voluptatum similique.
+    </a>
+    <pre>
+
+
+        ------------------
+        
+        # 텍스트 말줄임 '....'
+            
+            * 필수요소 *
+        1. 너비값 설정
+        2. white-space: nowrap; 한줄로 표현하기
+        3. overflow: hidden; 넘침 숨기기
+        4. text-overflow: ellipsis; '...' 표현하기
+
+        # 여러줄 말줄임 '....'
+        1. overflow: hidden; (공통)
+        2.    display: -webkit-box;
+        -webkit-line-clamp: 줄수;
+        -webkit-box-orient: vertical;
+
+    </pre>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+
+    <script>
+        'use strict';
+
+        let Num = 0;
+    
+
+
+        Num = Number(prompt('정수를 입력하세요'));
+
+        if ( Num % 1 === 0 ) {
+            if ( Num > 0 ) {
+                alert('양수');
+            } else if ( Num < 0 ) {
+                alert('음수');
+            } else {
+                alert('0');
+            }
+        }
+        else {
+            alert('정수로 입력하세요');
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <pre>
+        사용자에게 정수를 입력받아,
+        [양수], [0], [음수], [정수로 입력하세요]라는
+        경고창을 띄우세요.
+    </pre>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+.con-box{
+    width: 590px;
+    margin: auto;
+    background-color: #dadada;
+    padding: 0 15px 25px;
+    box-sizing: border-box;
+}
+.con-box h2 {
+    padding: 15px 0;
+    border-bottom: 1px solid #000;
+}
+.con-box h3 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 700;
+}
+.con-box p {font-size: 16px;}
+.con-box p.txt {margin-bottom: 80px;}
+.con-box img {}

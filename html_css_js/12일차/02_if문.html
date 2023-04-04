@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+
+        let pay = confirm('결제하시겠습니까?');
+
+        if( pay ) {
+            alert('결제되었습니다.');
+        } else {
+            alert('결제 취소되었습니다.');
+        } 
+
+
+        /* let x = confirm('당신은 성인입니까?');
+
+        if( !x ) {
+            alert('아니오 미성년입니다.');
+        } else {
+            alert('예 성인입니다.');
+        } */
+
+    </script>
+
+</head>
+<body>
+    <pre>
+        confirm('예 아니면 아니오'); 팝업창
+        확인 : true
+        취소 : false
+
+
+        let x = confirm('당신은 성인입니까?');
+
+        if( x === true ) {
+            alert('예 성인입니다.');
+        } else {
+            alert('아니오 미성년입니다.');
+        }
+    </pre>
+</body>
+</html>

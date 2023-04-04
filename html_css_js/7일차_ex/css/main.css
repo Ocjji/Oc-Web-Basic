@@ -1,0 +1,86 @@
+#wrap {width: 100%;}
+
+#header {width: 100%; background: tan;}
+#header .inner {width: 1300px; height: 0px; margin: auto;
+background: #eeeeee;}
+
+#visual {background: teal; width: 100%; height: 0px;}
+
+#container {}
+#container #content {}
+#container #content .con-box1 {}
+#container #content .con-box1 .inner {
+    width: 1300px; margin: auto; padding-top: 20px;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
+}
+#container #content .con-box1 .inner h2 {
+    font-size: 40px; font-weight: 600; text-align: center; 
+    padding-bottom: 35px;
+    border-bottom: 3px solid #000;
+}
+#container #content .con-box1 .inner ul {
+    
+}
+#container #content .con-box1 .inner ul li{
+    border-bottom: 1px solid #cecece;
+    
+    display: flex;
+    
+    
+
+}
+#container #content .con-box1 .inner ul li strong {
+    width: 320px; color: rgb(189, 142, 85);
+    font-size: 24px; font-weight: 700; padding-top: 30px; 
+    margin-bottom: 30px;
+}
+#container #content .con-box1 .inner ul li p {
+    font-size: 16px;
+    padding-top: 35px; margin-bottom: 30px;
+}
+#container #content .con-box1 .inner ul li ul {
+    padding-top: 30px; margin-bottom: 30px;
+}
+#container #content .con-box1 .inner ul li ul li {
+    border-bottom: none;
+    font-size: 16px;
+    /* text-indent: 5px; */
+    display: flex;
+    
+    
+}
+#container #content .con-box1 .inner ul li ul li::before {
+    display: inline-block;
+    margin-top: 9px;
+    margin-right: 5px;
+    content: "";
+    width: 4px; height: 4px; background: #000;
+    border-radius: 50%;
+    
+}
+#container #content .con-box1 .inner .care {
+    
+    text-align: center;
+    margin-top: 60px;
+    
+}
+#container #content .con-box1 .inner .care a {
+    display: inline-block;
+
+    width: 250px; height: 65px;
+    background: rgb(189, 142, 85);
+
+    font-size: 18px; color: #FFF;
+    line-height: 65px;
+}
+
+
+/* 첫페이지 시작 */
+.main {}
+.main .con-box {width: 100%;}
+.main .con-box .inner {width: 1300px; margin: auto; padding: 100px; box-sizing: border-box;}
+
+/* con1안에 해보기 */
+.main .con1 {}
+.main .con1 h2 {}

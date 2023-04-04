@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+
+    <script>
+        'use strict';
+
+        let id = 'ezen'; // const로 처리하는 것이 좋다
+        let user_id = '';
+
+        user_id = prompt('User ID를 입력하세요.');
+
+        if ( user_id == id ) {
+            alert('환영합니다!');
+        } else {
+            alert('잘못된 아이디입니다.');
+        }
+    </script>
+
+</head>
+
+<body>
+    <pre>
+        아이디 : id = ezen
+        사용자 아이디 : userid 외부입력 ( prompt )
+        아이디 일치하면 환영합니다. ( alert )
+        그렇지 않으면 잘못된 아이디 입니다
+    </pre>
+
+
+</body>
+
+</html>

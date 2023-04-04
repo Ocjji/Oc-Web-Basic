@@ -1,0 +1,51 @@
+.con-box{
+    /* 100% 브라우저 대응 */
+    width: 100%;
+    background-color: #dadada;
+}
+
+.con-box .inner {
+background: #f1f1f1;
+    
+    width: 1090px;
+    margin: auto;
+    padding: 35px 0;
+}
+
+.con-box .inner strong,
+.con-box .inner em,
+.con-box .inner h2 {
+    text-align: center;
+}
+
+
+.con-box .inner strong {
+    display: block;
+
+    font-size: 20px;
+    font-weight: 300;
+
+    color:red;
+
+    margin-bottom: 42px;
+    
+}
+.con-box .inner strong span {
+    
+    border-bottom: 1px solid red;
+}
+.con-box .inner em {
+    display: block;
+
+    font-size: 20px;
+    font-weight: 300;
+}
+.con-box .inner h2 {
+    font-size: 38px;
+    font-weight: 500;
+    line-height:1.3;
+    margin-bottom: 50px;
+}
+.con-box .inner p {
+    margin-bottom: 30px;
+}

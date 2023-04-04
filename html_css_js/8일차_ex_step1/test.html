@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .cf::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .list {margin: 40px;}
+        .list1 li {
+            float: left; width: 320px; height: 110px; border: 1px solid #000;
+            margin-left: -1px; background-color: #fff;
+            padding: 45px 50px; box-sizing: border-box; background-repeat: no-repeat;
+            background-position: right 50px top 50%;
+        }
+        .list1 li:nth-child(1) {
+            background-image: url(images/icon01.png);
+        }
+        .list1 li:nth-child(2) {
+            background-image: url(images/icon02.png);
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- ul.list.list$*3>li*2>strong+img -->
+    <ul class="list list1 cf">
+        <li><strong>위생/방역</strong></li>
+        <li><strong>청소</strong></li>
+    </ul>
+    <ul class="list list2">
+        <li><strong></strong><img src="" alt=""></li>
+        <li><strong></strong><img src="" alt=""></li>
+    </ul>
+    <ul class="list list3">
+        <li><strong></strong><img src="" alt=""></li>
+        <li><strong></strong><img src="" alt=""></li>
+    </ul>
+</body>
+</html>

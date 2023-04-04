@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+
+        let name = '', height = 0, weight = 0;
+        let resultHeight = 0;
+        let avgWeight = 0;
+        let result = '';
+
+
+        name = prompt('이름 입력');
+        height = prompt('키 입력');
+        weight = prompt('몸무게 입력');
+
+        resultHeight = (height / 100);
+
+        avgWeight = (resultHeight * resultHeight * 21).toFixed(2);
+
+        result = (avgWeight > weight) ? '정상체중' : '과체중';
+
+        document.write('키 : ' , height , '<br>');
+        document.write('몸무게 : ' , weight , '<br>');
+        document.write('표준체중 : ' , resultHeight ,'(키) X ', resultHeight ,'(키) X 21 = ', avgWeight, '(kg)' , '<br>');
+
+        
+
+        document.write(name , '은 ' , result , ' 입니다');
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

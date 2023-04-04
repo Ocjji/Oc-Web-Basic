@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        .box {
+            width: 800px;
+            margin: 50px;
+            position: relative;
+        }
+
+        .box input[type=checkbox] {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+        }
+
+        .box label {
+            margin-right: 40px;
+            position: relative;
+        }
+
+        .box label::before {
+            content: "\2713";
+
+
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            color: #fff;
+            text-align: center;
+            border: 1px solid #000;
+            margin-right: 5px;
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .box input[type=checkbox]:checked+label::before {
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="box">
+        <input type="checkbox" name="chk1" id="">
+        <label for="chk1">돈까스</label>
+        <input type="checkbox" name="chk2" id="chk2">
+        <label for="chk2">냉면</label>
+        <input type="checkbox" name="chk3" id="chk3">
+        <label for="chk3">제육덮밥</label>
+        <input type="checkbox" name="chk4" id="chk4">
+        <label for="chk4">순대국</label>
+        <input type="checkbox" name="chk5" id="chk5">
+        <label for="chk5">삼겹살</label>
+    </p>
+</body>
+
+</html>

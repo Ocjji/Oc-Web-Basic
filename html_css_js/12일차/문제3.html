@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+
+        let backNum = 0;
+        
+
+        backNum = Number(prompt('주민등록번호 뒷자리 첫글자를 입력하세요'));
+        
+        if ( backNum == 1 || backNum == 3 ) {
+            alert('남자');
+        } else if ( backNum == 2 || backNum == 4 ) {
+            alert('여자');
+        } else {
+            alert('"1 ~ 4" 사이의 정수를 입력해주세요!')
+        }
+
+    </script>
+
+</head>
+<body>
+    사용자에게 주민번호 뒷자리의 첫글자를 입력받아,
+    1 혹은 3이면 [남자], 2 혹 은 4이면 [여자],
+    나머지는 [1~4사이정수를 입력하세요]라는 경고창을 반환하시오.
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+
+        let num1 = 0;
+        let num2 = 0;
+        let op = '';
+
+        num1 = Number(prompt('숫자 1 입력'));
+        num2 = Number(prompt('숫자 2 입력'));
+
+        op = prompt('연산자를 입력해주세요.' , '+ , - , * , / , %');
+
+        if ( op == '+' || op == '-' || op == '*' || op == '/' || op == '%') {
+            switch ( op ) {
+                case '+': document.write('결과 : ', num1 , ' + ' , num2 , ' = ', num1 + num2 ); break;
+                case '-': document.write('결과 : ', num1 , ' - ' , num2 , ' = ', num1 - num2 ); break;
+                case '*': document.write('결과 : ', num1 , ' * ' , num2 , ' = ', num1 * num2 ); break;
+                case '/': document.write('결과 : ', num1 , ' / ' , num2 , ' = ', num1 / num2 ); break;
+                case '%': document.write('결과 : ', num1 , ' % ' , num2 , ' = ', num1 % num2 ); break;
+            }
+        } else {
+            document.write('다시 입력하세요. 해당 연산자는 존재하지 않습니다.');
+        }
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

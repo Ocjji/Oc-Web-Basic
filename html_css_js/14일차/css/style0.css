@@ -1,0 +1,52 @@
+.con-box { width: 750px; height: 340px; padding: 30px; box-sizing: border-box; margin:100px auto; background: #efefef; } 
+
+.con-box .list { display: flex;  } 
+.con-box .list li { 
+    font-size: 20px; margin-right: 20px; padding: 20px 0;
+} 
+.con-box .list li.on { color: coral; } 
+.con-box .box { position: relative; border-top: 3px solid coral; } 
+.con-box .box article { position: absolute; background: tan;
+    left: 0; top: 20px; width: 100%; 
+} 
+.con-box .box article:first-child { display: block; }
+.con-box .box article ul {} 
+.con-box .box article ul li { line-height: 40px; position: relative; } 
+.con-box .box article ul li a { 
+    width: 540px; font-size: 18px; 
+    display: block; overflow: hidden; 
+    white-space: nowrap; text-overflow: ellipsis;
+    border: 1px solid #000;
+} 
+.con-box .box article ul li span { font-size: 16px; position: absolute; right: 0; top: 0;} 
+.con-box .box article .more { 
+    position: absolute; right: 0; top:-70px; 
+} 
+.con-box .box article .more i { font-size: 25px; } 
+
+.con1 .list {  } 
+.con1 .list li { } 
+.con1 .list li.on {  } 
+.con1 .box {  } 
+.con1 .box article {  } 
+.con1 .box article:first-child {  }
+.con1 .box article ul {} 
+.con1 .box article ul li {  } 
+.con1 .box article ul li a {} 
+.con1 .box article ul li span { } 
+.con1 .box article .more { } 
+.con1 .box article .more i {  } 
+
+
+.con2 .list {  } 
+.con2 .list li { } 
+.con2 .list li.on {  } 
+.con2 .box {  } 
+.con2 .box article {  } 
+.con2 .box article:first-child {  }
+.con2 .box article ul {} 
+.con2 .box article ul li {  } 
+.con2 .box article ul li a {} 
+.con2 .box article ul li span { } 
+.con2 .box article .more { } 
+.con2 .box article .more i {  } 

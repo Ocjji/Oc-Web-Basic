@@ -1,0 +1,467 @@
+#wrap {
+    width: 100%;
+    min-width: 1600px;
+}
+
+.inner {
+    width: 1280px;
+    margin: auto;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#header {
+    width: 100%;
+    background: #41414d;
+}
+
+#header .inner {
+    height: 150px;
+    background: #41414d;
+}
+
+#header h1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+#header h1 a {}
+
+#header h1 a img {}
+
+#header .top-menu {
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+#header .top-menu li {
+    display: inline-block;
+    margin-left: 30px;
+    position: relative;
+}
+
+
+
+#header .top-menu li a {
+    color: #EEE;
+    position: relative;
+}
+
+#header .top-menu li::before {
+    content: "";
+
+    display: block;
+    width: 2px;
+    height: 18px;
+    background: #EEE;
+
+    position: absolute;
+    right: -19px;
+    top: 3px;
+}
+
+#header .top-menu li:last-child::before {
+    display: none;
+}
+
+
+#header .nav {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+#header .nav .gnb {}
+
+#header .nav .gnb li {
+    display: inline-block;
+    margin-left: 45px;
+}
+
+#header .nav .gnb li a {
+    color: #EEE;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+#container {}
+
+#content {}
+
+/* 페이지명 bbs */
+.bbs {}
+
+.bbs .inner {
+    padding: 100px 0;
+}
+
+.bbs h2 {
+    font-size: 40px;
+    color: #111;
+    position: relative;
+    line-height: 30px;
+    padding-left: 25px;
+    margin-top: 45px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #000;
+}
+
+.bbs h2::after {
+    content: "";
+
+    width: 15px;
+    height: 15px;
+    display: block;
+    background: red;
+    position: absolute;
+    left: 0;
+    top: -10px;
+}
+
+.bbs .flow {
+    width: 700px;
+    margin: 0 300px;
+    display: flex;
+    margin-top: 120px;
+    padding-bottom: 140px;
+}
+
+.bbs .flow div {
+    display: inline-block;
+    position: relative;
+}
+
+.bbs .flow div:nth-child(1)::after {
+    content: "약관동의";
+
+    font-size: 14px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) translateY(180%);
+}
+
+.bbs .flow div:nth-child(3)::after {
+    content: "인증";
+
+    font-size: 14px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) translateY(180%);
+
+}
+
+.bbs .flow div:nth-child(5)::after {
+    content: "정보입력";
+
+    font-size: 14px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) translateY(180%);
+}
+
+.bbs .flow div:nth-child(7)::after {
+    content: "가입완료";
+
+
+    font-size: 14px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) translateY(180%);
+}
+
+.bbs .flow div:nth-child(2),
+.bbs .flow div:nth-child(4),
+.bbs .flow div:nth-child(6) {
+    display: inline-block;
+    width: 70px;
+    height: 58px;
+    border-bottom: 1px solid #999999;
+}
+
+.bbs h3 {
+    font-size: 30px;
+    padding: 24px 0 18px 0;
+    border-bottom: 1px solid #999999;
+}
+
+.bbs h3.level {
+    border-bottom: none;
+}
+
+.bbs h4 {
+    display: inline-block;
+    font-size: 26px;
+    margin: 35px 0 35px 0;
+}
+
+.bbs span {
+    font-size: 20px;
+}
+
+.bbs span em {
+    font-size: 20px;
+    color: red;
+}
+.bbs .more {
+    padding-top: 20px;
+}
+.bbs .more em {
+    display: block;
+    color: red;
+}
+
+.bbs b {
+    display: inline-block;
+    margin: 0 5px;
+    color: red;
+}
+
+
+.bbs table {}
+
+.bbs table .w1 {
+    width: 220px;
+}
+
+.bbs table .w2 {
+    width: auto;
+}
+
+.bbs table .w140 {
+    width: 140px;
+}
+
+.bbs table .w145 {
+    width: 145px;
+}
+
+.bbs table .w160 {
+    width: 160px;
+}
+
+.bbs table .w270 {
+    width: 270px;
+}
+.bbs table .w340 {
+    width: 340px;
+}
+
+.bbs table .w450 {
+    width: 450px;
+}
+
+.bbs table .w1030 {
+    width: 1030px;
+}
+
+
+.bbs table tr {}
+
+.bbs table tr:first-child td {
+    border-top: 1px solid #ef1d40;
+    font-size: 16px;
+}
+
+.bbs table tr td {
+    padding: 12px;
+    vertical-align: middle;
+    border: 1px solid #999;
+}
+
+.bbs table tr td:first-child {
+    background: #f5f5f5;
+    border-left: none;
+}
+.bbs table tr td:last-child {
+    border-right: none;
+}
+.bbs table tr:nth-child(2) td:last-child input{
+    margin-right: 30px;
+}
+.bbs table tr td button {
+    display: inline-block;
+
+    font-size: 16px;
+    line-height: 20px;
+    vertical-align: top;
+    margin: 0 10px;
+    height: 50px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    background: #222222;
+    color: #fff;
+}
+.bbs table tr td button img{
+    display: inline-block;
+    padding-bottom: 4px;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.bbs table tr td select {
+    height: 50px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.bbs table tr td input[type=text],
+.bbs table tr td input[type=password] {
+    height: 50px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    background: #FFF;
+    padding: 0 10px;
+    font-size: 16px;
+}
+.bbs input[type=radio] {
+    position: absolute;
+    left: -99999px;
+}
+
+.bbs input[type=radio]+label {
+    display: inline-block;
+    margin-right: 40px;
+    padding-left: 30px;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+}
+
+.bbs input[type=radio]+label::before {
+    content: "";
+
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #999;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.bbs input[type=radio]:checked+label::before {
+    content: "";
+
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/bg_radio_on.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;
+}
+
+
+.bbs table tr td .normalAdd, 
+.bbs table tr td .detailAdd {
+    padding-top: 10px;
+}
+
+.bbs table select {
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-image: url(../images/select-bg.gif);
+}
+
+.bbs table .decision {
+    width: 270px;
+    height: 50px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    line-height: 50px;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+.bbs table strong {
+    margin-left: 20px;
+}
+.bbs table .ball {
+    display: block;
+    margin-left: 20px;
+    margin-top: 13px;
+    position: relative;
+}
+.bbs table .ball::before {
+    content: "";
+
+    width: 8px;
+    height: 8px;
+    background: #000;
+    border-radius: 50%;
+
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.bbs table ul li {
+    color: #8a8a8a;
+    margin-left: 20px;
+}
+.bbs .final {
+    margin-top: 40px;
+    text-align: center;}
+.bbs input[type=submit] {
+    width: 200px;
+    height: 60px;
+    box-sizing: border-box;
+    border: 1px solid red;
+    color: red;
+    background: #FFF;
+
+    font-size: 18px;
+    cursor: pointer;
+
+    transition: 0.2s linear;
+}
+.bbs input[type=submit]:hover {
+    background: red;
+    color: #FFF;
+}
+.bbs input[type=reset] {
+    width: 200px;
+    height: 60px;
+    box-sizing: border-box;
+    background: #FFF;
+
+
+    font-size: 18px;
+    cursor: pointer;
+
+    transition: 0.2s linear;
+}
+.bbs input[type=reset]:hover {
+    background: black;
+    color: #FFF;
+}
+
+#footer {
+    background: #41414d;
+}
+
+#footer .inner {
+    height: 200px;
+    background: #41414d;
+}
+
+#footer h1 {
+    position: absolute;
+    top: 0;
+    transform: translateY(120%);
+    left: 0;
+}

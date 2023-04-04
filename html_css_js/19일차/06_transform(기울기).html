@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+
+    <style>
+        .box {
+            margin: 50px;
+            width: 1000px;
+        }
+
+        .box span {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            font-size: 80px;
+            line-height: 1;
+            text-transform: uppercase;
+            font-weight: 700;
+            border: 1px solid #000;
+            text-align: center;
+
+            margin-right: 20px;
+        }
+
+        .box:hover span:nth-child(1),
+        .box:hover span:nth-child(3),
+        .box:hover span:nth-child(5),
+        .box:hover span:nth-child(7) {
+            transform: skewY(15deg);
+        }
+
+        .box span:nth-child(2),
+        .box span:nth-child(4),
+        .box span:nth-child(6) {
+            transform: skewY(-15deg);
+        }
+
+        /* nth-child (even / odd) 사용 가능하다 */
+
+        .box span:nth-child(3n+1) {
+            background: tan;
+        }
+
+        .box span:nth-child(3n+2) {
+            background: skyblue;
+        }
+
+        .box span:nth-child(3n) {
+            background: olive;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <span>p</span>
+        <span>r</span>
+        <span>o</span>
+        <span>j</span>
+        <span>e</span>
+        <span>c</span>
+        <span>t</span>
+    </div>
+</body>
+
+</html>

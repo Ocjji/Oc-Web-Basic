@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    
+    <style>
+        .box {
+            width: 600px; height: 400px;
+            margin: 50px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .box img {
+            position: absolute; left: 0; top: 0;
+            transition: all 1s ease-in-out;
+        }
+
+        
+        .box:hover img:last-child {
+            opacity: 0;
+        }
+
+
+    </style>    
+</head>
+<body>
+    <div class="box">
+        <img src="images/cat0.jpg" alt="고냥이">
+        <img src="images/cat1.jpg" alt="고냥이">
+    </div>
+</body>
+</html>

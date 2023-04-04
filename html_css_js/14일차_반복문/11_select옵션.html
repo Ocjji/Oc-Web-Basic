@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        * { margin: 0; padding: 0; }
+        select {
+            width: 150px; height: 50px;
+            border: 1px solid #000;
+            padding: 15px; box-sizing: border-box;
+            margin-right: 15px;
+        }
+    </style>
+        
+    <script>
+        'use strict';
+
+        // let m = '<select>';
+        //     m = m + '<option> 동물선택 </option>';
+        //     m = m + '<option> 강아지 </option>';
+        //     m = m + '<option> 고양이 </option>';
+        //     m = m + '<option> 호랑이 </option>';
+        //     m = m + '<option> 송아지 </option>';
+        //     m = m + '</select>';
+
+        let year, month, day;
+
+        year = '<select>';
+           year += '<option> === 년도 === </option>'; 
+
+            for( let i = 2023; i >= 1900; i-- ){
+                year += '<option>' + i + '년도' + '</option>';
+            }
+
+        year += '</select>';
+            
+        document.write( year );
+
+
+        month = '<select>';
+           month += '<option> === 월 === </option>'; 
+
+            for( let i = 1; i <= 12; i++ ){
+                month += '<option>' + i + '월' + '</option>';
+            }
+
+        month += '</select>';
+            
+        document.write( month );
+
+        day = '<select>';
+           day += '<option> === 일 === </option>'; 
+
+            for( let i = 1; i <= 31; i++ ){
+                day += '<option>' + i + '일' + '</option>';
+            }
+
+        day += '</select>';
+
+        document.write( day );
+
+
+    </script>
+
+</head>
+<body>
+    <!-- <select name="pets" id="pet-select">
+        <option value="">--Please choose an option--</option>
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+    </select> -->
+    
+</body>
+</html>

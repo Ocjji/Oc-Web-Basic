@@ -1,0 +1,76 @@
+#wrap {width: 100%; min-width: 1600px;}
+/* 페이지공통 */
+.inner {width: 1080px; margin: auto; position: relative; box-sizing: border-box;}
+
+#header {background: #ffe100; border-bottom: 1px solid #e5ca00;}
+#header .inner {height: 80px; display: flex; justify-content: space-between;}
+#header h1 {padding: 25px 0;}
+#header .nav {}
+#header .nav .gnb {}
+#header .nav .gnb li { display: inline-block; margin-left: 15px; position: relative;}
+#header .nav .gnb li a { height: 80px; padding:0 15px; line-height: 80px;
+font-size: 18px; font-weight: 500;}
+#header .nav .gnb li:last-child a {
+    width: 125px; height: 45px; border: 2px solid #FFF;
+    padding:14px 20px;
+    border-radius: 30px;
+}
+#header .nav .gnb li:nth-child(1):after {
+    content: "";
+
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #000;
+
+    position: absolute; left: 50%; bottom: 0;
+    transform: scaleX(0) translateX(-50%);
+}
+#header .nav .gnb li:nth-child(2):after {
+    content: "";
+
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #000;
+
+    position: absolute; left: 50%; bottom: 0;
+    transform: scaleX(0) translateX(-50%);
+}
+#header .nav .gnb li:nth-child(3):after {
+    content: "";
+
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #000;
+
+    position: absolute; left: 50%; bottom: 0;
+    transform: scaleX(0) translateX(-50%);
+}
+#header .nav .gnb li:nth-child(4):after {
+    content: "";
+
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #000;
+
+    position: absolute; left: 50%; bottom: 0;
+    transform: scaleX(0) translateX(-50%);
+}
+#header .nav .gnb li:nth-child(5):after {
+    content: "";
+
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #000;
+
+    position: absolute; left: 50%; top: 100%;
+    transform: scaleX(0) translateX(-50%);
+}
+#header .nav .gnb li:hover::after {
+    transition: 0.2s linear;
+    transform: scaleX(1) translateX(-50%);
+}

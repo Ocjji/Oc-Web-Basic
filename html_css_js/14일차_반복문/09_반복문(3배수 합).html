@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+
+        let sum = 0;
+        let sum_odd = 0;
+        
+        for( let i = 0; i <= 20; i++ ) {
+            if ( i != 0 && i % 3 === 0) {
+                sum += i;
+            }
+            
+        }
+
+        document.write('3의 배수의 합 : ', sum , '<br>');
+
+        for( let i = 0; i <= 20; i++ ) {
+            if ( i != 0 && i % 2 === 1) {
+                sum_odd += i;
+            }
+        }
+
+        document.write('홀수의 합 : ', sum_odd , '<br>');
+
+
+    </script>
+
+</head>
+<body>
+    <pre>
+        0부터 20까지의 3의 배수의 합구하기
+    </pre>
+</body>
+</html>

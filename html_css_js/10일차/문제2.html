@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict'
+
+        let day, date, t_min, t_max, rain, dust, 
+            s_rise, s_set, sea_south, sea_east, sea_west;
+
+        day='', date='',t_min='',t_max='',rain='',dust='';
+        s_rise='', s_set='', sea_south='', sea_east='', sea_west='';
+
+        day = prompt('내일 요일을 입력해주세요(요일 빼고 입력해주세요) 예시 : 월 or 화 ...');
+        date = prompt('내일 날짜를 입력해주세요(00월 00일)');
+        t_min = prompt('최저기온을 입력해주세요(단위 없이 숫자만 입력)');
+        t_max = prompt('최고기온을 입력해주세요(단위 없이 숫자만 입력)');
+        rain = prompt('강수확률을 입력해주세요(단위 %없이 숫자만 입력)');
+        dust = prompt('미세먼지 정도를 입력해주세요(좋음/보통/나쁨)');
+        s_rise = prompt('일출시간을 입력해주세요(오전 00시 00분/오후 00시 00분)');
+        s_set = prompt('일몰시간을 입력해주세요(오전 00시 00분/오후 00시 00분)');
+        sea_south = prompt('남해 파고를 입력해주세요(단위 없이 숫자만 입력)');
+        sea_east = prompt('동해 파고를 입력해주세요(단위 없이 숫자만 입력)');
+        sea_west = prompt('서해 파고를 입력해주세요(단위 없이 숫자만 입력)');
+
+        document.write('내일 날씨 예보입니다.','<br>');
+        document.write(day, '요일인 ', date, '의 아침 최저 기온은 ', t_min ,'도, 낮 최고 기온은 ', t_max,'도로 예보됐습니다.' , '<br>');
+        document.write('비올 확률은 ',rain,'&#37;이고, 미세먼지는 ', dust,' 수준일 것으로 예상됩니다.','<br>'); 
+        document.write('일출 시간은 ',s_rise,'이고, 일몰 시간은 ', s_set,'입니다.','<br>');
+        document.write('바다의 물결은 남해 앞바다 ',sea_south,'m, 동해 앞바다 ',sea_east,'m, 서해 앞바다 ', sea_west,'m 높이로 일겠습니다.','<br>');
+        document.write('지금까지 ' ,date,' ',day,'요일 날씨 예보였습니다.','<br>');
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

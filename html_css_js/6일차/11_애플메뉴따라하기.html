@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .nav {
+            width: 1000px;
+        }
+
+        .nav .gnb {
+            font-size: 0;
+        }
+
+        .nav .gnb li {
+            display: inline-block;
+            /* width: 103px;
+            height: 37px;
+            border: 1px solid #000; */
+        }
+
+        .nav .gnb li a {
+            display: block;
+            width: 103px;
+            height: 37px;
+            
+            font-size: 16px;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-image: url(images/nav.png);
+            /* 접근성 */
+            text-indent: -9999em;
+            overflow: hidden;
+        }
+        .nav .gnb li:nth-child(1) a {}
+        .nav .gnb li:nth-child(2) a {
+            background-position: -103px 0;
+        }
+        .nav .gnb li:nth-child(3) a {
+            background-position: -206px 0;
+        }
+        .nav .gnb li:nth-child(4) a {
+            background-position: -309px 0;
+        }
+        
+        /* :hover - 마우스 올렸을때 (많이 사용)
+        :모든태그 사용가능 */
+        .nav .gnb li a:hover {
+            background-position-y: -38px;
+        }
+
+        /* 눌렀을때 - 중요하지 않음 */
+        .nav .gnb li a:active {
+            background-position-y: -76px; 
+        }
+    
+    </style>
+</head>
+
+<body>
+    <!-- gnb = global navigation bar -->
+    <!-- nav.nav>ul.gnb>li*8>a[href="#"] -->
+    <nav class="nav">
+        <ul class="gnb">
+            <li>
+                <a href="#">홈</a>
+            </li>
+            <li>
+                <a href="#">Store</a>
+            </li>
+            <li><a href="#">Mac</a></li>
+            <li><a href="#">iPod</a></li>
+            <li><a href="#">iPhone</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">iTunes</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+    </nav>
+
+
+    <pre>
+        ------------------
+
+        스프라이트(sprite) 배경 이미지 적용
+        수업용
+    </pre>
+</body>
+
+</html>

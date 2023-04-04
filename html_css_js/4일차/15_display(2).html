@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .list {
+            font-size: 0; /* 박스사이즈 초기화*/
+
+            margin: 30px;
+            width: 600px;
+        }
+        .list li {
+            display: inline-block;
+            
+
+            width: 150px;
+            height: 150px;
+            border: 3px solid #000;
+
+            border-right: none; 
+            /* 겹치는 부분 제거하기 1 */
+
+            text-align: center;
+            line-height: 150px;
+
+            
+        }
+        .list li strong {
+            border: 1px solid red;
+            font-size: 16px;
+            
+        }
+        .list .last {
+            border-right: 3px solid #000; 
+            /* 마지막 오른쪽 생성 2 */
+        }
+    </style>
+</head>
+<body>
+    <!-- ul.list>li*3>strong{타이틀$} -->
+    <ul class="list">
+        <li><strong>타이틀1</strong></li>
+        <li><strong>타이틀2</strong></li>
+        <li class="last"><strong>타이틀3</strong></li>
+    </ul>
+
+    <pre>
+        
+        
+        <hr>
+
+        ######################## display : inline-block ########################
+
+        <hr>
+        
+        1. 인라인처럼 옆으로 나열
+        2. 블럭처럼 너비/높이/패딩/마진 사용가능
+        3. 사이간격 없애기
+            부모의 font-size:0 초기화 해주고
+            자신의 폰트 크기 변경
+
+    </pre>
+</body>
+</html>

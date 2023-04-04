@@ -1,0 +1,16 @@
+.box {
+    width: 600px;
+    background-color: #dadada;
+    margin: auto;
+    padding: 26px 21px;
+    box-sizing: border-box;
+}
+.box h3 {
+    font-size: 32px;
+    margin-bottom: 19px;
+    letter-spacing: 7px;
+    font-weight: 600;
+}
+.box p {
+    font-size: 20px;
+}

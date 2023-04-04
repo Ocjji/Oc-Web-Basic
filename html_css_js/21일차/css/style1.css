@@ -1,0 +1,109 @@
+#wrap {
+	width: 100%;
+	min-width: 1600px;
+}
+
+.inner {
+	width: 1100px;
+	margin: auto; position: relative; 
+	box-sizing: border-box;
+}
+
+#header {width: 100%; background: #EEE;}
+
+#header .inner {height: 150px; background: #DDD;}
+
+#subVisual {width: 100%; height: 350px; background-repeat: no-repeat;background-position: 50% 50%; background-size: cover; background-image: url(../images/cat5.jpg); display: flex; justify-content: center;}
+
+#subVisual h2 {font-size: 50px; color: #FFF;}
+
+#container {}
+
+#content {}
+
+/* 페이지명 bbs */
+.bbs {}
+.bbs .inner {padding: 100px 0;}
+
+.bbs h2 {font-size: 30px; color: rgb(9, 69, 115); position: relative; line-height: 30px;
+padding-left: 20px; margin-top: 45px;}
+.bbs h2::after{
+	content: "";
+
+	width: 4px;
+	height: 30px;
+	display: block;
+	background: rgb(9, 69, 115);
+	position: absolute; left: 0; top: 46%; transform: translateY(-50%);
+}
+
+.bbs h3 {font-size: 22px; color: rgb(60, 115, 196);
+	margin-bottom: 5px; margin-top: 25px;}
+
+.bbs .tb {width: 100%;}
+
+.bbs .tb1 .w1{width: 250px;}
+.bbs .tb1 .w2{}
+.bbs .tb1 .w3{width: 220px;}
+
+.bbs .tb thead {}
+.bbs .tb thead tr th {background: rgb(241,242,248); border-top: 3px solid rgb(9, 69, 115); border-right: 1px solid rgb(221, 221, 221); font-size: 18px; font-weight: 600; padding: 8px 0;}
+.bbs .tb thead tr th:last-child {
+	border-right: none; 
+} 
+.bbs .tb tbody {}
+.bbs .tb tbody tr {}
+.bbs .tb tbody tr td {border: 1px solid rgb(221, 221, 221);
+font-size: 14px; padding: 8px 0;}
+.bbs .tb tbody tr td:first-child {
+	border-left: none;
+	background: rgb(250, 250, 250);
+	font-weight: 600;
+	font-size: 16px;
+	text-indent: 25px;
+}
+.bbs .tb tbody tr td:last-child {
+	border-right: none;
+	text-align: center;
+	text-indent: 0;
+}
+
+.bbs .tb1 tbody tr:last-child td:first-child {
+	text-align: center;
+}
+.bbs .tb1 tbody tr td {
+	text-indent: 15px;
+}
+
+.bbs .tb2 .w1{width: 110px;}
+.bbs .tb2 .w2{}
+
+
+.bbs .tb2 tbody tr td:first-child {
+	text-align: center;
+	text-indent: 0;
+}
+.bbs .tb2 tbody tr td:last-child {
+	text-indent: 15px;
+}
+.bbs .tb2 tbody tr td:last-child {text-align: left;}
+.bbs p {
+	padding: 12px 0;
+}
+.bbs ul {
+	padding-top: 30px;
+}
+.bbs ul li {position: relative; padding-left: 14px; font-size: 14px;}
+.bbs ul li::after {
+	content: "";
+
+	display: block;
+	width: 4px;
+	height: 4px;
+	background: #000;
+	border-radius: 50%;
+
+	position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+}
+#footer {background: #EEE;}
+#footer .inner { height: 300px; background: #DDD;}

@@ -1,0 +1,50 @@
+.box {
+    width: 480px;
+    height: 330px;
+    padding: 45px 30px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    
+    background: url(/01_html_css/7일차_ex/images/icon_2.png) no-repeat;
+    background-position: 360px 45px;
+    background-color: #eeeeee;
+
+    /* background-position: right 25px top 30px; */
+    
+}
+.box span {
+    font-size: 15px; font-weight: 800; color: #c5c5c5;
+}
+.box h3 {
+    font-size: 24px;
+    line-height: 24px;
+    padding-bottom: 20px; 
+    font-weight: 500;
+}
+.box strong {
+    display: block;
+    font-size: 18px; padding-bottom: 30px;
+    font-weight: 500;
+}
+.box ul {}
+.box ul li {
+    font-size: 15px;
+    color: #949494;
+    font-weight: 300;
+    text-indent: 5px;
+    
+
+    display: flex;
+    
+    align-items: center;
+}
+.box ul li::before {
+    content: "";
+    
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: red;
+    border-radius: 50%;
+    
+}

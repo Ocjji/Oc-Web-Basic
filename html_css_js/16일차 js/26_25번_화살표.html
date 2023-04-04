@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+        
+        const make = (x, y, callback) => {
+            const result = callback(x, y);
+            document.write(`두수의 결과 : ${result}<br>`);
+        }
+        
+        make(10, 20, function(a, b) {
+            return a + b;
+        });
+
+        make(50, 15 , function(a ,b) {
+            return a - b;
+        });
+
+        const mul = (a, b) => a * b;
+        const div = (a, b) => parseInt(a / b);
+        const mod = (a, b) => a % b;
+
+        make(4, 3, mul);
+        make(17, 5, div);
+        make(12, 5, mod);
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

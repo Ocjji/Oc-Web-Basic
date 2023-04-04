@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+
+    <script>
+        'use strict';
+
+        const id = 'ezen';
+        const pw = '1234';
+        
+
+        let userid;
+        let userpw;
+        let count = 0;
+        
+        while (1) {
+            if (count > 4) {
+                alert('은행에 문의하세요');
+                break;
+            } else {
+                userid = prompt('ID 입력하세요');
+                userpw = prompt('PW 입력하세요');
+                if (id === userid && pw === userpw) {
+                    alert('로그인 성공');
+                    break;
+                } else {
+                    alert('로그인 실패');
+                    count++;
+                }
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

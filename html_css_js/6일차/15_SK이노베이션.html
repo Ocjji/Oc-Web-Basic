@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        p {
+            margin: 20px;
+        }
+
+        p span {
+            font-size: 20px;
+            margin: 10px;
+            color: black;
+            font-weight: 600;
+        }
+        
+        p span::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 15px;
+            background: peru;
+            
+            margin-right: 15px;
+        }
+
+        p span:first-child::before {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <p>
+        <span>대표이사 김준</span>
+        <span>사업자등록번호 101-86-32319</span>
+        <span>전화 02-2121-5114</span>
+    </p>
+
+    <pre>
+        ------------------
+
+    </pre>
+</body>
+</html>

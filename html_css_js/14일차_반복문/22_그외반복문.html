@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+
+        let arr = ['보라돌이','뚜비','나나','뽀'];
+
+        for( let i = 0; i < arr.length; i++ ) {
+            document.write( arr[i] , '&nbsp;');
+        }
+        document.write('<br>');
+
+        for( let item of arr ) {
+            document.write( item , '&nbsp;');
+        }
+        document.write('<br>');
+
+        for( let key in arr) {
+            document.write( key, '번째:', arr[key], '&nbsp;');
+        }
+        document.write('<br>');
+    </script>
+
+</head>
+<body>
+    <pre>
+
+
+       
+    </pre>
+</body>
+</html>

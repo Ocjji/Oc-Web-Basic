@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    
+    <style>
+        .box { margin: 10px;}
+        .box div {
+            width: 80px;height: 80px;font-size: 40px; text-align: center;
+            line-height: 2; background: tan; margin-bottom: 10px;
+            position: relative;
+        }
+        .box div:nth-child(1) {
+            /* transform: translateX(100px); */
+            /* transform: translateY(-50px); */
+            /* transform: translate(200px, 10px); */ /* position: relative; 와 비슷하다 */
+            background: mediumaquamarine;
+            transform: translate(-50%, -50%);
+        }
+        .box div:nth-child(2) {
+            transform: translate(200%,100%);
+        }
+        .box div:nth-child(3) {
+            left: 400px;
+            transform: scale(4,3); /* 4배, 3배 */
+            transform: scaleX(4);
+        }
+        .box div:nth-child(4) {
+            left: 100px;
+            background: violet;
+            transform: rotate(-45deg);
+        }
+        .box div:nth-child(5) {
+            font-size: 80px;
+            line-height: 80px;
+            font-weight: 700;
+            color: aqua;
+
+            /* transform: rotateX(180deg); */
+            transform: rotateY(130deg);
+        }
+        .box div:nth-child(6) {
+            transform: skewX(20deg);
+            transform: skewY(20deg);
+        }
+        .box div:nth-child(7) {
+            transform: translateX(200px) rotate(30deg) scaleY(1.5);
+        }
+        .box div:nth-child(8) {}
+        .box div:nth-child(9) {}
+        .box div:nth-child(10) {}
+    </style>    
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+
+
+    <pre>
+
+
+        transform : 
+        
+        위치 : 자기 자신이 기준
+        translate(x,y)
+        translateX(x)
+        translateY(y)
+
+        크기 : 100% - 1배 , 2베
+        자식들도 함께 적용된다
+        scale(너비,높이)
+        scaleX(너비)
+        scaleY(높이)
+
+        회전 : 360도 기준 deg - 양수 / 음수 사용 가능
+        rotate
+        양수                음수
+                위(0)
+        왼(-90)         오(90)
+                아(180)
+
+        rotateX() x축 기준 회전
+        rotateY() y축 기준 회전
+
+        기울기 : 양수 / 음수 가능
+        skew(x,y)
+        skewX(xdeg)
+        skewY(ydeg)
+    </pre>
+</body>
+</html>

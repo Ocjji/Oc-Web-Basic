@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .con-box {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #000;
+            margin: auto;
+        }
+        .con-box h2 {
+            font-size: 40px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .con-box h3 {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .con-box p {
+            line-height: 30px;
+        }
+
+        .con-box p:nth-of-type(1) {
+            background: tan;
+        }
+        .con-box p:nth-of-type(2) {
+            background: thistle;
+        }
+        .con-box p:last-of-type {
+            background: yellowgreen;
+        }
+        .con-box ul li:nth-of-type(odd) {
+            background: burlywood;
+        }
+        .con-box ul li:nth-child(even) {
+            background: skyblue;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- div.con-box>h2{타이틀}+h3{서브타이틀}+p{설명입니다.}*5+ul>li{list$}*5 -->
+    <div class="con-box">
+        <h2>타이틀</h2>
+        <h3>서브타이틀</h3>
+        <p>설명입니다.</p>
+        <p>설명입니다.</p>
+        <p>설명입니다.</p>
+        <p>설명입니다.</p>
+        <p>설명입니다.</p>
+        <ul>
+            <li>list1</li>
+            <li>list2</li>
+            <li>list3</li>
+            <li>list4</li>
+            <li>list5</li>
+        </ul>
+    </div>
+
+    <pre>
+        ------------------
+
+        nth-child() 의 성격
+
+        부모(.con-box)를 기준으로
+            자식을 순서대로 인식한다
+            h2 -> n=1
+            h3 -> n=2
+            p*5 -> n=3~7
+
+        따라서, 반드시 형제 요소가 동일한 경우만 사용한다
+    </pre>
+</body>
+
+</html>

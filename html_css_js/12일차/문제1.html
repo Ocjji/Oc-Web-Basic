@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+
+        let score = 0;
+
+        score = Number(prompt('점수를 입력하세요'));
+
+        if ( score >= 90 ) {
+            alert('기획팀');
+        } else if ( 80 <= score && score < 90 ) {
+            alert('총무팀');
+        } else {
+            alert('영업팀');
+        }
+
+    </script>
+
+</head>
+<body>
+    신입사원의 입사점수를 입력받아 90점이상이면 [기획팀], 80점이상이면 [총무팀],
+    나머지는[영업팀]이라고 경고창에 반환하시오.
+</body>
+</html>

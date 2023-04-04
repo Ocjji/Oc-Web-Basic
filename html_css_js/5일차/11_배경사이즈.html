@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .box {
+            width: 500px;
+            margin: auto;
+        }
+        .box div {
+            width: 600px;
+            height: 450px;
+            border: 1px solid #000;
+            margin-bottom: 50px;
+
+            background-image: url(images/a1.png);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+        }
+        .a1 {
+            /* background-size: 너비 높이; */
+            /* background-size: 300px 300px; */
+            
+            /* background-size: 50% 50%; */
+            /* '%'' 사용시 부모의 사이즈를 사용한다 */
+            
+            background-size: 50%;
+            /* 부모의 사이즈를 따라가고 나머지는 이미지 비율에 맞춰짐 */
+        }
+        .box .a2 {
+            background-size: contain;
+            background-image: url(images/cat0.jpg);
+            /* 
+                contain
+                배경이미지가 너비 또는 높이에 가까운 영역에 맞춰짐
+            */
+        }
+        .a3 {
+            background-size: cover;
+            /* 
+                cover
+                배경이미지가 너비 또는 높이에 먼 영역에 맞춰짐
+                나머지는 같은 비율로 맞춰짐
+            */
+        }
+        .box .a4 {
+            background-image:url(images/bigimg0.png);
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="a1"></div>
+        <div class="a2"></div>
+        <div class="a3"></div>
+        <div class="a4"></div>
+        <div class="a5"></div>
+    </div>
+    <pre>
+        ------------------
+
+        background-size
+        px
+        %
+        cover
+        contain
+
+        ## 배경이미지 작성은
+        1. 반드시 너비 / 높이 (공간이 존재하여야 함)
+        2. 주로 장식용 이미지 처리
+            - 아이콘
+                - 이미지처리
+                - 배경처리 ( 이미지 높이가 다른 경우 )
+            - 비주얼 광고 사진
+
+    </pre>
+</body>
+</html>

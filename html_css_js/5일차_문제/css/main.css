@@ -1,0 +1,36 @@
+#wrap {width: 100%;}
+
+/* 공통부분 */
+.inner {width: 1200px; margin: auto;}
+
+#header {
+    width: 100%;
+    background: #a5a5a5;
+    margin: auto;
+}
+#header .inner {height: 150px;background: #dadada;}
+
+#content {}
+#content .con{width: 100%;}
+#content .con .inner {background: #FFF;
+padding-bottom: 40px;
+box-sizing: border-box;}
+#content .con .inner h2 {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 85px;
+    margin-bottom: 60px;
+}
+#content .con .inner img {margin-bottom: 60px;}
+#content .con .inner h3 {font-size: 30px;margin-bottom: 20px;}
+#content .con .inner p {font-size: 15px;
+margin-bottom: 20px;}
+#content .con .inner .end {margin-bottom: 50px;}
+
+#footer { 
+    width: 100%; 
+    background: #e0e0e0;
+    margin: auto;
+}
+#footer .inner { height: 255px; background-color: #a5a5a5;}

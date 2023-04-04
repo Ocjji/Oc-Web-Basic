@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: tan;
+            margin: 10px;
+            position: relative;
+            cursor: pointer;
+
+            /* transition: 속성 시간 효과 지연시간 */
+            transition: all 1s ease-in-out 0s;
+
+            /* transition-property: width;
+            transition-duration: 1s;
+            transition-timing-function: ease-in;
+            transition-delay: 2s; */
+        }
+
+        div:hover {
+            /* width: 500px;
+            height: 300px; */
+            background: darkolivegreen;
+            transform: rotate(45deg) scale(2) translate(100px, 100px);
+            border-radius: 50%;
+            
+        }
+    </style>    
+</head>
+<body>
+    <div></div>
+</body>
+</html>

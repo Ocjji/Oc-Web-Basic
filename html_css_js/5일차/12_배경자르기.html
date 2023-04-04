@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .box {
+            width: 500px;
+            margin: auto;
+            
+        }
+        .box div {
+            width: 400px;
+            height: 300px;
+            padding: 50px;
+            border: 20px dotted red;
+            margin-bottom: 50px;
+            
+
+            background-image: url(images/cat1.jpg);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+        }
+        .a1 {
+            background-clip: border-box;
+        }
+        .box .a2 {
+            background-clip: content-box;
+        }
+        .a3 {
+            background-clip: padding-box;
+        }
+        .box .a4 {
+            background-origin: border-box;
+        }
+        .a5 {
+            background-origin: content-box;
+        }
+        .a6 {
+            background-origin: padding-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="a1"></div>
+        <div class="a2"></div>
+        <div class="a3"></div>
+        <div class="a4"></div>
+        <div class="a5"></div>
+        <div class="a6"></div>
+    </div>
+    <pre>
+        ------------------
+
+        background-size
+        px
+        %
+        cover
+        contain
+
+        ## 배경이미지 작성은
+        1. 반드시 너비 / 높이 (공간이 존재하여야 함)
+        2. 주로 장식용 이미지 처리
+            - 아이콘
+                - 이미지처리
+                - 배경처리 ( 이미지 높이가 다른 경우 )
+            - 비주얼 광고 사진
+
+    </pre>
+</body>
+</html>

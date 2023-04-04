@@ -1,0 +1,39 @@
+.con-box {
+    width: 960px;
+    height: 440px;
+    background-image: url(../../5일차_ex/images/vision_img01.jpg);
+    
+    padding-top: 50px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+    margin: auto;
+}
+.con-box h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: skyblue;
+    margin-bottom: 30px;
+    
+    
+}
+/* .con-box h2 span {
+    
+    border-bottom: 2px solid skyblue;
+    padding-bottom: 20px;
+} */
+.con-box h2::after {
+    content: "";
+    display: block;
+
+    width: 57px;
+    height: 2px;
+    background: skyblue;
+    
+    margin: 10px auto 0;
+}
+.con-box h3 {
+    font-size: 35px;
+    font-weight: 400;
+}

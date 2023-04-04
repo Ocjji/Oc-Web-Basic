@@ -1,0 +1,60 @@
+.con-box {width: 100%;}
+.con-box .inner {
+    width: 1400px; 
+    padding: 100px 0; 
+    margin: auto; 
+    box-sizing: border-box; 
+    position: relative;
+}
+.con-box .inner h2 {
+    font-size: 50px; 
+    font-weight: 700; 
+    text-align: center;
+    margin-bottom: 70px;
+}
+.con-box .inner .news {
+    display: flex;
+    justify-content: space-between;
+}
+.con-box .inner .news .box {
+    width: 650px;
+}
+.con-box .inner .news .box h3 {
+    font-size: 35px; 
+    padding-bottom: 30px;
+    border-bottom: 2px solid #000;
+}
+.con-box .inner .news .box ul {}
+.con-box .inner .news .box ul li {
+    padding: 35px 25px;
+    border-bottom: 1px dotted #DDD;
+}
+.con-box .inner .news .box ul li strong {
+    display: block;
+    width: 65px;
+    height: 35px;
+    border-radius: 17px;
+    color: #FFF;
+    text-align: center;
+    line-height: 35px;
+    box-sizing: border-box;
+    background: rgb(27, 89, 100);
+}
+.con-box .inner .news .box ul li a {}
+.con-box .inner .news .box ul li a p {
+    font-size: 25px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.con-box .inner .news .box ul li a span {
+    font-size: 14px;
+}
+
+.con-box .inner .news .box1 ul li {
+    display: flex; justify-content: space-between;
+}
+.con-box .inner .news .box1 ul li a {
+    display: block; width: 520px;
+}

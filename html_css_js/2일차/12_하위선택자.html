@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- link:css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+
+        /* div {}
+        div article {}
+        div article h2 {}
+        div article p {}
+
+        div section {}
+        div section h2 {}
+        div section p {} */
+
+        /* div {}
+        div article {}
+        div article h2 { background-color: pink; font-size: 20px; color:black; }
+        div article p {background-color: skyblue; }
+
+        div section {}
+        div section h2 { background-color: lime; font-size: 30px; }
+        div section p { background-color: yellow; } */
+
+        div {}
+        div > article {}
+        div h2 { background-color: pink; font-size: 20px; color:black; }
+        div > article > p {background-color: skyblue; }
+
+        div > section {}
+        div > section > h2 { background-color: lime; font-size: 30px; }
+        div > section > p { background-color: yellow; }
+
+    </style>
+</head>
+<body>
+    <!-- div>article>h2{제목2}+p{연습입니다.}^section>h2{제목2}+p{연습입니다.} -->
+    <div>
+        <article>
+            <h2>제목2</h2>
+            <p>연습입니다.</p>
+        </article>
+        <section>
+            <h2>제목2</h2>
+            <p>연습입니다.</p>
+        </section>
+    </div>
+
+
+
+    <pre>
+        //////////////////////////////////////
+
+        하위 선택자 ( 주소의 개념으로 생각하자 )
+
+        인천 남동구 인주대로 593 엔타스 12층 5호
+        인천 안에 남동구 안에 인주대로 안에 593 안에
+        엔타스 안에 12층 안에 5호
+
+        '안에'는 ' ' 공백처리
+        자식 또는 자손(후손)
+
+        A B C {} : 
+        A 안에 B 자식 or 자손
+
+        > : 자식선택자
+            꼭 필요한 경우에만 작성한다
+            '>' 유지보수도 어렵고, 좋은 방법이 아니다
+        
+
+    </pre>
+
+</body>
+</html>

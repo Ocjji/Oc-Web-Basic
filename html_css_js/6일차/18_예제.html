@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .list {
+            margin: 40px;
+        }
+        .list li {
+            
+            margin-bottom: 10px;
+            
+            border: 1px solid #000;
+
+            
+            
+        }
+        .list li::before {
+            content: "";
+            /* content: url(images/list-style01.gif); */
+            display: inline-block;
+            
+
+            width: 3px;
+            height: 3px;
+            background: red;
+            border-radius: 50%;
+            margin-right: 10px;
+            margin-left: 10px;
+
+            /* vertical-align: 4px; */
+            /* 마진으로 처리 가능 */
+            margin-bottom: 4px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <ul class="list">
+        <li>게시물입니다.</li>
+        <li>게시물입니다.</li>
+        <li>게시물입니다.</li>
+        <li>게시물입니다.</li>
+        <li>게시물입니다.</li>
+        <li>게시물입니다.</li>
+    </ul>
+
+    <pre>
+        ------------------
+
+    </pre>
+</body>
+</html>

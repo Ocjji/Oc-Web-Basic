@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .box {
+            padding: 10px;
+            border: 2px solid blue;
+            /* 방법 1 */
+            /* overflow: hidden; */
+        }
+        /* 방법 2 */
+        .box::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .box div {
+            width: 100px;
+            height: 100px;
+        }
+        .box div:nth-child(1) {
+            background: green;
+            float:left;
+        }
+        .box div:nth-child(2) {
+            background: red;
+            float: left;
+        }
+        .box div:nth-child(3) {
+            background: yellow;
+            float: left;
+        }
+        .box div:nth-child(4) {
+            background: palevioletred;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi atque natus ad cum alias, assumenda ipsum accusantium quas hic praesentium excepturi accusamus fugiat pariatur, quia illo velit commodi ullam quidem.</p>
+
+    <pre>
+        ------------------
+        
+        박스 옆으로 나열
+
+        1. display: inline-block;
+        2. float :15% 정도
+           띄워서 나열
+           나열되는 대상들이 옆으로 따라와 나열된다
+
+           종류
+           left는 띄워서 왼쪽부터 나열 ( 자주 사용 )
+           right는 띄워서 오른쪽부터 나열
+           none는 적용 안함
+
+           해제
+           left : 왼쪽 해제
+           right : 오른쪽 해제
+           both : 둘 다 해제( 자주 사용 )
+
+           * 자식을 띄우면 부모가 자식을 인식하지 못한다 
+
+           해결 
+
+           1. 부모에 overflow:hidden 
+           2. 부모에 ::after { content:""; display:block; clear:both } 
+           주로 .clearfix::after { content:""; display:block; clear:both } 만들고 사용한다 
+
+    </pre>
+</body>
+
+</html>

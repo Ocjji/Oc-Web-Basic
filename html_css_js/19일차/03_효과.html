@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+
+    <style>
+        .list {
+            position: fixed;
+            right: 30px;
+            top: 50px;
+            display: flex;
+        }
+
+        .list li {
+            margin-left: 20px;
+        }
+
+        .list li a {
+            border: 1px solid #DDD;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: block;
+            text-align: center;
+
+            transition: 0.5s;
+        }
+
+        .list:hover li a {
+            transform: scale(0.9) rotate(-15deg);
+            opacity: 0.7;
+        }
+
+        .list li:hover a {
+            transform: scale(1.3) rotate(15deg);
+            color: rebeccapurple;
+            opacity: 1;
+        }
+
+
+        /* .list:hover li {
+            transform: scale(0.9);
+        } */
+
+        .list li a i {
+            font-size: 30px;
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ul.list>li*5>a[href=""]>i[class] -->
+    <ul class="list">
+        <li><a href=""><i class="xi-home"></i></a></li>
+        <li><a href=""><i class="xi-user"></i></a></li>
+        <li><a href=""><i class="xi-mail"></i></a></li>
+        <li><a href=""><i class="xi-heart"></i></a></li>
+        <li><a href=""><i class="xi-help"></i></a></li>
+    </ul>
+</body>
+
+</html>

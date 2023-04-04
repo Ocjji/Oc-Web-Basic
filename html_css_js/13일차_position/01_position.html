@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+   <link rel="stylesheet" href="css/reset.css">
+   <style>
+      div {
+         width: 100px;
+         height: 100px;
+         background: red;
+
+         position: absolute;
+         left: 20%;
+         top: 20%;
+      }
+   </style>
+</head>
+
+<body>
+   <div></div>
+   <pre>
+        position 
+
+        1. static : 기본값 ( 생략됨 )
+
+        2. absolute  : 절대위치
+           단위 : px , %
+                 left / top / right / bottom 
+           부모가 존재하지 않으면 body 
+           document가 기준이된다
+
+        3. relative : 상대위치 
+           자기자신이 기준 
+           left / top 만 사용
+           right /bottom  우리가 생각하는 수치가아님
+
+        4. fixed : 고정 
+           left / top / bottom / right 
+           무조건 body 기준이다 
+              
+        5. sticky : ( javascript로 작업 )
+           특정위치가 되면 고정 
+           top    
+           무조건 body 기준이다        
+    </pre>
+</body>
+
+</html>

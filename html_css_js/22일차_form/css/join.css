@@ -1,0 +1,176 @@
+#wrap {
+    width: 100%;
+    min-width: 1600px;
+}
+
+.inner {
+    width: 990px;
+    margin: auto;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#header {
+    width: 100%;
+    background: #DDD;
+}
+
+#header .inner {
+    height: 150px;
+    background: #BBB;
+}
+
+.join {}
+
+.join .inner {
+    padding: 100px 0;
+}
+
+.join h2 {
+    font-size: 22px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #000;
+}
+
+.join b {
+    display: inline-block;
+    margin: 0 5px;
+    vertical-align: middle;
+    color: red;
+}
+
+.join h2+p {
+    position: absolute;
+    right: 0;
+    top: 110px;
+}
+
+.join table {}
+
+.join table .w1 {
+    width: 160px;
+}
+
+.join table .w2 {
+    width: auto;
+}
+
+.join table .w80 {
+    width: 80px;
+}
+
+.join table .w120 {
+    width: 120px;
+}
+
+.join table .w180 {
+    width: 180px;
+}
+
+.join table .w500 {
+    width: 680px;
+}
+
+.join table tr {}
+
+.join table tr td {
+    padding-bottom: 10px;
+    vertical-align: middle;
+}
+
+.join table tr td button {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+    height: 30px;
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+
+.join table tr:nth-child(3) td,
+.join table tr:nth-child(9) td {
+    border-bottom: 1px solid #DDD;
+}
+
+.join table tr:nth-child(1) td,
+.join table tr:nth-child(4) td {
+    padding-top: 10px;
+}
+
+.join table tr:nth-child(5) td input {
+    margin-right: 10px;
+}
+
+.join table tr:nth-child(10) td {
+    padding: 18px 0;
+    padding-left: 0;
+    border-bottom: 1px solid #DDD;
+    line-height: 1.6;
+    vertical-align: middle;
+}
+
+.join table tr:nth-child(10) td:nth-child(1) {
+    vertical-align: top;
+    line-height: 1.3;
+}
+
+.join table tr:nth-child(10) td input:nth-child(4) {
+    margin-left: 130px;
+}
+
+.join table tr td input[type=text],
+.join table tr td input[type=password] {
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    background: #fafafa;
+    padding: 0 5px;
+}
+
+.join table tr td input[type=checkbox] {
+    width: 13px;
+    height: 13px;
+    margin-left: 0;
+    vertical-align: middle;
+}
+
+
+
+.join table tr td select {
+    width: 200px;
+    height: 30px;
+    padding-left: 5px;
+}
+
+.join table tr td .txt {
+    margin-top: 10px;
+}
+
+.join table tr td em {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.join table+p {
+    text-align: center;
+    margin-bottom: 65px;
+    margin-top: 50px;
+}
+
+.join table+p input {
+    width: 150px;
+    height: 50px;
+    border: 1px solid #000;
+    background: #FFF;
+    font-size: 18px;
+}
+
+.join table+p input:last-child {
+    background: #000;
+    color: #FFF;
+    margin-left: -4px;
+    /* 마크업 작성 단계에서 input태그에 엔터 치지 않고 옆에 나열해서 작성
+        인라인의 성격으로 자동 간격 생성됨
+    */
+}

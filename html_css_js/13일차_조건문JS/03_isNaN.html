@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+
+        let m = prompt('아무거나');
+
+        let output = isNaN( m );
+
+        document.write( m , typeof m , '<br>');
+        document.write(output);
+
+        // 외부 연산자 '+'를 제외한 나머지는 계산을 해준다
+        // 연결 '20' + '30' : 2030
+        // cf)  '20' - '30' : -10
+
+        /* if ( m > 50 ) {
+            document.write('범위');
+        } else {
+            document.write('범위초과');
+        } */
+
+    </script>
+
+</head>
+<body>
+    <pre>
+        isNaN : 숫자, 문자 판별
+        https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/isNaN
+
+        Not a Number
+        숫자, 공백('') : false
+        문자 : true
+    </pre>
+</body>
+</html>

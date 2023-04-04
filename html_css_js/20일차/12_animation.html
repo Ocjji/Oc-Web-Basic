@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+
+    <style>
+        .txt {
+            width: 600px;
+            margin: 50px;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .txt span {
+            display: block;
+            width: 80px;
+            height: 80px;
+            font-size: 80px;
+            line-height: 1;
+            font-weight: 700;
+            text-transform: uppercase;
+            animation: ani 7s linear infinite alternate;
+            color: #FFF;
+        }
+        .txt span:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .txt span:nth-child(2) {animation-delay: 1s;}
+        .txt span:nth-child(3) {animation-delay: 2s;}
+        .txt span:nth-child(4) {animation-delay: 3s;}
+        .txt span:nth-child(5) {animation-delay: 4s;}
+        .txt span:nth-child(6) {animation-delay: 5s;}
+        .txt span:nth-child(7) {animation-delay: 6s;}
+
+        @keyframes ani {
+            0% {color: #EDE7F6}
+
+            10% {color: #D1C4E9}
+
+            20% {color: #B39DDB}
+
+            30% {color: #9575CD}
+
+            40% {color: #7E57C2}
+
+            50% {color: #673AB7}
+
+            60% {color: #5E35B1}
+
+            70% {color: #512DA8}
+
+            80% {color: #4527A0}
+
+            90% {color: #311B92}
+
+            100% {color: #240b94}
+        }
+    </style>
+</head>
+
+<body>
+
+    <p class="txt">
+        <span>p</span>
+        <span>r</span>
+        <span>o</span>
+        <span>j</span>
+        <span>e</span>
+        <span>c</span>
+        <span>t</span>
+    </p>
+
+</body>
+
+</html>

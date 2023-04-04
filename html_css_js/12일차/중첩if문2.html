@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+
+    <script>
+        'use strict';
+
+        let num;
+
+        num = Number(prompt('자연수를 입력해주세요'));
+
+        if ( 0 <= num && num <= 100 && num % 1 === 0 ) {
+            if ( num >= 80 ) {
+                alert('합격');
+            }
+            else {
+                alert('불합격');
+            }
+        } else {
+                alert('0 ~ 100 사이 정수로 다시 입력하세요!');
+        }
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+    <pre>
+        사용자에게 점수를 입력받아 80점이상이면 [합격], 그렇지 않으면 [불합격]이 라고 경고창에 반환하시오.
+        단, 점수가 0~100사이가 아니면 [0~100사이 정수로 다시 입력하세요!]라는 경고창을 띄워주세요.
+    </pre>
+</body>
+
+</html>

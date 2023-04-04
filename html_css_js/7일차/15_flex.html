@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .box {
+            width: 400px;
+            height: 200px;
+            border: 1px solid #000;
+            margin: 20px auto;
+            font-size: 25px;
+            
+            
+        }
+
+        /* 다양한 정 가운데 정렬법 */
+        .box1 {
+            display: block;
+            text-align: center;
+            line-height: 200px;
+        }
+        .box2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box3 {
+            display: block;
+            text-align: center;
+            padding-top: 50px;
+            box-sizing: border-box;
+        }
+        .box4 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box box1">안녕하세요</div>
+    <div class="box box2">
+        <span>안녕하세요</span>
+    </div>
+    <div class="box box3">
+        <span><img src="images/cat0.jpg" alt="고냥이" width="150"></span>
+    </div>
+    <div class="box box4">
+        <span><img src="images/cat0.jpg" alt="고냥이" width="150"></span>
+    </div>
+    <!-- 이미지는 span으로 한번 감싸서 처리하는 것이 좋다 -->
+
+    <pre>
+        ------------------
+
+    </pre>
+</body>
+</html>

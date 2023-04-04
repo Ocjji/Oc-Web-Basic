@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .top-menu {margin: 50px;}
+        .top-menu li {
+            display: inline-block;
+            margin-right: 15px; /* 메뉴끼리 조금씩 간격 */
+        } /*inline-block 사용 */
+        .top-menu li a {}
+        .top-menu li::after {
+            content: "";
+            display: inline-block;
+            width: 3px;
+            height: 10px;
+            background: #999;
+            margin-left: 15px;
+        }
+        .top-menu li:last-child::after {
+            display: none;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <!-- ul.top-menu>li*5>a[href="#"] -->
+    <ul class="top-menu">
+        <li><a href="#">홈</a></li>
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+        <li><a href="#">고객문의</a></li>
+        <li><a href="#">사이트맵</a></li>
+    </ul>
+
+    <pre>
+        ------------------
+
+    </pre>
+</body>
+</html>

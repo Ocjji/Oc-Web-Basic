@@ -1,0 +1,22 @@
+#wrap { width: 100%; }
+#header { width: 100%; background: #eeeeee; margin: auto;}
+#header .inner { width: 1170px; height: 120px; background: #dadada; margin: auto;}
+
+#visual {width: 100%;background-color: skyblue;}
+#visual .inner { width: 1170px; height: 720px; background: rgb(88, 182, 219); margin: auto;}
+
+#content {}
+#content .con1 {width: 100%; background-color: violet; margin: auto;}
+#content .con1 .inner {width: 1170px; height: 90px; margin: auto; background: purple;}
+
+#content .con2 {width: 100%; background-color: rgb(219, 255, 120); margin: auto;}
+#content .con2 .inner {width: 1170px; height: 940px; margin: auto; background: rgb(189, 161, 68);}
+
+#content .con3 {width: 100%; background: #fa9c9c; margin: auto;}
+#content .con3 .inner {width: 1170px; height: 710px; margin: auto; background: #ad5656;}
+
+#content .con4 {width: 100%; background: #3ca84b; margin: auto;}
+#content .con4 .inner {width: 1170px; height: 720px; margin: auto; background: #77ffff;}
+
+#footer {width: 100%; background: #fff2a6; margin: auto;}
+#footer .inner {width: 1170px; height: 320px; margin: auto; background: #e2a784;}

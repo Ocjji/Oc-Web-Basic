@@ -1,0 +1,48 @@
+.con-box {}
+.con-box h2 {
+    text-align: center; font-size: 50px; margin-top: 30px;
+    font-weight: 500;
+}
+.con-box .box {
+    width: 700px; height: 450px; background: #EEE;
+    margin: 50px auto; box-sizing: border-box; padding: 40px 50px;
+}
+.con-box .box h3 {
+    font-size: 35px; font-weight: 600; margin-bottom: 15px;
+}
+.con-box .box ul {}
+.con-box .box ul li {padding: 15px 0; border-bottom: 1px dashed #AAA;}
+.con-box .box ul li:last-child {
+    border-bottom: none;
+}
+.con-box .box ul li a {}
+.con-box .box ul li a strong{
+    display: block; width: 60px; height: 60px;
+    color: #FFF; font-size: 14px; line-height: 1.2;
+    text-align: center; box-sizing: border-box;
+    padding: 14px 15px;
+    background: rgb(39, 158, 179); border-radius: 50%;
+}
+.con-box .box ul li a p {
+    width: 520px; font-size: 18px;
+}
+
+.con-box .con1 {}
+.con-box .con1 ul li a {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.con-box .con2 {}
+.con-box .con2 ul li  {overflow: hidden;}
+.con-box .con2 ul li a {}
+.con-box .con2 ul li a strong {float: left;}
+.con-box .con2 ul li a p {float: right;}
+
+
+.con-box .con3 {}
+.con-box .con3 ul li {}
+.con-box .con3 ul li a {position: relative;}
+.con-box .con3 ul li a strong {position: absolute; left: 0; top: 0;}
+.con-box .con3 ul li a p {margin-left: 80px;}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    
+    <style>
+        .gallery {width: 600px;height: 400px; margin: 40px; position: relative;}
+        .gallery li {position: absolute; left: 0; top: 0;
+            animation: banner 12s infinite linear;
+            opacity: 0;
+        }
+        .gallery li img {}
+
+        @keyframes banner {
+            0%{opacity: 0;}
+            25%{opacity: 1;}
+            50%{opacity: 0;}
+            100%{opacity: 0;}
+        }
+        .gallery li:nth-child(1) {
+            animation-delay: 0;
+        }
+        .gallery li:nth-child(2) {animation-delay: 3s;}
+        .gallery li:nth-child(3) {animation-delay: 6s;}
+        .gallery li:nth-child(4) {animation-delay: 9s;}
+    </style>    
+</head>
+<body>
+    <ul class="gallery">
+        <li><img src="images/cat0.jpg" alt=""></li>
+        <li><img src="images/cat1.jpg" alt=""></li>
+        <li><img src="images/cat2.jpg" alt=""></li>
+        <li><img src="images/cat3.jpg" alt=""></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        
+        'use strict';
+
+        let score = '';
+        
+        score = prompt('등급을 입력하세요 ( A ~ F )');
+
+        switch ( score ) {
+            case 'A' : case 'B' : case 'C' : 
+                alert('합격'); break;
+            case 'D' : case 'E' : 
+                alert('대기'); break;
+            case 'F' : 
+                alert('불합격'); break;
+            default : 
+                alert('더이상 응시 불가');
+        }
+
+
+
+    </script>
+
+</head>
+<body>
+    <pre>
+        A~F입력
+        A, B, C : 합격
+        D, E 대기
+        F: 불합격
+        그외 더이상 응시 불가 출력
+        [ if문 ,switch~case 두가지로 해보기 ]
+    </pre>
+</body>
+</html>

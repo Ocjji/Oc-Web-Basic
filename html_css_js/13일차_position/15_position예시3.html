@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">​
+
+    <style>
+        .nav {margin: 30px; width: 1000px;}
+        .nav .gnb {display: flex;}
+        .nav .gnb li {margin-right: 20px; position: relative;}
+
+        .nav .gnb li:nth-child(3)::before , 
+        .nav .gnb li:nth-child(3)::after {
+            content: "";
+            position: absolute;
+            display: block; width: 12px; height: 12px;
+        }
+        .nav .gnb li:nth-child(3)::before {
+            background: red;
+            right: -10px; top: -5px;
+        }
+
+        .nav .gnb li:nth-child(3)::after {
+            background: blue;
+            right: -18px; top: -15px;
+        }
+        
+
+
+        .nav .gnb li a {font-size: 20px; font-weight: 500;}
+    </style>    
+</head>
+<body>
+
+    <!-- nav.nav>ul.gnb>li*5>a[href="#"]{MainMenu$} -->
+    <nav class="nav">
+        <ul class="gnb">
+            <li><a href="#">MainMenu1</a></li>
+            <li><a href="#">MainMenu2</a></li>
+            <li><a href="#">MainMenu3</a></li>
+            <li><a href="#">MainMenu4</a></li>
+            <li><a href="#">MainMenu5</a></li>
+        </ul>
+    </nav>
+
+    <pre>
+    
+    </pre>
+</body>
+</html>

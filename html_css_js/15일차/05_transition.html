@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    
+    <style>
+        .box {
+            width: 600px; margin: 30px auto;
+            border: 1px solid #000;
+        }
+        .box div {
+            width: 80px; font-size: 14px;
+            padding-right: 15px;
+            background: #999;
+            color: #fff;
+            padding-top: 10px; 
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            text-align: right;
+            cursor: pointer;
+        }
+        .box div:last-child {
+            margin-bottom: 0;
+        }
+        
+        .box div:nth-child(1) {transition: all 1.5s ease;} /* all은 생략가능 */
+        .box div:nth-child(2) {transition: all 1.5s ease-in;} /* all은 생략가능 */
+        .box div:nth-child(3) {transition: all 1.5s ease-out;} /* all은 생략가능 */
+        .box div:nth-child(4) {transition: all 1.5s ease-in-out;} /* all은 생략가능 */
+        .box div:nth-child(5) {transition: all 1.5s linear;} /* all은 생략가능 */
+        .box div:nth-child(6) {transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);} /* all은 생략가능 */
+        
+        .box:hover div:nth-child(1) ,
+        .box:hover div:nth-child(2) ,
+        .box:hover div:nth-child(3) ,
+        .box:hover div:nth-child(4) ,
+        .box:hover div:nth-child(5) ,
+        .box:hover div:nth-child(6) {background: tan; width: 550px;}
+
+        /* 또는 */
+
+        /* .box:hover div {background: tan; width: 550px;} */
+        
+    </style>    
+</head>
+<body>
+    <div class="box">
+        <div>ease</div>
+        <div>ease-in</div>
+        <div>ease-out</div>
+        <div>ease-in-out</div>
+        <div>linear</div>
+        <div>cubic-bezier</div>
+    </div>
+
+    <pre>
+
+        !!! 실제 움직이는 대상에 호버를 하지 않는 것이 좋다 !!!
+
+        움직이는 대상, 효과를 넣어야하는 대상에 hover 할 수는 있지만(10%),
+        대상의 부모 또는 상황에 따라 그의 부모에 호버하고 그안에 실제 대상이 움직이도록(효과)기 적용되게 만들기
+    </pre>
+</body>
+</html>

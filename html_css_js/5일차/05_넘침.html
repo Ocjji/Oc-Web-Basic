@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .con-box {
+            width: 600px;
+            margin: auto;
+        }
+        .con-box .box {
+            width: 200px;
+            height: 150px;
+            border: 1px solid #000;
+            display: inline-block;
+            margin: 15px;
+        }
+        .con-box .box1 {
+            overflow: visible;
+        }
+        .con-box .box2 {
+            overflow: hidden;
+        }
+        .con-box .box3 {
+            overflow: scroll;
+        }
+        .con-box .box4 {
+            overflow: auto;
+        }
+        .con-box .box5 {
+            /* overflow-x: visible; */
+            overflow-x: hidden;
+        }
+        .con-box .box6 {}
+    </style>
+</head>
+<body>
+     <div class="con-box">
+        <box class="box box1">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam tempore fugit error minima perferendis sequi temporibus iste est reprehenderit animi porro reiciendis eos, asperiores, expedita molestiae rerum quas cumque voluptate.
+        </box>
+        <box class="box box2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam tempore fugit error minima perferendis sequi temporibus iste est reprehenderit animi porro reiciendis eos, asperiores, expedita molestiae rerum quas cumque voluptate.
+        </box>
+        <box class="box box3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, consequatur. Dignissimos, commodi obcaecati nulla cumque sint accusantium, nisi facere saepe quidem voluptatem quisquam eius quae! Doloremque quas deserunt repellendus qui.
+        </box>
+        <box class="box box4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quasi quisquam dolorum eius nostrum molestiae blanditiis, reiciendis ipsum, qui libero ullam deserunt harum, rerum consequatur hic eligendi reprehenderit. Sequi, et.
+        </box>
+        <box class="box box5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quasi quisquam dolorum eius nostrum molestiae blanditiis, reiciendis ipsum, qui libero ullam deserunt harum, rerum consequatur hic eligendi reprehenderit. Sequi, et.
+        </box>
+        <box class="box box6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quasi quisquam dolorum eius nostrum molestiae blanditiis, reiciendis ipsum, qui libero ullam deserunt harum, rerum consequatur hic eligendi reprehenderit. Sequi, et.
+        </box>
+     </div>
+    <pre>
+        ------------------
+        overflow - 텍스트가 박스 영역을 넘어갔을 때 처리하는 방법
+
+        overflow : 
+        visible : 기본값
+        hidden : ** 영역까지만 보이기
+        scroll : 스크롤
+        auto : 회원가입 약관에 주로 사용
+
+        overflow-x / overflow-y
+    </pre>
+</body>
+</html>

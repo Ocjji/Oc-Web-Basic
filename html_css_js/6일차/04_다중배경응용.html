@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .list { margin: 20px; width: 1000px; }
+        .list li { padding: 20px 30px; border: 1px solid #000; display: inline-block;
+        
+        background: 
+            url(images/slidingBg2.png) 0 0 no-repeat, /*지상 2층*/
+            url(images/slidingBg3.png) right 0 no-repeat, /*지상 1층*/
+            url(images/slidingBg1.png) 0 0 repeat-x; /*지하*/
+
+            /* 아래 쓸수록 아래 layer에 들어가는 개념 */
+            /* 잘 사용하진 않음 다중배경 자체가 */
+        }
+    </style>
+</head>
+<body>
+    <!-- ul.list>li{MainMenu$}*5 -->
+    <ul class="list">
+        <li>About Me</li>
+        <li>Profile</li>
+        <li>Developer</li>
+        <li>Study</li>
+        <li>ETC.</li>
+    </ul>
+    <pre>
+        ------------------
+
+    </pre>
+</body>
+</html>

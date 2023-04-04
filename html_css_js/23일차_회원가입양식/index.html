@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/join.css">
+</head>
+
+<body>
+    <p id="skipNav">
+        <a href="#content" class="wrap">본문바로가기</a>
+    </p>
+    <div id="wrap">
+        <header id="header">
+            <div class="inner">
+                <h1><a href="index.html"><img src="https://via.placeholder.com/100x50" alt="가상이미지"></a></h1>
+
+                <!-- ul.top-menu>li*3>a[href="#"] -->
+                <ul class="top-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">email</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Join</a></li>
+                </ul>
+
+                <!-- nav.nav>ul.gnb>li*4>a[href="#"] -->
+                <nav class="nav">
+                    <ul class="gnb">
+                        <li><a href="#">MainMenu1</a></li>
+                        <li><a href="#">MainMenu2</a></li>
+                        <li><a href="#">MainMenu3</a></li>
+                        <li><a href="#">MainMenu4</a></li>
+                        <li><a href="#">MainMenu5</a></li>
+                        <li><a href="#">MainMenu6</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section id="subVisual"></section>
+
+        <main id="container" class="bbs">
+            <section id="content">
+                <div class="inner">
+                    <h2>회원가입 정보입력</h2>
+
+                    <div class="flow">
+                        <div><img src="images/member_bg1.png" alt="약관동의"></div>
+                        <div></div>
+                        <div><img src="images/member_bg2.png" alt="인증"></div>
+                        <div></div>
+                        <div><img src="images/member_bg3on.png" alt="정보입력"></div>
+                        <div></div>
+                        <div><img src="images/member_bg4.png" alt="가입완료"></div>
+                    </div>
+
+                    <h3>정보입력</h3>
+
+                    <h4>회원 상세 정보 입력</h4>
+                    <span>(
+                        <em>*</em>는 필수 입력정보)
+                    </span>
+
+                    <form action="#" method="post" name="form" target="_blank">
+                        <fieldset>
+                            <legend>회원정보입력</legend>
+                            <table>
+                                <colgroup>
+                                    <col class="w1">
+                                    <col class="w2">
+                                </colgroup>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label for="userName">성명</label><b>*</b>
+                                        </td>
+                                        <td>
+                                            <input type="text" id="userName" placeholder="ex)홍길동" required class="w145">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="userDate">생년월일</label><b>*</b></td>
+                                        <td><input type="text" id="userDate" placeholder="2022.03.16" required
+                                                class="w145">
+                                            <input type="radio" name="sunmoon" id="sun" checked>
+                                            <label for="sun">양력</label>
+
+                                            <input type="radio" name="sunmoon" id="moon">
+                                            <label for="moon">음력</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>성별</label><b>*</b></td>
+                                        <td>
+                                            <input type="radio" name="gen" id="gen1" checked>
+                                            <label for="gen1">남자</label>
+
+                                            <input type="radio" name="gen" id="gen2">
+                                            <label for="gen2">여자</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="userId">아이디</label><b>*</b></td>
+                                        <td><input type="text" id="userId" placeholder="아이디" required
+                                                class="w180"><button class="w140"><img src="images/yes_btn.gif" alt="">중복확인</button><span>8~16자리를 입력해야
+                                                합니다.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="userPwd1">비밀번호</label><b>*</b></td>
+                                        <td><input type="password" id="userPwd1" placeholder="비밀번호" required
+                                                class="w340">
+                                                <span>&nbsp영문대소문자, 숫자, 특수문자( ~!#()-_+ )만 사용가능합니다.</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="userPwd2">비밀번호확인</label><b>*</b></td>
+                                        <td><input type="password" id="userPwd2" placeholder="비밀번호 재입력" required
+                                                class="w340"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="userAdd">주소</label><b>*</b></td>
+                                        <td>
+                                            <input type="text" id="userAdd" placeholder="우편번호" class="w140"><button
+                                                class="w160"><img src="images/postal-no-btn.gif" alt="">우편번호찾기</button>
+                                            <p class="normalAdd">
+                                                <input type="text" placeholder="기본주소" class="w1030">
+                                            </p>
+                                            <p class="detailAdd">
+                                                <input type="text" placeholder="상세주소" class="w1030">
+                                            </p>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="userTel">연락처</label><b>*</b></td>
+                                        <td>
+                                            <select id="tel" title="국번입력" class="w145">
+                                                <option value="010">010</option>
+                                                <option value="011">011</option>
+                                                <option value="017">017</option>
+                                            </select>
+                                            <input type="text" placeholder="0000" class="w145">
+                                            <input type="text" placeholder="0000" class="w145">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="userEmail">이메일</label><b>*</b></td>
+                                        <td>
+                                            <input type="text" id="userEmail" placeholder="xxxx@naver.com" class="w450"
+                                                required>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>이메일 수신여부</td>
+                                        <td>
+                                            <input type="radio" name="emailAD" id="eAD1" checked>
+                                            <label for="eAD1">예</label>
+
+                                            <input type="radio" name="emailAD" id="eAD2">
+                                            <label for="eAD2">아니오</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>SNS 수신여부</td>
+                                        <td>
+                                            <input type="radio" name="snsAD" id="snsAD1" checked>
+                                            <label for="snsAD1">예</label>
+
+                                            <input type="radio" name="snsAD" id="snsAD2">
+                                            <label for="snsAD2">아니오</label>
+
+                                            <strong class="ball">개인정보보호법 제22조 제3항에 따라 &lt;마케팅 활용에 관한 동의&gt;를 받고자
+                                                합니다.</strong>
+                                            <ul>
+                                                <li>1. 수집목적 : 예술의전당 기획공연, 이벤트, 할인안내 동의 다양한 정보 제공</li>
+                                                <li>2. 보유기간 : 개인정보 보유기간 만료시까지, 동의 유지기간 동안.</li>
+                                                <li>3. 이용항목 : 휴대폰 번호, 이메일 주소 (동의사항에 한함)</li>
+                                                <li>4. 동의거부시 불이익 : 고객은 동의를 거부할 권리가 있으며, 동의하지 않으실 경우 수집목적에 따른 이벤트 할인안내 등의
+                                                    정보를 제공받을 수 없습니다.</li>
+                                            </ul>
+
+                                            <strong class="ball">유료멤버십 골드, 블루, 그린회원에 가입하실 때 SMS 수신 동의시 주요공연의 티켓오픈일자와
+                                                할인정보를 보내드립니다.</strong>
+                                            <strong>회원정보, 예매, 결제정보 및 서비스 중 정책 관련 내용은 수신동의 여부와 관계없이 발송됩니다.</strong>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h3 class="level">회원등급 가입</h3>
+
+                            <table>
+                                <colgroup>
+                                    <col class="w1">
+                                    <col class="w2">
+                                </colgroup>
+
+                                <tbody>
+                                    <tr>
+                                        <td>무료회원</td>
+                                        <td>
+                                            <select id="premium" title="유료/무료 회원결정" class="w270">
+                                                <option value="무료회원">무료회원</option>
+                                                <option value="유료회원">유료회원</option>
+                                            </select>
+                                            <p class="decision">유효기간:평생/금액무료</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+<p class="more">
+                            <em>* 유료회원(골드/블루) 가입 시 회원카드와 회원물품은 입력하신 주소지로 자동배송 됩니다. (1~2주 이내)</em>
+                            <em>* 유니온페이 제휴회원 가입은 예술의전당 고객센터(02-580-1300)에서만 가능합니다.</em>
+</p>
+                            <p class="final">
+                                <input type="submit" value="가입하기">
+                                <input type="reset" value="취소하기">
+                            </p>
+
+                        </fieldset>
+                    </form>
+
+                </div>
+            </section>
+        </main>
+
+
+        <footer id="footer">
+            <div class="inner">
+                <h1><a href="index.html"><img src="https://via.placeholder.com/100x50" alt="가상이미지"></a></h1>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

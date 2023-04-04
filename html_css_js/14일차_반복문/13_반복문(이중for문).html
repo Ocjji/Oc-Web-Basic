@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+
+        for ( let i = 0; i < 4; i++ ) {
+            for( let j = 0; j < 4; j++ ) {
+                document.write('i : ' , i , ' / ', 'j : ' , j, '<br>' );
+            }
+            document.write('<br>');
+        }
+    </script>
+
+</head>
+<body>
+    <pre>
+        
+        이중 for문 : '배열'(이차원배열)과 연결해서 많이 사용
+        
+        for ( 초기값; 조건식; 증감식 ) {
+            for ( 초기값; 조건식; 증감식 ) {
+                실행문;
+            }
+        }
+
+        for ( 초기값; 조건식; 증감식 ) {
+            실행문;
+            for ( 초기값; 조건식; 증감식 ) {
+                실행문;
+            }
+        }
+
+        i : 행
+        j : 열
+
+        for ( let i = 0; i < 4; i++ ) {
+            for( let j = 0; j < 4; j++ ) {
+                document.write('i : ' , i , ' / ', 'j : ' , j, '<br>' );
+            }
+        }
+
+        결과)
+
+        i : 0 / j : 0
+        i : 0 / j : 1
+        i : 0 / j : 2
+        i : 0 / j : 3
+
+        i : 1 / j : 0
+        i : 1 / j : 1
+        i : 1 / j : 2
+        i : 1 / j : 3
+
+        i : 2 / j : 0
+        i : 2 / j : 1
+        i : 2 / j : 2
+        i : 2 / j : 3
+
+        i : 3 / j : 0
+        i : 3 / j : 1
+        i : 3 / j : 2
+        i : 3 / j : 3
+
+    </pre>
+</body>
+</html>

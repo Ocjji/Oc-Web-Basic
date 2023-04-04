@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .box {
+            margin: 30px;
+        }
+
+        .box input[type=radio] {
+            position: absolute;
+            left: -99999px;
+            top: 0;
+        }
+
+        .box label {
+            display: inline-block;
+            margin-right: 40px;
+            padding-left: 30px;
+            height: 30px;
+            line-height: 30px;
+            position: relative;
+        }
+
+        .box label::before {
+            content: "";
+
+            display: block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .box input[type=radio]:checked+label::before {
+            content: "";
+
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-image: url(images/ico-formselect-arrow.png);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: 60%;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="box">
+        <input type="radio" name="rad" id="rad1">
+        <label for="rad1">1학년</label>
+
+        <input type="radio" name="rad" id="rad2">
+        <label for="rad2">2학년</label>
+
+        <input type="radio" name="rad" id="rad3">
+        <label for="rad3">3학년</label>
+    </p>
+</body>
+
+</html>

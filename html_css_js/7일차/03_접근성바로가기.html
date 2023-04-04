@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    
+    <p>
+        <a href="content">본문바로가기</a>
+    </p>
+
+    <ul>
+        <li><a href="#gnb">메뉴바로가기</a></li>
+        <li><a href="#content">본문바로가기</a></li>
+    </ul>
+
+    <!-- dl>dt{바로가기}+dd>a[href="nav"]{메뉴바로가기}^dd>a[href="content"]{본문바로가기} -->
+    <dl>
+        <dt>바로가기</dt>
+        <dd><a href="nav">메뉴바로가기</a></dd>
+        <dd><a href="content">본문바로가기</a></dd>
+    </dl>
+
+    <h2>찾아가는 대상</h2>
+    <nav class="nav">
+        <ul id="gnb">
+
+        </ul>
+    </nav>
+
+    <!-- main#content.pagename>section -->
+    <main id="content" class="pagename">
+        <section>
+
+        </section>
+    </main>
+
+    <!-- main#container.pagename>section#content -->
+    <main id="container" class="pagename">
+        <section id="content">
+
+        </section>
+    </main>
+
+    <!-- 서울사이버대학교 예시 -->
+    <!-- main#container.pagename>aside#sideBar{왼쪽영역}+section#content{실제 본문} -->
+    <main id="container" class="pagename">
+        <aside id="sideBar">왼쪽영역</aside>
+        <section id="content">실제 본문</section>
+    </main>
+
+    <pre>
+        ------------------
+
+        장애인 사용자의 편의를 위해 필수적인 기능
+
+
+    </pre>
+</body>
+</html>

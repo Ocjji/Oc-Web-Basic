@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        // let title = '신상명세서'
+        // , name = '김태리'
+        // , age = 60
+        // , addr = '인천광역시'
+        // , tel = '010-1234-5678';
+        // let은 한번 선언 후, 변수 = 값으로 나열하여 선언가능
+        
+        
+        // 선언은 한번에 하고, 값을 할당하는 방법 (자주사용)
+        // let title , name , age , addr , tel; 
+        
+        let title = '' , name = '' , age = 0 , addr = '' , tel = '';
+        // 처리속도 향상을 위해 초기값 할당
+
+        console.log(title);
+        // undefined - 값이 존재하지 않는다(자동)
+
+        title = '신상명세서';
+        name = '김태리';
+        age = 60;
+        addr = '인천광역시';
+        tel = '010-1234-5678';
+
+
+        /* let title = '신상명세서';
+        let name = '김태리';
+        let age = 60;
+        let addr = '인천광역시';
+        let tel = '010-1234-5678'; */
+
+
+        // document.write('<h2>title</h2>'); error
+
+        // 서로 다른 성격을 연결 +
+        document.write('<h2>'+title+'</h2>');
+        document.write('<p>이름 : '+name+'</p>');
+        document.write('<p>나이 : '+age+'</p>');
+        document.write('<p>주소 : '+addr+'</p>');
+        document.write('<p>전화 : '+tel+'</p>');
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

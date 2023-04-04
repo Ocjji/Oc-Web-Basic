@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .box {
+            border: 1px solid #000;
+        }
+        .box p {
+            width: 300px;
+            margin: 30px;
+            border: 1px solid red;
+        }
+        .box p strong {
+            background: yellow;
+        }
+        .box p:nth-child(1) img {
+            vertical-align: top;
+        }
+        .box p:nth-child(1) strong {}
+        .box p:nth-child(2) img {
+            vertical-align: middle;
+        }
+        .box p:nth-child(2) strong {}
+        .box p:nth-child(3) img {
+            vertical-align: bottom;
+        }
+        .box p:nth-child(3) strong {}
+        .box p:nth-child(4) img {
+            vertical-align: -300%;
+        }
+        .box p:nth-child(4) strong {}
+    </style>
+</head>
+<body>
+    <!-- div.box>p*4>img[src=images/a1.png]+strong{test} -->
+    <div class="box">
+        <p><img src="images/a1.png" alt=""><strong>test</strong></p>
+        <p><img src="images/a1.png" alt=""><strong>test</strong></p>
+        <p><img src="images/a1.png" alt=""><strong>test</strong></p>
+        <p><img src="images/a1.png" alt=""><strong>test</strong></p>
+    </div>
+    
+    <pre>
+        ------------------
+
+        vertical-align : 수직 가운데 정렬
+        인라인 또는 인라인블럭만 사용가능
+        (a, span, em, strong, b, i, input, button, img)
+        
+        주로 폼요소의 요소들이 틀어지는 것을 해결하기 위함
+        이미지의 오차해결
+
+        예외)
+        테이블 요소의 th, td의 수직가운데 정렬처리
+
+
+        vertical-align: middle;
+        vertical-align: top;
+        vertical-align: bottom;
+        vertical-align: 수치px, % ;
+    </pre>
+</body>
+</html>

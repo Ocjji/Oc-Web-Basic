@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .nav {margin: 50px;}
+        .nav .gnb {}
+        .nav .gnb li { margin-right: 50px; display: inline-block; }
+        .nav .gnb li a {
+            font-size: 25px;
+            vertical-align: middle;
+        }
+        .nav .gnb li::after {
+            content: "";
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: blue;
+            margin-left: 10px;
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- nav.nav>ul.gnb>li*2>a[href="#"] -->
+    <nav class="nav">
+        <ul class="gnb">
+            <li><a href="#">대학생활</a></li>
+            <li><a href="#">대학원</a></li>
+        </ul>
+    </nav>
+
+
+    <pre>
+        ------------------
+
+    </pre>
+</body>
+</html>

@@ -1,0 +1,53 @@
+.box {
+    width: 310px;
+    height: 405px;
+    margin: 30px auto;
+    background-color: #dadada;
+    padding: 22px 25px;
+    box-sizing: border-box;
+}
+
+
+.box1 {}
+.box1 a {}
+.box1 img {
+    margin-bottom: 14px;
+}
+.box1 h3 {
+    margin-bottom: 12px;
+    font-size: 18px; font-weight: 500;
+}
+.box1 p {
+    font-size: 12px;
+}
+
+
+.box2 {}
+.box2 a {}
+.box2 a img {
+    margin-bottom: 14px;
+}
+.box2 a strong {
+    display: block;
+
+    margin-bottom: 8px;
+    font-size: 18px; font-weight: 500;
+}
+.box2 a em {
+    font-size: 12px;
+}
+
+/* 위는 본이이 작성한 코드 */
+/* 강사님이 알려주시는 그룹선택자 사용하면 */
+/* 
+
+.box a h3,
+.box a strong {
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.box2 a strong { display: block;} 
+*/
+/* 
+위와 같은 식으로 처리하며, strong처럼 다른 부분은 display 처리 */

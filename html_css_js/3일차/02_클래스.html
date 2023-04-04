@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        /* .con-box {}
+        .con-box ul {}
+        .con-box ul li { background-color: yellow; font-size: 20px; color:red; }
+        .con-box ul .a { background-color: green; font-size: 15px; color:skyblue; }
+        .con-box ul .b { background:red; font-size: 13px; color:aqua; }
+        .con-box ul .c { font-size: 15px; color:aquamarine; }
+        .con-box ul .d { font-size: 20px; color:violet; }
+        .con-box ul .e { font-size: 15px; color:hotpink; }
+        .con-box ul .f { font-size: 30px; color:greenyellow; } */
+
+        /* div에 클래스 */
+        div.con-box {}
+        div.con-box ul {}
+        div.con-box ul li { background-color: yellow; font-size: 20px; color:red; }
+
+        /* 요소.클래스 -> 주로 팀 단위 작업할 때, 명확성을 위하여 사용함 */
+        div.con-box ul li.a { background-color: green; font-size: 15px; color:skyblue; }
+        /* 23 점 */
+        div.con-box ul .a { background-color: green; font-size: 15px; color:black; }
+        /* 22 점 */
+
+        div.con-box ul li.b { background:red; font-size: 13px; color:aqua; }
+        .con-box ul .c { font-size: 15px; color:aquamarine; }
+        .con-box ul .d { font-size: 20px; color:violet; }
+        .con-box ul .e { font-size: 15px; color:hotpink; }
+        .con-box ul .f { font-size: 30px; color:greenyellow; }
+    </style>
+</head>
+
+<body>
+
+    <!-- div.con-box>ul>li{list$}*6 -->
+    <div class="con-box">
+        <ul>
+            <li class="a">list1</li>
+            <li class="b">list2</li>
+            <li class="c">list3</li>
+            <li class="d">list4</li>
+            <li class="e">list5</li>
+            <li class="f">list6</li>
+        </ul>
+    </div>
+
+    <pre>
+        * 클래스 선택자 *
+        별명/별칭
+        한 페이지에 여러번 사용가능
+        점수로는 10점
+
+        형식) 정의할 시,
+        <태그 class="클래스명">
+        
+        'style.css' 에서는 .클래스명
+
+        클래스명 규칙
+        1. 영문자, 숫자, _ , - 혼용 가능
+        2. 첫글자는 반드시 숫자 제외
+           주로 영문자 소문자
+        3. 대소문자 구별됨
+        4. 특수문자/한글 사용불가
+        5. 두 단어가 합쳐질 경우,
+           1) 단어-단어 : dog-cat
+           2) 단어_단어 : dog_cat
+           3) 단어단어첫글자대문자 :
+              dogCat
+        6. 주로 영역( div 집 ) 클래스를
+           작성하는 것이 좋다
+
+        클래스 GUIDE를 작성하여 규칙을 정한 뒤 작업한다
+        예)
+        클래스 : dog-cat
+        아이디 : dogCat
+    </pre>
+</body>
+
+</html>

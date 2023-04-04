@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        /* 
+            1. text : 너비 지정하기
+            공통 크기
+            .클래스명100 { width:100px }
+            .클래스명20 { width:20px }
+        */
+        .w150 {
+            width: 150px;
+        }
+
+        .w80 {
+            width: 80px;
+        }
+
+        .w50 {
+            width: 50px;
+        }
+
+        /* 
+            1.reset.css
+            password, text : padding-top/padding-bottom
+            box-sizing:border-box
+        */
+        input[type=text],
+        input[type=password] {
+            box-sizing: border-box;
+        }
+
+        /* 
+            폼요소 : inline-block
+            단, label은 inline
+        */
+    </style>
+
+</head>
+
+<body>
+    <!-- form 대신 div로 처리 가능 -->
+    <form action="#" method="get" name="form">
+        <!-- 생략가능 : fieldset -->
+        <fieldset>
+            <!-- 생략가능 : legend -->
+            <legend>연습양식</legend>
+            <!-- 모든태그가능 -->
+            <p>
+                <label for="userid">아이디</label>
+                <input type="text" id="userid" title="아이디를 입력하세요" size="50" maxlength="6" placeholder="아이디"
+                    autocomplete="off" required class="w150">
+            </p>
+            <p>
+                <label for="userpw1">비밀번호</label>
+                <input type="password" id="userpw1" title="비밀번호를 입력하세요" placeholder="비밀번호" required class="w80">
+            </p>
+            <p>
+                <label for="userpw2">비밀번호 재입력</label>
+                <input type="password" id="userpw2" title="비밀번호를 재입력하세요">
+            </p>
+            <p>
+                <label for="tel">전화번호</label>
+                <input type="text" id="tel" title="국번3자리" class="w50"> -
+                <input type="text" title="중간4자리" class="w50"> -
+                <input type="text" title="끝 4자리" class="w50">
+                <!-- 아이디 한번만 쓰기 -->
+            </p>
+            <p>
+                <label for="chk1">화장품</label>
+                <input type="checkbox" id="chk1">
+                <input type="checkbox" id="chk2">
+                <label for="chk2">거울</label>
+                <input type="checkbox" id="chk3">
+                <label for="ch3">드라이기</label>
+            </p>
+            <p>
+                <label for="rad1">1학년</label>
+                <input type="radio" id="rad1" name="rad">
+                <label for="rad2">2학년</label>
+                <input type="radio" id="rad2" name="rad">
+                <label for="rad3">3학년</label>
+                <input type="radio" id="rad3" name="rad">
+                <label for="rad4">4학년</label>
+                <input type="radio" id="rad4" name="rad">
+            </p>
+            <p>
+                <!-- 화면에 보이지 않음 -->
+                <!-- 개발과정에서 값을 임시로 잠깐 보관하고 값을 꺼내오기 위한 용도 -->
+                <input type="hidden">
+            </p>
+
+            <p>
+                <input type="file">
+            </p>
+
+            <p>
+                <label for="sel">사이트</label>
+                <select id="sel" title="사이트를 선택하세요">
+                    <option value="">사이트 선택</option>
+                    <option value="">네이버</option>
+                    <option value="">다음</option>
+                    <option value="">카카오</option>
+                    <option value="">구글</option>
+                </select>
+            </p>
+            <p>
+                <label for="comm">여러줄</label>
+                <textarea id="comm" cols="50" rows="5"></textarea>
+            </p>
+            <p>
+                <input type="button" value="클릭버튼용">
+                <button>클릭용</button>
+                <button><i class=""></i></button>
+                <!-- 전송용 -->
+                <input type="submit" value="가입">
+                <input type="reset" value="취소">
+            </p>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

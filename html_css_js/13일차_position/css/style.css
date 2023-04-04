@@ -1,0 +1,30 @@
+.con-box { 
+    width: 750px; height: 340px;
+    padding: 30px 30px; box-sizing: border-box; margin: 20px auto;
+    background: #EEE;
+}
+.con-box dl { display: flex; position: relative; }
+.con-box dl dt { 
+    font-size: 20px; font-weight: 500;
+    padding: 15px 0; margin-right: 20px;
+}
+
+/* position: absolute 자식의 컨텐츠만큼만 인식한다. 꼭 너비 지정해야함 */
+.con-box dl dd {
+    position: absolute; left: 0px; top: 70px;
+    width: 100%; border-top: 3px solid #000;
+    padding-top: 20px; display: none;
+}
+.con-box dl dd:nth-of-type(1) {
+    display: block;
+}
+
+.con-box dl dd ul {}
+.con-box dl dd ul li {}
+.con-box dl dd ul li a {font-size: 18px; line-height: 2.2;}
+.con-box dl dd ul li span {
+    font-size: 14px; float: right; padding-top: 8px;
+}
+.con-box dl dd .more {position: absolute; right: 0; top: -50px;}
+.con-box dl dd .more a {}
+.con-box dl dd .more a i {font-size: 25px;}

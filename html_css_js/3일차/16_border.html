@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            margin: 20px;
+            padding: 10px;
+            background-color: green;
+        }
+        .box1 {
+            border-top:2px solid red;
+            border-right:5px dotted blue;
+            border-bottom:4px dashed yellow;
+            border-left:6px solid purple;
+            /* padding, border : 박스 크기에 영향을 준다 */
+            box-sizing: border-box;
+        }
+        .box2 {
+            border:3px solid purple;
+            box-sizing: border-box;
+        }
+        .box3 {
+            border-top:4px solid blue;
+            border-right:4px solid blanchedalmond;
+            border-left:4px solid burlywood;
+            box-sizing: border-box;
+        }
+        /* .box3 {
+            border-top:4px solid palevioletred;
+            border-right:4px solid palevioletred;
+            border-left:4px solid palevioletred;
+            box-sizing: border-box;
+        } */
+        .box4 {
+            border:4px solid palevioletred;
+            border-bottom: none;
+            box-sizing: border-box;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="box1">test</div>
+    <div class="box2">test</div>
+    <div class="box3">test</div>
+    <div class="box4">test</div>
+
+    <pre>
+        
+        ################### border 테두리 ###################
+        
+        border-top: 크기 스타일 색;
+        border-right: 크기 스타일 색;
+        border-bottom: 크기 스타일 색;
+        border-left: 크기 스타일 색;
+
+        * 속기법 *
+        border: 크기 스타일 색;
+
+        * 스타일 *
+        solid : 실선
+        dotted : 점섬
+        dashed : 긴점선
+
+        node : 선없애기
+        border-top : none
+        border : none
+
+        border-width : 너비
+        border-style : solid
+        border-color : 색
+
+    </pre>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+        
+        function add(x, y) {
+            return x + y;
+        }
+
+        function addResult( callback ) {
+            alert(`두수의 합 : ${callback}`); 
+        } // 함수를 불러오는 것이 아니라, 함수의 값을 불러오기 때문에 () 쓰지 않음
+
+
+        addResult(add(10, 20));
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

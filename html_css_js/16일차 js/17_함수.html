@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+
+        // 선언적 함수
+        // make1();
+
+        function make1() {
+            alert(`test1`);
+        }
+        
+        
+        // make1();
+
+
+        // 기명함수 - 선언 전 실행 불가
+        // x1();
+
+        const x1 = function make2() {
+            alert(`기명함수`);
+        }
+        // 함수 실행됨
+        // x1(); 
+        
+        // 함수 실행되지 않음
+        // make2(); 
+
+        // 익명함수 - 선언 전 실행 불가
+        // make3();
+
+        const make3 = function () {
+            alert(`익명함수`);
+        }
+
+        // make3();
+
+
+        // 즉시 실행 함수
+        (function () {
+            
+
+            alert(`코드실행`);
+        })();
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

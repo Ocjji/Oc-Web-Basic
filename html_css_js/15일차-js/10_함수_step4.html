@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        button {
+            width: 80px; height: 40px;
+            font-size: 20px; 
+        }
+    </style>
+    
+    <script>
+        'use strict';
+
+        function make ( num ) {
+            // document.write(`${num}단 입니다. <br><br>`);
+            var dan = '';
+            // for ( let i = 1; i <= 9; i++ ) {
+            //     document.write(`${num} X ${i} = ${num*i} <br>`);
+            // } 
+            
+            for ( let i = 1; i <= 9; i++ ) {
+                dan += `${num} X ${i} = ${num*i} \n`;
+            }
+
+            alert(`${dan}`);
+
+        }
+        
+    </script>
+
+</head>
+<body>
+    <p>
+        <button onclick="make(2)">2단</button>
+        <button onclick="make(3)">3단</button>
+        <button onclick="make(4)">4단</button>
+        <button onclick="make(5)">5단</button>
+   </p>
+</body>
+</html>

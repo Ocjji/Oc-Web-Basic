@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .box {
+            width: 450px;
+            margin: 40px auto;
+            border: 1px solid #000;
+            padding: 15px;
+        }
+        /* 포토샵 기준 -25px 이면, 폰트크기*자간/1000 */
+        /* fz:40, ls:-25 => -1px */
+        .box1 {font-size: 40px; letter-spacing: -1px;}
+        /* fz:30, ls:-50 =>  -1.5px */
+        .box2 {font-size: 30px; letter-spacing: -1.5px;}
+        /* 피그마 기본 % */
+        .box3 {letter-spacing: -0.2%;}
+        .box4 {}
+        /* 글자크기가 커져서 행간이 너무 커보여서 행간을 줄여줌 */
+    </style>
+</head>ㅋ
+<body>
+    
+    <div class="box box1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil labore doloribus animi maxime harum reiciendis magni beatae aliquam velit, eos, dicta aspernatur est pariatur impedit. Maxime placeat amet vel minus.</div>
+    <div class="box box2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil labore doloribus animi maxime harum reiciendis magni beatae aliquam velit, eos, dicta aspernatur est pariatur impedit. Maxime placeat amet vel minus.</div>
+    <div class="box box3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil labore doloribus animi maxime harum reiciendis magni beatae aliquam velit, eos, dicta aspernatur est pariatur impedit. Maxime placeat amet vel minus.</div>
+    <div class="box box4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil labore doloribus animi maxime harum reiciendis magni beatae aliquam velit, eos, dicta aspernatur est pariatur impedit. Maxime placeat amet vel minus.</div>
+
+
+    <pre>
+        
+        
+        <hr>
+
+        ######################## 행간 ########################
+
+        <hr>
+        
+        line-height : 행간 px 처리하지 않는다
+        em으로 처리한다
+
+        단, line-height만 em 생략이 가능하다
+        기본 행간처리는 reset.css 'body' 부분에 처리
+
+        본문크기 : 최소 14px ~ 16px ( 요즘은 보통 16px )
+        본문기준 : 행간은 1.5 ~ 1.8 정도 ( 보통 1.6 )
+        
+        폰트크기커지면 그에 따라 설정
+            제목 : h2 ( 1.3 정도 )
+    </pre>
+</body>
+</html>

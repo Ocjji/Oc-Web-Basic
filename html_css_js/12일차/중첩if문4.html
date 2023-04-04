@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+
+    <script>
+        'use strict';
+
+        let id, pw;
+
+        id = prompt('아이디를 입력하세요');
+        pw = prompt('비밀번호를 입력하세요');
+
+        if ( id === 'ezen' && pw === '1234') {
+            alert('로그인 성공');
+        } else {
+            alert('로그인 실패');
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <pre>
+        id='ezen'
+        pw='1234'
+
+        조건1)
+        아이디와 비밀번호가 일치하면
+            로그인성공
+        그렇지 않으면
+            로그인 실패
+        
+        조건2)
+        아이디가 일치했을때
+            비밀번호 받기
+            비밀번호 일치하면 로그인 성공
+            그렇지 않으면 비밀번호 오류
+
+        그렇지않으면
+            아이디 오류
+    </pre>
+</body>
+
+</html>

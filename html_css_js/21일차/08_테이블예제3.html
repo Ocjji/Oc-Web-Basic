@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        .bbs {
+            width: 1100px;
+            margin: 20px auto;
+        }
+
+        .bbs .tb {}
+
+        .bbs .tb .w1 {
+            width: 250px;
+        }
+
+        .bbs .tb .w2 {
+            width: 270px;
+        }
+
+        .bbs .tb .w3 {
+            width: auto;
+        }
+
+        .bbs .tb th,
+        .bbs .tb td {
+            padding: 15px 0;
+            vertical-align: middle;
+            border-bottom: 1px solid #DDD;
+            border-right: 1px solid #DDD;
+            text-align: left;
+        }
+
+        .bbs .tb thead {}
+
+        .bbs .tb thead tr {}
+
+        .bbs .tb thead tr th {
+            background: #CCC;
+            font-weight: 500;
+            font-size: 18px;
+            text-align: center;
+            border-top: 3px solid #000;
+        }
+
+        .bbs .tb thead tr th:last-child,
+        .bbs .tb tbody tr td:last-child {
+            border-right: none;
+        }
+
+        .bbs .tb tbody {}
+
+        .bbs .tb tbody tr th {
+            background: #EFEFEF;
+            text-indent: 20px;
+        }
+
+        .bbs .tb tbody tr td {
+            text-indent: 20px;
+        }
+
+        .bbs .tb tbody tr td ul {}
+
+        .bbs .tb tbody tr td ul li {
+            position: relative;
+            padding-left: 10px;
+        }
+
+        .bbs .tb tbody tr td ul li::after {
+            content: "";
+
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            background: #000;
+            border-radius: 50%;
+
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="bbs">
+        <table class="tb">
+            <caption class="hide">
+                <strong>테이블 제목</strong>
+                <p>원서접수 구분 일정 내용 설명</p>
+            </caption>
+            <colgroup>
+                <col class="w1">
+                <col class="w2">
+                <col class="w3">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">일정</th>
+                    <th scope="col">내용</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">인터넷 원서접수 및 전형료 납부</th>
+                    <td>2022. 12. 1(목) ~ 2023. 1. 11(수)</td>
+                    <td>
+                        <ul>
+                            <li>인터넷 접수만 가능(PC, 모바일)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">입학서류 제출</th>
+                    <td>2022. 12. 1(목) ~ 2023. 1. 11(수)</td>
+                    <td>
+                        <ul>
+                            <li>온라인, 등기우편 또는 방문제출</li>
+                            <li>기간내 입학서류 제출</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">합격자 발표</th>
+                    <td>2023. 1. 17(화)</td>
+                    <td>
+                        <ul>
+                            <li>입학홈페이지, 문자메시지(SMS)</li>
+                            <li>합격여부는 입학홈페이지에서 직접 확인</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">기본등록금 납부</th>
+                    <td>2023. 1. 17(화) ~ 1. 19(목)</td>
+                    <td>
+                        <ul>
+                            <li>합격자에 한해 기본등록금(30만원) 납부</li>
+                            <li>홈페이지에서 신용카드 및 계좌납부</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">학번발급</th>
+                    <td>2023. 1. 26(목) 14시</td>
+                    <td>
+                        <ul>
+                            <li>기본등록금 납부자를 대상으로 학번발급</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">수강신청</th>
+                    <td>2023. 1. 26(목) ~ 1. 31(화)</td>
+                    <td>
+                        <ul>
+                            <li>학생포털에서 직접 신청</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">수강등록금 납부</th>
+                    <td>2023. 2 .7(화) ~ 2. 14(화)</td>
+                    <td>
+                        <ul>
+                            <li>학생포털에서 신용카드 및 계좌납부</li>
+                            <li>최소학점(12학점)이상 신청 시 신청하신 학점에 대한 수업료납부</li>
+                            <li>이미 납부한 기본등록금(30만원)은 수강등록금 납부시 자동 감액 처리</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">개강</th>
+                    <td>2023. 2. 27(월)</td>
+                    <td>
+                        <ul>
+                            <li>대학포털에서 로그인을 통한 강의수강</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

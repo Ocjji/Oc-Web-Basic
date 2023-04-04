@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+
+        function sum ( x, y ) {
+            let result = x + y;
+            return result;
+        }
+
+        function sub ( x, y ) {
+            let result = x - y;
+            return result;
+        }
+
+        function mul ( x, y ) {
+            let result = x * y;
+            return result;
+        }
+        
+        function div ( x, y ) {
+            let result = parseInt(x / y);
+            return result;
+        }
+        
+        function mod ( x, y ) {
+            let result = x % y;
+            return result;
+        }
+
+        let x1 = sum(10, 20);
+        document.write(`합 : ${x1} <br>`);
+
+        let x2 = sub(30, 20);
+        document.write(`차 : ${x2} <br>`);
+
+        let x3 = mul(8, 6);
+        document.write(`곱 : ${x3} <br>`);
+
+        let x4 = div(20, 3);
+        document.write(`몫 : ${x4} <br>`);
+
+        let x5 = mod(20, 3);
+        document.write(`나머지 : ${x5} <br>`);
+
+    </script>
+
+</head>
+<body>
+    
+
+    <pre>
+
+        function 함수 ( ... ) {
+            실행문;
+
+            return 반환값;
+        }
+
+
+        let 변수명 = 함수( ... );
+
+    </pre>
+</body>
+</html>

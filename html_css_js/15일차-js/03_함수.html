@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+
+        document.write('안녕하세요<br>');
+        document.write('나는 홍길동입니다.<br>');
+        document.write('==================<br>');
+        
+        document.write('안녕하세요<br>');
+        document.write('나는 홍길동입니다.<br>');
+        document.write('==================<br>');
+
+        document.write('안녕하세요<br>');
+        document.write('나는 홍길동입니다.<br>');
+        document.write('==================<br>');
+
+        document.write('안녕하세요<br>');
+        document.write('나는 홍길동입니다.<br>');
+        document.write('==================<br>');
+
+        document.write('안녕하세요<br>');
+        document.write('나는 홍길동입니다.<br>');
+        document.write('==================<br>');
+
+        document.write('<hr>');
+
+        function msgGreeting () {
+            document.write('안녕하세요<br>');
+            document.write('나는 홍길동입니다.<br>');
+            document.write('==================<br>');
+        }
+
+        msgGreeting();
+        msgGreeting();
+        msgGreeting();
+        msgGreeting();
+        msgGreeting();
+
+        document.write('<hr>');
+
+        for (let i = 0; i < 5; i++ ){
+            msgGreeting();
+        }
+
+        document.write('<hr>');
+
+        let j = 0;
+        while ( j < 5 ){
+            msgGreeting();
+            j++;
+        }
+
+    </script>
+
+</head>
+<body>
+
+
+    <pre>
+
+        함수란?
+
+        자주 사용하는 명령들(실행문, 수식, 제어문, 내용 등)을 담아 두었다가
+        필요시 호출하여 사용할 수 있다
+
+        장점 : 코드 줄이기, 코드 재사용
+
+        형식 1 )
+        
+        할일 함수명 () {
+            실행문
+        }
+
+        function 함수명 () { : 함수명은 변수명과 규칙 동일
+            실행문
+        } : 정의시
+
+        함수명(); - 호출
+
+
+        형식 2 )
+        function 함수명 ( 매개변수, 매개변수 ) {
+            실행문
+        }
+        함수명 ( 값, 값 );
+
+
+        형식 3 )
+        function 함수명 ( 매개변수, 매개변수 ) {
+            실행문
+            return 반환값
+        }
+        let 변수명 = 함수명 ( 값, 값 );
+
+
+    </pre>
+</body>
+</html>

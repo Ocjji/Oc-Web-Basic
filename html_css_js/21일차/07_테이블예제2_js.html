@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        .tb-box {
+            width: 1100px;
+            margin: 30px auto;
+        }
+
+        .tb-box .tb {
+            width: 100%;
+        }
+
+        .tb-box .tb col.w1 {
+            width: 80px;
+        }
+
+        .tb-box .tb col.w2 {}
+
+        .tb-box .tb col.w3 {
+            width: 100px;
+        }
+
+        .tb-box .tb col.w4 {
+            width: 70px;
+        }
+
+        .tb-box .tb th,
+        .tb-box .tb td {
+            height: 55px;
+            border-bottom: 1px solid #DDD;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .tb-box .tb thead {}
+
+        .tb-box .tb thead tr {}
+
+        .tb-box .tb thead tr th {
+            border-top: 3px solid #000;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .tb-box .tb tbody {}
+
+        .tb-box .tb tbody tr {}
+
+        .tb-box .tb tbody tr td {}
+
+        .tb-box .tb tbody tr:last-child td {
+            border-bottom: 3px solid #000;
+        }
+
+        .tb-box .tb tbody tr td:nth-child(2) {
+            font-weight: 700;
+            text-align: left;
+            text-indent: 25px;
+        }
+
+        .tb-box .tb tbody tr td:nth-child(3),
+        .tb-box .tb tbody tr td:nth-child(4) {
+            color: #aaa;
+        }
+
+        .tb-box .paging {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .tb-box .paging button {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+            font-weight: 600;
+            border: 1px solid #DDD;
+        }
+
+        .tb-box .paging button {
+            cursor: pointer;
+        }
+
+        .on:hover,
+        .on.active {
+            background: #7ea338;
+            color: white;
+        }
+
+        .on:visited {
+            background: #7ea338;
+            color: white;
+        }
+
+        .on {
+            border: 0;
+        }
+    </style>
+
+    <script>
+        function change_btn(e) {
+            var btns = document.querySelectorAll(".on");
+            btns.forEach(function (btn, i) {
+                if (e.currentTarget == btn) {
+                    btn.classList.add("active");
+                } else {
+                    btn.classList.remove("active");
+                }
+            });
+            console.log(e.currentTarget);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="tb-box">
+        <table class="tb">
+            <caption>
+                <strong></strong>
+                <p></p>
+            </caption>
+
+            <colgroup>
+                <col class="w1">
+                <col class="w2">
+                <col class="w3">
+                <col class="w4">
+            </colgroup>
+
+            <thead>
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">등록일</th>
+                    <th scope="col">조회</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1077</td>
+                    <td>뮤지컬 [지저스 크라이스트 수퍼스타] 초대 이벤트</td>
+                    <td>2022.12.01</td>
+                    <td>586</td>
+                </tr>
+                <tr>
+                    <td>1076</td>
+                    <td>2023학년도 상반기 신·편입생 모집안내</td>
+                    <td>2022.12.01</td>
+                    <td>3381</td>
+                </tr>
+                <tr>
+                    <td>1075</td>
+                    <td>2023학년도 상반기 국가장학금 및 학자금 대출 안내</td>
+                    <td>2022.12.01</td>
+                    <td>947</td>
+                </tr>
+                <tr>
+                    <td>1074</td>
+                    <td>입학서류 온라인 제출서비스 안내</td>
+                    <td>2022.12.01</td>
+                    <td>134</td>
+                </tr>
+                <tr>
+                    <td>1073</td>
+                    <td>2023학년도 상반기 신·편입생 모집안내</td>
+                    <td>2022.11.30</td>
+                    <td>2252</td>
+                </tr>
+                <tr>
+                    <td>1072</td>
+                    <td>국내 최초! 드론·로봇융합전공 신설</td>
+                    <td>2022.11.24</td>
+                    <td>544</td>
+                </tr>
+                <tr>
+                    <td>1071</td>
+                    <td>2023학년도 상반기 국가장학금 및 학자금 대출 안내</td>
+                    <td>2022.11.23</td>
+                    <td>988</td>
+                </tr>
+                <tr>
+                    <td>1070</td>
+                    <td>2023학년도 신설 및 개편학과(전공)를 소개합니다 </td>
+                    <td>2022.11.09</td>
+                    <td>2744</td>
+                </tr>
+                <tr>
+                    <td>1069</td>
+                    <td>2023학년도 상반기 입학상담예약신청 이벤트 <발레 지젤 & 트리플 빌>
+                    </td>
+                    <td>2022.11.08</td>
+                    <td>1014</td>
+                </tr>
+                <tr>
+                    <td>1068</td>
+                    <td>'내 인생이 달라지는' 서울사이버대학교 온라인 특강 안내</td>
+                    <td>2022.11.03</td>
+                    <td>658</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="paging">
+            <button class="on" onclick="change_btn(event)"> &lt; </button>
+            <button class="on" onclick="change_btn(event)">1</button>
+            <button class="on" onclick="change_btn(event)">2</button>
+            <button class="on" onclick="change_btn(event)">3</button>
+            <button class="on" onclick="change_btn(event)">4</button>
+            <button class="on" onclick="change_btn(event)">5</button>
+            <button class="on" onclick="change_btn(event)">6</button>
+            <button class="on" onclick="change_btn(event)">7</button>
+            <button class="on" onclick="change_btn(event)">8</button>
+            <button class="on" onclick="change_btn(event)">9</button>
+            <button class="on" onclick="change_btn(event)">10</button>
+            <button class="on" onclick="change_btn(event)"> &gt; </button>
+        </p>
+    </div>
+
+</body>
+
+</html>

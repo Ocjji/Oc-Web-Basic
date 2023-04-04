@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+
+    <style>
+        .box {
+            width: 300px;
+            height: 200px;
+            background: #ddd;
+            border-radius: 30px;
+            margin: 50px auto;
+            text-align: center;
+            line-height: 200px;
+            font-size: 18px;
+            position: relative;
+        }
+
+        .box::after {
+            content: "";
+
+            display: block;
+            width: 0;
+            height: 0;
+
+            position: absolute;
+        }
+
+        .box1::after {
+            border-top: 25px solid red;
+            /* border-right: 25px solid blue; */
+            border-right: 25px solid transparent;
+
+            left: 20%;
+            top: -12px;
+            transform: rotate(45deg);
+        }
+
+        .box2::after {
+            /* border-top: 25px solid #000; */
+            border-top: 25px solid transparent;
+            border-right: 25px solid red;
+
+            right: -12px;
+            top: 20%;
+            transform: rotate(-45deg);
+        }
+
+        .box3::after {
+            /* border-left: 25px solid #000; */
+            border-left: 25px solid transparent;
+            border-bottom: 25px solid red;
+
+            left: 50%;
+            bottom: -12px;
+            transform: translateX(-50%) rotate(45deg);
+        }
+
+        .box4::after {
+            /* border-bottom: 25px solid #000; */
+            border-bottom: 25px solid transparent;
+            border-left: 25px solid red;
+
+            left: -12px;
+            bottom: 30%;
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">내용1</div>
+    <div class="box box2">내용2</div>
+    <div class="box box3">내용3</div>
+    <div class="box box4">내용4</div>
+</body>
+
+</html>

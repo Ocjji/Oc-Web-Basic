@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        * { margin: 0; padding: 0; }
+        ul { margin: 30px; }
+        ul li {
+            width: 250px; height: 40px; border: 1px solid #000;
+            margin-bottom: 5px; text-align: center; line-height: 40px;
+            list-style: none;
+        }
+    </style>
+    
+    <script>
+        'use strict';
+
+        let dan, result, output = '';
+        dan = Number(prompt('단을 입력하세요'));
+
+        output = '<ul>';
+
+        for( let i = 1; i <= 9; i++ ) {
+            result = dan * i;
+
+            output += '<li>' + dan + ' X ' + i + ' = ' + result + '</li><br>';
+        }
+
+        output += '</ul>';
+
+        document.write(output);
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

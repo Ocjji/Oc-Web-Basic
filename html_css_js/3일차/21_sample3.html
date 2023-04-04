@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+
+    <style>
+        .box1 { 
+            width: 500px;
+            height: 400px;
+            background-color: #c0c0c0;
+            margin: 50px auto;
+            padding: 25px 35px;
+            box-sizing: border-box;
+        }
+        .box1 h3 {font-size: 25px; font-weight: 600; margin-bottom: 15px;}
+        .box1 ul {}
+        .box1 ul li {margin-bottom: 15px;}
+        /* div.box1>h3+ul>li*6 */
+
+        .box2 {
+            width: 500px; height: 400px; background-color: #c0c0c0;
+            margin: 50px auto;
+            padding: 25px 35px;
+            box-sizing: border-box;
+        }
+        .box2 dl {}
+        .box2 dl dt {font-size: 25px; font-weight: 600; margin-bottom: 15px;}
+        .box2 dl dd {margin-bottom: 15px;}
+        /* div.box2>dl>dt+dd*6 */
+
+        .box3 {
+            width: 500px; height: 400px; background-color: #c0c0c0;
+            margin: 50px auto;
+            padding: 25px 35px;
+            box-sizing: border-box;
+        }
+        .box3 dl {}
+        .box3 dl dt {font-size: 25px; font-weight: 600; margin-bottom: 15px;}
+        .box3 dl dd {}
+        .box3 dl dd ul {}
+        .box3 dl dd ul li {margin-bottom: 15px;}
+        /* div.box3>dl>dt+dd>ul>li*6 */
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- div.box1>h3+ul>li*6 -->
+    <div class="box1">
+        <h3>경품</h3>
+        <ul>
+            <li>[퓨리얼]직수형정수기 (1명)</li>
+            <li>[조말론]라임바질앤만다린 센트 써라운드 디퓨저(1명)</li>
+            <li>[제브로]시리얼디펜서(1명)</li>
+            <li>푸르지오 프리미엄타월세트(10명)</li>
+            <li>[CGV] 주말 영화 2인 예매권(10명)</li>
+            <li>[스타벅스]아메리카노 Tall(20명)</li>
+        </ul>
+    </div>
+
+    <!-- div.box2>dl>dt+dd*6 -->
+    <div class="box2">
+        <dl>
+            <dt>경품</dt>
+            <dd>[퓨리얼]직수형정수기 (1명)</dd>
+            <dd>[조말론]라임바질앤만다린 센트 써라운드 디퓨저(1명)</dd>
+            <dd>[제브로]시리얼디펜서(1명)</dd>
+            <dd>푸르지오 프리미엄타월세트(10명)</dd>
+            <dd>[CGV] 주말 영화 2인 예매권(10명)</dd>
+            <dd>[스타벅스]아메리카노 Tall(20명)</dd>
+        </dl>
+    </div>
+
+    <!-- div.box3>dl>dt+dd>ul>li*6 -->
+    <div class="box3">
+        <dl>
+            <dt>경품</dt>
+            <dd>
+                <ul>
+                    <li>[퓨리얼]직수형정수기 (1명)</li>
+                    <li>[조말론]라임바질앤만다린 센트 써라운드 디퓨저(1명)</li>
+                    <li>[제브로]시리얼디펜서(1명)</li>
+                    <li>푸르지오 프리미엄타월세트(10명)</li>
+                    <li>[CGV] 주말 영화 2인 예매권(10명)</li>
+                    <li>[스타벅스]아메리카노 Tall(20명)</li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+
+</body>
+
+</html>

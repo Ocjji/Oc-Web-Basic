@@ -1,0 +1,23 @@
+.con-box {width: 1550px; height: 820px;
+padding-top: 135px; padding-left: 90px; padding-right: 90px; padding-bottom: 75px;}
+.con-box div { width: 660px; height: 660px; }
+.con-box div h2 {font-size: 35px; font-weight: 500;}
+.con-box div ul {border-top: 5px solid #000;}
+.con-box div ul li {padding: 40px 0;}
+.con-box div ul li a {font-size: 24px; display: block;}
+.con-box div ul li span {}
+
+
+.con-box .con1 {}
+.con-box .con1 h2 {}
+.con-box .con1 ul {}
+.con-box .con1 ul li {position: relative;}
+.con-box .con1 ul li a {}
+.con-box .con1 ul li span {}
+
+.con-box .con2 {}
+.con-box .con2 h2 {}
+.con-box .con2 ul {}
+.con-box .con2 ul li {}
+.con-box .con2 ul li a {}
+.con-box .con2 ul li span {}

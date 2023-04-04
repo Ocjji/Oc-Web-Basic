@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        .bbs {
+            width: 1100px;
+            margin: 50px auto;
+        }
+
+        /* table 너비값 100%로 지정 */
+        /* 추후에 reset.css 에서 기본값으로 처리 */
+        .bbs .tb {
+            width: 100%;
+        }
+
+        .bbs .tb .w1 {
+            width: 80px;
+        }
+
+        .bbs .tb .w2 {}
+
+        .bbs .tb .w3 {
+            width: 110px;
+        }
+
+        .bbs .tb .w4 {
+            width: 80px;
+        }
+
+        /* th, td 공통 */
+        .bbs .tb th,
+        .bbs .tb td {
+            height: 50px;
+            border-bottom: 1px solid #DDD;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .bbs .tb thead {}
+
+        .bbs .tb thead tr {}
+
+        .bbs .tb thead tr th {
+            border-top: 3px solid #000;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+
+        .bbs .tb tbody {}
+
+        .bbs .tb tbody tr {}
+
+        /* tr보다는 td 또는 th 에 처리하는 연습 필요! */
+        .bbs .tb tbody tr:last-child td {
+            border-bottom: 3px solid #000;
+        }
+
+        .bbs .tb tbody tr td {}
+
+        .bbs .tb tbody tr td:nth-child(2) {
+            /* padding-left: 25px; */
+            text-indent: 20px;
+            text-align: left;
+        }
+
+        .bbs .paging {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .bbs .paging a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            border: 1px solid #DDD;
+        }
+
+        .bbs .paging a.on {
+            background: rgb(197, 197, 255);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="bbs">
+        <table class="tb">
+            <caption>
+                <strong></strong>
+                <p></p>
+            </caption>
+            <!-- 열 너비 -->
+            <colgroup>
+                <col class="w1">
+                <col class="w2">
+                <col class="w3">
+                <col class="w4">
+            </colgroup>
+
+            <thead>
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">등록일</th>
+                    <th scope="col">조회</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>890</td>
+                    <td>카카오톡 온라인 입학설명회</td>
+                    <td>2020.01.03</td>
+                    <td>509</td>
+                </tr>
+                <tr>
+                    <td>889</td>
+                    <td>문화행사 뮤지컬 [레베카] 지원완료자 초대 이벤트</td>
+                    <td>2019.12.31</td>
+                    <td>226</td>
+                </tr>
+                <tr>
+                    <td>890</td>
+                    <td>카카오톡 온라인 입학설명회</td>
+                    <td>2020.01.03</td>
+                    <td>509</td>
+                </tr>
+                <tr>
+                    <td>889</td>
+                    <td>문화행사 뮤지컬 [레베카] 지원완료자 초대 이벤트</td>
+                    <td>2019.12.31</td>
+                    <td>226</td>
+                </tr>
+                <tr>
+                    <td>890</td>
+                    <td>카카오톡 온라인 입학설명회</td>
+                    <td>2020.01.03</td>
+                    <td>509</td>
+                </tr>
+                <tr>
+                    <td>889</td>
+                    <td>문화행사 뮤지컬 [레베카] 지원완료자 초대 이벤트</td>
+                    <td>2019.12.31</td>
+                    <td>226</td>
+                </tr>
+                <tr>
+                    <td>890</td>
+                    <td>카카오톡 온라인 입학설명회</td>
+                    <td>2020.01.03</td>
+                    <td>509</td>
+                </tr>
+                <tr>
+                    <td>889</td>
+                    <td>문화행사 뮤지컬 [레베카] 지원완료자 초대 이벤트</td>
+                    <td>2019.12.31</td>
+                    <td>226</td>
+                </tr>
+                <tr>
+                    <td>890</td>
+                    <td>카카오톡 온라인 입학설명회</td>
+                    <td>2020.01.03</td>
+                    <td>509</td>
+                </tr>
+                <tr>
+                    <td>889</td>
+                    <td>문화행사 뮤지컬 [레베카] 지원완료자 초대 이벤트</td>
+                    <td>2019.12.31</td>
+                    <td>226</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="paging">
+            <a href="#"> &lt; </a>
+            <a href="#" class="on">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">8</a>
+            <a href="#">9</a>
+            <a href="#">10</a>
+            <a href="#"> &gt; </a>
+        </p>
+    </div>
+
+</body>
+
+</html>

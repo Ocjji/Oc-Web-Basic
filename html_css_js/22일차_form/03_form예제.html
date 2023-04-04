@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        .join {
+            width: 800px;
+            margin: 50px auto;
+        }
+
+        .join table {}
+
+        .join table .w1 {
+            width: 160px;
+            background: tan;
+        }
+
+        .join table .w2 {}
+
+        .join table td {
+            border: 1px solid #000;
+            padding: 10px 15px;
+            vertical-align: top;
+        }
+
+        .join table td .w410 {
+            width: 410px;
+        }
+
+        .join table td .w120 {
+            width: 120px;
+        }
+
+        .join table td .w610 {
+            width: 610px;
+        }
+
+        .join table td input[type=text] {
+            height: 25px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+
+        .join table td select {
+            height: 25px;
+            border: 1px solid #000;
+        }
+
+        .join p {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .join p input {
+            width: 150px;
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid #000;
+        }
+
+        .join p input:last-child {
+            background: lightcoral;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="join">
+        <form action="" method="get">
+            <table>
+                <caption>
+                    <strong></strong>
+                    <p></p>
+                </caption>
+
+                <colgroup>
+                    <col class="w1">
+                    <col class="w2">
+                </colgroup>
+
+                <tbody>
+                    <tr>
+                        <td><label for="catName">고양이이름</label></td>
+                        <td><input type="text" id="catName" title="고양이 이름 입력" class="w410" required
+                                placeholder="cat name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="addr">주소</label></td>
+                        <td>
+                            <select id="addr" title="주소를 선택하세요" class="">
+                                <option>서울</option>
+                                <option>경기</option>
+                                <option>인천</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>성별</td>
+                        <td>
+                            <!-- radio는 css처리 안된다 -->
+                            <input type="radio" name="rad" id="rad1">
+                            <label for="rad1">남자</label>
+                            <input type="radio" name="rad" id="rad2">
+                            <label for="rad2">여자</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>좋아하는것</td>
+                        <td>
+                            <!-- checkbox는 css처리 안된다 -->
+                            <input type="checkbox" name="chk1" id="chk1">
+                            <label for="chk1">생선</label>
+                            <input type="checkbox" name="chk2" id="chk2">
+                            <label for="chk2">고기</label>
+                            <input type="checkbox" name="chk3" id="chk3">
+                            <label for="chk3">우유</label>
+                            <input type="checkbox" name="chk4" id="chk4">
+                            <label for="chk4">바삭바삭한 것</label>
+                            <input type="checkbox" name="chk5" id="chk5">
+                            <label for="chk5">고양이 통조림</label>
+                            <input type="checkbox" name="chk6" id="chk6">
+                            <label for="chk6">단것</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="file">사진</label></td>
+                        <td><input type="file" id="file"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="username">기르는 주인</label></td>
+                        <td><input type="text" id="username" class="w410" title="기르는 주인 입력"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">이메일</label></td>
+                        <td><input type="text" id="email" class="w410" title="이메일 입력"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="comm">코멘트</label></td>
+                        <td><textarea id="comm" cols="50" rows="6" class="w610"></textarea></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                <input type="submit" value="확인">
+                <input type="reset" value="초기화">
+            </p>
+        </form>
+    </div>
+</body>
+
+</html>

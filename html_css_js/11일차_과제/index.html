@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .con-box {}
+        .con-box h2 {padding: 20px; font-size: 30px; font-weight: 600;}
+        .con-box .box {
+            width: 700px; height: 450px;
+            padding: 55px 50px; margin: auto; background: #EEEEEE;
+            box-sizing: border-box;
+        }
+        .con-box .box h3 {font-size: 32px; font-weight: 700; margin-bottom: 10px;}
+        .con-box .box ul {}
+        .con-box .box ul li {
+            width: 600px; height: 100px;
+            padding: 20px 0;
+            box-sizing: border-box;
+            border-bottom: 1px dotted #868686;
+        }
+        .con-box .box ul li:last-child {
+            border-bottom: none;
+        }
+        .con-box .box ul li a {}
+        .con-box .box ul li a strong {
+            width: 60px; height: 60px;
+            background: rgb(112,194,208); 
+            font-size: 13px; color: #FFF; line-height: 14px;
+            text-align: center;
+            padding-top: 17px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            word-break: keep-all;
+        }
+        .con-box .box ul li a p {
+            width: 500px; height: 60px;
+            padding:0 20px;
+            font-size: 18px;
+        }
+        
+        .con-box .con1 ul li a {
+            display: flex;
+        }
+        .con-box .con1 ul li a strong {
+            display: block;           
+        }
+        .con-box .con1 ul li a p {}
+        
+        .con-box .con2 ul li a {
+            overflow: hidden;           
+        }
+        .con-box .con2 ul li a strong {
+            float: left;
+        }
+        .con-box .con2 ul li a p { 
+            float: right;
+        }
+
+        .con-box .con3 ul li a {}
+
+        .con-box .con3 ul li a strong {
+            position: absolute;
+        }
+        .con-box .con3 ul li a p {
+            padding-top: 3px;
+            margin-left: 60px;
+        }
+
+    </style>
+</head>
+<body>
+     <div class="con-box">
+        <h2>1. flex </h2>
+        <div class="box con1">
+            <h3>WHAT'S NEW</h3>            
+            <!-- ul>li*3>a[href="#"]>strong+p -->
+            <ul>
+                <li>
+                    <a href="#">
+                        <strong>채용<br>공고</strong>
+                        <p>[육아정책연구소] 연구직 채용 공고(제13호 채용공고 정규직 연구원) 최종면접전형 합격 결과 연기 공지</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <strong>채용<br>공고</strong>
+                        <p>[육아정책연구소] 행정직 채용 공고(제12호 채용공고 대체근무자 계약직 행정원) 최종면접 전형합격 결과</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <strong>채용<br>공고</strong>
+                        <p>[육아정책연구소] 정규직·무기계약직 행정원 채용 (제11호 채용공고 정규직·무기계약직 행정원) 최종면접전형 합</p>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <h2>2. float</h2>
+        <div class="box con2">
+            <h3>WHAT'S NEW</h3>
+
+            <ul>
+                <li>
+                    <a href="#">
+                        <strong>채용<br>공고</strong>
+                        <p>[육아정책연구소] 연구직 채용 공고(제13호 채용공고 정규직 연구원) 최종면접전형 합격 결과 연기 공지</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <strong>채용<br>공고</strong>
+                        <p>[육아정책연구소] 행정직 채용 공고(제12호 채용공고 대체근무자 계약직 행정원) 최종면접 전형합격 결과</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <strong>채용<br>공고</strong>
+                        <p>[육아정책연구소] 정규직·무기계약직 행정원 채용 (제11호 채용공고 정규직·무기계약직 행정원) 최종면접전형 합</p>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <h2>3. position </h2>
+        <div class="box con3">
+            <h3>WHAT'S NEW</h3>
+
+            <ul>
+                <li>
+                    <a href="#">
+                        <strong>채용<br>공고</strong>
+                        <p>[육아정책연구소] 연구직 채용 공고(제13호 채용공고 정규직 연구원) 최종면접전형 합격 결과 연기 공지</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <strong>채용<br>공고</strong>
+                        <p>[육아정책연구소] 행정직 채용 공고(제12호 채용공고 대체근무자 계약직 행정원) 최종면접 전형합격 결과</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <strong>채용<br>공고</strong>
+                        <p>[육아정책연구소] 정규직·무기계약직 행정원 채용 (제11호 채용공고 정규직·무기계약직 행정원) 최종면접전형 합</p>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+     </div>
+    <pre>
+        ------------------
+        box 클래스는 공통처리하고 ( 같은 스타일을 공통으로 처리해 보세요 ) 
+
+        1. flex  
+        2. float 
+              1) strong과 p를 float처리하기 ( 자식들이 띄워진다 )
+              2) li에 overfloat:hidden - 자식을 인식하기 못하기 때문에처리 
+        3. position 
+              1) strong을 position: absolute 처리 
+              2) p를 margin-left로 밀기
+
+
+        위 3가지의 경우의수로 만들어보세요
+
+    </pre>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/join.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <p id="skipNav"><a href="#content">본문바로가기</a></p>
+    <!-- #wrap>header#header>div.inner^main#container.join>section#content>div.inner^^footer#footer>div.inner -->
+    <div id="wrap">
+        <header id="header">
+            <div class="inner">
+
+            </div>
+        </header>
+        <!-- // header -->
+
+        <main id="container" class="join">
+            <section id="content">
+                <div class="inner">
+                    <h2>회원 정보 입력</h2>
+                    <p><b>*</b>필수입력 항목</p>
+
+                    <form action="#" method="post" name="form" target="_blank">
+                        <fieldset>
+                            <legend>회원정보입력</legend>
+                            <table>
+                                <colgroup>
+                                    <col class="w1">
+                                    <col class="w2">
+                                </colgroup>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label for="userName">이름</label><b>*</b>
+                                        </td>
+                                        <td><input type="text" id="userName" placeholder="ex)홍길동" required class="w180">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="userDate">생년월일</label><b>*</b></td>
+                                        <td><input type="text" id="userDate" placeholder="2021.03.29" required
+                                                class="w180"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="userSex">성별</label><b>*</b></td>
+                                        <td><input type="text" id="userSex" placeholder="남자/여자" required class="w180">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="userId">아이디</label><b>*</b></td>
+                                        <td><input type="text" id="userId" placeholder="아이디" required
+                                                class="w180"><button class="w80">중복확인</button><span>6자
+                                                이상(한글/특수문자 불가)</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="userPwd">비밀번호</label><b>*</b></td>
+                                        <td><input type="password" id="userPwd" placeholder="비밀번호8자리" required
+                                                class="w180"><span>영문, 숫자, 특수문자를 혼합하여 8~15자로 사용 합니다. 공백은 사용이
+                                                불가합니다.</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="userPwd1">비밀번호확인</label><b>*</b></td>
+                                        <td><input type="password" id="userPwd1" placeholder="비밀번호8자리" required
+                                                class="w180"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="userEmail">이메일</label><b>*</b></td>
+                                        <td>
+                                            <input type="text" id="userEmail" class="w180" required>
+                                            <span>@</span>
+                                            <input type="text" class="w180">
+                                            <select title="이메일선택">
+                                                <option>기타(직접입력)</option>
+                                                <option>naver.com</option>
+                                                <option>google.com</option>
+                                            </select><button class="w80">중복확인</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="userTel">휴대폰 번호</label><b>*</b></td>
+                                        <td><input type="text" id="userTel" class="w180" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="userAdd">배송주소 (선택)</label></td>
+                                        <td>
+                                            <input type="text" id="userAdd" class="w120"><button>우편번호찾기</button>
+                                            <p class="txt"></p>
+                                            <input type="text" class="w500">
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>eKOLON 멤버십<br>정보 수신 동의</td>
+                                        <td>
+                                            <em>회원님께 제공되는 공지, 이벤트 소식, 포인트 정보, 행사, 신상품 소개 등의 다양한 정보 안내를 받으시겠습니까?</em>
+                                            <input type="checkbox" id="chk1">
+                                            <label for="chk1">이메일 수신동의</label>
+                                            <input type="checkbox" id="chk2">
+                                            <label for="chk2">SMS 수신 동의</label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>
+                                <input type="reset" value="취소">
+                                <input type="submit" value="확인">
+                            </p>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <!-- // main content -->
+
+        <footer id="footer">
+            <div class="inner">
+
+            </div>
+        </footer>
+        <!-- // footer -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+div {
+    width: 400px;
+    height: 400px;
+    border: 1px solid #000;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    /* background-position: center center; */
+    background-image: url(../images/cat0.jpg);
+    background-size: cover;
+}
+/* 
+    스타일 분리하고
+    배경 이미지를 처리할 경우
+    ../ 상위 폴더 지정
+*/

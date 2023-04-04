@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict'
+        
+        // 결과가 1개
+        // const make1 = ( x ) => `${x} 값`;
+        // const make1 = x => `${x} 값`;
+
+        // // 결과가 1개 (return)
+        // function make2(x, y) {
+        //     return x * y;
+        // }
+
+        // const make2 = (x, y) => {
+        //     return x * y;
+        // }
+        const make2 = (x,y) => x * y;
+        alert(make2(5,2));
+
+    </script>
+
+</head>
+<body>
+    <pre>
+        ============ 화살표 함수 ============
+        
+        ***** 기존 함수 *****
+
+        function make1(){
+            alert(`실행문`);
+        }
+        make1();
+
+
+        ***** 화살표 함수로 변환 *****
+
+        const make1 = () => {
+            alert(`실행문`);
+        }
+        make1();
+
+        =====================================
+
+        ***** 기존 함수 *****
+
+        function make1( x ){
+            alert(`${x} 값`);
+        }
+        make1(100);
+
+
+        ***** 화살표 함수로 변환 *****
+        case 1:
+        const make1 = ( x ) => {     //    매개변수가 하나일 경우 괄호() 생략 가능
+            alert(`${x} 값`);
+        }
+        make1(100);
+
+        case 2:
+        const make1 = x => {     //    위와 동일 매개변수 x 하나
+            alert(`${x} 값`);
+        }
+        make1(100);
+
+        =====================================
+      
+        ***** 기존 함수 *****
+
+        function make1( x ){
+            return (`${x} 값`);
+        }
+        let x1 = make1(100);
+        alert(x1);
+
+
+        ***** 화살표 함수로 변환 *****
+
+        // 결과가 1개
+        const make1 = ( x ) => `${x} 값`;
+        const make1 = x => `${x} 값`;
+
+        // 결과가 1개 (return)
+        function make2(x, y) {
+            return x * y;
+        }
+
+        const make2 = (x, y) => {
+            return x * y;
+        }
+        const make2 = (x,y) => x * y;
+
+    </pre>
+</body>
+</html>

@@ -1,0 +1,10 @@
+div { background-color: green; }
+div h2 { background-color: yellow; font-size: 40px; color:brown; }
+div ul { background-color: blue; }
+div ul li { color:skyblue; }
+div + p { background-color: red; }
+p { background-color: darkorange; }
+
+div.con-box {font-size: 25px;}
+
+div.con-box li { font-size: 15px; }

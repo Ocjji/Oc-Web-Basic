@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+
+        let month = '';
+
+        month = Number(prompt('몇월인가요?'));
+
+        if (month % 1 != 0) {
+            document.write('소숫점을 입력하지 말아주세요<br>');
+            document.write('해당 달은 존재하지 않습니다');
+        } else {
+            if ( 1 <= month && month <= 2 ) {
+                document.write('겨울입니다!');
+            } else if ( 3 <= month && month <= 5) {
+                document.write('봄입니다!');
+            } else if ( 6 <= month && month <= 8 ) {
+                document.write('여름입니다!');
+            } else if ( 9 <= month && month <= 11 ) {
+                document.write('가을입니다!');
+            } else if ( 12 === month) {
+                document.write('겨울입니다!');
+            } else {
+                document.write('해당 달은 존재하지 않습니다');
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    <pre>
+        month 달입력받기
+        1 ~ 12 외 값을 입력하면 해당달은 존재하지 않습니다.
+        3 ~ 5 봄
+        6 ~ 8 여름
+        9 ~ 11 가을
+        그외 : 12 ~ 2 겨울
+        document.write 로 출력하기
+    </pre>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+
+    <script>
+        'use strict';
+
+        let num;
+
+        num = Number(prompt('자연수를 입력해주세요'));
+
+        if ( num >= 30 ) {
+            if ( num % 2 === 0 ) {
+                alert('30 이상의 짝수입니다.');
+            }
+            else {
+                alert('30 이상의 홀수입니다.');
+            }
+        } else {
+            if ( num % 3 === 0) {
+                alert('30 미만이며, 3의 배수입니다.');
+            }
+            else {
+                alert('30 미만이며, 3의 배수가 아닙니다.');
+            }
+        }
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+    <pre>
+        중첩if문 : if문 안에 if문 처리
+
+        if (조건) {
+            if (조건) {
+                실행문
+            }
+        }
+
+        1. 30보다 크거나 같으면
+            짝수 / 홀수 판정
+
+            그렇지 않으면
+            3의 배수 여부 판정
+    </pre>
+</body>
+
+</html>

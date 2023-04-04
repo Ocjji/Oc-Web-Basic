@@ -1,0 +1,72 @@
+.con-box {
+    width: 460px;
+    height: 325px;
+    background: #eeeeee;
+    margin: auto;
+    padding-top: 30px;
+    padding-left: 30px;
+
+    box-sizing: border-box;
+}
+.con-box h2 {
+    margin-bottom: 4px;
+}
+.con-box ul {}
+.con-box ul li {
+    height: 40px;
+    font-size: 15px;
+    background: no-repeat;
+    /* text-indent:40px; */
+    margin-bottom: 10px;
+    margin: auto;
+    line-height: 29px;
+
+    display: block;
+}
+/* .con-box ul li:nth-child(1) {
+    background-image: url(../../5일차_ex/images/num01.png);
+}
+.con-box ul li:nth-child(2) {
+    background-image: url(../../5일차_ex/images/num02.png);
+}
+.con-box ul li:nth-child(3) {
+    background-image: url(../../5일차_ex/images/num03.png);
+}
+.con-box ul li:nth-child(4) {
+    background-image: url(../../5일차_ex/images/num04.png);
+}
+.con-box ul li:nth-child(5) {
+    background-image: url(../../5일차_ex/images/num05.png);
+}
+.con-box ul li:nth-child(6) {
+    background-image: url(../../5일차_ex/images/num06.png);
+} */ /* 완성형 */
+
+.con-box ul li:nth-child(1)::before {
+    content: "";
+    display: inline-block;
+
+    width: 28px;
+    height: 29px;
+    background-image: url(../../5일차_ex/images/num01.png);
+    /* text-align: center; */
+    vertical-align: -10px;
+
+    margin-right: 9px;
+    
+}
+.con-box ul li:nth-child(2)::before {
+    content: "";
+    display: inline-block;
+
+    width: 28px;
+    height: 29px;
+    background: url(../../5일차_ex/images/num02.png);
+    
+    /* text-align: center; */
+    vertical-align: -10px;
+
+    margin-right: 9px;
+    
+}
+/* 차일드와 함께 before 사용 */

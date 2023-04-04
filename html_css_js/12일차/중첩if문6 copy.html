@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+
+    <script>
+        'use strict';
+
+        let id, level;
+
+        id = prompt('아이디를 입력하세요');
+
+
+        if (id === 'ezen') {
+            if ((level = prompt('level을 입력하세요')) >= 5 && level <= 10) {
+                alert(level + '레벨은 해당 컨텐츠를 사용할 수 있습니다.');
+            } else {
+                alert(level + '레벨은 해당 컨텐츠를 사용할 수 없습니다.');
+            }
+        } else {
+            alert('아이디 오류, 다시 입력하세요');
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <pre>
+        id = ezen , userid , level
+
+            아이디가 일치하면
+            level 입력받기
+            5 ~ 10 이면
+            xx레벨은 해당 컨텐츠를 사용할수 있습니다.
+            그렇지 않으면
+            xx레벨은 해당 컨텐츠에 접근할수 없습니다.
+            그렇지 않으면
+            해당 아이디가 존재하지 않습니다. 다시 입력하세요
+    </pre>
+</body>
+
+</html>

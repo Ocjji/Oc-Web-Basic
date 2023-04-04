@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script>
+        'use strict';
+
+        function fx ( num ) {
+            let x = num + 50;
+            document.write(`x : ${x} <br>`);
+        }
+
+        fx(100);
+        fx(300);
+        document.write(`<br>`);
+
+        function sum ( x, y ) {
+            document.write(`두 수의 합 : ${x+y}<br>`);
+        }
+        function sub ( x, y ) {
+            document.write(`두 수의 차 : ${x-y}<br>`);
+        }
+        function mul ( x, y ) {
+            document.write(`두 수의 곱 : ${x*y}<br>`);
+        }
+        function div ( x, y ) {
+            document.write(`두 수의 몫 : ${parseInt(x / y)}<br>`);
+        }
+        function mod ( x, y ) {
+            document.write(`두 수의 나머지 : ${x%y}<br>`);
+        }
+
+
+        sum(10,30);
+        document.write(`===================<br>`);
+        sub(10,30);
+        document.write(`===================<br>`);
+        mul(10,30);
+        document.write(`===================<br>`);
+        div(20,3);
+        document.write(`===================<br>`);
+        mod(20,3);
+        document.write(`===================<br>`);
+
+    </script>
+
+</head>
+<body>
+    <pre>
+        합 : 두 수의 합 sum
+        차 : 두 수의 합 sub
+        곱 : 두 수의 합 mul
+        몫 : 두 수의 합 div
+        나머지 : 두 수의 합 mod
+        
+    </pre>
+</body>
+</html>

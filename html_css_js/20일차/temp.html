@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+
+    <style>
+        .box {
+            width: 400px;
+            height: 550px;
+            margin: 40px auto;
+            background: #EEE;
+            border-radius: 40px;
+
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+
+
+        }
+
+        .box::after {
+            content: "";
+
+            display: block;
+            width: 400px;
+            height: 150px;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-image: url(images/space-pattern.jpg);
+            overflow: hidden;
+        }
+
+        .box .gong {
+            width: 180px;
+            height: 180px;
+
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+
+            overflow: hidden;
+
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 10%;
+            z-index: 10;
+
+
+            transition: 0.2s ease;
+        }
+
+        .box .gong:hover {
+            transform: translateX(-50%) scale(1.2);
+        }
+
+        .box img {}
+
+        .box h3 {
+            font-size: 30px;
+            font-weight: 700;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 48%;
+        }
+
+
+        .box strong {
+
+            display: block;
+
+            width: 320px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 25px;
+            font-weight: 600;
+            border-radius: 30px;
+
+            text-align: center;
+            background: rgb(255, 207, 76);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 60%;
+            transition: 0.2s ease;
+        }
+
+        .box strong:hover {
+            background: rgb(255, 145, 0);
+            transform: translateX(-50%) scale(1.07);
+        }
+
+
+        .box p {
+            width: 340px;
+            word-break: keep-all;
+            margin: 20px auto;
+            position: absolute;
+            left: 10%;
+            top: 70%;
+        }
+
+        .spider {
+            margin: 100px auto;
+            width: 600px;
+            height: 400px;
+            background: linear-gradient(90deg, rgba(1, 51, 84, 1) 0%, rgba(128, 1, 1, 1) 78%);
+            /* text-align: center; */
+            color: #FFF;
+            position: relative;
+        }
+
+        .spider img {
+            position: absolute;
+            z-index: 100;
+            padding-top: 30px;
+            padding-left: 80px;
+            width: 76%;
+
+            transition: all 0.4s ease;
+        }
+
+        .spider:hover img {
+            width: 90%;
+            transform: translateX(25%) translateY(-10%);
+        }
+
+        .spider h3 {
+            margin-top: 60px;
+            font-size: 50px;
+            position: absolute;
+            left: 5%;
+            top: 0;
+        }
+
+        .spider p {
+            width: 220px;
+            text-align: left;
+            position: absolute;
+            left: 5%;
+            top: 40%;
+            z-index: 10;
+        }
+
+        .spider .more {
+            position: absolute;
+            left: 5%;
+            top: 85%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="gong"><img src="images/m0.jpg" alt="공효진"></div>
+        <h3>공효진</h3>
+
+        <strong>Follow</strong>
+        <p>설레는 반짝이는 보내는 인간의 구하지 인간이 같지 피다. 열매를 바이며, 무한한 꽃이 할지라도 미묘한 인간의 기쁘며, 품었기 보라. 싸인 예수는 영락과 얼마나 붙잡아 피어나기 황금시대다.</p>
+    </div>
+
+    <div class="spider">
+        <img src="images/pic1.png" alt="스파이더맨">
+        <div>
+            <h3>spidey</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, asperiores! Corporis cum odio doloremque
+                maiores ex cumque praesentium illo esse, quasi doloribus.</p>
+            <p class="more">Read More</p>
+        </div>
+    </div>
+</body>
+
+</html>
