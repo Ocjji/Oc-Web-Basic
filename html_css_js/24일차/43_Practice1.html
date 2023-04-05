@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        .box {
+            width: 200px;
+            height: 50px;
+            border: 1px solid #000;
+            line-height: 50px;
+        }
+
+        button {
+            padding: 20px 30px;
+            margin-top: 10px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+    <p>
+        <button>확인</button>
+    </p>
+
+    <script>
+        'use strict';
+
+        let dom = document.querySelector('.box');
+        let btn = document.querySelector('button');
+
+        // 이벤트 (사건) : 마우스, 키보드
+        // click 사용해보기
+
+        // 선택자.addEventListener('이벤트', 할일(){});
+        btn.addEventListener('click', function () {
+            dom.innerHTML = '안녕';
+        });
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        1개만 선택해 올 수 있음
+        document.querySelector('css 선택자')
+        document.querySelector('태그명')
+        document.querySelector('아이디')
+        document.querySelector('클래스')
+        document.querySelector('경로')
+        
+        .innerText = '내용'
+        .textContent = '내용'
+        .innerHTML = '내용+태그'
+
+        선택자.addEventListener('이벤트', 할일(){
+            실행문; ....
+        });
+    </pre>
+
+
+</body>
+
+
+</html>

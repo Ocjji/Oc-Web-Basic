@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+
+    </style>
+    <script>
+        'use strict';
+
+        let userid = prompt(`아이디를 입력하세요`);
+
+        if (8 <= userid.length && userid.length <= 12) {
+            alert(`사용가능한 아이디입니다.`);
+        } else {
+            alert(`8 ~ 12 글자 사이로 입력하세요.`);
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <pre>
+
+        <hr>
+
+        문제1)
+        1. 사용자 아이디를 입력받기 userid
+        2. 조건
+        길이가 8 ~ 12 글자 사이면
+        alert 사용가능한 아이디 입니다.
+        그렇지 않으면
+        8 ~ 12 글자 사이 다시 입력하세요
+
+    </pre>
+</body>
+
+</html>

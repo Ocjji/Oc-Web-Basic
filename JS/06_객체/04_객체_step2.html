@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+
+    </style>
+    <script>
+        'use strict';
+
+        let cat = {
+            name: '미호',
+            age: 15,
+            color: '하얀색',
+            food: '쥐포간식',
+            // this - 자기자신
+            // this - 객체 자신 (나) - cat
+
+            eat: function () {
+                document.write(`${this['name']}는 ${this['food']}을 먹는다<br>`);
+            },
+            sleep: function () {
+                document.write(`${this['name']}는 잠을 잔다<br>`);
+            },
+            run() { // 함수명만 써도 가능
+                document.write(`${this['name']}는 달린다<br>`);
+            }
+        }
+
+        document.write(`이름 : ${cat['name']} <br>`);
+        document.write(`나이 : ${cat['age']} <br>`);
+        document.write(`컬러 : ${cat['color']} <br>`);
+        document.write(`음식 : ${cat['food']} <br>`);
+        document.write(`<hr> <br>`);
+
+        // 메서드 : 객체.메서드()
+        // 함수() : 객체가 존재하지 않는다
+
+        cat.eat();
+        cat.sleep();
+        cat.run();
+
+    </script>
+
+</head>
+
+<body>
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

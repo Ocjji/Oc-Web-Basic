@@ -1,0 +1,144 @@
+#wrap {
+    width: 100%;
+    min-width: 1600px;
+}
+
+.inner {
+    width: 1000px;
+    margin: auto;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#header {
+    width: 100%;
+    background: #41414d;
+}
+
+#header .inner {
+    height: 150px;
+    background: #41414d;
+}
+
+#subVisual {}
+
+#subVisual .inner {
+    width: 1920px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../images/subVisual.jpg);
+}
+
+#container {}
+
+#content {}
+
+#footer {
+    background: #41414d;
+}
+
+#footer .inner {
+    height: 200px;
+    background: #41414d;
+}
+
+#footer h1 {
+    position: absolute;
+    top: 0;
+    transform: translateY(120%);
+    left: 0;
+}
+
+/* 게시판 */
+.bbs .inner {
+    padding: 100px 0;
+}
+
+.bbs h2 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+    padding-left: 10px;
+    line-height: 1.1;
+}
+
+.bbs strong {
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.bbs .board h2 {
+    text-align: center;
+}
+
+.bbs .tb-board {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.bbs .tb-board .w1 {
+    width: 120px;
+}
+
+.bbs .tb-board .w2 {
+    width: 350px;
+}
+
+.bbs .tb-board .w3 {
+    width: 160px;
+}
+
+.bbs .tb-board .w4 {
+    width: 210px;
+}
+
+.bbs .tb-board .w5 {
+    width: 160px;
+}
+
+.bbs .tb-board tbody {}
+
+.bbs .tb-board tbody tr {}
+
+.bbs .tb-board tbody tr td {
+    text-align: center;
+    height: 40px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    vertical-align: middle;
+    font-size: 15px;
+}
+
+.bbs .tb-board tbody tr:first-child td {
+    font-weight: 600;
+}
+
+.bbs .btnwrite {
+    text-align: right;
+}
+
+.bbs .btnwrite a button {
+    width: 100px;
+    height: 40px;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.bbs ul {
+    display: flex;
+    justify-content: center;
+}
+
+.bbs ul li {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.bbs ul li:nth-child(3) {
+    background: #000;
+    color: #fff;
+
+}

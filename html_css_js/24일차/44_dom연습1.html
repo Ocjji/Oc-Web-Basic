@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        body {
+            margin: 50px;
+        }
+
+        .box {
+            width: 300px;
+            height: 80px;
+            font-size: 40px;
+            line-height: 2;
+            text-align: center;
+            border: 1px solid #000;
+            margin: 20px;
+        }
+
+        button {
+            width: 120px;
+            height: 45px;
+            margin: 20px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="box">xxx</div>
+    <p>
+        <button class="btn1">중지</button>
+        <button class="btn2">시작</button>
+    </p>
+
+    <script>
+        'use strict';
+
+        let dom = document.querySelector('.box');
+        let btn1 = document.querySelector('.btn1');
+        let btn2 = document.querySelector('.btn2');
+        let timerId = null, interval = 1000;
+        let cnt = 0;
+
+
+
+        dom.innerHTML = cnt;
+
+        // timerId = setInterval(timer, interval);
+
+        function timer() {
+            cnt++;
+            dom.innerHTML = cnt;
+        }
+
+
+        btn2.addEventListener('click', function () {
+            timerId = setInterval(timer, interval);
+        });
+        btn1.addEventListener('click', function () {
+            clearInterval(timerId);
+        });
+
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        1. 단위 1초 .box 출력 카운트출력 0
+        2. 중지 : 멈춤
+        3. 시작 : 재가동        
+
+    </pre>
+</body>
+
+</html>

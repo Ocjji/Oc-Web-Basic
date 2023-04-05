@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+
+    </style>
+    <script>
+        'use strict';
+
+        const car = {
+            name: '옥반떼',
+            color: '흰색',
+            price: '3000',
+            start: function (x) {
+                if (x === 'on') {
+                    alert(`${this['name']} 시동 켬`);
+                } else if (x === 'off') {
+                    alert(`${this['name']} 시동 끔`);
+                }
+            }
+        }
+
+        document.write(`이름 : ${car['name']}<br>`);
+        document.write(`이름 : ${car['color']}<br>`);
+        document.write(`이름 : ${car['price']}<br>`);
+        document.write(`<hr> <br>`);
+
+        // car.start('on');
+        car.start('off');
+    </script>
+
+</head>
+
+<body>
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+
+    </style>
+    <script>
+        'use strict';
+
+        let getPW = ''; // 입력값
+        let max_length = 8; // 최대자리수
+        let convertPW = ''; // 변환값
+
+        // 입력받기
+        getPW = prompt('비밀번호를 입력하세요.(1 ~ 8자리)');
+
+        // 함수 시작
+
+        // function
+
+        // return 값 사용하기
+
+        // 함수 끝
+
+
+
+
+        convertPW = make(getPW); // return 값을 변환 비밀번호 변수에 저장
+
+
+        document.write(`${convertPW}`); // 출력하기
+
+    </script>
+
+</head>
+
+<body>
+    <pre>
+
+        <hr>
+        # 비밀번호 변환 생성기 #
+
+        예외값은 처리하지 않습니다. (9자리 이상 등)
+
+
+        비밀번호 입력 : 0~8자리
+        
+        입력된 비밀번호 왼쪽에 남은 자리수 크기만큼
+
+        역순으로 숫자가 채워집니다.
+                
+
+        예 1)
+        입력값 : 87 (8자리에서 6자리가 모자라기 때문에)
+
+        변환된 비밀번호 : 654321 + 87
+        
+        출력값 : 65432187
+        
+        예 2)
+        입력값 : 8794 (8자리에서 4자리가 모자라기 때문에)
+
+        변환된 비밀번호 : 4321 + 8794
+
+        출력값 : 43218794
+
+
+    </pre>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+
+    </style>
+    <script>
+        'use strict';
+        let a = prompt(`숫자를 입력하세요`);
+        let result = 0;
+
+        // toString() : 숫자를 문자로 변환
+        // a = a.toString();
+
+        const make = (num) => {
+            if (num.length === 1) {
+                return '0' + num;
+            } else {
+                return num;
+            }
+        }
+
+        result = make(a);
+        document.write(`결과 : ${result} <br>`);
+    </script>
+
+</head>
+
+<body>
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

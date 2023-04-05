@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+
+    </style>
+    <script>
+        'use strict';
+
+        let cat = {
+            name: '미호',
+            age: 15,
+            color: '하얀색',
+            food: '쥐포간식',
+            eat: function () {
+                document.write(`고양이는 음식을 먹는다<br>`);
+            },
+            sleep: function () {
+                document.write(`고양이는 잠을 잔다<br>`);
+            },
+            run: function () {
+                document.write(`고양이는 달린다<br>`);
+            }
+        }
+
+        document.write(`이름 : ${cat['name']} <br>`);
+        document.write(`나이 : ${cat['age']} <br>`);
+        document.write(`컬러 : ${cat['color']} <br>`);
+        document.write(`음식 : ${cat['food']} <br>`);
+        document.write(`<hr> <br>`);
+
+        // 메서드 : 객체.메서드()
+        // 함수() : 객체가 존재하지 않는다
+
+        cat.eat();
+        cat.sleep();
+        cat.run();
+
+    </script>
+
+</head>
+
+<body>
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

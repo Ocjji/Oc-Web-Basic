@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        .search-wrap {
+            display: flex;
+        }
+
+        .search-wrap .search-form {
+            margin: 20px;
+        }
+
+        .search-wrap .search-form select {
+            width: 80px;
+            height: 30px;
+            box-sizing: border-box;
+            border: none;
+            font-size: 10px;
+            padding-left: 5px;
+        }
+
+        .search-wrap .search-form input[type=text] {
+            width: 200px;
+            height: 30px;
+            box-sizing: border-box;
+        }
+
+        .search-wrap .search-form button {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            background: #000;
+            text-align: center;
+        }
+
+        .search-wrap .search-form button i {
+            color: #FFF;
+            font-size: 18px;
+            vertical-align: middle;
+            box-sizing: border-box;
+        }
+    </style>
+    <script>
+        'use strict';
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="search-wrap">
+        <div class="search-form">
+            <select name="검색방법" id="selection">
+                <option value="전체">전체</option>
+                <option value="제목">제목</option>
+                <option value="내용">내용</option>
+            </select>
+            <label for="search" class="hide">검색</label>
+            <input type="text" id="search" title="검색어를 입력하세요">
+            <button>
+                <i class="xi-search"></i>
+            </button>
+        </div>
+    </div>
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

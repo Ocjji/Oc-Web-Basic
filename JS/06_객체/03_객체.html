@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+
+    </style>
+    <script>
+        'use strict';
+        let obj = {
+            '제품명': '아메리카노',
+            '유형': '커피',
+            '원산지': '칠레',
+            '성분': '원두'
+        }
+
+        document.write(`제품명 : ${obj.제품명}   <br>`);
+        document.write(`유형 : ${obj.유형}   <br>`);
+        document.write(`원산지 : ${obj.원산지}   <br>`);
+        document.write(`성분 : ${obj.성분}   <br>`);
+        document.write(`//////////////////////<br>`);
+        document.write(`제품명 : ${obj['제품명']}   <br>`);
+        document.write(`유형 : ${obj['유형']}   <br>`);
+        document.write(`원산지 : ${obj['원산지']}   <br>`);
+        document.write(`성분 : ${obj['성분']}   <br>`);
+        document.write(`//////////////////////<br>`);
+
+        // for ~ in , for ~ of , for( 초기값; 최종값; 증감식)
+        // for ~ in : 키, 인덱스번호 (배열)
+        // for ~ of : 값 (배열)
+
+
+        // for( let 변수 in 객체명 ){}
+        for (let i in obj) {
+            document.write(`${i} : ${obj[i]} <br>`);
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>
