@@ -121,24 +121,120 @@
 .bbs .btnwrite a button {
     width: 100px;
     height: 40px;
-    color: #888;
     margin-bottom: 30px;
+    background: #FFF;
+    border: 1px solid #000;
+    cursor: pointer;
 }
 
-.bbs ul {
+.bbs .board ul {
     display: flex;
     justify-content: center;
 }
 
-.bbs ul li {
+.bbs ul a li {
     width: 30px;
     height: 30px;
     text-align: center;
     line-height: 30px;
+    box-sizing: border-box;
 }
 
-.bbs ul li:nth-child(3) {
+.bbs ul a:nth-child(3) li {
     background: #000;
     color: #fff;
 
+}
+
+.bbs .w190 {width: 190px;}
+.bbs .w700 {width: 700px;}
+.bbs .w980 {width: 980px;}
+
+.bbs .tb-write {margin-top: 30px; margin-bottom: 30px;}
+.bbs .tb-write .w1 {width: 100px;}
+.bbs .tb-write .w2 {width: 380px;}
+.bbs .tb-write .w3 {width: 100px;}
+.bbs .tb-write .w4 {width: auto;}
+
+.bbs .tb-write tbody {}
+.bbs .tb-write tbody tr {}
+.bbs .tb-write tbody tr td {
+    box-sizing: border-box;
+    padding-left: 15px;
+    border-bottom: 1px solid #000;
+}
+.bbs .tb-write tbody tr:first-child td {
+    border-top: 2px solid #000;
+    border-bottom: 1px dashed #d3d3d3;    
+}
+.bbs .tb-write tbody tr td input[type=text],
+.bbs .tb-write tbody tr td input[type=password] {
+    height: 40px;
+    margin: 15px 0 15px 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.bbs textarea {
+    height: 270px;
+    border: none;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.bbs .write .btnsubmit {
+    display: flex;
+    justify-content: center;
+}
+.bbs .write p a {
+    color: none;
+}
+.bbs .write p a button{
+    width: 100px;
+    height: 40px;
+    border: 1px solid #000;
+    cursor: pointer;    
+}
+.bbs .write .submit {
+    background: #000;
+    color: #FFF;
+}
+.bbs .write .reset {
+    background: #FFF;
+    margin-left: 10px;
+}
+
+.bbs .view {}
+.bbs .view h3 {
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.bbs .view ul {display: flex; margin-top: 25px;
+    margin-bottom: 25px;}
+.bbs .view ul li {}
+.bbs .view ul li:nth-child(n+2)::before {
+    content: "";
+
+    width: 1px;
+    height: 15px;
+    display: inline-block;
+    background: #888;
+    margin-right: 20px;
+    line-height: 15px;
+    vertical-align: middle;
+}
+.bbs .view ul li em {
+    color: #888;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.bbs .view p {
+    border: none;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
 }

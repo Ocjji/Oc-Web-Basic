@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <link rel="stylesheet" href="css/reset.css" />
+      <title>Document</title>
+      <style>
+         body {
+            background: skyblue;
+         }
+         #box {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+         }
+         #box #display {
+            width: 300px;
+            height: 100px;
+            border: 3px solid #fff;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+         }
+         #box #display .block {
+            width: 26px;
+            height: 95px;
+            background: #fff;
+            margin: 0 2px;
+         }
+         #box #percent {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+         }
+      </style>
+   </head>
+   <body>
+      <div id="box">
+         <div id="display"></div>
+         <div id="percent">0%</div>
+      </div>
+      <script>
+         'use strict';
+         let percentNumber = 0; // 하단 숫자표시할 변수
+         const display = document.querySelector('#display'); // html상에서의 테두리
+         const percent = document.querySelector('#percent'); // html상에서의 하단 숫자
+         let block = null; // html상에서의 테두리(const display)안에 들어갈 block을 위한 변수
+
+
+         const loading = () => {
+
+            percentNumber++;
+            if(percentNumber > 100){
+               return 0;
+            }
+            percent.innerHTML = percentNumber + '%';
+            
+            /* 
+              문제1)
+              let percentNumber가 100이 될때까지 하단숫자(const percent)에 표시하세요
+              ex. 0%, 5%, 12% ... 100%
+              만약, 100보다 크다면 반복을 중지하세요.
+              tip. innerHTML
+
+              //////////////////////////////////////////////////////////////////////////
+          */
+
+            // /////////////////////////////////////////////////////////////////////////
+            if (percentNumber % 10 === 0) {
+               block = document.createElement('div'); // 새로운 블록 요소 생성
+               block.classList.add('block'); // 생성된 블록 요소에 클래스 추가
+               display.append(block); // 완성한 블록요소를 display에 추가하기
+            }
+         };
+
+         /* 
+              문제2)
+              0.1초마다 실행
+              //////////////////////////////////////////////////////////////////////////
+         
+            
+              */
+               setInterval(loading, 100);
+         /*
+              //////////////////////////////////////////////////////////////////////////
+            이 문제는
+            아직 배우지 않은 부분들이 많기 때문에
+            문제를 이해하고 코드를 파악하는데 중점을 둔 문제입니다.
+            주석처리된 부분을 채워서 동작시켜보세요.
+            
+            0% -> 100%가 될때까지 0.1초마다 1%씩 증가됩니다.
+            10%단위마다 박스가 하나씩 추가됩니다. (10%, 20%, 30% ... 100%)
+         */
+      </script>
+   </body>
+</html>
