@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+
+    </style>
+    <script>
+        'use strict';
+
+        let names = ['보라돌이', '뚜비', '나나', '뽀'];
+
+        let len = names.length;
+        let username = prompt('검색할 이름');
+
+        for (let i = 0; i < len; i++) {
+            if (names[i] === username) {
+                document.write(`${names[i]}을 검색했습니다.`);
+                break;
+            }
+        }
+
+        /* for (let idx in names) {
+            if (names[idx] === username) {
+                document.write(`${names[idx]}을 검색했습니다.`);
+                break;
+            }
+        } */
+
+        /* for (let name of names) {
+            if (name === username) {
+                document.write(`${name}을 검색했습니다.`);
+                break;
+            }
+        } */
+    </script>
+
+</head>
+
+<body>
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

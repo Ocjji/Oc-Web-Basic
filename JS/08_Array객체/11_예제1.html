@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        .box {
+            border: 1px solid #000;
+            width: 300px;
+            padding: 30px;
+            margin: 50px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="box">
+        xxx
+    </div>
+    <script>
+        'use strict';
+
+        let color = 'red,green,blue,pink,skyblue,brown';
+
+        let arr = color.split(',');
+        // document.write(arr);
+
+        document.querySelector('.box').innerHTML = arr.join('<br>');
+
+    </script>
+
+    <!-- 
+    <script>
+        'use strict';
+
+        let arr = [];
+
+        arr[0] = 'red';
+        arr[1] = 'green';
+        arr[2] = 'blue';
+        arr[3] = 'pink';
+        arr[4] = 'skyblue';
+
+        document.querySelector('.box').innerHTML = arr.join('<br>');
+
+    </script>
+     -->
+
+    <!-- 
+    <script>
+        'use strict';
+
+        let msg = '';
+        /* 
+                msg += 'red';
+                msg += 'green';
+                msg += 'blue';
+                msg += 'pink';
+                msg += 'skyblue';
+         */
+
+        msg += 'red<br>';
+        msg += 'green<br>';
+        msg += 'blue<br>';
+        msg += 'pink<br>';
+        msg += 'skyblue<br>';
+
+
+        document.querySelector('.box').innerHTML = msg;
+
+    </script>
+     -->
+
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

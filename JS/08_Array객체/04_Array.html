@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+
+    </style>
+    <script>
+        'use strict';
+
+        let users = ['user1', 'user2', 'user3', 'user4'];
+        //             0         1        2        3
+
+        let arr = [];
+        arr[0] = '홍길동';
+        arr[1] = 20;
+        arr[2] = '인천';
+        arr[3] = '남자';
+        arr[4] = '010-2222-3333';
+
+        document.write(`이름 : ${arr[0]} <br>`);
+        document.write(`나이 : ${arr[1]} <br>`);
+        document.write(`주소 : ${arr[2]} <br>`);
+        document.write(`성별 : ${arr[3]} <br>`);
+        document.write(`전화 : ${arr[4]} <br>`);
+        document.write(`길이 : ${arr.length} <br><br>`);
+
+        let menuList = ['회사소개', '인사말', '제품소개', '실적', '고객문의'];
+
+        for (let i = 0; i < menuList.length; i++) {
+            let menuItem = menuList[i];
+            document.write(`${i}번 : ${menuItem} <br>`);
+        }
+
+        document.write(`<br>`);
+
+        for (let x in menuList) {
+            document.write(`${x}번 : ${menuList[x]} <br>`);
+        }
+
+        document.write(`<br>`);
+
+        let count = 0;
+        for (let y of menuList) {
+            document.write(`${count}번 : ${y} <br>`);
+            count++;
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>
