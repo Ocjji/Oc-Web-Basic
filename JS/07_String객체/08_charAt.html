@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+
+    </style>
+    <script>
+        'use strict';
+
+        let x = prompt('주민등록번호 뒷자리만 입력');
+        // x = x.toString();
+        let ch = x.charAt(0);
+        let len = x.length;
+        document.write(`${typeof x}`);
+
+        if (len !== 7) {
+            document.write(`7자리로 입력해주세요`);
+        } else if (isNaN(x)) {
+            if (ch === '1' || ch === '3') {
+                document.write(`당신은 남자입니다.`);
+            } else if (ch === '2' || ch === '4') {
+                document.write(`당신은 여자입니다.`);
+            } else {
+                document.write(`형식이 잘못되었습니다.`);
+            }
+        }
+
+
+
+    </script>
+
+</head>
+
+<body>
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+
+    </style>
+    <script>
+        'use strict';
+
+        let birth = '';
+        let yy = '';
+        let mm = '';
+        let dd = '';
+
+        birth = prompt(`생년월일 6자리 입력`);
+
+        yy = birth.slice(0, 2);
+        mm = birth.slice(2, 4);
+        dd = birth.slice(4, 6);
+
+        document.write(`당신의 생일 : ${yy}년 ${mm}월 ${dd}일 !!!`);
+
+    </script>
+
+</head>
+
+
+<body>
+    <pre>
+
+        <hr>
+
+        1. 입력값 user : 주민번호 앞자리 '6자리'
+        2. 변수 y = 년, m = 월, d = 일
+        3. substring, slice *
+
+        4. 결과값
+            YY년 MM월 DD일 출력
+    </pre>
+</body>
+
+</html>
