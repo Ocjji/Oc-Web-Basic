@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        .box p {
+            width: 300px;
+            line-height: 20px;
+            text-align: center;
+            border: 1px solid #000;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div class="box">
+        <!-- <p>XXX</p> -->
+    </div>
+
+    <script>
+        'use strict';
+
+        let arr = [10, 20, 30, 40, 50];
+        let dom = document.querySelector('.box');
+        let x = '';
+        // x = '<p>XXX<p>';
+        // x += '<p>안녕<p>';
+        /* 
+                for (let elment of arr) {
+                    x += '<p>' + elment + '</p>';
+                }
+        
+                for (let elment in arr) {
+                    x += '<p>' + arr[elment] + '</p>';
+                }
+        */
+        let arr1 = arr.map(elment => {
+            return `<p> ${elment} </p>`;
+        });
+
+        let arr2 = arr.map((elment, idx) => `<p> ${elment} </p>`
+        );
+        console.log(arr2);
+
+        // dom.innerHTML = arr1.join('');
+        dom.innerHTML = arr2;
+
+    </script>
+
+    <pre>
+        <hr>
+    </pre>
+</body>
+
+</html>

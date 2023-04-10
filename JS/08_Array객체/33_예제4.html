@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .box {
+            margin: 20px auto;
+            width: 800px;
+        }
+
+        .box table {
+            width: 100%;
+        }
+
+        .box table caption {
+            display: none;
+        }
+
+        .box table .w1 {
+            width: 80px;
+        }
+
+        .box table .w2 {
+            width: 120px;
+        }
+
+        .box table .w3 {
+            width: 120px;
+        }
+
+        .box table .w4 {
+            width: 120px;
+        }
+
+        .box table .w5 {}
+
+        .box th,
+        .box td {
+            border: 1px solid #000;
+            height: 50px;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .box th {
+            border-bottom: none;
+            border-top: 2px solid #000;
+            background: #EFEFEF;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <table>
+            <caption>신상명세서</caption>
+            <colgroup>
+                <col class="w1">
+                <col class="w2">
+                <col class="w3">
+                <col class="w4">
+                <col class="w5">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">이름</th>
+                    <th scope="col">나이</th>
+                    <th scope="col">주소</th>
+                    <th scope="col">설명</th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+                <!-- <tr>
+                    <td>00</td>
+                    <td>홍길동</td>
+                    <td>10</td>
+                    <td>인천</td>
+                    <td>나는 인천에 살고 있습니다.</td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+    <script>
+        let data = [
+            { id: 1, name: '홍길동', age: 15, addr: '서울', msg: '홍길동 안녕!' },
+            { id: 2, name: '고길동', age: 25, addr: '서울', msg: '고길동 안녕!안녕!' },
+            { id: 3, name: '강호동', age: 22, addr: '인천', msg: '강호동 안녕!안녕!' },
+            { id: 4, name: '송혜교', age: 18, addr: '서울', msg: '송혜교 안녕!' },
+            { id: 5, name: '김철수', age: 24, addr: '부산', msg: '김철수 안녕!안녕!' },
+            { id: 6, name: '김기철', age: 30, addr: '부산', msg: '김기철 안녕!' },
+        ];
+
+        let dom = document.querySelector('.tbody');
+
+        let arr1 = data.map((elment, idx) => {
+            return `<tr><td>${elment.id}</td><td>${elment.name}</td><td>${elment.age}</td><td>${elment.addr}</td><td>${elment.msg}</td></tr>`;
+        });
+
+        // console.log(arr1);
+        dom.innerHTML = arr1.join('');
+
+
+    </script>
+</body>
+
+</html>

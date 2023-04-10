@@ -6,16 +6,13 @@ let str1 = elements.join();
 console.log(str1, typeof str1);
 
 console.log(elements.join());
-// Expected output: "Fire,Air,Water"
 
 console.log(elements.join(''));
-// Expected output: "FireAirWater"
 
 let str2 = elements.join('  +  ');
 console.log(str2, typeof str2);
 
 console.log(elements.join('-'));
-// Expected output: "Fire-Air-Water"
 
 let menus = ['menu1', 'menu2', 'menu3', 'menu4'];
 // menu1-menu2-...
@@ -24,7 +21,7 @@ let str3 = menus.join('-');
 console.log(str3);
 
 let str4 = menus.join('<br>');
-document.write(str4);
+console.log(str4);
 // join();
 
 /* 
