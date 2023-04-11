@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <script>
+        'use strict';
+        // console.log(Array());
+        // console.dir(Array());
+
+        function fun(num) {
+            console.log(num);
+        }
+
+        function fun1() {
+            // 배열
+            console.log(arguments);
+            console.log(Array.isArray(arguments));
+            console.log(Array.isArray([]));
+            console.log(arguments);
+            console.log(arguments[0]);
+            console.log(arguments[1]);
+            console.log(arguments[2]);
+            console.log(arguments.length);
+        }
+
+        function fun2() {
+            let sum = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            console.log(sum);
+        }
+
+        function fun3() {
+            // 1. 배열로 변경
+            let arg_sum = [];
+            for (let item of arguments) {
+                arg_sum.push(item);
+            }
+            // 2. 누적값 메서드
+            let sumTest = arg_sum.reduce((acc, cur) => acc + cur, 0);
+            return sumTest;
+        }
+        function fun4() {
+            // 1. 배열로 변경
+            // let arg_sum = Array.of(arguments);
+            let arg_sum = Array.from(arguments);
+
+            // 2. 누적값 메서드 Array.reduce()
+            let sumTest2 = arg_sum.reduce((acc, cur) => acc + cur, 0);
+            return sumTest2;
+        }
+
+        // 값 가변 : 알 수 없다
+        fun(10, 20, 30, 40, 50);
+        fun1(10, 20, 30, 40, 50);
+        fun2(10, 20, 30, 40, 50);
+        let result = fun3(10, 20, 30, 40, 50);
+        console.log(result);
+        let result2 = fun3(10, 20, 30, 40, 50);
+        console.log(result2);
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        유사 배열 : 배열형식, length 만 쓸 수 있다
+                    속성 : length
+                    메서드 : toString
+
+        forEach , map 과 같은 내장함수 사용불가
+
+        arguments - 유사배열        
+
+    </pre>
+</body>
+
+</html>

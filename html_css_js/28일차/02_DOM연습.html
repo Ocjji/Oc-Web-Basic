@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+
+    </style>
+
+
+</head>
+
+<body>
+    <ul>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+    </ul>
+
+    <script>
+        'use strict';
+
+        let list = document.getElementsByTagName('li');
+
+        console.log(list);
+
+        let arr = ['보라돌이', '뚜비', '나나', '뽀'];
+
+        // for (let i in arr) {
+        //     list[i].innerHTML = arr[i];
+        // }
+        // list[0].innerHTML = '사과';
+        // list[1].innerHTML = '수박';
+        // list[2].innerHTML = '포도';
+        // list[3].innerHTML = '딸기';
+
+        let liItem = Array.from(list);
+
+        liItem.forEach((element, idx) => {
+            console.log(element);
+            element.innerHTML = arr[idx];
+            element.style.border = '1px solid #000';
+        });
+    /*
+        for (let i = 0; i < list.length; i++) {
+            let x = list[i];
+            x.style.margin = '30px';
+            x.style.width = '300px';
+            x.style.height = '100px';
+            x.style.lineHeight = '100px';
+            x.style.fontSize = '30px';
+            x.style.border = '1px solid #000';
+            x.style.textAlign = 'center';
+        }
+        */
+    </script>
+
+
+    <pre>
+
+        document.getElementsByTagName('태그명');
+        getElements : 복수 - 배열 로 처리됨
+
+        <hr>
+        
+    </pre>
+</body>
+
+</html>
