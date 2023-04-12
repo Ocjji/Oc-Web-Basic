@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        .box {
+            width: 400px;
+            height: 100px;
+            border: 1px solid #000;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 100px;
+        }
+
+        .box span {
+            color: blue;
+            background: skyblue;
+        }
+
+        button {
+            padding: 20px 30px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="box">
+        xxx
+    </div>
+    <p>
+        <button onclick="make1()">innerHTML</button>
+        <button onclick="make2()">innerText</button>
+        <button onclick="make3()">textContent</button>
+    </p>
+
+    <script>
+        'use strict';
+
+        let box = document.querySelector('.box');
+
+        let btn1 = document.querySelector('button:nth-child(1)');
+        let btn2 = document.querySelector('button:nth-child(2)');
+        let btn3 = document.querySelector('button:nth-child(3)');
+
+        const make1 = () => {
+            // box.innerHTML = 'innerHTML';
+            box.innerHTML = '안녕하세요 <span>홍길동 1</span> 입니다.';
+        }
+        const make2 = () => {
+            // box.innerText = 'innerText';
+            box.innerText = '안녕하세요 <span>홍길동 2</span> 입니다.';
+        }
+        const make3 = () => {
+            // box.textContent = 'textContent';
+            box.textContent = '안녕하세요 <span>홍길동 3</span> 입니다.';
+        }
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        .innerHTML : 텍스트 + html
+        
+        .innerText : 텍스트
+        .textContent : 텍스트
+
+    </pre>
+</body>
+
+</html>

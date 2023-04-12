@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        body {
+            font-size: 20px;
+        }
+
+        .name {
+            display: none;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <p id="txt1">xx</p>
+    <p id="txt2">xx</p>
+    <p id="txt3">xx</p>
+    <h2 class="txt">안녕하세요 저는 <span class="name">홍길동</span>입니다.</h2>
+
+    <script>
+        'use strict';
+
+        let txt1 = document.querySelector('#txt1');
+        let txt2 = document.querySelector('#txt2');
+        let txt3 = document.querySelector('#txt3');
+        let txt = document.querySelector('.txt');
+
+        txt1.innerHTML = '<a href="http://www.naver.com">naver</a>';
+        txt2.innerHTML = '<a href="http://www.naver.com">naver</a>';
+        txt3.innerHTML = '<a href="http://www.naver.com">naver</a>';
+
+        console.log(txt.innerHTML);
+        // 안녕하세요 저는 <span class="name">홍길동</span>입니다.
+        console.log(txt.innerText);
+        // 안녕하세요 저는 입니다.
+        console.log(txt.textContent);
+        // 안녕하세요 저는 홍길동입니다.
+    </script>
+
+    <pre>
+
+        <hr>
+
+        setter : 값 지정
+        선택자.innerHTML = '값'
+        선택자.innerText = '값'
+        선택자.textContent = '값'
+
+        getter : 값 꺼내오기
+        선택자.innerHTML 
+        선택자.innerText
+        선택자.textContent
+    </pre>
+</body>
+
+</html>

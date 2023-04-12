@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        button {
+            padding: 20px 35px;
+            margin: 20px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <h2>xxx</h2>
+
+    <img src="images/cat0.jpg" alt="고양이">
+    <p>
+        <button>사진1</button>
+        <button>사진2</button>
+        <button>사진3</button>
+        <button>사진4</button>
+    </p>
+
+    <script>
+        'use strict';
+
+        let h2 = document.querySelector('h2');
+        let pic = document.querySelector('img');
+        // let btn1 = document.querySelector('button:nth-child(1)');
+        // let btn2 = document.querySelector('button:nth-child(2)');
+        // let btn3 = document.querySelector('button:nth-child(3)');
+
+        let timerId = null;
+        let titles = ['고양이1', '고양이2', '고양이3', '고양이4'];
+        let imgs = ['images/cat0.jpg', 'images/cat1.jpg', 'images/cat2.jpg', 'images/cat3.jpg'];
+
+        let cnt = 0;
+
+        h2.innerHTML = titles[cnt];
+        h2.style.fontSize = '40px';
+        h2.style.fontWeight = '700';
+
+        timerId = setInterval(() => {
+            cnt++;
+            if (cnt > 3) {
+                cnt = 0;
+            }
+            h2.innerText = titles[cnt];
+            pic.setAttribute('src', imgs[cnt]);
+        }, 2000);
+
+
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

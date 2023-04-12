@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <div id="box">
+        xxx
+    </div>
+
+    <script>
+        'use strict';
+        let dom = document.getElementById('box');
+        let names = ['보라돌이', '뚜비', '나나', '뽀', '아기햇님'];
+        let x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color = color + x[Math.floor(Math.random() * 16)];
+        }
+        let title = '';
+        title = names[Math.floor(Math.random() * 5)];
+
+        dom.innerHTML = title;
+
+        dom.style.backgroundColor = color;
+        dom.style.width = '300px';
+        dom.style.height = '300px';
+        dom.style.border = '2px solid #000';
+        dom.style.textAlign = 'center';
+        dom.style.fontSize = '50px';
+        dom.style.lineHeight = '300px';
+
+
+
+
+    </script>
+
+    <pre>
+
+        <hr>
+        IE 버전 때문에 많이 사용했었음
+        getElementById('아이디')
+        getElementsByClassName('클래스명') : 배열(유사배열)
+        getElementsByTagName('태그명') : 배열(유사배열)
+
+        스타일
+        선택자.style.속성 = '값'
+        속성 : css 모든 속성 지정
+        속성-속성 : 두번째 첫글자 대문자로 시작
+
+    </pre>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        li {
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            background-color: #999;
+            margin: 20px;
+            line-height: 40px;
+            font-weight: 600;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <p>태그선택자</p>
+    <ul>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+    </ul>
+    <div>
+        <p>문단내용</p>
+    </div>
+    <p>나도문단</p>
+
+    <script>
+        'use strict';
+        let arr = ['보라돌이', '뚜비', '나나', '뽀', '아가햇님'];
+        let color = ['purple', 'yellowgreen', 'yellow', 'red', 'orange'];
+        let li = document.getElementsByTagName('li');
+        console.dir(li);
+
+        li[0].style.color = 'purple';
+        li[1].style.color = 'yellowgreen';
+        li[2].style.color = 'yellow';
+        li[3].style.color = 'red';
+        li[4].style.color = 'orange';
+
+        // for ~ in
+        for (let idx in arr) {
+            li[idx].innerHTML = arr[idx];
+            li[idx].style.borderRadius = '20px';
+        }
+
+        // 기본 for문
+        for (let i = 0; i < color.length; i++) {
+            li[i].style.border = '3px solid ' + color[i];
+        }
+
+        // for ~ of 별로 좋지 않음
+        // for(let item of color ){
+        //     // li[여기에 쓸 것이 없음]
+        // }
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

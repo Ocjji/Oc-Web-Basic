@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        .box {
+            width: 220px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 30px;
+            margin: 30px;
+            border: 1px solid #000;
+        }
+
+        button {
+            display: inline-block;
+            margin: 0px 0 0 30px;
+            width: 100px;
+            height: 40px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="box">xxx</div>
+    <p>
+        <button class="prev">-1 감소</button>
+        <button class="next">+1 증가</button>
+    </p>
+
+
+    <script>
+        'use strict';
+
+        let cnt = 0;
+        let timerId = null;
+        let interval = 4000;
+        let nintendo = true;
+
+        let dom = document.querySelector('.box');
+        let prev = document.querySelector('.prev');
+        let next = document.querySelector('.next');
+
+        dom.innerHTML = cnt;
+        // setInterval(() => {
+        //     cnt++;
+        //     if (cnt > 10) {
+        //         cnt = 0;
+        //     }
+        //     dom.innerHTML = cnt;
+        // }, 1000);
+
+        timerId = setInterval(rolling, interval);
+
+        function rolling() {
+            cnt++;
+            if (cnt > 10) {
+                cnt = 0;
+            }
+            dom.innerHTML = cnt;
+            clearInterval(timerId);
+            timerId = setInterval(rolling, interval);
+        }
+
+        prev.addEventListener('click', function () {
+            cnt--;
+            if (cnt < 0) {
+                cnt = 10;
+            }
+            dom.innerHTML = cnt;
+            clearInterval(timerId);
+            timerId = setInterval(rolling, interval);
+        });
+
+        next.addEventListener('click', function () {
+            cnt++;
+            if (cnt > 10) {
+                cnt = 0;
+            }
+            dom.innerHTML = cnt;
+            clearInterval(timerId);
+            timerId = setInterval(rolling, interval);
+        });
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

@@ -8,12 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 
     <style>
-        .box {
-            width: 100px;
-            height: 100px;
-            margin: 50px;
-            border: 1px solid #000;
-        }
     </style>
 
 
@@ -37,8 +31,12 @@
             if (color1 < num) {
                 color1 = Math.floor(color1).toString(16);
             }
-            dom.style.backgroundColor = color1;
-        }, 1000);
+            dom.style.backgroundColor = '#' + color1;
+        }, 500);
+
+        dom.style.width = '100px';
+        dom.style.height = '100px';
+        dom.style.border = '2px solid #000';
 
     </script>
 

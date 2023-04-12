@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+
+    </style>
+
+
+</head>
+
+<body>
+    <p class="box1">test</p>
+    <p class="box1">test</p>
+    <p class="box1">test</p>
+    <p class="box1">test</p>
+
+    <script>
+        'use strict';
+        let p = document.getElementsByClassName('box1');
+        console.log(p);
+
+        for (let i = 0; i < p.length; i++) {
+            p[i].innerHTML = `.box1의 [${i}] 번째`;
+            p[i].style.width = '300px';
+            p[i].style.backgroundColor = '#888';
+            p[i].style.marginBottom = '15px';
+        }
+    </script>
+
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

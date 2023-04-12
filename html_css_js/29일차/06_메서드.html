@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <div id="box">xxx</div>
+    <button onclick="make('스타일값 넣기')">확인</button>
+
+    <script>
+        'use strict';
+        let dom = document.getElementById('box');
+        let btn = document.getElementsByTagName('button');
+        const make = (x) => {
+            // alert(x);
+            // div의 텍스트 넣고 스타일 넣기
+            dom.innerHTML = x;
+
+            dom.style.width = '200px';
+            dom.style.height = '200px';
+            dom.style.border = '2px solid #000';
+            dom.style.margin = '30px';
+            dom.style.textAlign = 'center';
+            dom.style.lineHeight = '200px';
+            btn[0].style.display = 'none';
+        }
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

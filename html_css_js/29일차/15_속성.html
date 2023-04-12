@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        a {
+            font-size: 50px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <a href=""></a>
+    <img style="display : block; width: 100%">
+    <div></div>
+    <script>
+        'use strict';
+        let a = document.querySelector('a');
+
+        a.textContent = '네이버';
+        a.setAttribute('href', 'http://www.naver.com');
+        a.setAttribute('style', 'color : red; border : 1px solid #000');
+        a.setAttribute('target', '_blank');
+        a.setAttribute('id', 'idName');
+        a.setAttribute('class', 'className');
+
+        let img = document.querySelector('img');
+        img.setAttribute('src', 'images/visual.gif');
+        img.setAttribute('alt', '잘자요');
+        img.setAttribute('title', '맑은 눈의 밤인사');
+
+        let dom = document.querySelector('div');
+        let txt = ''
+        txt += a.getAttribute('href') + '<br>';
+        txt += a.getAttribute('target') + '<br>';
+        txt += img.getAttribute('alt') + '<br>';
+        txt += img.getAttribute('title') + '<br>';
+
+        dom.innerHTML = txt;
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        Element.getAttribute() : 속성 꺼내오기
+        Element.getAttribute('속성')
+
+        Element.setAttribute() : 속성 지정하기
+        Element.setAttribute('속성, '값')
+
+    </pre>
+</body>
+
+</html>

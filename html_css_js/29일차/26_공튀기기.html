@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        .box {
+            border: 4px solid blue;
+            margin: 40px;
+            padding: 15px;
+            position: relative;
+        }
+
+        .ball {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: red;
+            position: absolute;
+            /* transform: translateX(-50%) translateY(-50%); */
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="box">
+        <div class="ball"></div>
+    </div>
+
+
+    <script>
+        'use strict';
+
+        let ball = document.querySelector('.ball');
+
+        let timerId = null;
+        let velocity = [1, 1];
+        let dir = ['+', '+'];
+        let max = {
+            x: 400,
+            y: 250
+        };
+
+        let box = document.querySelector('.box');
+        box.style.width = max.x + 'px';
+        box.style.height = max.y + 'px';
+
+
+        let ball_left = 0;
+        let ball_top = 0;
+        ball.style.left = '0px';
+        ball.style.top = '0px';
+
+        console.log(ball.getAttribute('style'));
+
+        timerId = setInterval(() => {
+
+            if (dir[0] == '+' && dir[1] == '+') {
+                ball_left = ball_left + velocity[0];
+                ball.style.left = ball_left + 'px';
+
+                ball_top = ball_top + velocity[1];
+                ball.style.top = ball_top + 'px';
+
+                if (ball_top === max.y) {
+                    dir[1] = '-';
+                    velocity[1] = -1;
+                }
+                if (ball_left === max.x) {
+                    dir[0] = '-';
+                    velocity[0] = -1;
+                }
+            }
+            if (dir[0] == '+' && dir[1] == '-') {
+                ball_left = ball_left + velocity[0];
+                ball.style.left = ball_left + 'px';
+
+                ball_top = ball_top + velocity[1];
+                ball.style.top = ball_top + 'px';
+
+                if (ball_top === 0) {
+                    dir[1] = '+';
+                    velocity[1] = 1;
+                }
+                if (ball_left === max.x) {
+                    dir[0] = '-';
+                    velocity[0] = -1;
+                }
+            }
+            if (dir[0] == '-' && dir[1] == '-') {
+                ball_left = ball_left + velocity[0];
+                ball.style.left = ball_left + 'px';
+
+                ball_top = ball_top + velocity[1];
+                ball.style.top = ball_top + 'px';
+
+                if (ball_top === 0) {
+                    dir[1] = '+';
+                    velocity[1] = 1;
+                }
+                if (ball_left === 0) {
+                    dir[0] = '+';
+                    velocity[0] = 1;
+                }
+            }
+            if (dir[0] == '-' && dir[1] == '+') {
+                ball_left = ball_left + velocity[0];
+                ball.style.left = ball_left + 'px';
+
+                ball_top = ball_top + velocity[1];
+                ball.style.top = ball_top + 'px';
+
+                if (ball_top === max.y) {
+                    dir[1] = '-';
+                    velocity[1] = -1;
+                }
+                if (ball_left === 0) {
+                    dir[0] = '+';
+                    velocity[0] = 1;
+                }
+            }
+        }, 5);
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

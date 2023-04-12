@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        a {
+            font-size: 50px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <a href="http://www.naver.com" target="_blank" title='설명입니다.' id='testID' class='test'>a태그</a>
+
+    <script>
+        'use strict';
+        let a = document.querySelector('a');
+        a.textContent = '네이버입니다.';
+        console.log(a.href);
+        console.log(a.target);
+        console.log(a.title);
+        console.log(a.id); // 가능
+        console.log(a.class); // 불가능
+    </script>
+
+    <pre>
+        HTML DOM : set
+        <태그 속성, class = 'test'>
+        요소.요소속성 = '값';
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

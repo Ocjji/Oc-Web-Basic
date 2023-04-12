@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        p {
+            margin: 50px;
+        }
+
+        button {
+            width: 300px;
+            height: 50px;
+            margin: 30px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <p>
+        <button onclick="make1()">첫번째 방식 / 예전방식</button>
+        <button class="btn1">두번째 방식 / 살짝 예전방식</button>
+        <button class="btn2">세번째 방식 / ***** 요즘방식 *****</button>
+        <button class="btn3">네번째 방식 / *** 화살표함수 ***</button>
+        <button class="btn4">다섯번째 방식 / *** 함수로 분리 ***</button>
+    </p>
+    <script>
+        'use strict';
+        function make1() {
+            alert('첫번째 방식 / 예전방식');
+        }
+
+        let btn1 = document.querySelector('.btn1');
+        btn1.onclick = function () {
+            alert('두번째 방식 / 살짝 예전방식');
+        }
+        /* 선택자.이벤트 = 할일() {
+            alert('두번째 형식');
+        } */
+
+        let btn2 = document.querySelector('.btn2');
+        btn2.addEventListener('click', function () {
+            alert('세번째 방식 / ***** 요즘방식 *****');
+        });
+
+        let btn3 = document.querySelector('.btn3');
+        btn3.addEventListener('click', () => {
+            alert('네번째 방식 / *** 화살표함수 ***');
+        });
+
+        ///////////////////////////////////////////////////
+
+        function make2() {
+            alert('함수로 분리');
+        }
+        const make3 = () => {
+            alert('함수로 분리');
+        }
+        let btn4 = document.querySelector('.btn4');
+        btn4.addEventListener('click', make3);
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

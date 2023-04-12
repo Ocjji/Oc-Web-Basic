@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <h1 id="title">xxx</h1>
+    <h2 class="txt">xxx</h2>
+    <h3 class="txt">xxx</h3>
+
+    <script>
+        'use strict';
+        let h1 = document.querySelector('#title');
+        h1.innerHTML = '제목1';
+        h1.style.backgroundColor = 'tan';
+
+        let txt = document.querySelectorAll('.txt');
+        console.log(Array.isArray(txt));
+        console.dir(txt);
+
+        txt.forEach(function (item) {
+            console.log(item);
+            item.innerHTML = '나는 클래스입니다.';
+        });
+
+    </script>
+
+    <pre>
+
+        <hr>
+        1개만
+        Document.querySelector()
+        Document.querySelector('css 선택자')
+        Document.querySelector('#아이디')
+        Document.querySelector('.클래스')
+        Document.querySelector('태그')
+        Document.querySelector('경로(:nth-???)') 가능
+
+        Document.querySelector() 는 제공한 선택자 또는 선택자 뭉치와 일치하는 문서 내 첫 번째 Element를 반환합니다. 일치하는 요소가 없으면 null을 반환합니다.
+
+        여러개 - 배열처리
+        Document.querySelectorAll()
+
+        Document 메소드 querySelectorAll() 는 지정된 셀렉터 그룹에 일치하는 다큐먼트의 엘리먼트 리스트를 나타내는 정적(살아 있지 않은) NodeList 를 반환합니다.
+
+    </pre>
+</body>
+
+</html>

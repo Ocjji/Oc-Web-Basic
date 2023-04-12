@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        button {
+            padding: 20px 35px;
+            margin: 20px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <!-- div.gallery>img+p>button -->
+    <div class="gallery">
+        <img src="images/cat0.jpg" alt="고양이">
+        <p>
+            <button>사진1</button>
+            <button>사진2</button>
+            <button>사진3</button>
+            <button>사진4</button>
+        </p>
+    </div>
+    <script>
+        'use strict';
+        let pic = document.querySelector('.gallery img');
+        let btn1 = document.querySelector('p button:nth-child(1)');
+        let btn2 = document.querySelector('p button:nth-child(2)');
+        let btn3 = document.querySelector('p button:nth-child(3)');
+        let btn4 = document.querySelector('p button:nth-child(4)');
+
+        function visual(n) {
+            switch (n) {
+                case 1: pic.setAttribute('src', 'images/cat0.jpg'); break;
+                case 2: pic.setAttribute('src', 'images/cat1.jpg'); break;
+                case 3: pic.setAttribute('src', 'images/cat2.jpg'); break;
+                case 4: pic.setAttribute('src', 'images/cat3.jpg'); break;
+            }
+        }
+
+        btn1.addEventListener('click', visual(1));
+        btn2.addEventListener('click', visual(2));
+        btn3.addEventListener('click', visual(3));
+        btn4.addEventListener('click', visual(4));
+
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>
