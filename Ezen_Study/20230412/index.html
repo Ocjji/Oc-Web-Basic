@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <title>Document</title>
+   <link rel="stylesheet" href="css/reset.css" />
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+   <style>
+      .wrap {
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .wrap .box {
+         margin: 50px;
+         width: 600px;
+         background: #ededed;
+         border-radius: 20px;
+         padding: 20px;
+      }
+
+      .wrap .box h2 {
+         font-size: 50px;
+         font-weight: 600;
+         text-align: center;
+         margin-bottom: 10px;
+      }
+
+      .wrap .box div {
+         width: 500px;
+         height: 500px;
+         border-radius: 20px;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background: #000;
+         margin: auto;
+         margin-bottom: 50px;
+         background-image: url();
+      }
+
+      .wrap .box button {
+         cursor: pointer;
+         display: block;
+         border-radius: 20px;
+         width: 200px;
+         height: 50px;
+         margin: auto;
+         background: #fff;
+         border: 2px solid #000;
+         font-size: 20px;
+         font-weight: 600;
+         transition: 0.3s;
+      }
+
+      .wrap .box button:hover {
+         background: #000;
+         color: #fff;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="wrap">
+      <div class="box">
+         <h2>Title</h2>
+         <div></div>
+         <button>GO</button>
+      </div>
+   </div>
+   <script>
+      /* 
+      머쓱이는 점심시간마다 메뉴를 고르지 못하는 결정장애가 있다. 머쓱이를 위해 점심메뉴를 정할 수 있는 점심메뉴 룰렛을 만들어보자.
+      -조건-
+      HTML과 css는 건드리지 않는다.
+      0.1초마다 타이틀과 이미지가 바뀐다.
+      이때, 순서대로가 아닌 랜덤하게 바뀐다.
+      정지를 누르면 멈추고, 다시 누르면 재시작된다.
+      */
+      'use strict';
+      const arr = ['부대찌개', '국밥', '우육면', '돈까스', '제육볶음', '라면', '마라탕', '짜장면', '카레', '샐러드'];
+
+      let h2 = document.querySelector('.box h2');
+      let box = document.querySelector('.box div');
+      let btn = document.querySelector('.box button');
+
+      let timerId = null;
+      let interval = 100;
+      let isplay = false;
+
+      let ran = 0;
+      let prev = 0;
+
+      h2.innerText = arr[ran];
+      box.style.backgroundSize = 'cover';
+      box.style.backgroundImage = 'url(images/' + arr[ran] + '.jpg)';
+
+      const rolling = () => {
+         while (1) {
+            ran = Math.floor(Math.random() * 10);
+            if (ran !== prev) {
+               prev = ran;
+               break;
+            }
+         }
+         box.style.backgroundImage = 'url(images/' + arr[ran] + '.jpg)';
+         h2.innerText = arr[ran];
+      }
+
+      btn.addEventListener('click', () => {
+         if (isplay === true) {
+            clearInterval(timerId);
+            btn.innerHTML = 'GO';
+            isplay = false;
+         } else {
+            timerId = setInterval(rolling, interval);
+            btn.innerHTML = 'STOP';
+            isplay = true;
+         }
+      });
+
+
+
+   </script>
+</body>
+
+</html>
