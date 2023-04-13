@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        .gallery {
+            width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+
+        .gallery h2 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .gallery img {
+            width: 500px;
+            height: 330px;
+        }
+
+        .gallery p {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .gallery button {
+            width: 80px;
+            margin-top: 15px;
+            padding: 10px 0;
+            background: #000;
+            color: white;
+            text-align: center;
+        }
+
+        .gallery button.on {
+            background-color: red;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <!-- div.gallery>h2{xxx}+img+p>button -->
+    <div class="gallery">
+        <h2>고양이</h2>
+        <img src="images/img0.jpg" alt="">
+        <p>
+            <button class="on">ON</button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+        </p>
+    </div>
+
+    <script>
+        'use strict';
+        let titles = ['고양이', '퍼렁새', '원숭이', '겨란', '보호색'];
+
+
+        let txt = document.querySelector('.gallery h2');
+        let pic = document.querySelector('.gallery img');
+        let btn = document.querySelectorAll('.gallery p button');
+        let timerId = null;
+        let interval = 3000;
+        let totalImg = titles.length;
+        let cnt = 0;
+        let curNum = 0;
+        let isPlay = {
+            status: true,
+            idx: 0
+        }
+
+        const spinTime = {
+            duration: 3000, // 시간은 3초
+            iterations: Infinity, // 반복은 무한
+        };
+
+        timerId = setInterval(rolling, interval);
+
+        function rolling() {
+            cnt++;
+            if (cnt > 4) {
+                cnt = 0;
+            }
+            banner(cnt);
+        }
+
+        btn.forEach((element, idx) => {
+            element.addEventListener('click', function () {
+                // banner(idx);
+
+                if (isPlay.status === true) {
+                    banner(idx);
+                    btn[idx].textContent = 'RESTART';
+                    clearInterval(timerId);
+                    isPlay.status = false;
+                } else if (isPlay.status === false && idx === cnt) {
+                    banner(idx);
+                    timerId = setInterval(rolling, interval);
+                    isPlay.status = true;
+                } else if (isPlay.status === false && idx !== cnt) {
+                    banner(idx);
+                    clearInterval(timerId);
+                    btn[idx].textContent = 'RESTART';
+                    isPlay.status = false;
+                }
+            });
+        });
+
+        function banner(num) {
+            txt.textContent = titles[num];
+            pic.setAttribute('src', 'images/img' + num + '.jpg');
+            for (let item of btn) {
+                item.textContent = '';
+                item.style.backgroundColor = 'black';
+                item.style.color = 'white';
+            }
+            btn[num].textContent = 'ON';
+            btn[num].style.backgroundColor = 'red';
+
+            pic.animate([
+                { opacity: '0', offset: 0 },
+                { opacity: '1', offset: 0.4 },
+                { opacity: '1', offset: 1 },
+            ], spinTime);
+
+            cnt = num;
+        }
+    </script>
+
+    <pre>
+        <hr>
+
+        버튼 클릭시 멈춤 / 다시 실행
+
+    </pre>
+</body>
+
+</html>

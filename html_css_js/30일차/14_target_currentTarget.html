@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        .con-box {
+            padding: 30px;
+            width: 300px;
+            height: 200px;
+            border: 1px solid #000;
+            font-size: 30px;
+            margin: 30px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .con-box p {
+            width: 45%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .con-box p:nth-child(1) {
+            background: tan;
+        }
+
+        .con-box p:nth-child(2) {
+            background: violet;
+        }
+
+        .con-box p strong {
+            display: block;
+            background: #ddd;
+            width: 100px;
+            line-height: 50px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="con-box">
+        <p class="box1">
+            <strong>홍길동</strong>
+        </p>
+        <p class="box2">
+            <strong>고길동</strong>
+        </p>
+    </div>
+
+    <script>
+        'use strict';
+        let dom = document.querySelector('.con-box');
+
+
+        // event, evt, e : 이벤트
+        dom.addEventListener('click', function (e) {
+            console.log(this);
+            console.log(e.target);
+            console.log(e.currentTarget);
+        });
+
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        dom.addEventListener('click', function () {})
+        이벤트한 자기 자신 = dom : this (나)
+
+        dom.addEventListener('click', function (e) {
+            console.log(this);
+            // 정말 마우스가 클릭한 대상
+            console.log(e.target);
+            // 이벤트한 대상 ( 클릭한 대상 )
+            console.log(e.currentTarget);
+        });
+
+
+    </pre>
+</body>
+
+</html>

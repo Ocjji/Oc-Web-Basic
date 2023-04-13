@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        button {
+            width: 200px;
+            height: 60px;
+            margin: 10px;
+        }
+
+        .box {
+            margin: 10px;
+            width: 200px;
+            height: 60px;
+            border: 1px solid #000;
+            font-size: 30px;
+            line-height: 2;
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        'use strict';
+
+
+        // load 
+        // load 이벤트는 리소스( 이미지, 동영상, 텍스트, style 등 )와 그것에 의존하는 리소스들의 로딩이 완료되면 실행됩니다.
+
+        // 1. 과거 방식 ( 예전 방식 )
+        // window.onload = function () {
+        //     let btn = document.querySelector('button');
+        //     let dom = document.querySelector('.box');
+
+        //     // html 내부에 div.box를 생성하기도 전에 실행
+        //     btn.addEventListener('click', function () {
+        //         dom.textContent = 'load 실행';
+        //     })
+        // }
+
+
+        // 2. 요즘 방식
+        // window.addEventListener('load', function () {
+        //     let btn = document.querySelector('button');
+        //     let dom = document.querySelector('.box');
+
+        //     // html 내부에 div.box를 생성하기도 전에 실행
+        //     btn.addEventListener('click', function () {
+        //         dom.textContent = 'load 실행';
+        //     })
+        // });
+
+
+        // 3. 최근 방식
+        // DOMContentLoaded
+        // DOMContentLoaded 이벤트는 초기 HTML 문서를 완전히 불러오고 분석했을 때 발생합니다. 스타일 시트, 이미지, 하위 프레임의 로딩은 기다리지 않습니다.
+        window.addEventListener('DOMContentLoaded', (event) => {
+            let btn = document.querySelector('button');
+            let dom = document.querySelector('.box');
+
+            // html 내부에 div.box를 생성하기도 전에 실행
+            btn.addEventListener('click', function () {
+                dom.textContent = 'load 실행';
+            })
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <button>확인</button>
+    <div class="box">xxx</div>
+
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        .gallery {
+            width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+
+        .gallery h2 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .gallery img {
+            width: 500px;
+            height: 330px;
+        }
+
+        .gallery p {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .gallery button {
+            width: 80px;
+            margin-top: 15px;
+            padding: 10px 0;
+            background: #000;
+            color: white;
+            text-align: center;
+        }
+
+        .gallery button.on {
+            background-color: red;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <!-- div.gallery>h2{xxx}+img+p>button -->
+    <div class="gallery">
+        <h2>갤러리</h2>
+        <img src="images/img0.jpg" alt="">
+        <div class="txt"></div>
+        <p>
+            <button class="prev">이전</button>
+            <button class="next">다음</button>
+        </p>
+    </div>
+
+    <script>
+        'use strict';
+        let arr = [];
+
+        for (let i = 0; i < 10; i++) {
+            arr[i] = '<strong>고양이' + i + '번</strong><p>고양이 ' + i + '의 사진입니다.</p>';
+        }
+        console.log(arr);
+
+        let h2 = document.querySelector('.gallery h2');
+        let txt = document.querySelector('.gallery .txt');
+        let alt = document.querySelector('.gallery .txt .strong');
+        let prev = document.querySelector('.gallery prev');
+        let next = document.querySelector('.gallery next');
+
+
+        let cnt = 0;
+        let imgurl = '';
+        let totalImg = arr.length;
+        let str = '';
+
+        txt.innerHTML = arr[cnt];
+        alt = document.querySelector('.gallery .txt strong');
+        str = alt.textContent;
+        pic.setAttribute('alt', str);
+
+        prev.addEventListener('click', function () {
+            cnt--;
+            if (cnt < 0) {
+                cnt = totalImg - 1;
+            }
+            banner();
+        });
+
+        next.addEventListener('click', function () {
+            cnt++;
+            if (cnt > totalImg - 1) {
+                cnt = 0;
+            }
+            banner();
+        });
+
+        function banner() {
+            imgurl = 'images/img' + cnt + '.jpg';
+            pic.setAttribute('src', imgurl);
+            txt.innerHTML = arr[cnt];
+            alt = document.querySelector('.gallery .txt strong');
+            str = alt.textContent;
+            pic.setAttribute('alt', str);
+
+            txt.animate([
+                { trasform: 'trasnslateX(100px)' },
+                { trasform: 'trasnslateX(0)' }
+            ], 400)
+        }
+    </script>
+
+    <pre>
+        <hr>
+
+        버튼 클릭시 멈춤 / 다시 실행
+
+    </pre>
+</body>
+
+</html>

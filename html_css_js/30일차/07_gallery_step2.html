@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        .gallery {
+            width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+
+        .gallery h2 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .gallery img {
+            width: 500px;
+            height: 330px;
+        }
+
+        .gallery p {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .gallery button {
+            margin-top: 15px;
+            padding: 10px 17px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <!-- div.gallery>h2{xxx}+img+p>button -->
+    <div class="gallery">
+        <h2>고양이</h2>
+        <img src="images/img0.jpg" alt="">
+        <p>
+            <button>이미지1</button>
+            <button>이미지2</button>
+            <button>이미지3</button>
+            <button>이미지4</button>
+            <button>이미지5</button>
+        </p>
+    </div>
+
+    <script>
+        'use strict';
+        let titles = ['고양이', '퍼렁새', '원숭이', '겨란', '보호색'];
+
+
+        let txt = document.querySelector('.gallery h2');
+        let pic = document.querySelector('.gallery img');
+        let btn = document.querySelectorAll('.gallery p button');
+        let timerId = null;
+        let interval = 3000;
+        let totalImg = titles.length;
+        let cnt = 0;
+
+        const spinTime = {
+            duration: 3000, // 시간은 3초
+            iterations: Infinity, // 반복은 무한
+        };
+
+        /* for (let i = 0; i < 5; i++) {
+            btn[i].addEventListener('click', function () {
+                txt.textContent = titles[i];
+                pic.setAttribute('src', 'images/img' + i + '.jpg');
+            });
+        } */
+
+        timerId = setInterval(rolling, interval);
+        function rolling() {
+            cnt++;
+            if (cnt > 4) {
+                cnt = 0;
+            }
+            txt.textContent = titles[cnt];
+            pic.setAttribute('src', 'images/img' + cnt + '.jpg');
+        }
+
+        titles.forEach((element, idx) => {
+            let item = btn[idx];
+            item.addEventListener('click', function () {
+                txt.textContent = element;
+                pic.setAttribute('src', 'images/img' + idx + '.jpg');
+
+                pic.animate([
+                    { opacity: '0', offset: 0 },
+                    { opacity: '1', offset: 0.4 },
+                    { opacity: '1', offset: 1 },
+                    // { opacity: '0' },
+                ], spinTime);
+
+                cnt = idx;
+                clearInterval(timerId);
+                timerId = setInterval(rolling, interval);
+            });
+        });
+
+        pic.animate([
+            { opacity: '0', offset: 0 },
+            { opacity: '1', offset: 0.4 },
+            { opacity: '1', offset: 1 },
+            // { opacity: '0' },
+        ], spinTime);
+
+        /* btn[0].addEventListener('click', function () {
+            txt.textContent = '사진 111';
+            pic.setAttribute('src', 'images/img0.jpg');
+        });
+        btn[1].addEventListener('click', function () {
+            txt.textContent = '사진 222';
+            pic.setAttribute('src', 'images/img1.jpg');
+        });
+        btn[2].addEventListener('click', function () {
+            txt.textContent = '사진 333';
+            pic.setAttribute('src', 'images/img2.jpg');
+        });
+        btn[3].addEventListener('click', function () {
+            txt.textContent = '사진 444';
+            pic.setAttribute('src', 'images/img3.jpg');
+        });
+        btn[4].addEventListener('click', function () {
+            txt.textContent = '사진 555';
+            pic.setAttribute('src', 'images/img4.jpg');
+        });
+ */
+    </script>
+
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

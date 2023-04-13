@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: #000;
+            position: relative;
+            left: 50px;
+            top: 50px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div></div>
+
+    <script>
+        'use strict';
+        let div = document.querySelector('div');
+
+
+
+        const spinTime = {
+            duration: 4000, // 시간은 4초
+            // iterations: 3, // 반복은 3번
+            iterations: Infinity, // 반복은 무한
+        };
+
+        div.addEventListener('click', () => {
+            // alert('클릭!');
+            div.animate([
+                { transform: "rotate(0) scale(1)", opacity: 0 },
+                { transform: "rotate(360deg) scale(3)", opacity: 1 },
+                { transform: "rotate(720deg) scale(1)", opacity: 0 },
+            ], { duration: 3000, iterations: Infinity });
+        });
+
+    </script>
+
+    <pre>
+
+
+
+        div.addEventListener('click', () => {
+            // alert('클릭!');
+            div.animate([
+                { transform: "rotate(0) scale(1)", opacity: 0 },
+                { transform: "rotate(360deg) scale(3)", opacity: 1 },
+                { transform: "rotate(720deg) scale(1)", opacity: 0 },
+            ], { duration: 3000, iterations: Infinity });
+        });
+
+        <hr>
+
+        https://developer.mozilla.org/en-US/docs/Web/API/Element/animate
+
+    </pre>
+</body>
+
+</html>

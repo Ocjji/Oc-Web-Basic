@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: #000;
+            position: relative;
+            left: 50px;
+            top: 50px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div></div>
+
+    <script>
+        'use strict';
+        let div = document.querySelector('div');
+
+
+
+        const spinTime = {
+            duration: 4000, // 시간은 4초
+            // iterations: 3, // 반복은 3번
+            iterations: Infinity, // 반복은 무한
+        };
+
+        div.addEventListener('click', () => {
+            // offset : 0 ~ 1 (0 ~ 100%)
+            //'3초' 처음과 끝은 생략 가능하다
+            div.animate([
+                { transform: "translateX(0px)", offset: 0 },
+                { transform: "translateX(100px)", offset: 0.05 },
+                { transform: "translateX(200px)", offset: 0.1 },
+                { transform: "translateX(300px)", offset: 0.2 },
+                { transform: "translateX(400px)", offset: 0.5 },
+                { transform: "translateX(500px)", offset: 1 },
+            ], 3000);
+        });
+
+    </script>
+
+    <pre>
+
+
+
+        div.addEventListener('click', () => {
+            // offset : 0 ~ 1 (0 ~ 100%)
+            //'3초' 처음과 끝은 생략 가능하다
+            div.animate([
+                { transform: "translateX(0px)", offset: 0 },
+                { transform: "translateX(100px)", offset: 0.05 },
+                { transform: "translateX(200px)", offset: 0.1 },
+                { transform: "translateX(300px)", offset: 0.2 },
+                { transform: "translateX(400px)", offset: 0.5 },
+                { transform: "translateX(500px)", offset: 1 },
+            ], 3000);
+        });
+
+        <hr>
+
+        https://developer.mozilla.org/en-US/docs/Web/API/Element/animate
+
+    </pre>
+</body>
+
+</html>

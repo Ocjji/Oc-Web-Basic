@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        button {
+            width: 200px;
+            height: 60px;
+            margin: 10px;
+        }
+
+        .box {
+            margin: 10px;
+            width: 200px;
+            height: 60px;
+            border: 1px solid #000;
+            font-size: 30px;
+            line-height: 2;
+            text-align: center;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <button>확인</button>
+    <div class="box">xxx</div>
+
+    <script>
+        'use strict';
+        let dom = document.querySelector('.box');
+
+        // dom.addEventListener('click', function () {
+        //     this.textContent = '홍길동';
+        //     this.style.backgroundColor = 'tan';
+        //     this.style.color = 'red';
+        // });
+
+        // event, evt, e : 이벤트
+        dom.addEventListener('click', (event) => {
+            event.currentTarget.textContent = '홍길동';
+            event.currentTarget.style.backgroundColor = 'tan';
+            event.currentTarget.style.color = 'red';
+        });
+
+
+        // event, evt, e : 이벤트
+        // dom.addEventListener('click', (event) => {
+        //     event.target.textContent = '홍길동';
+        //     event.target.style.backgroundColor = 'tan';
+        //     event.target.style.color = 'red';
+        // });
+
+        // 화살표 함수에서 this 사용불가
+        // dom.addEventListener('click', () => {
+        //     this.textContent = '홍길동';
+        //     this.style.backgroundColor = 'tan';
+        //     this.style.color = 'red';
+        // });
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        dom.addEventListener('click', function () {})
+        이벤트한 자기 자신 = dom : this (나)
+
+    </pre>
+</body>
+
+</html>

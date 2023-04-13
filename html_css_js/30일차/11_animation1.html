@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div class="box">
+        <img src="images/move/cat0.png" alt="고양이 이동0">
+    </div>
+
+    <script>
+        'use strict';
+
+        let pic = document.querySelector('.box img');
+        let cnt = 0;
+        let imgurl = '';
+        let totalImg = 6;
+        let interval = 300;
+
+        setInterval(function () {
+            cnt++;
+            if (cnt > totalImg - 1) {
+                cnt = 0;
+            }
+            imgurl = 'images/move/cat' + cnt + '.png';
+            pic.setAttribute('src', imgurl);
+        }, 300);
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        하
+
+    </pre>
+</body>
+
+</html>
