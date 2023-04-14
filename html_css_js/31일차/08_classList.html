@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        div {
+            width: 200px;
+            height: 50px;
+            border: 1px solid #000;
+            margin: 20px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        strong {
+            display: block;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            font-size: 30px;
+            border: 1px solid #000;
+            margin: 20px;
+        }
+
+        button {
+            font-size: 20px;
+        }
+
+        .on1 {
+            background: pink;
+            border-radius: 50px;
+            height: 150px;
+            border-width: 10px;
+        }
+
+        .on2 {
+            background: red;
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+            border-width: 1px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div>xxx</div>
+    <strong>xxx</strong>
+    <p>
+        <button>add</button>
+        <button>remove</button>
+        <button>toggle</button>
+        <button>contains</button>
+        <button>replace</button>
+    </p>
+    <script>
+        'use strict';
+
+        let dom = document.querySelector('div');
+        let strong = document.querySelector('strong');
+        let btn = document.querySelectorAll('button');
+
+        let txt;
+
+        btn[0].addEventListener('click', e => {
+            // dom.classList.add('on1');
+            dom.classList.add('on1', 'on2');
+            strong.textContent = dom.classList;
+        })
+        btn[1].addEventListener('click', e => {
+            dom.classList.remove('on1');
+            strong.textContent = dom.classList;
+        })
+        btn[2].addEventListener('click', e => {
+            dom.classList.toggle('on1');
+            strong.textContent = dom.classList;
+        })
+        btn[3].addEventListener('click', e => {
+            txt = dom.classList.contains('on1');
+            // 존재 여부 + if
+            strong.textContent = txt;
+        })
+        btn[4].addEventListener('click', e => {
+            dom.classList.replace('on1', 'on2');
+            strong.textContent = dom.classList;
+        })
+    </script>
+
+    <pre>
+
+        <hr>
+        classList 없으면 작업 못할 정도
+        
+        Element.classList
+        Element.classList 는 엘리먼트의 클래스 속성의 컬렉션인 활성 DOMTokenList를 반환하는 읽기 전용 프로퍼티이다.
+
+        classList 사용은 공백으로 구분된 문자열인 element.className을 통해 엘리먼트의 클래스 목록에 접근하는 방식을 대체하는 간편한 방법이다.
+
+    </pre>
+</body>
+
+</html>

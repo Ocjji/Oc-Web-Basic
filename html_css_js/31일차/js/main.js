@@ -11,7 +11,7 @@ let img_index = 0;
 let show_index = 1;
 
 let timerId = null;
-let interval = 1500;
+let interval = 4000;
 let isPlay = true;
 
 

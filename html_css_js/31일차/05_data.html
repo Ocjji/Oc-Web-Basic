@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        div {
+            width: 200px;
+            margin: 30px;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="box1" data-name="보라돌이">BOX 1</div>
+    <div class="box2" data-name="뚜비" data-age="20">BOX 2</div>
+    <div class="box3" data-list-name="나나" data-list-age="25">BOX 3</div>
+    <div class="box4" data-test-num1="30" data-test-num2="40">BOX 4</div>
+    <div class="box5" data-name="">BOX 5</div>
+
+    <script>
+        'use strict';
+        let dom1 = document.querySelector('.box1');
+        let dom2 = document.querySelector('.box2');
+        let dom3 = document.querySelector('.box3');
+        let dom4 = document.querySelector('.box4');
+        let dom5 = document.querySelector('.box5');
+
+        dom1.textContent = `${dom1.dataset.name}입니다.`;
+        dom2.textContent = `${dom2.dataset.name}이고, 나이는 ${dom2.dataset.age}입니다.`;
+        // 예) data-name1-name2 는 호출시, dataset.name1Name2 로 카멜표기법으로 호출한다.
+        dom3.textContent = `${dom3.dataset.listName}이고, 나이는 ${dom3.dataset.listAge}입니다.`;
+        dom4.textContent = `두 수의 합은 : ${Number(dom4.dataset.testNum1) + Number(dom4.dataset.testNum2)}입니다.`;
+
+    </script>
+
+    <pre>
+
+        <hr>
+        data-*
+
+        < 선언문 >
+        data-이름 = "내용"
+
+        < 사용문 >
+        선택자.dataset.이름
+
+        data-* 전역 특성은 사용자 지정 데이터 특성(custom data attributes)이라는 특성 클래스를 형성함으로써 임의의 데이터를 스크립트로 HTML과 DOM 사이에서 교환할 수 있는 방법입니다.
+        
+        모든 사용자 지정 데이터는 해당 데이터를 지정한 요소의 HTMLElement 인터페이스, dataset (en-US) 속성을 통해 사용할 수 있습니다. data-*의 *은 XML 이름 생성 규칙을 따르는 모든 이름으로 대체할 수 있습니다.
+
+        dataset (en-US) 속성 : js
+
+        data-사용자정의 = ""
+        data-사용자정의-사용자정의 = ""
+        data-dog = ""
+        data-dog-cat = ""
+
+    </pre>
+</body>
+
+</html>

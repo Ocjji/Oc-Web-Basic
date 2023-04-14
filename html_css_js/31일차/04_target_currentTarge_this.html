@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        ul {
+            margin: 30px;
+        }
+
+        ul li {
+            display: inline-block;
+            width: 300px;
+            height: 50px;
+            border: 1px solid #000;
+            text-align: center;
+            line-height: 50px;
+            font-size: 25px;
+            margin: 20px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <ul>
+        <li>e.target</li><span>화살표 함수 가능</span>
+        <li>e.currentTarget</li><span>화살표 함수 가능</span>
+        <li>this</li><span>화살표 함수 불가능</span>
+    </ul>
+    <script>
+        'use strict';
+        let list = document.querySelectorAll('li');
+
+        // list[0].addEventListener('click', (e) => {
+        //     // list[0].textContent = 'menu1';
+        //     e.target.textContent = 'e.target!!';
+        // });
+        // list[1].addEventListener('click', (e) => {
+        //     // list[1].textContent = 'menu2';
+        //     e.currentTarget.textContent = 'e.currentTarget!!';
+        // });
+        // list[2].addEventListener('click', function () {
+        //     // list[2].textContent = 'menu3';
+        //     this.textContent = 'this는 화살표 함수 X';
+        //     console.log(this);
+        //     // this는 화살표 함수 쓸 수 없다!!!!!!
+        // });
+
+        // for (let i = 0; i < list.length; i++) {
+        //     list[i].addEventListener('click', function () {
+        //         this.textContent = 'for문으로 지정! Index : ' + i;
+        //     });
+        // }
+
+        list.forEach((element, idx) => {
+            element.addEventListener('click', (e) => {
+                e.target.textContent = 'for문으로 지정! Index : ' + idx;
+            });
+        });
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

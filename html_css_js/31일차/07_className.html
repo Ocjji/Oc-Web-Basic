@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        h2 {
+            font-size: 40px;
+            text-indent: 20px;
+        }
+
+        div {
+            width: 300px;
+            height: 100px;
+            line-height: 100px;
+            padding: 10px;
+            border: 1px solid #000;
+            margin: 10px;
+        }
+
+        .output {
+            width: 300px;
+            padding: 20px;
+            border-style: none;
+            border: 1px solid #000;
+            margin: 10px;
+            font-size: 30px;
+        }
+
+        button {
+            width: 120px;
+            height: 50px;
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        .box {
+            background: tan;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        .on {
+            border-width: 20px;
+        }
+
+        .on1 {
+            background: thistle;
+            border-radius: 30px;
+        }
+
+        .on2 {
+            height: 200px;
+            border-color: brown;
+        }
+
+        .on3 {
+            height: 150px;
+            background: navajowhite;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <h2> className </h2>
+    <div class="box on">XXX</div>
+    <p class="output">
+        XXX
+    </p>
+    <p>
+        <button>읽기</button>
+        <button>추가1</button>
+        <button>추가2</button>
+        <button>추가3</button>
+        <button>추가4</button>
+        <button>삭제</button>
+    </p>
+
+    <script>
+        'use strict';
+
+
+
+        let dom = document.querySelector('div');
+        let output = document.querySelector('.output');
+        let btn = document.querySelectorAll('button');
+
+        let txt;
+
+        btn[0].addEventListener('click', (e) => {
+            txt = dom.className;
+            output.textContent = txt;
+        });
+        btn[1].addEventListener('click', (e) => {
+            dom.className = 'on1';
+        });
+        btn[2].addEventListener('click', (e) => {
+            dom.className += ' on2';
+        });
+        btn[3].addEventListener('click', (e) => {
+            dom.className = 'on1 on2 on3';
+        });
+        btn[4].addEventListener('click', (e) => {
+            dom.className = 'box';
+            dom.className += ' on';
+            dom.className += ' on1';
+            dom.className += ' on2';
+            dom.className += ' on3';
+        });
+        btn[5].addEventListener('click', (e) => {
+            dom.className = '';  //  삭제
+        });
+
+    </script>
+
+    <pre>
+
+        <hr>
+        이런게 있구나 정도!
+
+        Element.className
+
+        className 특정 엘리먼트의 클래스 속성의 값을 가져오거나 설정할 수 있다.
+        
+
+    </pre>
+</body>
+
+</html>

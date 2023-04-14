@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        .box {
+            width: 300px;
+            height: 100px;
+            border: 1px solid #000;
+            margin: 30px auto;
+            background: tan;
+            text-align: center;
+            font-size: 20px;
+            line-height: 5;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 25px;
+            margin: 20px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="box">
+        xxx
+    </div>
+    <p>
+        <button class="decre">감소</button>
+        <button class="incre">증가</button>
+    </p>
+    <script>
+        'use strict';
+
+        let dom = document.querySelector('.box');
+        let decre = document.querySelector('.decre');
+        let incre = document.querySelector('.incre');
+
+        let op = 1;
+        let opTxt = op + '';
+        const onDecre = () => {
+            if (op > 0.2) {
+                op -= 0.1;
+                dom.style.opacity = op;
+                opTxt = op.toFixed(1);
+                dom.textContent = 'opacity : ' + opTxt;
+            }
+        }
+        const onIncre = () => {
+            if (op < 0.9) {
+                op += 0.1;
+                dom.style.opacity = op;
+                opTxt = op.toFixed(1);
+                dom.textContent = 'opacity : ' + opTxt;
+            }
+        }
+
+        decre.addEventListener('click', onDecre);
+        incre.addEventListener('click', onIncre);
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

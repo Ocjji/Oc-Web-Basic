@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        body {
+            margin: 50px;
+        }
+
+        button {
+            width: 200px;
+            height: 60px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <button>안녕</button>
+
+    <script>
+        'use strict';
+        let btn = document.querySelector('button');
+
+        let clicked = true;
+
+        btn.addEventListener('click', () => {
+            if (!clicked) {
+                btn.textContent = '잘가';
+                clicked = true;
+            } else {
+                btn.textContent = '안녕';
+                clicked = false;
+            }
+        });
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

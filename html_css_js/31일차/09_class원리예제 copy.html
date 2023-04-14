@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        div {
+            width: 300px;
+            height: 50px;
+            border: 1px solid #000;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        img {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+
+        .paging {
+            margin: 50px;
+            display: flex;
+        }
+
+        .paging li {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #888;
+            border-radius: 50%;
+            background: #888;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        .paging li.on {
+            border: 3px solid #888;
+            background: #444;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div>xxx</div>
+    <img src="" alt="">
+    <ul class="paging">
+        <li class="on" data-page="1"></li>
+        <li data-page="2"></li>
+        <li data-page="3"></li>
+        <li data-page="4"></li>
+    </ul>
+    <script>
+        'use strict';
+        let dom = document.querySelector('div');
+        let pic = document.querySelector('img');
+        let li = document.querySelectorAll('.paging li');
+
+        let isPlay = true;
+        let timerId = null;
+        let view = 1;
+
+        dom.textContent = 1;
+        pic.src = 'images/img' + 1 + '.jpg';
+
+        const clicked = (e) => {
+            // for (let i = 0; i < li.length; i++) {
+            //     li[i].classList.remove('on');
+            // }
+
+            li.forEach(element => {
+                element.classList.remove('on');
+            });
+
+            e.target.classList.add('on');
+
+            if (e.target.classList.contains('on')) {
+                dom.textContent = e.target.dataset.page;
+                pic.src = 'images/img' + e.target.dataset.page + '.jpg';
+            }
+        }
+
+        // const rolling = () => {
+        //     view++;
+        //     if (view > 3) {
+        //         view = 0;
+        //     }
+        //     li.forEach(element => {
+        //         element.classList.remove('on');
+        //     });
+
+        //     li[view].classList.add('on');
+
+        //     if (li[view].classList.contains('on')) {
+        //         dom.textContent = li[view].dataset.page;
+        //         pic.src = 'images/img' + li[view].dataset.page + '.jpg';
+        //     }
+        // }
+
+        // timerId = setInterval(rolling, 500);
+
+        for (let i = 0; i < li.length; i++) {
+            li[i].addEventListener('click', clicked);
+        }
+
+
+
+    </script>
+
+    <pre>
+
+        <hr>
+        https://www.hyundaigfholdings.co.kr/web/html/ko/MAIN/MAIN.html#none
+        비주얼 페이징부분 처리
+        
+
+    </pre>
+</body>
+
+</html>

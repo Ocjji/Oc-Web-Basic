@@ -1,0 +1,17 @@
+.naver { width: 400px; padding: 15px; border: 1px solid #000; margin: 10px;}
+.naver .num-box{ display: flex; }
+.naver .num-box p { margin-right: 10px; margin-bottom: 20px;}
+.naver .num-box p:last-child span { display: inline-block; width: 30px; height: 30px; border: 1px solid #000; text-align: center; line-height: 30px; }
+.naver .num-box .next { }
+.naver .num-box .prev { }
+
+.naver .con-box {
+    position: relative; width: 100%; height: 500px;
+}
+.naver .con-box article { position: absolute; left: 0; top: 0; width: 100%; height: 450px; display: none; }
+.naver .con-box article h3 { font-size: 40px; }
+.naver .con-box article:nth-child(1) { background: yellow; display: block; }
+.naver .con-box article:nth-child(2) { background: pink; }
+.naver .con-box article:nth-child(3) { background: skyblue; }
+.naver .con-box article:nth-child(4) { background: lime; }
+.naver .con-box article:nth-child(5) { background: hotpink; }        

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        body {
+            margin: 20px;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        img {
+            width: 150px;
+            margin: 15px;
+        }
+
+        div {
+            width: 350px;
+            height: 50px;
+            border: 1px solid #000;
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-indent: 20px;
+            line-height: 50px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <ul>
+        <li><img src="images/cat0.jpg" data-src="images/cat0.jpg" alt="고양이0" data-title="뒤돌아보는 고양이" data-msg="쳐다보는구나">
+        </li>
+        <li><img src="images/cat1.jpg" data-src="images/cat1.jpg" alt="고양이1" data-title="멍때리는 고양이" data-msg="어딘가를 보고있음">
+        </li>
+    </ul>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <div class="box4">box4</div>
+    <script>
+        'use strict';
+        let img1 = document.querySelector('ul li:first-child img');
+        let img2 = document.querySelector('ul li:last-child img');
+        let box = document.querySelectorAll('div');
+
+        const currentPlay = (e) => {
+            box[0].textContent = `${e.target.dataset.src}`;
+            box[1].textContent = `${e.target.dataset.title}`;
+            box[2].textContent = `${e.target.dataset.msg}`;
+        }
+
+        img1.addEventListener('click', currentPlay);
+        img2.addEventListener('click', currentPlay);
+
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>
