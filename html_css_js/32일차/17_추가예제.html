@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        body {
+            margin: 50px;
+        }
+
+        .box {
+            font-size: 50px;
+            font-weight: 700;
+            color: #000
+        }
+
+        .box span {
+            display: inline-block;
+            opacity: 0;
+            transition: 0.5s;
+            transform: scale(2) translateY(-50px) rotate(180deg);
+        }
+
+        .box span.on {
+            opacity: 1;
+            transform: scale(1) translateY(0px) rotate(0deg);
+            color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="box">마지막 시간 입니다.</h2>
+
+    <script>
+        let box = document.querySelector('.box');
+        let arr = [];
+        let timerId = null;
+        let cnt = 0;
+
+        arr = box.textContent.split('');
+        console.log(arr);
+        let spanList = '';
+
+        for (let i = 0; i < arr.length; i++) {
+            spanList += `<span>${arr[i]}</span>`;
+        }
+        console.log(spanList);
+        box.innerHTML = spanList;
+
+
+        let spanAll = document.querySelectorAll('.box span');
+        console.log(spanAll);
+
+        timerId = setInterval(function () {
+            /* spanAll.forEach(element => {
+                element.classList.remove('on');
+            }); */
+            spanAll[cnt].classList.add('on');
+            cnt++;
+            if (cnt === span.length) {
+                clearInterval(timer)
+            }
+        }, 300);
+
+    </script>
+
+    <pre>
+        <hr>
+        1. h2의 글자 가져오기
+        2. 각각의 글자를 배열로 분리해서 담기
+        3. 예)
+        <span>마</span>
+        <span>지</span>
+        ...
+        <span>다</span>
+        <span>.</span>
+        innerHTML를 이용해서 h2에 넣기
+        4. 0.03초 단위로 span요소의 개수만큼 각각 span에 클래스 on 붙이기
+    </pre>
+</body>
+
+</html>

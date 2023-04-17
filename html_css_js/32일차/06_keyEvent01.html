@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        .box {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #000;
+            font-size: 50px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+        'use strict';
+        let dom = document.querySelector('.box');
+
+        window.addEventListener('keydown', e => {
+            dom.textContent = e.key;
+        });
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

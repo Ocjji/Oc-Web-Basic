@@ -1,0 +1,12 @@
+.wrap{width: 1200px;display: flex; margin:50px auto; justify-content: space-between;}
+.wrap .left{width: 700px; height: 475px; }
+.wrap .left img{}
+.wrap .left span{font-size: 25px; font-weight: 600; color: #000000; display: block; margin-bottom: 20px; }
+.wrap .right{width: 400px;  }
+.wrap .right ul{ display: flex; flex-wrap: wrap; margin-top: 0px;  }
+.wrap .right ul li{margin: 5px; padding: 3px; background: #dcdcdc;}
+.wrap .right ul li.on {background: tomato;}
+.wrap .right ul li img{width: 100px;}
+.wrap .right p { font-size: 25px; }
+.wrap .right p .current { }
+.wrap .right p .total { }

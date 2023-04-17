@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        button {
+            padding: 20px
+        }
+
+        .con-box .img {
+            width: 600px;
+            height: 400px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            border: 1px solid #000;
+        }
+
+        .con-box .txt {
+            width: 600px;
+            height: 40px;
+            font-size: 20px;
+            line-height: 2;
+            padding: 0 15px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="con-box">
+        <div class="img">
+            <img src="images/site0.jpg" alt="">
+        </div>
+        <div class="txt">????</div>
+        <p>
+            <button class="prev">이전</button>
+            <button class="next">다음</button>
+        </p>
+    </div>
+
+    <script>
+        'use strict';
+        let arr = ['네이버', '네이트', '구글', '다음'];
+        let arrURL = [];
+        arrURL[0] = 'http://www.naver.com';
+        arrURL[1] = 'http://www.nate.com';
+        arrURL[2] = 'http://www.google.com';
+        arrURL[3] = 'http://www.daum.net';
+        let pic = document.querySelector('.con-box img');
+        let next = document.querySelector('.con-box .next');
+        let prev = document.querySelector('.con-box .prev');
+        let txt = document.querySelector('.con-box .txt');
+        let box = document.querySelector('.con-box .img');
+
+        let cnt = 0;
+        let size = arr.length;
+        let timer = null;
+        const interval = 3000;
+        let className = '';
+
+        txt.textContent = arr[0];
+
+        timer = setInterval(rolling, interval);
+
+        function rolling() {
+            cnt++;
+            cnt = cnt % size;
+            banner();
+        }
+
+        box.addEventListener('mouseenter', () => {
+            clearInterval(timer);
+        });
+
+        box.addEventListener('mouseleave', () => {
+            timer = setInterval(rolling, interval);
+        });
+
+        box.addEventListener('click', () => {
+            window.open(arrURL[cnt]);
+        });
+
+        const gallery = (btnName) => {
+            if (btnName === 'next') {
+                cnt++;
+                if (cnt > 3) {
+                    cnt = 0;
+                }
+            } else {
+                cnt--;
+                if (cnt < 0) {
+                    cnt = 3;
+                }
+            }
+            banner();
+        }
+
+        function banner() {
+            // 공통부분
+            pic.setAttribute('src', `images/site${cnt}.jpg`);
+            pic.animate([
+                { opacity: 0 },
+                { opacity: 1 }
+            ], 400)
+            txt.textContent = arr[cnt];
+        }
+
+        next.addEventListener('click', e => {
+            className = e.target.getAttribute('class');
+            console.log(className);
+            // 자신의 클래스명
+            gallery(className);
+        });
+
+        prev.addEventListener('click', e => {
+            className = e.target.getAttribute('class');
+            console.log(className);
+            // 자신의 클래스명
+            gallery(className);
+        });
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

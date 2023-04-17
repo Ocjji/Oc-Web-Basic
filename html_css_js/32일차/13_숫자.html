@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        .box {
+            margin: 50px;
+            width: 300px;
+            height: 80px;
+            border: 1px solid #000;
+            line-height: 2;
+            font-size: 40px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box" data-num="1000">
+        xxx
+    </div>
+    <script>
+        'use strict';
+        let dom = document.querySelector('.box');
+
+        let start = 0;
+        let end = 0;
+        let cnt = 0;
+        let speed = 250;
+        let step;
+        // end = dom.getAttribute('data-num');
+        end = dom.dataset.num;
+
+        dom.textContent = start;
+
+        const counter = () => {
+            cnt = Number(dom.textContent);
+            step = end / speed;
+            console.log(step);
+
+            if (cnt < end) {
+                dom.textContent = cnt + step;
+                setTimeout(counter, 1);
+            } else {
+                dom.textContent = end;
+            }
+        }
+        counter();
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

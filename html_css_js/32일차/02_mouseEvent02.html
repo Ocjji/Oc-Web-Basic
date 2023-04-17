@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        .con-box {
+            width: 300px;
+            border: 1px solid #000;
+            padding: 30px;
+            margin: 30px auto;
+            display: flex;
+            justify-content: space-between;
+            height: 200px;
+            cursor: pointer;
+        }
+
+        .con-box p {
+            width: 45%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .con-box p:nth-child(1) {
+            background: pink;
+        }
+
+        .con-box p:nth-child(2) {
+            background: tomato;
+        }
+
+        .con-box p strong {
+            display: block;
+            background: yellow;
+            width: 100px;
+            line-height: 50px;
+        }
+
+        .con-box p span {
+            display: block;
+            background: yellow;
+            width: 100px;
+            line-height: 50px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="con-box">
+        <p class="box1">
+            <strong>홍길동</strong>
+        </p>
+        <p class="box2">
+            <span>강호동</span>
+        </p>
+    </div>
+
+    <script>
+        'use strict';
+        let dom = document.querySelector('.con-box');
+        dom.addEventListener('mouseenter', e => {
+            console.log('mouseenter');
+        });
+        dom.addEventListener('mouseleave', e => {
+            console.log('mouseleave');
+        });
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

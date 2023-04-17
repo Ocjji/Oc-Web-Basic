@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        h2 {
+            margin: 20px;
+            width: 300px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        h2::after {
+            content: "hihi";
+            color: red;
+        }
+
+        .box {
+            margin: 20px;
+            width: 400px;
+            height: 200px;
+            border: 1px solid #000;
+            background: pink;
+            position: relative;
+            text-align: center;
+            line-height: 200px;
+            font-size: 30px;
+        }
+
+        button {
+            margin-left: 20px;
+            width: 50px;
+            height: 30px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <h2>안녕</h2>
+    <div class="box">xxx</div>
+    <p>
+        <button>확인</button>
+        <button>확인</button>
+        <button>확인</button>
+        <button>확인</button>
+    </p>
+    <script>
+        'use strict';
+
+        let h2 = document.querySelector('h2');
+        let dom = document.querySelector('.box');
+        let btn = document.querySelectorAll('button');
+        let x, y, w, h;
+        let add;
+
+        // dom.style.left = '30px';
+        // dom.style.top = '40px';
+
+        btn[0].addEventListener('click', e => {
+            x = dom.style.left;
+            y = dom.style.top;
+            dom.textContent = `x : ${x} , y : ${y}`;
+        });
+        btn[1].addEventListener('click', e => {
+            x = getComputedStyle(dom).left;
+            y = getComputedStyle(dom).top;
+            dom.textContent = `x : ${x} , y : ${y}`;
+        });
+        btn[2].addEventListener('click', e => {
+            w = getComputedStyle(dom).width;
+            h = getComputedStyle(dom).height;
+            dom.textContent = `너비 : ${w} , 높이 : ${h}`;
+        });
+        btn[3].addEventListener('click', e => {
+            add = getComputedStyle(h2, ':after').color;
+            dom.textContent = `h2 after의 색상 : ${add}`;
+        });
+
+    </script>
+
+    <pre>
+
+        <hr>
+        https://developer.mozilla.org/ko/docs/Web/API/Window/getComputedStyle
+        
+
+    </pre>
+</body>
+
+</html>

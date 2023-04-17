@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> 기본 for문 </title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        body {
+            background: #DCDCDC;
+        }
+
+        .box {
+            width: 600px;
+            height: 600px;
+            border: 1px solid #000;
+            position: relative;
+            margin: 10px auto;
+            background: beige;
+        }
+
+        .box img {
+            width: 100px;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            transition: 0.3s;
+        }
+
+        button {
+            padding: 15px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="images/img.jpg" alt="">
+    </div>
+    <p class="btn">
+        <button>왼</button>
+        <button>오</button>
+        <button>위</button>
+        <button>아래</button>
+        <button>랜덤</button>
+    </p>
+    <script>
+        let pic = document.querySelector('.box img');
+        let btn = document.querySelectorAll('button');
+        let dom = document.querySelector('.box');
+        let x, y, w, h;
+        w = parseInt(getComputedStyle(dom).width)
+        h = parseInt(getComputedStyle(dom).height)
+        x = parseInt(getComputedStyle(pic).left);
+        y = parseInt(getComputedStyle(pic).top);
+        for (let i = 0; i < btn.length; i++) {
+            btn[i].addEventListener('click', e => {
+                if (i === 0) {
+                    if (x > 0) {
+                        x -= 10;
+                        pic.style.left = x + 'px';
+                    }
+                } else if (i === 1) {
+                    if (x < (w - pic.width)) {
+                        x = x + 10;
+                        pic.style.left = x + 'px';
+                    }
+                } else if (i === 2) {
+                    if (y > 0) {
+                        y -= 10;
+                        pic.style.top = `${y}px`;
+                    }
+                } else if (i === 3) {
+                    if (y < (h - pic.height)) {
+                        y += 10;
+                        pic.style.top = `${y}px`;
+                    }
+                } else {
+                    x = Math.random() * (w - pic.width)
+                    y = Math.random() * (h - pic.height)
+                    pic.style.left = `${x}px`;
+                    pic.style.top = `${y}px`;
+                }
+            })
+        }
+    </script>
+    <pre>
+    기본 for문으로 수정
+    index 번호 0 ~ 3
+    다중 if문으로 정리
+    </pre>
+</body>
+
+</html>

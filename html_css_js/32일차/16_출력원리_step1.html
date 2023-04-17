@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        .list {
+            margin: 30px;
+        }
+
+        .list li {
+            width: 200px;
+            height: 20px;
+            border: 1px solid #000;
+            margin: 10px;
+            padding: 10px;
+            user-select: none;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <ul class="list"></ul>
+
+    <script>
+        'use strict';
+        let arr = ['사과', '옥수수', '수박', '딸기', '참외'];
+        let dom = document.querySelector('.list');
+        let li = '';
+
+
+        // li += `<li>${arr[0]}</li>`;
+        // 기본 for문으로 수정
+        for (let i = 0; i < arr.length; i++) {
+            li += `<li>${arr[i]}</li>`;
+        }
+
+        // 화면에 요소 출력후
+        dom.innerHTML = li;
+
+        // 클릭시 li 안에 안녕 출력
+        let liAll = document.querySelectorAll('.list li');
+        liAll.forEach((element, idx) => {
+            element.addEventListener('click', e => {
+                e.target.textContent = '안녕' + idx;
+            })
+        });
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

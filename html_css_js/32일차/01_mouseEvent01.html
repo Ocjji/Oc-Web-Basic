@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        body {
+            margin-left: 50px;
+        }
+
+        .box {
+            width: 120px;
+            height: 100px;
+            background: tomato;
+            margin: 15px;
+            font-size: 16px;
+            font-weight: 700;
+            color: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .box p {
+            width: 50px;
+            height: 50px;
+            background: yellow;
+        }
+
+        .output {
+            border: 1px solid #000;
+            width: 200px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 25px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="box box1">click</div>
+    <div class="box box2">dblclick / contextmenu</div>
+    <div class="box box3">mousedown / mouseup</div>
+    <div class="box box4">mousemove</div>
+
+    <div class="box box5">
+        <p>test</p>
+    </div>
+
+    <div class="box box6">
+        <p>test</p>
+    </div>
+
+    <p>
+        <button class="btn">삭제</button>
+    </p>
+
+    <div class="output">
+        ???
+    </div>
+
+    <script>
+        'use strict';
+        let btn = document.querySelector('.btn');
+        let output = document.querySelector('.output');
+
+        let box1 = document.querySelector('.box1');
+        let box2 = document.querySelector('.box2');
+        let box3 = document.querySelector('.box3');
+        let box4 = document.querySelector('.box4');
+        let box5 = document.querySelector('.box5');
+        let box6 = document.querySelector('.box6');
+
+        btn.addEventListener('click', e => {
+            output.textContent = '';
+            // output.innerHTML = '';
+        });
+        // 마우스 클릭
+        box1.addEventListener('click', e => {
+            output.innerHTML += `<div>click<div>`
+        });
+        // 마우스 더블 클릭
+        box2.addEventListener('dblclick', e => {
+            output.innerHTML += `<div>dbclick<div>`
+        });
+        // 마우스 우측 클릭
+        box2.addEventListener('contextmenu', e => {
+            output.innerHTML += `<div>contextmenu<div>`
+        });
+        // 마우스 눌렀을때
+        box3.addEventListener('mouseup', e => {
+            output.innerHTML += `<div>mouseup<div>`
+        });
+        // 마우스 떼었을때
+        box3.addEventListener('mousedown', e => {
+            output.innerHTML += `<div>mousedown<div>`
+        });
+        // 마우스 움직였을때
+        box4.addEventListener('mousemove', e => {
+            output.innerHTML += `<div>mousemove<div>`
+        });
+
+        // over와 out은 자식 요소를 감지한다.
+        box5.addEventListener('mouseover', e => {
+            output.innerHTML += `<div>mouseover<div>`
+        });
+        box5.addEventListener('mouseout', e => {
+            output.innerHTML += `<div>mouseout<div>`
+        });
+
+        // mouseenter + mouseleave
+        // mouseover + mouseleave
+
+        // 대상 요소 한번만 인식하여, 자식요소에서 반응 없음
+        box6.addEventListener('mouseenter', e => {
+            output.innerHTML += `<div>mouseenter<div>`
+        });
+        box6.addEventListener('mouseleave', e => {
+            output.innerHTML += `<div>mouseleave<div>`
+        });
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

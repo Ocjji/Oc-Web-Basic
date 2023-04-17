@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        .box {
+            width: 300px;
+            height: 150px;
+            font-size: 50px;
+            text-align: center;
+            border: 1px solid #000;
+            line-height: 3;
+            margin: 30px;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 20px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="box">xxx</div>
+    <p>
+        <button data-color="red">red</button>
+        <button data-color="orange">orange</button>
+        <button data-color="yellow">yellow</button>
+        <button data-color="green">green</button>
+        <button data-color="blue">blue</button>
+    </p>
+    <script>
+        'use strict';
+
+        let dom = document.querySelector('.box');
+        let btn = document.querySelectorAll('button');
+
+        /* btn[0].addEventListener('click', function (e) {
+            dom.textContent = 'red';
+            dom.style.backgroundColor = 'red';
+        })
+        btn[1].addEventListener('click', function (e) {
+            dom.textContent = 'orange';
+            dom.style.backgroundColor = 'orange';
+        }) */
+
+        // 방법 1
+        // btn.forEach(element => {
+        //     element.addEventListener('click', function (e) {
+        //         dom.style.backgroundColor = e.target.dataset.color;
+        //         dom.textContent = e.target.dataset.color;
+        //     });
+        // });
+
+        // 방법 2
+        btn.forEach(element => {
+            element.addEventListener('click', (e) => {
+                dom.style.backgroundColor = e.target.textContent;
+                dom.textContent = e.target.textContent;
+            });
+        })
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

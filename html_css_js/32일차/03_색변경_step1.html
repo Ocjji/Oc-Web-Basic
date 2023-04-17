@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        div {
+            margin: 30px;
+            width: 200px;
+            height: 150px;
+            border: 1px solid #000;
+            font-size: 20px;
+            line-height: 150px;
+            text-align: center;
+        }
+
+        .box {
+            display: inline-block;
+            background: pink;
+        }
+
+        button {
+            width: 200px;
+            height: 50px;
+            margin-left: 30px;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 50px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <p>
+        <button>분홍</button>
+    </p>
+
+    <script>
+        'use strict';
+
+        let dom = document.querySelectorAll('div');
+        let btn = document.querySelector('button');
+
+        let isColor = true;
+        let txt = '분홍';
+
+        const toPink = (arr) => {
+            arr.forEach(element => {
+                element.style.backgroundColor = 'pink';
+                element.textContent = 'pink';
+            });
+        }
+        const toYellow = (arr) => {
+            arr.forEach(element => {
+                element.style.backgroundColor = 'yellow';
+                element.textContent = 'yellow';
+            });
+        }
+        btn.addEventListener('click', e => {
+            isColor ? toYellow(dom) : toPink(dom);
+            txt = (isColor === true) ? '노랑' : '분홍';
+            btn.textContent = txt;
+            isColor = !isColor;
+        });
+
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        isColor가 true 이면 pink 색변경하고 버튼에 pink
+        isColor가 false 이면 yellow 색변경하고 버튼에 yellow
+        단 삼항 연산자로 작성하기
+        박스 2개 모두 pink => yellow 스위치 처럼 왕복
+        true / false
+        ! not => !true - false / !false - true
+
+    </pre>
+</body>
+
+</html>
