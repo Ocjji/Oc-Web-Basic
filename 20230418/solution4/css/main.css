@@ -1,0 +1,97 @@
+#wrap {
+    width: 100%;
+}
+
+#wrap .inner {
+    width: 1600px;
+    margin: auto;
+}
+
+.inner h2 {
+    margin-top: 110px;
+    margin-bottom: 100px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.article {
+    width: 1200px;
+    height: 610px;
+    margin: auto;
+    background-image: url(../images/health-img0.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    padding-top: 55px;
+    position: relative;
+}
+
+.article .content {
+    width: 1035px;
+    height: 500px;
+    border: 3px solid #559d9c;
+    padding-top: 65px;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+
+.article .content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    color: #559d9c;
+}
+
+.article .content strong {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.article .content p {
+    width: 470px;
+    font-size: 15px;
+    color: #666;
+}
+
+.article .content .more {
+    text-align: center;
+    width: 175px;
+    height: 55px;
+    font-size: 15px;
+    line-height: 55px;
+    border-radius: 27px;
+    border: 1px solid #559d9c;
+    margin-top: 80px;
+    cursor: pointer;
+}
+
+.article .content .more a {
+    color: #559d9c;
+    font-weight: 600;
+}
+
+.article button {
+    width: 60px;
+    height: 60px;
+    background: none;
+    border: none;
+    position: absolute;
+    cursor: pointer;
+}
+
+.article .prev {
+    left: -90px;
+    top: 30%;
+}
+
+.article .next {
+    right: -80px;
+    top: 30%;
+}
+
+.article button i {
+    font-size: 60px;
+    line-height: 60px;
+}
