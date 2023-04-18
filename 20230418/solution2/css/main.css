@@ -1,0 +1,208 @@
+.join-box {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.join-box b {
+    color: red;
+}
+
+.join-box h2 {
+    margin-top: 60px;
+    font-size: 24px;
+    margin-bottom: 35px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.join-box ul {
+    display: flex;
+
+}
+
+.join-box ul li {
+    text-align: center;
+    width: 400px;
+    height: 40px;
+    box-sizing: border-box;
+    line-height: 40px;
+    color: #fff;
+    background-color: #aeaeae;
+    margin-right: 1px;
+}
+
+.join-box ul li:nth-child(2) {
+    background-color: #e6003e;
+}
+
+.join-box h3 {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 100px;
+    margin-right: 5px;
+    margin-bottom: 30px;
+}
+
+.join-box strong {}
+
+.join-box table {
+    width: 100%;
+}
+
+.join-box table .w1 {
+    width: 270px;
+}
+
+.join-box table .w2 {
+    width: auto;
+}
+
+.join-box .w100 {
+    width: 100px;
+}
+
+.join-box .w140 {
+    width: 140px;
+}
+
+.join-box .w150 {
+    width: 150px;
+}
+
+.join-box .w200 {
+    width: 200px;
+}
+
+.join-box .w255 {
+    width: 255px;
+}
+
+.join-box .w360 {
+    width: 360px;
+}
+
+.join-box .w245 {
+    width: 245px;
+    margin-right: 7px;
+}
+
+.join-box .w500 {
+    width: 500px;
+}
+
+.join-box ::placeholder {
+    font-size: 12px;
+}
+
+
+
+.join-box table tr:first-child td {
+    border-top: 2px solid #000;
+}
+
+.join-box table tr:last-child td {
+    border-bottom: 2px solid #000;
+}
+
+.join-box table tr:nth-child(5) td:last-child {
+    font-size: 12px;
+    color: #666;
+}
+
+.join-box table tr td select {
+    height: 40px;
+    padding-left: 20px;
+    font-size: 12px;
+    border: 1px solid #999;
+    color: #555;
+}
+
+
+
+.join-box table tr td:first-child {
+    background: #eaeaea;
+    padding-left: 20px;
+}
+
+.join-box table tr td:last-child {
+    padding-left: 30px;
+}
+
+.join-box table tr td {
+    border-bottom: 1px solid #aeaeae;
+    height: 60px;
+    vertical-align: middle;
+}
+
+.join-box table tr td b {
+    margin-right: 3px;
+}
+
+.join-box table tr td input[type=text],
+.join-box table tr td input[type=password] {
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    background: #FFF;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+.join-box input[type=radio]+label {
+    display: inline-block;
+    margin-right: 30px;
+    padding-left: 6px;
+}
+
+.join-box table p {
+    display: inline-block;
+}
+
+.join-box table button {
+    height: 40px;
+    margin-left: 20px;
+    background: #676767;
+    border: none;
+    color: #FFF;
+    font-size: 12px;
+    line-height: 40px;
+}
+
+.join-box #userAdd {
+    background: #DDD;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.join-box table .normalAdd input[type=text] {
+    background: #DDD;
+    margin-bottom: 10px;
+    margin-right: 7px;
+}
+
+.join-box .final {
+    text-align: center;
+    margin-top: 90px;
+}
+
+.join-box .final input[type=reset] {
+    width: 210px;
+    height: 50px;
+    margin-right: 25px;
+    font-size: 16px;
+    border: 1px solid #999;
+    color: #333;
+    background: #FFF;
+    font-weight: 600;
+}
+
+.join-box .final input[type=submit] {
+    width: 210px;
+    height: 50px;
+    font-size: 16px;
+    border: 1px solid pink;
+    color: #FFF;
+    background: #e6003e;
+    font-weight: 600;
+}

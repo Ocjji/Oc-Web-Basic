@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <div class="join-box">
+        <h2>회원가입</h2>
+        <ul>
+            <li>약관동의</li>
+            <li>개인정보 입력</li>
+            <li>회원가입 완료</li>
+        </ul>
+
+        <h3>회원정보입력</h3><strong>(<b>*</b>는 필수입력사항입니다.)</strong>
+
+        <form action="#" method="post" name="form" target="_blank">
+            <fieldset>
+                <legend>회원정보입력</legend>
+                <table>
+                    <caption>
+                        <strong>회원정보입력</strong>
+                        <p>회원가입 회원정보입력</p>
+                    </caption>
+                    <colgroup>
+                        <col class="w1">
+                        <col class="w2">
+                    </colgroup>
+
+                    <tbody>
+                        <tr>
+                            <td><b>*</b><label for="userId">아이디</label></td>
+                            <td><input type="text" id="userId" placeholder="영문 + 숫자, 6~16글자 사이로 아이디를 입력하세요." required
+                                    class="w500"><button class="w200">아이디 중복 확인</button></td>
+                        </tr>
+                        <tr>
+                            <td><b>*</b><label for="userPwd1">비밀번호</label></td>
+                            <td>
+                                <input type="password" id="userPwd1" placeholder="영문 + 숫자, 6~16글자 사이로 비밀번호를 입력하세요."
+                                    required class="w500">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>*</b><label for="userPwd2">비밀번호확인</label></td>
+                            <td><input type="password" id="userPwd2" placeholder="비밀번호를 재입력하세요" required class="w500">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>*</b><label for="userName">이름</label>
+                            </td>
+                            <td>
+                                <input type="text" id="userName" placeholder="성" required class="w245">
+                                <input type="text" placeholder="이름" required class="w245">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>*</b><label for="userNameEng">영문이름</label>
+                            </td>
+                            <td>
+                                <input type="text" id="userNameEng" placeholder="성 (Family name)" required class="w245">
+                                <input type="text" placeholder="이름 (Given name)" required class="w245">
+                                여권상의 영문이름과 동일하게 작성하여 주시기 바랍니다.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>*</b><label for="userDate">생년월일</label></td>
+                            <td>
+                                <select id="userDate" title="2019" class="w150">
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                </select>
+                                -
+                                <select title="01" class="w100">
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                </select>
+                                -
+                                <select title="01" class="w100">
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>*</b><label>성별</label></td>
+                            <td>
+                                <input type="radio" name="gen" id="gen1" checked>
+                                <label for="gen1">남자</label>
+                                <input type="radio" name="gen" id="gen2">
+                                <label for="gen2">여자</label>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td><label for="userAdd">주소</label></td>
+                            <td>
+                                <input type="text" id="userAdd" class="w200"><button class="w140">우편번호</button>
+                                <br>
+                                <p class="normalAdd">
+                                    <input type="text" class="w360">
+                                </p>
+                                <p class="detailAdd">
+                                    <input type="text" class="w360">
+                                </p>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>*</b><label for="userTel">핸드폰</label></td>
+                            <td>
+                                <input type="text" id="userTel" placeholder="" class="w150">
+                                -
+                                <input type="text" placeholder="" class="w150">
+                                -
+                                <input type="text" placeholder="" class="w150">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="tel">전화번호</label></td>
+                            <td>
+                                <input type="text" id="tel" placeholder="" class="w150">
+                                -
+                                <input type="text" placeholder="" class="w150">
+                                -
+                                <input type="text" placeholder="" class="w150">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>*</b><label for="userEmail">이메일</label></td>
+                            <td>
+                                <input type="text" id="userEmail" class="w200" required>
+                                @
+                                <input type="text" class="w255" required>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </fieldset>
+
+            <p class="final">
+                <input type="reset" value="이전 페이지">
+                <input type="submit" value="다음">
+            </p>
+
+        </form>
+    </div>
+</body>
+
+</html>

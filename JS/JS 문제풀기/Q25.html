@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <script>
+        'use strict';
+
+        let odd = [];
+        let sum = 0;
+
+        for (let i = 1; i <= 20; i++) {
+            console.log(i);
+            if (i % 2 === 0) {
+                odd.push(i);
+            }
+        }
+        console.log(odd);
+        odd.forEach(element => {
+            sum += element;
+        });
+
+        document.write(`합 : ${sum}`);
+
+    </script>
+
+    <pre>
+
+        <hr>
+
+        
+
+    </pre>
+</body>
+
+</html>

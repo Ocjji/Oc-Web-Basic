@@ -1,0 +1,113 @@
+#wrap {
+    width: 100%;
+}
+
+.inner {
+    width: 1920px;
+    height: 700px;
+    background-image: url(../images/patient-bg.png);
+    background-repeat: no-repeat;
+    margin: auto;
+
+    color: #fff;
+    text-align: center;
+}
+
+.inner h2 {
+    padding-top: 110px;
+    font-size: 24px;
+    margin-bottom: 110px;
+}
+
+.inner ul {
+    width: 1200px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inner ul li {}
+
+.inner ul li strong {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.inner ul li b {
+    margin-left: 6px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.inner ul li em {
+    display: inline-block;
+    width: 400px;
+    font-size: 22px;
+    margin-top: 30px;
+    font-weight: 300;
+}
+
+.inner .con-box {
+    width: 1200px;
+    height: 400px;
+    margin: auto;
+    margin-top: 90px;
+    background: #FFF;
+    color: black;
+    border-radius: 25px;
+    padding: 80px 280px 0 110px;
+    box-sizing: border-box;
+    text-align: left;
+    position: relative;
+}
+
+.inner .con-box p {
+    font-size: 15px;
+    margin-bottom: 85px;
+    color: #666;
+}
+
+.inner .con-box img {
+    display: inline-block;
+}
+
+.inner .con-box .info {
+    display: inline-block;
+    margin-left: 70px;
+
+}
+
+.inner .con-box strong {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #444;
+}
+
+.inner .con-box em {
+    font-size: 16px;
+    color: #444;
+}
+
+.inner .con-box .nav {
+    width: 160px;
+    position: absolute;
+    right: 80px;
+    bottom: 70px;
+}
+
+.inner .con-box .nav button {
+    width: 35px;
+    height: 18px;
+    border-radius: 9px;
+    background: #b3d6d2;
+    border: none;
+    margin-right: 5px;
+}
+
+.inner .con-box .nav button.on {
+    width: 65px;
+    background: #509d9c;
+}
