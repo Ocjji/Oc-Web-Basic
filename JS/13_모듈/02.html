@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script type="module">
+        'use strict';
+        // import 사용자정의 변수
+        import data from './data/test.js';
+        console.log(data);
+
+        let li = document.querySelectorAll('li');
+
+        li.forEach((element, idx) => {
+            element.textContent = data[idx];
+        });
+
+    </script>
+
+    <pre>
+
+        <hr>
+        1. 외부 xxx.js 파일에서
+            export default 변수명;
+        
+        2. script type="module" 써야하고,
+
+        3. import 사용자정의 from '경로'
+
+    </pre>
+</body>
+
+</html>
