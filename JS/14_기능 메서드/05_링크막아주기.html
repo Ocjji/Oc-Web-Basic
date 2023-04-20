@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        div {
+            width: 100%;
+            height: 1500px;
+            background: tan;
+        }
+
+        a {
+            display: block;
+            height: 45px;
+            background: #000;
+            color: #fff;
+            line-height: 45px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <a class="link" href="#">클릭이벤트</a>
+
+    <p>
+        <a href="#">클릭이벤트</a>
+        <a href="#">클릭이벤트</a>
+        <a href="#">클릭이벤트</a>
+    </p>
+
+    <script>
+        'use strict';
+        let link = document.querySelector('.link');
+
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            // 페이지에 a의 href="#"이 많으면 어떻게 할까요?
+        });
+
+        // 해결방법
+        let links = document.querySelectorAll('p a');
+
+        links.forEach(element => {
+            element.addEventListener('click', e => {
+                e.preventDefault();
+            })
+        });
+
+    </script>
+
+    <pre>
+        <hr>
+        <a href="javascript:void(0)"></a>
+    </pre>
+</body>
+
+</html>

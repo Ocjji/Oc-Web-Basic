@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        .box {
+            width: 400px;
+            border: 1px solid #000;
+            padding: 10px;
+        }
+
+        .box h2 {
+            font-size: 40px;
+            background: pink;
+        }
+
+        .box h3 {
+            font-size: 30px;
+            background: yellow;
+        }
+
+        .box h4 {
+            font-size: 20px;
+            background: skyblue;
+        }
+
+        .box p {
+            font-size: 16px;
+            background: orange;
+        }
+
+        .box span {
+            font-size: 20px;
+            font-weight: 600;
+            color: tomato
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="box">
+        <!-- <h2>제목2</h2>
+        <h3>제목3</h3>
+        <img src="images/cat0.jpg" width="300" alt=""> -->
+    </div>
+
+    <script>
+        'use strict';
+        let picInfo = { id: 1, src: 'images/cat0.jpg', width: 300, alt: '' };
+
+        let box = document.querySelector('.box');
+        let h2 = document.createElement('h2');
+        box.append(h2);
+        h2.textContent = '제목2';
+
+        let h3 = document.createElement('h3');
+        box.append(h3);
+        h3.textContent = '제목3';
+
+        let pic = document.createElement('img');
+        box.append(pic);
+        pic.src = 'images/cat0.jpg';
+        pic.width = 300;
+        pic.alt = '';
+
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>

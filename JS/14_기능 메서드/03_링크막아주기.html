@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <h2>xxx</h2>
+    <img class="pic" src="images/cat1.jpg" alt="고양이1">
+    <div>xxx</div>
+    <p>
+        <a href="images/cat0.jpg" data-title="고양이사진" data-desc="고양이 세부설명 내용">
+            <img src="images/cat2.jpg" alt="고양이2" width="120">
+        </a>
+    </p>
+    <script>
+        'use strict';
+        let pic = document.querySelector('.pic');
+        let link = document.querySelector('a');
+        let h2 = document.querySelector('h2');
+        let dom = document.querySelector('div');
+
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            h2.textContent = e.currentTarget.dataset.title;
+            dom.textContent = e.currentTarget.dataset.desc;
+            pic.setAttribute('src', e.currentTarget.href);
+        });
+
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        body {
+            margin: 50px;
+        }
+
+        .banner {}
+
+        .banner ul {
+            display: flex;
+            width: 400px;
+            height: 150px;
+            border: 1px solid #000;
+            overflow: hidden;
+        }
+
+        .banner ul li {
+            width: 200px;
+        }
+
+        .banner ul li img {
+            width: 200px;
+        }
+
+        .btn {
+            margin-top: 10px;
+        }
+
+        .btn button {
+            padding: 10px 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <ul>
+            <li><img src="images/cat0.jpg" alt=""></li>
+            <li><img src="images/cat1.jpg" alt=""></li>
+            <li><img src="images/cat2.jpg" alt=""></li>
+            <li><img src="images/cat3.jpg" alt=""></li>
+        </ul>
+    </div>
+    <p class="btn">
+        <button class="prev">이전</button>
+        <button class="next">다음</button>
+    </p>
+    <script>
+        let ul = document.querySelector('ul');
+        let prev = document.querySelector('.prev');
+        let next = document.querySelector('.next');
+
+        let first, last;
+
+        prev.addEventListener('click', e => {
+            last = ul.lastElementChild;
+            ul.prepend(last);
+        })
+
+        next.addEventListener('click', e => {
+            first = ul.firstElementChild;
+            ul.append(first);
+        })
+
+    </script>
+    <pre>
+        <hr>
+        이전 누르면 리스트 중에 맨앞에 li를 떼어서 맨뒤에 붙이기
+        다음 누르면 리스트 중에 맨뒤에 li를 떼어서 맨앞에 붙이기
+    </pre>
+</body>
+
+</html>

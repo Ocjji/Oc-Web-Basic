@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        .con-box {
+            width: 610px;
+            margin: 50px auto;
+            border: 1px solid #000;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .con-box .box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 1px solid #000;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-image: url(images/img.jpg);
+            background-size: cover;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="con-box">
+        <!-- <div class="box">
+
+        </div> -->
+    </div>
+    <script>
+        'use strict';
+
+        let dom = document.querySelector('.con-box');
+        let box = '';
+
+        for (let i = 0; i < 20; i++) {
+            box = document.createElement('div');
+            box.classList.add('box');
+            dom.append(box);
+
+            box.style.opacity = 0;
+            box.animate([
+                { opacity: 0 },
+                { opacity: 1 }
+            ], {
+                duration: 1000,
+                delay: i * 300,
+                fill: 'forwards'
+            });
+            // fill: 'forwards' 마지막 값 처리 후, 유지한다
+        }
+
+
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>

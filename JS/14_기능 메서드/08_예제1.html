@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        .list-group {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #000;
+            width: 300px;
+        }
+
+        .list-group li {
+            padding: 10px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <a href="#" class="find-parent" data-color="#ff6600">parent</a>
+            <a href="#" class="find-parents" data-color="#ff6600">parents</a>
+        </li>
+        <li class="list-group-item">
+            <a href="#" class="find-parent" data-color="#0066ff">parent</a>
+            <a href="#" class="find-parents" data-color="#0066ff">parents</a>
+        </li>
+        <li class="list-group-item">
+            <a href="#" class="find-parent" data-color="yellow">parent</a>
+            <a href="#" class="find-parents" data-color="#00aa00">parents</a>
+        </li>
+    </ul>
+
+    <script>
+        'use strict';
+        const findParent = document.querySelectorAll('.find-parent');
+        const findParents = document.querySelectorAll('.find-parents');
+
+        // 기본 for문 누르면 자신의 부모의 컬러를 뽑아서 부모에 적용
+        for (let i = 0; i < findParent.length; i++) {
+            findParent[i].addEventListener('click', e => {
+                e.preventDefault();
+                let current = e.currentTarget;
+                const color = current.dataset.color;
+                const parent = current.parentElement;
+
+                // 해당 선택자를 기준으로
+                // 상위에 가까이 있는 선택자를 찾아줌
+                // const parent = current.closest('.list-group');
+                // const parent = current.closest('.list-group-item');
+                console.log(parent);
+                parent.style.backgroundColor = color;
+            });
+        }
+        // for문
+
+        // for문
+
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>

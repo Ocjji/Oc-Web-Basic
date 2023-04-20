@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        .box {
+            width: 200px;
+            margin: 30px;
+            padding: 30px;
+        }
+
+        .box ul {}
+
+        .box ul li {
+            line-height: 40px;
+            border: 1px solid #000;
+            margin-bottom: 5px;
+            text-indent: 10px;
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        <ul class="list">
+            <li>test</li>
+            <li>test</li>
+            <li>test</li>
+            <li>test</li>
+            <li>test</li>
+            <li>test</li>
+            <li>test</li>
+            <li>test</li>
+            <li>test</li>
+            <li>test</li>
+            <li>hi</li>
+        </ul>
+        <!-- 주석처리 -->
+        <p class="txt1">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        </p>
+        <p class="txt1">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        </p>
+    </div>
+
+    <script>
+        'use strict';
+        let list = document.querySelector('.list');
+        let li = document.querySelectorAll('.list li');
+        let p = document.querySelectorAll('p');
+
+        let a1 = list.firstElementChild;
+        console.log(a1);
+        a1.textContent = '처음 자식요소';
+        a1.style.color = 'red';
+
+        let a2 = list.lastElementChild;
+        a2.textContent = '마지막 자식요소';
+        a2.style.color = 'blue';
+
+        let a3 = list.parentElement;
+        a3.style.border = '3px solid yellow';
+
+        let a4 = list.children;
+        console.log(a4);
+
+        let a5 = list.children[2];
+        a5.textContent = '3번째 자식요소';
+    </script>
+
+    <pre>
+        <hr>
+        ** 요소 **
+        children : 자식 요소 (유사배열)
+        firstElementChild : 첫번째 자식 요소
+        lastElementChild : 마지막 자식 요소
+        nextElementSibling : 다음 형제 요소
+        prevElementSibling : 이전 형제 요소
+        parentElement : 부모 요소
+    </pre>
+</body>
+
+</html>

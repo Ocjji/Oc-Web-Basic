@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <p><a href="http://www.naver.com" target="_blank">네이버</a></p>
+    <p><a href="http://www.nate.com" target="_blank">네이트</a></p>
+    <p><a href="http://www.daum.net" target="_blank">다음</a></p>
+
+    <script>
+        'use strict';
+        let link = document.querySelectorAll('a');
+        link.forEach(element => {
+            element.addEventListener('click', e => {
+                // 링크 막아주기 맨처음 시작 코드에 작성
+                // 이벤트 취소
+                e.preventDefault();
+            })
+        });
+
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>

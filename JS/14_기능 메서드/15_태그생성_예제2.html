@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .box {
+            margin: 30px;
+        }
+
+        .box button {
+            padding: 20px 40px;
+        }
+
+        .box .list {
+            margin-top: 20px;
+            width: 200px;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+
+        .box .list li {
+            width: 200px;
+            line-height: 45px;
+            border: 1px solid #000;
+            text-align: center;
+            margin-bottom: 5px;
+            user-select: none;
+            color: #FFF;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <button>추가</button>
+        <ul class="list">
+            <!-- <li>추가</li>
+            li 생성
+            -->
+        </ul>
+    </div>
+
+    <script>
+        let arrColor = ['red', 'blue', 'green', 'yellow', 'tan'];
+
+        let list = document.querySelector('.box .list');
+        let btn = document.querySelector('button');
+        let li = '';
+        let menu = [];
+
+        let ranColor = '';
+
+        console.log(ranColor);
+
+        btn.addEventListener('click', e => {
+            for (let i = 0; i < 10; i++) {
+                ranColor = arrColor[Math.floor(Math.random() * 5)];
+                li = document.createElement('li');
+                li.textContent = 'MainMenu' + i;
+                li.style.backgroundColor = ranColor;
+                list.append(li);
+
+                li.addEventListener('click', e => {
+                    console.log('click');
+                    e.currentTarget.remove();
+                });
+            }
+        });
+
+
+    </script>
+
+    <pre>
+        1. 컬러 5개 배열 처리 - arrColor
+        2. 버튼누르면
+           컬러 5개중 랜덤으로 선택
+           li 10개 생성 출력 - MainMenu0 ~ MainMenu9
+           컬러 넣기
+        3. 생성된 li를 클릭시 대상 삭제
+    </pre>
+</body>
+
+</html>

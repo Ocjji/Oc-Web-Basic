@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        .box {
+            width: 90%;
+            padding: 20px;
+            border: 1px solid #000;
+            margin: auto;
+            font-size: 20px;
+        }
+
+        p {
+            border-bottom: 1px solid #999;
+            padding: 15px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div data-name="하나" class="box">
+        하나
+        <div data-name="둘" class="box">
+            둘
+            <div data-name="셋" class="box">
+                셋
+            </div>
+        </div>
+    </div>
+
+    <div class="output"></div>
+
+
+    <script>
+        'use strict';
+        let box = document.querySelectorAll('.box');
+        let output = document.querySelector('.output');
+        let txt = '';
+
+        box.forEach(element => {
+            // 버블링 - 하위에서 상위로 이벤트 전파
+            // 버블링 ('이벤트') , (이벤트, false) : 기본값이 false
+            // element.addEventListener('click', make);
+            // element.addEventListener('click', make, false);
+
+            // 캡쳐링 - 상위에서 하위로 이벤트 전파
+            // 캡쳐링 (이벤트, true)
+            // element.addEventListener('click', make, true);
+            element.addEventListener('click', make, {
+                capture: true
+            });
+        });
+
+        function make(e) {
+            // 이벤트 전파를 막아줌
+            // e.stopPropagation();
+
+            txt += `<p> ${e.currentTarget.dataset.name} </p>`;
+            output.innerHTML = txt;
+        }
+
+    </script>
+
+    <pre>
+
+        <hr>
+        이벤트 캡쳐링 : 상위에서 하위로 이벤트 전파
+
+        이벤트 버블링 : 하위에서 상위로 이벤트 전파        
+
+    </pre>
+</body>
+
+</html>

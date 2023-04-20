@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .con-box {
+            width: 890px;
+            margin: 50px auto;
+        }
+
+        .con-box h2 {
+            font-size: 50px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .con-box .list {
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid #000;
+        }
+
+        .con-box .list li {
+            width: 200px;
+            margin: 10px;
+        }
+
+        .con-box .list li img {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con-box">
+        <h2>사진 갤러리</h2>
+        <ul class="list">
+            <!-- <li><img src="images/cat0.jpg" alt=""></li> -->
+        </ul>
+    </div>
+
+    <script type="module">
+        'use strict';
+
+        import arrImg from '.data/database.js';
+
+        // let arrImg = [
+        //     'images/cat0.jpg',
+        //     'images/cat1.jpg',
+        //     'images/cat2.jpg',
+        //     'images/cat3.jpg',
+        //     'images/cat4.jpg',
+        // ]
+
+        let list = document.querySelector('.con-box .list');
+        let li = '';
+        let img = '';
+
+        let timerId = null;
+        let cnt = 0;
+        let ranNum = '';
+        let imgSrc = '';
+
+        timerId = setInterval(gallery, 500);
+
+        function gallery() {
+            // 함수구현
+            li = document.createElement('li');
+            list.append(li);
+
+            img = document.createElement('img');
+            li.append(img);
+
+            ranNum = Math.floor(Math.random() * 5);
+            imgSrc = arrImg[ranNum];
+            img.setAttribute('src', imgSrc);
+
+            img.style.opacity = 0;
+            img.animate([
+                { opacity: 0 },
+                { opacity: 1 }
+            ], {
+                duration: 300,
+                delay: 100,
+                fill: 'forwards'
+            });
+            cnt++;
+            if (cnt > 19) {
+                clearInterval(timerId);
+            }
+        }
+    </script>
+
+    <pre>
+
+        ul.list 안에 출력 - for문 사용 X
+        0.5초 단위로 계속처리 - setInterval 사용
+        총 고양이 사진 5개로 랜덤처리 
+        li 생성 , 사진 생성 ul안에 붙이기 
+        투명도 효과 처리 
+        0.3초단위로 
+        20장 출력하면 타이머 중단 
+
+        스크립트 코드만 올리세요 
+
+    </pre>
+</body>
+
+</html>

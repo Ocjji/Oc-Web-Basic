@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 30px;
+            text-align: center;
+            font-size: 30px;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div>
+
+    </div>
+
+    <script>
+        'use strict';
+        let div = document.querySelector('div');
+
+        // 태그생성
+        let h2 = document.createElement('h2');
+        // let txt = document.createTextNode('제목');
+        // h2.append(txt);
+        div.append(h2);
+
+        h2.textContent = 'Greeting!!!';
+
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>
