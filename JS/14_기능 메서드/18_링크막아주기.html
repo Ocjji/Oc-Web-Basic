@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        img {
+            width: 250px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <img src="images/cat0.jpg" alt="고양이 0">
+    <img src="images/cat0.jpg" alt="고양이 0">
+    <img src="images/cat0.jpg" alt="고양이 0">
+
+    <script>
+        'use strict';
+        let imgs = document.querySelectorAll('img');
+        imgs.forEach(element => {
+            element.addEventListener('contextmenu', e => {
+                // 마우스 우측 클릭
+                e.preventDefault();
+                console.log('test');
+            })
+        });
+
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>

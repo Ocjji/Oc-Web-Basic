@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        body {
+            margin: 30px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <input type="text" value="값">
+    <h1>xxx</h1>
+    <script>
+        'use strict';
+        let $h1 = document.querySelector('h1');
+        let $inp = document.querySelector('input');
+        let txt = '';
+
+        txt = $inp.value;
+        $h1.textContent = txt;
+
+        $inp.addEventListener('keyup', e => {
+            txt = $inp.value;
+            $h1.textContent = txt;
+            console.log(txt);
+        });
+
+    </script>
+
+    <pre>
+        <hr>
+        * 이벤트 *
+        type="text" : keydown, keyup , input
+                      change : 엔터
+
+        keydown , keyup
+        input : 값이 바뀔때
+        change : 변경했을때
+        focus : 초점 ( 선택 )
+        blur : 밖으로 벗어났을때
+    </pre>
+</body>
+
+</html>

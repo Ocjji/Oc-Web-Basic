@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        div {
+            margin-top: 5px;
+            width: 300px;
+            border: 1px solid #000;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <script>
+        'use strict';
+
+        const get = (target) => {
+            return document.querySelector(target);
+        }
+        const getAll = (target) => {
+            return document.querySelectorAll(target);
+        }
+
+        const $body = get('body');
+
+        for (let i = 0; i < 30; i++) {
+            let div = document.createElement('div');
+            $body.append(div);
+        }
+
+        const $divs = getAll('div');
+
+        $divs.forEach((element, idx) => {
+            let num = idx * 10;
+            element.style.height = '15px';
+            element.style.backgroundColor = `rgba(${num},${num},${num})`;
+        });
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>

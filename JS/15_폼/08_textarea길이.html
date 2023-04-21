@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        textarea {
+            vertical-align: top;
+            /* 하단부분 오차생김 방지 */
+            margin: 20px;
+            width: 300px;
+            border: 1px solid #000;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <textarea cols="300" rows="10" placeholder="나문희"></textarea>
+    <p>글자수 : </p>
+    <div>남은 글자수 : 50</div>
+    <script>
+        'use strict';
+        let $textarea = document.querySelector('textarea');
+        let $p = document.querySelector('p');
+        let $div = document.querySelector('div');
+        let current = 0;
+        let max = 50;
+
+        document.addEventListener('keyup', e => {
+            let current = $textarea.value;
+
+            $p.textContent = `글자수 : ${current.length}`;
+            $div.textContent = `남은글자수 : ${max - current.length}`;
+
+            if (current.length > 50) {
+                $textarea.value = $textarea.value.slice(0, 50);
+                $p.textContent = `글자수 : ${max}`;
+                $div.textContent = `남은글자수 : 0`;
+            }
+        });
+
+
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>

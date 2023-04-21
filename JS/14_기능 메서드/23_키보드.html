@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        div {
+            margin: 30px;
+        }
+
+        h1 {
+            width: 300px;
+            font-size: 30px;
+            border: 1px solid #000;
+            margin-bottom: 10px;
+            line-height: 60px;
+            user-select: none;
+        }
+
+        span {
+            font-size: 20px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div>
+        <h1>클릭수 : 0</h1>
+    </div>
+    <script>
+        'use strict';
+
+        let h1 = document.querySelector('h1');
+
+        let cnt = 0;
+
+        const make = (e) => {
+            let txt = '';
+            txt += `alt : ${e.altKey}<br>`;
+            txt += `ctrl : ${e.ctrlKey}<br>`;
+            txt += `shift : ${e.shiftKey}<br>`;
+            txt += `code : ${e.code}<br>`;
+            txt += `keyCode : ${e.keyCode}<br>`;
+            txt += `key : ${e.key}<br>`;
+
+            h1.innerHTML = txt;
+        }
+
+        document.addEventListener('keydown', make);
+        document.addEventListener('keyup', make);
+
+
+
+
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>

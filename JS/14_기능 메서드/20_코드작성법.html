@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        ul {
+            margin: 20px;
+        }
+
+        li {
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+            text-align: center;
+            border: 1px solid #000;
+            margin-bottom: 10px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <ul>
+        <li class="item1">xxx</li>
+        <li class="item2">xxx</li>
+        <li class="item3">xxx</li>
+    </ul>
+    <script>
+
+        'use strict';
+
+        // 경로 지정 함수 ( 단일 )
+        const get = (target) => {
+            return document.querySelector(target);
+        }
+
+        // 경로 지정 함수 ( 복수 )
+        const getAll = (target) => {
+            return document.querySelectorAll(target);
+        }
+
+        // 경로 , 값을 구별하기 위해서 $경로
+        let $item1 = get('.item1');
+        let $item2 = get('.item2');
+        let $item3 = get('.item3');
+
+        $item1.addEventListener('click', e => {
+            e.currentTarget.style.backgroundColor = 'red';
+        });
+        $item2.addEventListener('click', e => {
+            e.currentTarget.style.backgroundColor = 'green';
+        });
+        $item3.addEventListener('click', e => {
+            e.currentTarget.style.backgroundColor = 'blue';
+        });
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>

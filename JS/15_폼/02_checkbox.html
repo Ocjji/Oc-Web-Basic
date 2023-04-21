@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        body {
+            margin: 30px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <p>
+        <input type="checkbox" name="chk1" value="삼겹살" checked> 삼겹살
+        <input type="checkbox" name="chk2" value="라면"> 라면
+    </p>
+
+    <h1>xxx</h1>
+
+    <script>
+        'use strict';
+        let $inp = document.querySelectorAll('input');
+        let $h1 = document.querySelector('h1');
+        let txt = '';
+
+        $inp.forEach(element => {
+            element.addEventListener('change', e => {
+                if (e.currentTarget.checked) {
+                    txt = e.currentTarget.value;
+                } else {
+                    txt = '';
+                }
+                $h1.textContent = txt;
+            });
+        })
+
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>

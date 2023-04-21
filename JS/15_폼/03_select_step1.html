@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        body {
+            margin: 30px;
+        }
+
+        h1,
+        h2 {
+            font-size: 40px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <h1>xxx</h1>
+    <h2>xxx</h2>
+
+    <select name="" id="">
+        <option value="1번 부대">1번 부대</option>
+        <option value="2번 부대">2번 부대</option>
+        <option value="3번 부대">3번 부대</option>
+        <option value="4번 부대">4번 부대</option>
+    </select>
+
+
+
+    <script>
+        'use strict';
+        let $h1 = document.querySelector('h1');
+        let $h2 = document.querySelector('h2');
+        let $inp_select = document.querySelector('select');
+        let txt = '';
+
+        $inp_select.addEventListener('change', e => {
+            let num = e.currentTarget.selectedIndex;
+            txt = e.currentTarget.value;
+            $h1.textContent = `index : ${num}`;
+            $h2.textContent = txt;
+        });
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>

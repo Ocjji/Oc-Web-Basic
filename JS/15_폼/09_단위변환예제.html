@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <!-- 1 inch = 1 * 2.54 cm -->
+    <input type="text">
+    <button>convert</button>
+    <select>
+        <option value="2.54" selected>cm</option>
+        <option value="0.0254">m</option>
+        <option value="25.4">mm</option>
+    </select>
+    <p>xxx</p>
+
+    <script>
+        'use strict';
+        let $inp = document.querySelector('input');
+        let $p = document.querySelector('p');
+        let $btn = document.querySelector('button');
+        let $select = document.querySelector('select');
+        let num = 0;
+        let inch = 0;
+
+        $btn.addEventListener('click', e => {
+            num = Number($inp.value);
+            let idx = $select.selectedIndex;
+            console.log($select.selectedIndex);
+
+            if (!isNaN(num)) {
+                inch = $inp.value * $select.value;
+                $p.textContent = `${inch.toFixed(2)} ${$select[idx].textContent} 입니다.`;
+            } else {
+                $p.textContent = `숫자를 입력해주세요`;
+            }
+        })
+
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>

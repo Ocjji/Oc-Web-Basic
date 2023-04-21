@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        div {
+            margin: 30px;
+        }
+
+        h1 {
+            width: 150px;
+            height: 60px;
+            font-size: 30px;
+            border: 1px solid #000;
+            margin-bottom: 10px;
+            line-height: 60px;
+            user-select: none;
+        }
+
+        span {
+            font-size: 20px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div>
+        <h1>클릭수 : 0</h1>
+        <p>
+            <button class="btn1">이벤트</button>
+            <button class="btn2">해제</button>
+        </p>
+        <span>xxxxxxx</span>
+    </div>
+    <script>
+        'use strict';
+
+        let btn1 = document.querySelector('.btn1');
+        let btn2 = document.querySelector('.btn2');
+        let h1 = document.querySelector('h1');
+        let span = document.querySelector('span');
+
+        let cnt = 0;
+        let isPlay = false;
+
+        function increment() {
+            h1.textContent = `클릭수 : ${++cnt}`;
+        }
+
+        btn1.addEventListener('click', e => {
+            // cnt++;
+            // h1.textContent = `클릭수 : ${cnt}`;
+            if (!isPlay) {
+                h1.addEventListener('click', increment);
+                span.textContent = 'h1 이벤트 연결';
+                isPlay = !isPlay;
+            }
+        });
+        btn2.addEventListener('click', e => {
+            // cnt--;
+            // h1.textContent = `클릭수 : ${cnt}`;
+            if (isPlay) {
+                h1.removeEventListener('click', increment);
+                span.textContent = 'h1 이벤트 해제';
+            }
+        });
+
+
+
+
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>

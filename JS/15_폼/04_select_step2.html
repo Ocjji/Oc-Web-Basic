@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        body {
+            margin: 30px;
+        }
+
+        h1,
+        h2 {
+            font-size: 40px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <h1>xxx</h1>
+    <h2>xxx</h2>
+
+    <select name="" id="">
+        <option value="">사이트 선택</option>
+        <option value="http://www.naver.com">네이버</option>
+        <option value="http://www.nate.com">네이트</option>
+        <option value="http://www.google.com">구글</option>
+        <!-- window.open -->
+    </select>
+
+
+
+    <script>
+        'use strict';
+        let $h1 = document.querySelector('h1');
+        let $h2 = document.querySelector('h2');
+        let $inp_select = document.querySelector('select');
+        let link = '';
+
+        $inp_select.addEventListener('change', e => {
+            let num = e.currentTarget.selectedIndex;
+            link = e.currentTarget.value;
+            $h1.textContent = `index : ${num}`;
+            $h2.textContent = link;
+
+            if (link) {
+                window.open(link);
+            }
+        });
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>

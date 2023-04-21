@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        ul {
+            margin: 20px;
+        }
+
+        li {
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+            text-align: center;
+            border: 1px solid #000;
+            margin-bottom: 10px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <ul>
+        <li>복사</li>
+    </ul>
+
+    <script>
+        'use strict';
+        const ul = document.querySelector('ul');
+        // const li = document.querySelector('ul li');
+        const li = ul.querySelector('li');
+
+        for (let i = 0; i < 5; i++) {
+            const clone = li.cloneNode(true);
+            ul.append(clone);
+        }
+
+
+
+
+    </script>
+
+    <pre>
+        <hr>
+        복사
+        대상노드.cloneNode(속성)
+        기본값은 false or 생략
+        자식도 복사 : true
+    </pre>
+</body>
+
+</html>

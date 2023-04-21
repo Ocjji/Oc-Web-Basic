@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+
+    </style>
+
+
+
+</head>
+
+
+<body>
+    <input type="text">
+    <button>확인</button>
+    <p>xxx</p>
+
+    <script>
+        'use strict';
+        let $inp = document.querySelector('input');
+        let $btn = document.querySelector('button');
+        let $p = document.querySelector('p');
+        let txt = '';
+
+        $inp.addEventListener('keyup', e => {
+            txt = $inp.value;
+            console.log(txt);
+
+            let idx_includes = txt.indexOf('@');
+            console.log(idx_includes);
+
+            let after = txt.substr(idx_includes + 1);
+            console.log(after);
+
+            let idx_includes2 = after.indexOf('.');
+
+            if (idx_includes === -1) {
+                $p.textContent = `잘못된 형식입니다.`;
+            } else if (idx_includes2 === -1) {
+                $p.textContent = `잘못된 형식입니다.`;
+            } else {
+                $p.textContent = `등록되었습니다.`;
+            }
+        });
+
+
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>
