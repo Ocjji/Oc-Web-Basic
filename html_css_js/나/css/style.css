@@ -1,0 +1,510 @@
+#wrap {
+    width: 100%;
+    min-width: 1600px;
+}
+
+#header,
+#footer,
+#visual,
+#subVisual {
+    width: 100%;
+}
+
+.inner {
+    margin: auto;
+    position: relative;
+    width: 1400px;
+    box-sizing: border-box;
+}
+
+#header {}
+
+#header .inner {
+    height: 150px;
+}
+
+#header h1 {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+#header .top-menu {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    display: flex;
+}
+
+#header .top-menu li {
+    margin-left: 15px;
+    position: relative;
+}
+
+#header .top-menu li::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 1px;
+    height: 12px;
+    background: #000;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#header .top-menu li:last-child::after {
+    display: none;
+}
+
+#header .top-menu li {
+    font-size: 14px;
+}
+
+#header .nav {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#header .nav .gnb {
+    display: flex;
+}
+
+#header .nav .gnb li {
+    margin-left: 50px;
+}
+
+#header .nav .gnb li a {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#footer {}
+
+/* 서브공통구조 */
+#subVisual {
+    width: 100%;
+    height: 410px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: relative;
+}
+
+#subVisual.subvis1 {
+    background-image: url(../images/contents/sublayout/spot1.jpg);
+}
+
+#subVisual.subvis2 {
+    background-image: url(../images/contents/sublayout/spot2.jpg);
+}
+
+#subVisual.subvis3 {
+    background-image: url(../images/contents/sublayout/spot3.jpg);
+}
+
+#subVisual.subvis4 {
+    background-image: url(../images/contents/sublayout/spot4.jpg);
+}
+
+#subVisual.subvis5 {
+    background-image: url(../images/contents/sublayout/spot5.jpg);
+}
+
+#subVisual.subvis6 {
+    background-image: url(../images/contents/sublayout/spot3.jpg);
+}
+
+#subVisual h2 {
+    text-align: center;
+    font-size: 40px;
+    color: #FFF;
+    padding-top: 130px;
+}
+
+#subVisual nav {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+}
+
+#subVisual nav ul {
+    text-align: center;
+}
+
+#subVisual nav ul li {
+    margin-right: 45px;
+    display: inline-block;
+    position: relative;
+}
+
+#subVisual nav ul li:last-child {
+    margin-right: 0;
+}
+
+#subVisual nav ul li a {
+    display: block;
+    padding: 0 15px;
+    line-height: 70px;
+    color: #FFF;
+}
+
+#subVisual nav ul li a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #FFF;
+    position: absolute;
+    left: 0;
+    top: -1px;
+    transition: 0.2s;
+    transform: scale(0);
+}
+
+#subVisual nav ul li:hover a::after {
+    transform: scale(1);
+}
+
+#subVisual nav ul li.on a::after {
+    transform: scale(1);
+}
+
+.page {}
+
+.page .inner {
+    padding: 100px 0;
+}
+
+/* index page */
+
+#visual {
+    height: 750px;
+    position: relative;
+}
+
+#visual .main-banner {
+    width: 100%;
+    height: 750px;
+    position: relative;
+}
+
+#visual .main-banner li {
+    width: 100%;
+    height: 750px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+#visual .main-banner li:nth-child(1) {
+    background-image: url(../images/visual1.jpg);
+    opacity: 1;
+}
+
+#visual .main-banner li:nth-child(2) {
+    background-image: url(../images/visual2.jpg);
+}
+
+#visual .main-banner li:nth-child(3) {
+    background-image: url(../images/visual3.jpg);
+}
+
+#visual .btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+    background: #FFF;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#visual .btn i {
+    line-height: 70px;
+    font-size: 40px;
+}
+
+#visual .prev {
+    left: 40px;
+}
+
+#visual .next {
+    right: 40px;
+}
+
+#visual .paging {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15px;
+}
+
+#visual .paging li {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 7px;
+    border-radius: 50%;
+    background: #FFF;
+}
+
+#visual .paging li.on {
+    background: orange;
+}
+
+.main {}
+
+.main .con-box {
+    width: 100%;
+}
+
+.main .con-box .inner {
+    padding: 130px 0;
+}
+
+.main .con-box h2 {
+    font-size: 45px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.main .con-box h2+p {
+    font-size: 20px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.main .con1 {
+    background: #EEE;
+}
+
+.main .con1 ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .con1 ul li {
+    width: 300px;
+    height: 390px;
+    position: relative;
+    overflow: hidden;
+}
+
+.main .con1 ul li a {}
+
+.main .con1 ul li a img {
+    width: 300px;
+    height: 390px;
+}
+
+.main .con1 ul li a span {
+    display: block;
+    width: 300px;
+    height: 390px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.main .con1 ul li:hover a span {
+    opacity: 0.6;
+}
+
+.main .con1 ul li a div {
+    position: absolute;
+    left: 0;
+    bottom: -80px;
+    padding: 20px;
+    color: #FFF;
+    transition: 0.4s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.main .con1 ul li:hover a div {
+    bottom: 0;
+}
+
+.main .con1 ul li a div i {
+    font-size: 30px;
+}
+
+.main .con1 ul li a div strong {
+    font-size: 30px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.main .con1 ul li a div p {
+    width: 100%;
+    position: relative;
+    left: 0;
+    top: 30px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.main .con1 ul li:hover a div p {
+    top: 0;
+    opacity: 1;
+}
+
+.main .con2 {
+    height: 600px;
+    background: #D0D0D0;
+    background-image: url(../images/main/section1_2.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.main .con2 .box {
+    width: 400px;
+    height: 450px;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 50px 30px 0 30px;
+    box-sizing: border-box;
+    color: #555;
+}
+
+.main .con2 .box em {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.main .con2 .box strong {
+    display: block;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.main .con2 .box strong::after {
+    margin-top: 50px;
+    content: "";
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: #FFF;
+}
+
+.main .con2 .box p {
+    margin-top: 30px;
+}
+
+.main .con3 {
+    background: #E5E5E5;
+}
+
+.main .con4 {}
+
+/* 회사소개 */
+.sub1-1 {}
+
+.sub1-1 h3 {}
+
+.sub1-1 h3::after {}
+
+.sub1-1 .sub1-bg {}
+
+.sub1-1 .sub1-bg ul {}
+
+.sub1-1 .sub1-bg ul li {}
+
+.sub1-1 .sub1-bg ul li span {}
+
+.sub1-1 .sub1-bg ul li span i {}
+
+.sub1-1 .sub1-bg ul li em {}
+
+.sub1-1 strong {}
+
+.sub1-1 strong+ul {}
+
+.sub1-1 strong+ul li {}
+
+.sub1-1 strong+ul li span {}
+
+.sub1-1 strong+ul li span i {}
+
+.sub1-1 strong+ul li p {}
+
+/* 인사말 */
+.sub1-2 {}
+
+.sub1-2 h3 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 75px;
+    text-align: center;
+}
+
+.sub1-2 .ceo-banner {
+    width: 100%;
+    height: 480px;
+    box-sizing: border-box;
+    padding: 140px 240px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    background-image: url(../images/contents/sub1/ceo-img03.jpg);
+}
+
+.sub1-2 .ceo-banner p {
+    width: 420px;
+    font-size: 35px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.sub1-2 .ceo-banner strong {
+    font-size: 20px;
+}
+
+.sub1-2 .ceo-banner strong span {
+    font-weight: 700;
+}
+
+.sub1-2 .ceo-msg {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sub1-2 .ceo-msg div {
+    padding: 70px 20px;
+    width: 670px;
+}
+
+.sub1-2 .ceo-msg .ceo-left {}
+
+.sub1-2 .ceo-msg .ceo-right {}
+
+.sub1-2 .ceo-msg div p {
+    margin-bottom: 25px;
+    font-size: 17px;
+}

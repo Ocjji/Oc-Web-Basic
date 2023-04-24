@@ -1,0 +1,167 @@
+#wrap {
+    width: 100%;
+    min-width: 1600px;
+}
+
+#header,
+#footer,
+#visual,
+#subVisual {
+    width: 100%;
+}
+
+.inner {
+    margin: auto;
+    position: relative;
+    width: 1400px;
+    box-sizing: border-box;
+}
+
+#header {}
+
+#header .inner {
+    height: 150px;
+}
+
+#header h1 {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+#header .top-menu {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    display: flex;
+}
+
+#header .top-menu li {
+    margin-left: 15px;
+    position: relative;
+}
+
+#header .top-menu li::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 1px;
+    height: 12px;
+    background: #000;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#header .top-menu li:last-child::after {
+    display: none;
+}
+
+#header .top-menu li {
+    font-size: 14px;
+}
+
+#header .nav {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#header .nav .gnb {
+    display: flex;
+}
+
+#header .nav .gnb li {
+    margin-left: 50px;
+}
+
+#header .nav .gnb li a {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* index page */
+
+#visual {
+    height: 750px;
+    position: relative;
+}
+
+#visual .main-banner {
+    width: 100%;
+    height: 750px;
+    position: relative;
+}
+
+#visual .main-banner li {
+    width: 100%;
+    height: 750px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+#visual .main-banner li:nth-child(1) {
+    background-image: url(../images/visual1.jpg);
+    opacity: 1;
+}
+
+#visual .main-banner li:nth-child(2) {
+    background-image: url(../images/visual2.jpg);
+}
+
+#visual .main-banner li:nth-child(3) {
+    background-image: url(../images/visual3.jpg);
+}
+
+#visual .btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+    background: #FFF;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#visual .btn i {
+    line-height: 70px;
+    font-size: 40px;
+}
+
+#visual .prev {
+    left: 40px;
+}
+
+#visual .next {
+    right: 40px;
+}
+
+#visual .paging {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15px;
+}
+
+#visual .paging li {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 7px;
+    border-radius: 50%;
+    background: #FFF;
+}
+
+#visual .paging li.on {
+    background: orange;
+}

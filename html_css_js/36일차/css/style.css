@@ -1,0 +1,210 @@
+/* 전체 페이지 공통 */
+#wrap {
+    width: 100%;
+    min-width: 1600px;
+}
+
+#header,
+#footer,
+#visual,
+#subVisual {
+    width: 100%;
+}
+
+.inner {
+    width: 1400px;
+    margin: auto;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#header {
+    background: #888;
+}
+
+#header .inner {
+    height: 150px;
+}
+
+#header h1 {
+    position: absolute;
+    left: 0;
+    top: 50px;
+}
+
+#header .top-menu {
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+#header .top-menu li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+#header .nav {
+    position: absolute;
+    right: 0;
+    top: 65px;
+}
+
+#header .nav .gnb {
+    display: flex;
+}
+
+#header .nav .gnb li {
+    margin-left: 70px;
+}
+
+#header .nav .gnb li a {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#footer {
+    background: #888;
+}
+
+#footer .inner {
+    height: 250px;
+    background: #666;
+}
+
+/* subpage 공통 */
+#subVisual {
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+#subVisual.subvis1 {
+    background-image: url(../images/cat0.jpg);
+}
+
+#subVisual.subvis2 {
+    background-image: url(../images/cat1.jpg);
+}
+
+#subVisual.subvis3 {
+    background-image: url(../images/cat2.jpg);
+}
+
+#subVisual.subvis4 {
+    background-image: url(../images/cat3.jpg);
+}
+
+#subVisual.subvis5 {
+    background-image: url(../images/cat4.jpg);
+}
+
+#subVisual h2 {
+    font-size: 70px;
+    color: red;
+}
+
+.page {
+    width: 1400px;
+    margin: auto;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page #sideBar {
+    width: 350px;
+    height: 700px;
+    background: violet;
+    box-sizing: border-box;
+    padding: 30px 50px;
+}
+
+.page #sideBar h3 {
+    font-size: 30px;
+}
+
+.page #content {
+    width: 1000px;
+    height: 2000px;
+    background: #457821;
+}
+
+.page #content h3 {
+    font-size: 30px;
+}
+
+
+/* index.html */
+#visual {
+    height: 700px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url(../images/cat1.jpg);
+    background-size: cover;
+}
+
+/* index 컨텐츠 공통 */
+.main {}
+
+.main .con-box {
+    width: 100%;
+}
+
+.main .con-box .inner {
+    padding: 100px 0;
+}
+
+.main .con-box h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.main .con1 {
+    background: #333;
+}
+
+.main .con1 .inner {
+    height: 600px;
+    background: #334444;
+}
+
+.main .con2 {
+    background: #444;
+}
+
+.main .con2 .inner {
+    height: 700px;
+    background: #445555;
+}
+
+.main .con3 {
+    background: #555;
+}
+
+.main .con3 .inner {
+    height: 500px;
+    background: #556666;
+}
+
+.main .con4 {
+    background: #666;
+}
+
+.main .con4 .inner {
+    height: 600px;
+    background: #667777;
+}
+
+/* sub1.html */
+
+/* sub2.html */
+
+/* sub3.html */
+
+/* sub4.html */
