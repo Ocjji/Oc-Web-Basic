@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <div>
+        <input type="checkbox" name="chk">
+        링크 활성화 여부, e.preventDefault()
+    </div>
+    <p>
+        <a href="http://www.naver.com" target="_blank">네이버로 이동</a>
+    </p>
+    <script>
+        'use strict';
+        let chk = document.querySelector('input');
+        let link = document.querySelector('a');
+
+        let isLink = false;
+
+
+        chk.addEventListener('change', e => {
+            isLink = e.currentTarget.checked;
+        });
+        link.addEventListener('click', e => {
+            if (!isLink) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>

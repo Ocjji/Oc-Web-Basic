@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        div {
+            margin-bottom: 20px;
+        }
+
+        p {
+            width: 200px;
+            height: 100px;
+            background: pink;
+            text-align: center;
+            line-height: 100px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="checkbox" name="chk"> 클래스붙이고 떼기
+    </div>
+    <p> 텍스트 보이기 </p>
+    <script>
+        let chk = document.querySelector('input');
+        let p = document.querySelector('p');
+
+        chk.addEventListener('change', e => {
+            if (chk.checked) {
+                chk.classList.add('on');
+                p.textContent = `class ON`;
+            } else {
+                chk.classList.remove('on');
+                p.textContent = `class OFF`;
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <div>
+        <input type="radio" name="ani" value="강아지">강아지
+        <input type="radio" name="ani" value="고양이">고양이
+        <input type="radio" name="ani" value="호랑이">호랑이
+    </div>
+    <p>xxx</p>
+
+    <script>
+        'use strict';
+        // let rad = document.querySelectorAll('input');
+        let rad = document.querySelectorAll('[name=ani]');
+        let p = document.querySelector('p');
+
+        rad.forEach(element => {
+            element.addEventListener('change', e => {
+                let current = e.currentTarget;
+                console.log(current.checked);
+                if (current.checked) {
+                    p.textContent = current.value;
+                } else {
+                    p.textContent = '';
+                }
+            })
+        });
+
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>

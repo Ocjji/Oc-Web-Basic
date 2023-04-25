@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <div>
+        <input type="checkbox" name="chk1" value="펭귄" checked>펭귄
+        <input type="checkbox" name="chk2" value="바다표범">바다표범
+        <input type="checkbox" name="chk3" value="북극곰">북극곰
+        <input type="checkbox" name="chk4" value="북극여우">북극여우
+    </div>
+    <p>xxx</p>
+
+    <script>
+        'use strict';
+        let $input = document.querySelectorAll('input');
+        let $p = document.querySelector('p');
+
+
+        $input.forEach(element => {
+            element.addEventListener('change', e => {
+                let arr = [];
+                $input.forEach(chk => {
+                    if (chk.checked) {
+                        arr.push(chk.value);
+                    }
+                })
+                $p.textContent = `${arr.join(',')}`;
+            })
+        })
+
+
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>

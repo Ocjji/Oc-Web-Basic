@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        .box {width: 600px;height: 400px;border: 1px solid #000;margin: 50px;position: relative;}
+        .box span {position: absolute;left: 0;top: 0;display: block;width: 600px;height: 400px;background: tan; opacity: 0.4; pointer-events: auto;}
+
+    </style>
+
+
+</head>
+
+<body>
+    <div class="box">
+        <img src="images/cat0.jpg" alt="">
+        <span></span>
+    </div>
+
+    <script>
+        'use strict';
+
+        let img = document.querySelector('img');
+
+        img.addEventListener('click' , e => {
+            alert('테스트');
+        })
+
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>

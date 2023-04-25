@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        body {
+            margin: 30px;
+        }
+
+        ul {
+            margin-top: 10px;
+        }
+
+        ul li {
+            width: 250px;
+            line-height: 40px;
+            border: 1px solid #000;
+            text-indent: 10px;
+            margin-bottom: 5px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <input type="text" id="txt">
+    <button class="add">추가</button>
+    <button class="print">출력</button>
+
+    <p>xxx</p>
+
+    <ul>
+        <!-- <li>xxx</li> -->
+    </ul>
+
+    <script>
+        'use strict';
+        let $input = document.querySelector('input');
+        let $add = document.querySelector('.add');
+        let $print = document.querySelector('.print');
+        let $p = document.querySelector('p');
+        let $list = document.querySelector('ul');
+
+        let txt = '';
+        let temp = [];
+
+        $add.addEventListener('click', e => {
+            txt = $input.value;
+            temp.push(txt);
+            $p.textContent = temp;
+            $input.value = '';
+
+            $input.focus();
+        });
+
+        $print.addEventListener('click', e => {
+            temp.forEach(element => {
+                let li = document.createElement('li');
+                li.textContent = element;
+                $list.append(li);
+
+                li.addEventListener('click', e => {
+                    e.currentTarget.remove();
+                });
+            });
+            temp = [];
+            $p.textContent = temp;
+        });
+
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>

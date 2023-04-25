@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        body {
+            margin: 50px;
+        }
+
+        p {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <select>
+        <option value="">펭귄</option>
+        <option value="">북극여우</option>
+        <option value="">북극곰</option>
+        <option value="">바다표범</option>
+        <option value="">흰수염고래</option>
+    </select>
+    <p>선택 : xx</p>
+
+    <script>
+        'use strict';
+        let sel = document.querySelector('select');
+        let p = document.querySelector('p');
+
+        // change or input
+        sel.addEventListener('change', e => {
+            let idx = e.currentTarget.selectedIndex;
+            console.log(idx);
+            p.textContent = `선택 : ${e.currentTarget[idx].textContent}`;
+        });
+
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>

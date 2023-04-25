@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        body {
+            margin: 30px;
+        }
+
+        ul {
+            margin-top: 10px;
+        }
+
+        ul li {
+            width: 250px;
+            line-height: 40px;
+            border: 1px solid #000;
+            text-indent: 10px;
+            margin-bottom: 5px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <input type="text" id="txt">
+    <button>추가</button>
+
+    <ul>
+        <!-- <li>xxx</li> -->
+    </ul>
+
+    <script>
+        'use strict';
+        let $input = document.querySelector('input');
+        let $btn = document.querySelector('button');
+        let $list = document.querySelector('ul');
+
+        let txt = '';
+
+        $btn.addEventListener('click', e => {
+            txt = $input.value;
+            console.log(txt);
+            let li = document.createElement('li');
+            li.textContent = txt;
+            // $list.innerHTML += `<li>${li.textContent}</li>`;
+            $list.append(li);
+
+            $input.value = '';
+            // 커서가 입력창에 오도록 focus() 사용
+            $input.focus();
+        })
+
+
+    </script>
+
+    <pre>
+        <hr>
+
+    </pre>
+</body>
+
+</html>
