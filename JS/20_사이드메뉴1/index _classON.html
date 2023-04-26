@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        .wing {
+            position: absolute;
+            left: -200px;
+            top: 100px;
+            width: 200px;
+            transition: 0.5s;
+            background: beige;
+            box-sizing: border-box;
+            padding: 25px;
+        }
+
+        .wing.on {
+            left: 0px;
+        }
+
+        .wing h2 {
+            font-size: 25px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .wing ul {}
+
+        .wing ul li {}
+
+        .wing ul li a {
+            display: block;
+            text-align: center;
+            line-height: 40px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .wing .close {
+            position: absolute;
+            display: block;
+            width: 40px;
+            height: 40px;
+            right: -40px;
+            /* left: 0; */
+            top: 0px;
+            background: #EFEFEF;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .wing .close i {
+            font-size: 18px;
+            line-height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wing">
+        <h2>광고</h2>
+        <ul>
+            <li><a href="#">Menu1</a></li>
+            <li><a href="#">Menu2</a></li>
+            <li><a href="#">Menu3</a></li>
+            <li><a href="#">Menu4</a></li>
+        </ul>
+        <span class="close"><i class="xi-angle-right"></i> </span>
+    </div>
+    <script>
+
+        let $wing = document.querySelector('.wing');
+        let $close = document.querySelector('.close');
+        let $i = document.querySelector('.wing span i');
+
+        $close.addEventListener('click', e => {
+            if ($wing.classList.contains('on')) {  // contains = true; on을 제거한다.
+                // $wing.classList.remove('on');
+                $i.classList.replace("xi-angle-left", "xi-angle-right");
+            } else {   // contains = false; on을 붙인다.
+                // $wing.classList.add('on');
+                $i.classList.replace("xi-angle-right", "xi-angle-left");
+            }
+            $wing.classList.toggle('on');
+        });
+
+    </script>
+</body>
+
+</html>

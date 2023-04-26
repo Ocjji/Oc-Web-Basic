@@ -33,12 +33,32 @@
     top: 114px;
     background: rgba(255, 255, 255, 0.4);
     width: 100%;
-    height: 450px;
+    height: 100%;
     z-index: -10;
 }
 
 #header.on {
     height: 564px;
+}
+
+#header.on0 {
+    height: 564px;
+}
+
+#header.on1 {
+    height: 650px;
+}
+
+#header.on2 {
+    height: 800px;
+}
+
+#header.on3 {
+    height: 900px;
+}
+
+#header.on4 {
+    height: 800px;
 }
 
 #header .inner {

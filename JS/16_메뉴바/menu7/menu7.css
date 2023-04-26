@@ -37,8 +37,24 @@
     z-index: -10;
 }
 
-#header.on {
+#header.on0 {
     height: 564px;
+}
+
+#header.on1 {
+    height: 650px;
+}
+
+#header.on2 {
+    height: 500px;
+}
+
+#header.on3 {
+    height: 700px;
+}
+
+#header.on4 {
+    height: 800px;
 }
 
 #header .inner {

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        .family {
+            width: 250px;
+            height: 30px;
+            margin: 30px;
+            position: relative;
+        }
+
+        .family .title {
+            display: block;
+            height: 30px;
+            border: 1px solid #999;
+            line-height: 30px;
+            padding: 0 15px;
+            background-repeat: no-repeat;
+            background-position: right 20px top 50%;
+            background-image: url(http://www.lsmnm.com/asset/img/ico/drop_ico.png);
+        }
+
+        /* http://www.lsmnm.com/asset/img/ico/drop_icoup.png */
+
+        .family .list {
+            position: absolute;
+            left: 0;
+            top: 31px;
+            width: 100%;
+            height: 160px;
+            overflow: hidden;
+        }
+
+        .family .list li {}
+
+        .family .list li a {
+            display: block;
+            height: 30px;
+            border: 1px solid #999;
+            line-height: 30px;
+            background: #fff;
+            margin-bottom: -1px;
+            padding: 0 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="family">
+        <a href="#" class="title">패밀리 사이트</a>
+        <ul class="list">
+            <li><a href="#">네이버</a></li>
+            <li><a href="#">네이트</a></li>
+            <li><a href="#">구글</a></li>
+            <li><a href="#">다음</a></li>
+            <li><a href="#">이젠컴퓨터</a></li>
+        </ul>
+    </div>
+    <script>
+        const title = document.querySelector('.title');
+        const list = document.querySelector('.list');
+        let isPlay = false;
+
+        list.style.height = '0px';
+        title.addEventListener('click', e => {
+            if (isPlay) {
+                title.preventDefault;
+                list.style.height = '0px';
+            } else {
+                title.preventDefault;
+                list.style.height = '160px';
+            }
+            isPlay = !isPlay;
+        })
+
+
+    </script>
+</body>
+
+</html>

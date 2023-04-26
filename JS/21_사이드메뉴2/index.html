@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        .wing-bar {
+            position: absolute;
+            left: 0;
+            top: 100px;
+        }
+
+        .wing {
+            position: absolute;
+            left: -80px;
+            top: 0px;
+            width: 80px;
+            transition: 0.5s;
+            box-sizing: border-box;
+            z-index: 20
+        }
+
+        .wing.on {
+            left: 0
+        }
+
+        .wing ul {}
+
+        .wing ul li {}
+
+        .wing ul li a,
+        .wing .close,
+        .open {
+            display: block;
+            text-align: center;
+            line-height: 80px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            background: hotpink;
+            height: 80px;
+            position: relative;
+        }
+
+        .wing ul li a i {
+            font-size: 25px;
+            color: #fff
+        }
+
+        .wing .close {
+            background: rgb(245, 144, 195);
+            cursor: pointer;
+        }
+
+        .wing .close i {
+            font-size: 18px;
+            line-height: 40px;
+        }
+
+        .wing .close i {
+            font-size: 18px;
+            line-height: 40px;
+        }
+
+        .wing-bar .open {
+            position: absolute;
+            display: block;
+            left: 0;
+            top: 100px;
+            background: #EFEFEF;
+            text-align: center;
+            cursor: pointer;
+            width: 80px;
+            background: rgb(245, 144, 195);
+            cursor: pointer;
+            transition: 0.5s;
+            z-index: 10
+        }
+
+        .wing-bar .open.on {
+            left: -90px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wing-bar">
+        <div class="wing">
+            <ul>
+                <li><a href="#" data-tooltip="email"><i class="xi-dashboard-o"></i></a></li>
+                <li><a href="#"><i class="xi-lightbulb-o"></i></a></li>
+                <li><a href="#"><i class="xi-mail-o"></i></a></li>
+                <li><a href="#"><i class="xi-heart-o"></i></a></li>
+                <li><a href="#"><i class="xi-star-o"></i></a></li>
+            </ul>
+            <span class="close"><i class="xi-angle-left"></i> </span>
+        </div>
+        <span class="open"><i class="xi-angle-right"></i> </span>
+    </div>
+    <script>
+        ; (function () {
+            const get = (target) => {
+                return document.querySelector(target);
+            }
+
+            const $close = get('.close');
+            const $open = get('.open');
+
+            $open.addEventListener('click', e => {
+                $open.classList.toggle('on');
+                $close.parentElement.classList.toggle('on');
+            });
+            $close.addEventListener('click', e => {
+                $open.classList.toggle('on');
+                $close.parentElement.classList.toggle('on');
+            });
+        })();
+    </script>
+</body>
+
+</html>
