@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        body {
+            text-align: center;
+        }
+
+        img {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="images/화면.jpg" alt="">
+    <script type="module" src="main.js">
+        let ulHeight = 800;
+
+        ul.addEventListener('click', e => {
+            ulHeight += 800;
+
+            if (ulHeight > 2000) { ulHeight = 2400; }
+
+            ul.style.height = ulHeight + 'px';
+        })
+
+    </script>
+    <pre>
+        <hr>
+    </pre>
+</body>
+
+</html>

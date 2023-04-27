@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        .tab-box {
+            margin: 30px auto;
+            width: 500px;
+        }
+
+        .tab-box .tab {
+            display: flex;
+        }
+
+        .tab-box .tab li a {
+            display: inline-block;
+            width: 100px;
+            text-align: center;
+            padding: 8px 0;
+            color: #333;
+            border-radius: 4px 4px 0 0;
+            background: beige;
+        }
+
+        .tab-box .tab li a.on {
+            background: #333;
+            color: #fff;
+        }
+
+        .tab-box .tab li a:not(.on):hover {
+            opacity: .5;
+            transition: opacity .4s;
+        }
+
+        .tab-box .con-box {}
+
+        .tab-box .con-box .content {
+            display: none;
+        }
+
+        .tab-box .con-box .content.on {
+            background: #333;
+            color: #fff;
+            min-height: 150px;
+            padding: 12px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab-box">
+        <ul class="tab">
+            <li><a href="http://www.naver.com" class="on" data-id="about">about</a></li>
+            <li><a href="http://www.naver.com" data-id="service">service</a></li>
+            <li><a href="http://www.naver.com" data-id="contact">content</a></li>
+        </ul>
+        <div class="con-box">
+            <div class="content on" id="about">
+                사랑의 생명을 같은 같이 커다란 예가 있으랴? 전인 있는 되려니와, 곳이 낙원을 것이다.
+            </div>
+            <div class="content" id="service">
+                언덕 애기 새워 위에도 별 멀리 거외다. 흙으로 노루, 어머니 봅니다. 부끄러운 걱정도 너무나 아이들의 내린 말 별이 있습니다.
+            </div>
+            <div class="content" id="contact">
+                옥 별이 멀듯이, 어머니, 불러 지나가는 이런 듯합니다. 릴케 못 어머니 남은 까닭입니다. 딴은 나는 계절이 어머니 오면 봅니다. 그리워 오는 까닭이요, 책상을 이름과, 어머니, 별
+                이름을 추억과 봅니다. 소녀들의 별에도 내 사랑과 계십니다.
+            </div>
+        </div>
+    </div>
+    <script>
+        let li = document.querySelectorAll('.tab li');
+        let links = document.querySelectorAll('.tab li a');
+        let contents = document.querySelectorAll('.con-box .content');
+
+        links.forEach(element => {
+            element.addEventListener('click', e => {
+                const current = e.currentTarget;
+                e.preventDefault();
+
+                console.log(current.dataset.id);
+                const id = current.dataset.id;
+                const view = document.querySelector(`#${id}`);
+                contents.forEach(element => {
+                    element.classList.remove('on');
+                })
+                links.forEach(element => {
+                    element.classList.remove('on');
+                })
+                view.classList.add('on');
+                element.classList.add('on');
+            });
+        })
+    </script>
+</body>
+
+</html>

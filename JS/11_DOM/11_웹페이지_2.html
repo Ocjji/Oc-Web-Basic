@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        #wrap {
+            width: 100%;
+            min-width: 1600px;
+        }
+
+        .inner {
+            width: 1400px;
+            margin: auto;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        #header {
+            width: 100%;
+        }
+
+        #header.on {
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: rgba(255, 255, 255, 0.5);
+            z-index: 100;
+        }
+
+        #header .inner {
+            height: 150px;
+        }
+
+        #header h1 {
+            position: absolute;
+            left: 0;
+            top: 50px;
+        }
+
+        #header .nav {
+            position: absolute;
+            right: 0;
+            top: 65px;
+        }
+
+        #header .gnb {
+            display: flex;
+        }
+
+        #header .gnb li {
+            margin-left: 70px;
+        }
+
+        #header .gnb li a {
+            font-size: 18px;
+        }
+
+        .con-box {
+            width: 100%;
+        }
+
+        .con-box .inner {
+            height: 1080px;
+            padding: 100px 0;
+        }
+
+        .con-box h2 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .con0 {
+            background: #B2EBF2;
+        }
+
+        .con1 {
+            background: tomato;
+        }
+
+        .con2 {
+            background: #F0F4C3;
+        }
+
+        .con3 {
+            background: #C8E6C9;
+        }
+
+        .con4 {
+            background: #FFCC80;
+        }
+
+        .top {
+            position: fixed;
+            left: 90%;
+            bottom: 0;
+            width: 60px;
+            height: 60px;
+            background: #000;
+            text-align: center;
+            display: none;
+        }
+
+        .top.on {
+            display: block;
+        }
+
+        .top i {
+            line-height: 60px;
+            color: #fff;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- div#wrap>header#header>h1>a[href="#"]>img^^^main#container>section#content>div.con-box.con$>div.inner>h2{타이틀$} -->
+    <div id="wrap">
+        <header id="header">
+            <div class="inner">
+                <h1><a href="#"><img src="https://via.placeholder.com/100x50" alt=""></a></h1>
+                <nav class="nav">
+                    <ul class="gnb">
+                        <li><a href="#">MainMenu1</a></li>
+                        <li><a href="#">MainMenu2</a></li>
+                        <li><a href="#">MainMenu3</a></li>
+                        <li><a href="#">MainMenu4</a></li>
+                        <li><a href="#">MainMenu5</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main id="container">
+            <section id="content">
+                <div class="con-box con0">
+                    <div class="inner">
+                        <h2>타이틀0</h2>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="con-box con1">
+                    <div class="inner">
+                        <h2>타이틀1</h2>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="con-box con2">
+                    <div class="inner">
+                        <h2>타이틀2</h2>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="con-box con3">
+                    <div class="inner">
+                        <h2>타이틀3</h2>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="con-box con4">
+                    <div class="inner">
+                        <h2>타이틀4</h2>
+                    </div>
+                </div>
+                <!--  -->
+            </section>
+        </main>
+    </div>
+    <p class="top">
+        <i class="xi-arrow-up"></i>
+    </p>
+    <script>
+        let li = document.querySelectorAll('.gnb li');
+        let con = document.querySelectorAll('.con-box');
+        let ttop = document.querySelector('.top');
+        let header = document.querySelector('#header');
+        let ty = 0;
+        //getComputedStyle : css 속성값 가져오기
+        window.addEventListener('scroll', e => {
+            // let t = document.documentElement.scrollTop
+            let t = window.scrollY
+
+            // 헤더
+            let headerStyles = window.getComputedStyle(header);
+            // 또는 let 높이값 = parseInt(getComputedStyle(header).height);
+            // if (t > header.getAttribute('height')) {
+            if (t >= parseInt(headerStyles.getPropertyValue('height'))) {
+                header.classList.add('on');
+            } else {
+                header.classList.remove('on');
+            }
+
+            // 탑
+            if (t > 1000) {
+                ttop.classList.add('on');
+            } else {
+                ttop.classList.remove('on');
+            }
+        })
+        li.forEach((item, idx) => {
+            item.addEventListener('click', e => {
+                e.preventDefault();
+                ty = con[idx].offsetTop;
+                console.log(ty);
+                window.scrollTo({ top: ty, behavior: 'smooth' });
+            })
+        })
+        ttop.addEventListener('click', e => {
+            ty = 0;
+            window.scrollTo({ top: ty, behavior: 'smooth' });
+        })
+
+    </script>
+    <pre>
+    </pre>
+</body>
+
+</html>

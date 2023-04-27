@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .tab {
+            width: 500px;
+            border: 1px solid #000;
+            position: relative;
+            height: 400px;
+        }
+
+        .tab dt {
+            width: 100px;
+            height: 40px;
+            margin-right: 5px;
+            background: #999;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+            float: left;
+            cursor: pointer;
+        }
+
+        .tab dt.on {
+            background: pink;
+        }
+
+        .tab dd {
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 100%;
+            height: 300px;
+            display: none;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .tab dd.on {
+            display: block;
+        }
+
+        .tab dd:nth-of-type(1) {
+            background: pink;
+            display: block;
+        }
+
+        .tab dd:nth-of-type(2) {
+            background: skyblue;
+        }
+
+        .tab dd:nth-of-type(3) {
+            background: lime;
+        }
+
+        .tab dd:nth-of-type(4) {
+            background: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <dl class="tab">
+        <dt class="on" data-id="tab1">제목1</dt>
+        <dd id="tab1">
+            <p>
+                것은 타오르고 열락의 창공에 충분히 뜨거운지라, 피어나기 것이다. 인간의 더운지라 청춘에서만 사막이다. 따뜻한 청춘의 꽃 얼음이 인생을 힘있다. 반짝이는 소담스러운 영락과 있다. 인간이
+                할지니, 두기 크고 것이다.
+            </p>
+        </dd>
+        <dt data-id="tab2">제목2</dt>
+        <dd id="tab2">
+            <p>불러 가슴속에 말 까닭이요, 토끼, 부끄러운 어머니 버리었습니다. 지나가는 어머니 차 오면 나는 아스라히 소녀들의 있습니다. 이국 별 별 잠, 계절이 있습니다. 풀이 이름과, 묻힌 된
+                별에도 봅니다. 아름다운 이름을 어머님, 별 다 나의 위에도 내린 거외다.</p>
+        </dd>
+        <dt data-id="tab3">제목3</dt>
+        <dd id="tab3">
+            <p>내린 멀리 멀리 별을 동경과 까닭입니다. 옥 별 별 멀듯이, 동경과 지나고 않은 이름과 듯합니다.</p>
+        </dd>
+        <dt data-id="tab4">제목4</dt>
+        <dd id="tab4">
+            <p>
+                사랑의 가진 피부가 작고 심장의 생생하며, 길지 뿐이다. 피가 얼음이 하여도 안고, 그러므로 이것이다. 사라지지 찾아다녀도, 목숨을 수 착목한는 싹이 석가는 관현악이며, 하는 것이다.
+            </p>
+        </dd>
+    </dl>
+    <script>
+        let dts = document.querySelectorAll('dt');
+
+        let dds = document.querySelectorAll('dd');
+
+        dts.forEach(element => {
+            element.addEventListener('click', e => {
+                let current = e.currentTarget;
+                console.log(current.dataset.id);
+
+                dts.forEach(element => {
+                    element.classList.remove('on');
+                })
+                element.classList.add('on');
+
+                dds.forEach(element => {
+                    element.classList.remove('on');
+                    if (current.dataset.id === element.id) {
+                        element.classList.add('on');
+                    }
+                })
+            });
+        })
+
+    </script>
+</body>
+
+</html>
