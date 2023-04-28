@@ -7,34 +7,52 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-    <style>
-        body {
-            text-align: center;
-        }
-
-        img {
-            margin: 0 auto;
-        }
-    </style>
 </head>
 
 <body>
-    <img src="images/화면.jpg" alt="">
-    <script type="module" src="main.js">
-        let ulHeight = 800;
+    <div class="popup-bg"></div>
 
-        ul.addEventListener('click', e => {
-            ulHeight += 800;
+    <div class="popup">
+        <strong></strong>
+        <button class="close"><i class="xi-close"></i></button>
+        <img src="images/photo0.jpg" alt="">
+        <p class="popup-nav">
+            <button class="popup-prev"><i class="xi-arrow-left"></i></button>
+            <button class="popup-next"><i class="xi-arrow-right"></i></button>
+        </p>
+    </div>
 
-            if (ulHeight > 2000) { ulHeight = 2400; }
+    <div id="wrap">
+        <header id="header">
+            <div class="inner">
+                <h2>Image Gallery</h2>
+            </div>
+        </header>
 
-            ul.style.height = ulHeight + 'px';
-        })
+        <main id="container" class="main">
+            <section id="content">
+                <div class="con-box">
+                    <div class="inner">
+                        <div class="gallery">
+                            <ul class="list">
+                                <!-- <li><img src="" alt=""></li> -->
+                            </ul>
+                            <p>
+                                <button class="more">더보기</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 
-    </script>
     <pre>
         <hr>
     </pre>
+
+    <script type="module" src="js/main.js"></script>
+
 </body>
 
 </html>

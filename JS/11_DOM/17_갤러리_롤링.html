@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        .con-box {
+            width: 750px;
+            margin: 50px auto;
+            position: relative;
+            /* overflow: hidden; */
+        }
+
+        .con-box .banner {
+            display: flex;
+            transition: 0.4s;
+        }
+
+        .con-box .banner li {}
+
+        .con-box .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            border: none;
+            background: transparent;
+            color: #fff
+        }
+
+        .con-box .btn i {
+            font-size: 50px;
+        }
+
+        .con-box .prev {
+            left: 20px;
+        }
+
+        .con-box .next {
+            right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con-box">
+        <ul class="banner">
+            <li>
+                <img src="images/img4.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/img0.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/img1.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/img2.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/img3.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/img4.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/img0.jpg" alt="">
+            </li>
+        </ul>
+        <p>
+            <button class="btn prev">
+                <i class="xi-angle-left-thin"></i>
+            </button>
+            <button class="btn next">
+                <i class="xi-angle-right-thin"></i>
+            </button>
+        </p>
+    </div>
+    <script>
+        ; (function () {
+            const get = (target) => {
+                return document.querySelector(target);
+            }
+            const getAll = (target) => {
+                return document.querySelectorAll(target);
+            }
+
+            let $banner = get('.banner');
+            let $bannerli = getAll('.banner li');
+            let $next = get('.next');
+            let $prev = get('.prev');
+            let current = 1;
+            let totalImage = $bannerli.length;
+            let size = 750;
+            let arrX = [0, -750, -1500, -2250, -3000, -3750, -4500];
+
+            $banner.style.transitionDuration = '0s';
+            $banner.style.transform = `translateX(${arrX[current]}px)`;
+
+
+            $next.addEventListener('click', e => {
+                current++;
+                $banner.style.transition = '0.4s';
+                banner();
+                if (current > 5) {
+                    setTimeout(() => {
+                        $banner.style.transitionDuration = '0s';
+                        $banner.style.transform = `translateX(-750px)`;
+                        current = 1;
+                    }, 400)
+                }
+            });
+
+            $prev.addEventListener('click', e => {
+                current--;
+                $banner.style.transition = '0.4s';
+                banner();
+                if (current < 1) {
+                    setTimeout(() => {
+                        $banner.style.transitionDuration = '0s';
+                        $banner.style.transform = `translateX(-3750px)`;
+                        current = 5;
+                    }, 400)
+                }
+            });
+
+            function banner() {
+                $banner.style.transform = `translateX(${arrX[current]}px)`;
+            }
+        })();
+
+    </script>
+</body>
+
+</html>

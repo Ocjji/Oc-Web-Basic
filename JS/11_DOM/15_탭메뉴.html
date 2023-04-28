@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+       #content { width: 100%; }
+       #content .inner { width: 1400px; margin: auto; }
+       .sub-tab {}
+       .sub-tab .tab {display: flex;}
+       .sub-tab .tab li {}
+       .sub-tab .tab li a {display: block; width: 200px; height: 60px; margin-right: 10px; border: 1px solid #DCDCDC; text-align: center; line-height: 60px; }
+       .sub-tab .tab li.on a {background: tomato; color:#fff}
+       .sub-tab .con-box { margin-top: 60px; width: 100%; position: relative; height: 1000px; }
+       .sub-tab .con-box .box { position: absolute; width: 100%; }
+       .sub-tab .con-box .box h3 {font-size: 50px; padding-top: 50px;}
+       .sub-tab .con-box .box p {margin-top: 30px; font-size: 18px;}
+       .sub-tab .con-box .box1 {height: 600px; background: pink;}
+       .sub-tab .con-box .box2 {height: 1000px; background: skyblue;}
+       .sub-tab .con-box .box3 {height: 1200px; background: lime;}
+       .sub-tab .con-box .box4 { height: 400px; background: tomato;}
+       .sub-tab .con-box .box0 { height: 800px; background: yellow;}
+       #footer { width: 100%; height: 150px; background: #333;
+       }
+    </style>
+</head>
+<body>
+   <section id="content">
+       <div class="inner">
+           <div class="sub-tab">
+               <ul class="tab">
+                   <li class="on" data-id="0" ><a href="#" >제목1</a></li>
+                   <li data-id="1"><a href="#" >제목2</a></li>
+                   <li data-id="2"><a href="#" >제목3</a></li>
+                   <li data-id="3"><a href="#" >제목4</a></li>
+                   <li data-id="4"> <a href="#" >제목5</a></li>
+               </ul>
+               <div class="con-box">
+                    <article class="box box0">
+                        <h3>제목1</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima expedita autem harum officia debitis, ullam sapiente itaque nulla beatae eius molestiae excepturi non repellendus doloremque nam, temporibus consequatur vero. Voluptatibus?
+                        </p>
+                    </article>
+                    <article class="box box1">
+                        <h3>제목2</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima expedita autem harum officia debitis, ullam sapiente itaque nulla beatae eius molestiae excepturi non repellendus doloremque nam, temporibus consequatur vero. Voluptatibus?
+                        </p>
+                    </article>
+                    <article class="box box2">
+                        <h3>제목3</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima expedita autem harum officia debitis, ullam sapiente itaque nulla beatae eius molestiae excepturi non repellendus doloremque nam, temporibus consequatur vero. Voluptatibus?
+                        </p>
+                    </article>
+                    <article class="box box3">
+                        <h3>제목4</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima expedita autem harum officia debitis, ullam sapiente itaque nulla beatae eius molestiae excepturi non repellendus doloremque nam, temporibus consequatur vero. Voluptatibus?
+                        </p>
+                    </article>
+                    <article class="box box4">
+                        <h3>제목5</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima expedita autem harum officia debitis, ullam sapiente itaque nulla beatae eius molestiae excepturi non repellendus doloremque nam, temporibus consequatur vero. Voluptatibus?
+                        </p>
+                    </article>
+               </div>
+           </div>
+       </div>
+   </section>
+   <footer id="footer">
+       하단내용
+   </footer>
+
+   <script>
+    const tab = document.querySelector('.tab');
+    const tab_li = document.querySelectorAll('.tab li');
+    const articles = document.querySelectorAll('.con-box .box');
+    const content = document.querySelector('#content');
+    let id = 0;
+    let h = 0;
+
+    tab_li.forEach(element =>{
+        element.addEventListener('click', e=>{
+            const current = e.currentTarget;
+            id = e.currentTarget.dataset.id;
+            
+            tab_li.forEach(li => {
+                li.classList.remove('on');
+            })
+            tab_li[id].classList.add('on');
+
+            articles.forEach(arti => {
+                arti.style.display = 'none';    
+            })
+            articles[id].style.display = 'block';
+            
+
+            // 높이처리
+            h = getComputedStyle(articles[id]).height;
+            h = parseInt(h) + 200;
+            content.style.height = h + 'px';
+ 
+        })
+    });
+
+    articles.forEach(arti => {
+        arti.style.display = 'none';
+    })
+    articles[id].style.display = 'block';
+
+   </script>
+</body>
+</html>
