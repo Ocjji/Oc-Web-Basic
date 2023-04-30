@@ -71,6 +71,41 @@
             background: skyblue;
         }
 
+        #mainVisual .paging .btn-play {
+            position: absolute;
+            left: 120%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        #mainVisual .paging .btn-play .play {
+            width: 30px;
+            height: 30px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        #mainVisual .paging .btn-play .play i {
+            width: 30px;
+            height: 30px;
+            font-size: 22px;
+            line-height: 30px;
+            border-radius: 50%;
+        }
+
+        #mainVisual .paging .btn-play .play i.xi-pause {
+            border: 3px solid red;
+            color: red;
+        }
+
+
+        #mainVisual .paging .btn-play .play i.xi-play {
+            border: 3px solid skyblue;
+            color: skyblue;
+        }
+
+
         #mainVisual .btn-wrap {}
 
         #mainVisual .btn-wrap .btn {
@@ -111,7 +146,13 @@
             <li class="on"></li>
             <li></li>
             <li></li>
+            <p class="btn-play">
+                <button class="play">
+                    <i class="xi-pause"></i>
+                </button>
+            </p>
         </ul>
+
         <!-- 다음/이전 -->
         <p class="btn-wrap">
             <button class="btn prev">

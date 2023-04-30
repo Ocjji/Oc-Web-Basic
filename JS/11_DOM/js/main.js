@@ -6,35 +6,53 @@ const bannerLi = document.querySelectorAll('.main-banner li');
 const pagingLi = document.querySelectorAll('.paging li');
 const btnNext = document.querySelector('.btn-wrap .next');
 const btnPrev = document.querySelector('.btn-wrap .prev');
+const btnPlay = document.querySelector('.paging .btn-play .play');
+const playIcon = document.querySelector('.paging .btn-play .play i');
 
 let current = 0;
 let old = 0;
-let isPlay = null;
-const interval = 3000;
+let timer = null;
+let isPlay = true;
+const interval = 4000;
 
-isPlay = setInterval(roll_next, interval);
+timer = setInterval(roll_next, interval);
 
 
 btnNext.addEventListener('click', e => {
-    clearInterval(isPlay);
-    roll_next();
-    isPlay = setInterval(roll_next, interval);
+    if (isPlay === true) {
+        clearInterval(timer);
+        roll_next();
+        timer = setInterval(roll_next, interval);
+    }
 })
 btnPrev.addEventListener('click', e => {
-    clearInterval(isPlay);
-    roll_prev();
-    isPlay = setInterval(roll_next, interval);
+    if (isPlay === true) {
+        clearInterval(timer);
+        roll_prev();
+        timer = setInterval(roll_next, interval);
+    }
 })
 pagingLi.forEach((pLi, idx) => {
     pLi.addEventListener('click', e => {
         pageView(idx);
-        clearInterval(isPlay);
-        isPlay = setInterval(roll_next, interval);
+        if (isPlay) {
+            clearInterval(timer);
+            timer = setInterval(roll_next, interval);
+        }
         paging(idx);
         current = idx;
     })
-
 })
+btnPlay.addEventListener('click', e => {
+    if (isPlay) {
+        clearInterval(timer);
+        playIcon.classList.replace('xi-pause', 'xi-play');
+    } else {
+        timer = setInterval(roll_next, interval);
+        playIcon.classList.replace('xi-play', 'xi-pause');
+    }
+    isPlay = !isPlay;
+});
 
 function roll_next() {
     current++;
@@ -101,3 +119,4 @@ function pageView(current) {
     })
     pagingLi[current].classList.add('on');
 }
+
