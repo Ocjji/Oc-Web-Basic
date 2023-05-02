@@ -1,0 +1,206 @@
+#wrap {
+    width: 100%;
+    min-width: 1600px;
+}
+
+#header {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    height: 150px;
+    transition: 0.3s;
+    padding-top: 40px;
+    background: #FFF;
+    overflow: hidden;
+}
+
+#header.on {
+    height: 400px;
+    /* 전체메뉴 높이값 */
+}
+
+#header .inner {
+    width: 1200px;
+    height: 110px;
+    position: relative;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+#header h1 {
+    position: absolute;
+    left: 0;
+    top: 50px;
+}
+
+#header .top-menu {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    display: flex;
+}
+
+#header .top-menu li {
+    margin-left: 15px;
+}
+
+#header .top-menu li a {
+    font-size: 14px;
+}
+
+#header .nav {
+    position: absolute;
+    left: 50%;
+    top: 65px;
+    transform: translateX(-50%);
+}
+
+#header .nav .gnb {
+    display: flex;
+}
+
+#header .nav .gnb li {
+    margin-left: 80px;
+}
+
+#header .nav .gnb>li:first-child {
+    margin-left: 0;
+}
+
+#header .nav .gnb li a {
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    text-align: center;
+}
+
+/* header total menu bar */
+#header .nav .gnb li .total-menu-bar {
+    position: absolute;
+    top: 80px;
+    width: 870px;
+    height: 200px;
+    border: 1px solid #000;
+    display: none;
+    transition: 0.3s;
+}
+
+#header .nav .gnb li .total-menu-bar.on {
+    display: block;
+}
+
+#header .nav .gnb .total-menu-bar ul {
+    /* position: relative; */
+    width: 300px;
+    left: 0;
+    height: 300px;
+    opacity: 1;
+    display: block;
+    /* border: 1px solid #000; */
+    /* background: tan; */
+}
+
+
+#header .nav .gnb .total-menu-bar ul li a {
+    display: inline-block;
+}
+
+#header .nav .gnb .total-menu-bar ul:nth-child(1) {
+    left: 60px;
+}
+
+#header .nav .gnb .total-menu-bar ul:nth-child(2) {
+    left: 200px;
+    /* 사이즈 미정 */
+}
+
+#header .nav .gnb .total-menu-bar ul:nth-child(3) {
+    left: 400px;
+    /* 사이즈 미정 */
+}
+
+#header .nav .gnb .total-menu-bar ul:nth-child(4) {
+    left: 540px;
+    /* 사이즈 미정 */
+}
+
+#header .nav .gnb .total-menu-bar ul:nth-child(5) {
+    left: 730px;
+    /* 사이즈 미정 */
+}
+
+#header .nav .gnb .total-menu-bar ul li {
+    transition: 0.3s;
+    /* opacity: 0; */
+}
+
+/* #header .nav .gnb .total-menu-bar.on {
+    display: block;
+} */
+
+#header .nav .gnb li ul {
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    position: absolute;
+    top: 35px;
+    display: flex;
+}
+
+#header .nav .gnb li ul.on {
+    opacity: 1;
+    pointer-events: auto;
+    top: 35px;
+}
+
+#header .nav .gnb li.m0 ul {
+    left: 0;
+    /* 사이즈 미정 */
+}
+
+#header .nav .gnb li.m1 ul {
+    left: 176px;
+    /* 사이즈 미정 */
+}
+
+#header .nav .gnb li.m2 ul {
+    left: 353px;
+    /* 사이즈 미정 */
+}
+
+#header .nav .gnb li.m3 ul {
+    left: 530px;
+    /* 사이즈 미정 */
+}
+
+#header .nav .gnb li.m4 ul {
+    left: 705px;
+    /* 사이즈 미정 */
+}
+
+#header .nav .gnb li ul li {
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+#header .nav .gnb li ul li a {
+    line-height: 40px;
+    color: #000;
+    font-weight: normal;
+    transition: 0.4s;
+}
+
+#header .nav .gnb li ul li a:hover {
+    background: #888;
+    color: #000;
+}
+
+#visual {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    background-image: url(https://via.placeholder.com/1920x600);
+}
