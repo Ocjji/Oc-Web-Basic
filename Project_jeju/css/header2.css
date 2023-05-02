@@ -60,7 +60,7 @@
 }
 
 #header .nav .gnb li {
-    margin-left: 80px;
+    margin-left: 50px;
 }
 
 #header .nav .gnb>li:first-child {
@@ -74,75 +74,54 @@
     text-align: center;
 }
 
-/* header total menu bar */
-#header .nav .gnb .total-menu {
-    /* position: relative; */
+#header .total-menu {
+    position: relative;
+
+    left: 17%;
+    top: 65px;
+    width: 100px;
+    /* left: 50%; */
+    top: 65px;
+    transform: translateX(-50%);
+
+    background: #FFF;
+    border: none;
 }
 
-#header .nav .gnb li .total-menu-bar {
+#header .total-menu a {
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    text-align: center;
+}
+
+#header .total-menu-bar {
     position: absolute;
-    top: 80px;
-    width: 870px;
-    height: 200px;
+    width: 800px;
+    top: 70px;
     border: 1px solid #000;
+    transition: 0.3s;
     display: none;
-    transition: 0.3s;
 }
 
-#header .nav .gnb li .total-menu-bar.on {
+#header .total-menu .total-menu-bar.on {
     display: block;
 }
 
-#header .nav .gnb .total-menu-bar ul {
-    position: absolute;
-    left: 0;
+#header .total-menu-bar .total-menu-list {
     width: 100%;
-    height: 150px;
-    opacity: 1;
-    display: block;
-    /* border: 1px solid #000; */
-    /* background: tan; */
+    border: 1px solid #000;
 }
 
-
-#header .nav .gnb .total-menu-bar ul li a {}
-
-#header .nav .gnb .total-menu-bar .total-menu-list ul {
-    width: 150px;
+#header .total-menu-bar .total-menu-list>li {
+    display: flex;
 }
 
-#header .nav .gnb .total-menu-bar .total-submenu0 {
-    left: 0px;
+#header .total-menu-bar .total-menu-list li ul {
+    width: 100px;
 }
 
-#header .nav .gnb .total-menu-bar .total-submenu1 {
-    left: 200px;
-    /* 사이즈 미정 */
-}
-
-#header .nav .gnb .total-menu-bar .total-submenu2 {
-    left: 400px;
-    /* 사이즈 미정 */
-}
-
-#header .nav .gnb .total-menu-bar .total-submenu3 {
-    left: 540px;
-    /* 사이즈 미정 */
-}
-
-#header .nav .gnb .total-menu-bar .total-submenu4 {
-    left: 730px;
-    /* 사이즈 미정 */
-}
-
-#header .nav .gnb .total-menu-bar ul li {
-    transition: 0.3s;
-    /* opacity: 0; */
-}
-
-/* #header .nav .gnb .total-menu-bar.on {
-    display: block;
-} */
+#header .total-menu-bar .total-menu-list li ul li {}
 
 #header .nav .gnb li ul {
     opacity: 0;

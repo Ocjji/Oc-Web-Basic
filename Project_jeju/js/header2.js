@@ -8,6 +8,7 @@ const getAll = (target) => {
 
 let $gnbli = getAll('#header .nav > .gnb > li');
 let $subli = getAll('#header .nav .gnb > li > ul');
+let $totalMenu = get('#header .total-menu');
 let $totalMenuBar = get('#header .total-menu-bar');
 let $header = get('#header');
 
@@ -20,15 +21,24 @@ $gnbli.forEach(element => {
             subItem.classList.remove('on');
         })
         $totalMenuBar.classList.remove('on');
+        $header.classList.remove('on');
         current.children[1].classList.add('on');
-
-        if ($totalMenuBar.classList.contains('on')) {
-            $header.classList.add('on');
-        } else if (!$totalMenuBar.classList.contains('on')) {
-            $header.classList.remove('on');
-        }
+        /* 
+                if ($totalMenuBar.classList.contains('on')) {
+                    $header.classList.add('on');
+                } else if (!$totalMenuBar.classList.contains('on')) {
+                    $header.classList.remove('on');
+                } */
     })
 });
+
+$totalMenu.addEventListener('mouseenter', e => {
+    $subli.forEach(subItem => {
+        subItem.classList.remove('on');
+    })
+    $totalMenuBar.classList.add('on');
+    $header.classList.add('on');
+})
 
 $header.addEventListener('mouseleave', e => {
     $subli.forEach(subItem => {
