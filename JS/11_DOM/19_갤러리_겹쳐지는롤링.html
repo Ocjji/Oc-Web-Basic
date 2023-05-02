@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        .con-box {
+            width: 750px;
+            margin: 50px auto;
+            position: relative;
+            ove rflow: hidden;
+        }
+
+        .con-box .banner {
+            width: 750px;
+            height: 750px;
+            position: relative;
+            border: 1px solid #f00;
+        }
+
+        .con-box .banner li {
+            position: absolute;
+            left: 750px;
+            top: 0;
+            transition: 0.4s;
+        }
+
+        .con-box .banner li:first-child {
+            left: 0;
+        }
+
+        .con-box .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            border: none;
+            background: transparent;
+            color: #fff;
+            z-index: 20;
+        }
+
+        .con-box .btn i {
+            font-size: 50px;
+        }
+
+        .con-box .prev {
+            left: 20px;
+        }
+
+        .con-box .next {
+            right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con-box">
+        <ul class="banner">
+            <li>
+                <img src="images/img0.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/img1.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/img2.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/img3.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/img4.jpg" alt="">
+            </li>
+        </ul>
+        <p>
+            <button class="btn prev">
+                <i class="xi-angle-left-thin"></i>
+            </button>
+            <button class="btn next">
+                <i class="xi-angle-right-thin"></i>
+            </button>
+        </p>
+    </div>
+    <script>
+        ; (function () {
+            const get = (target) => {
+                return document.querySelector(target);
+            }
+            const getAll = (target) => {
+                return document.querySelectorAll(target);
+            }
+
+            let $banner = get('.banner');
+            let $bannerli = getAll('.banner li');
+            let $next = get('.next');
+            let $prev = get('.prev');
+            let current = 0, totalImage = $bannerli.length, size = 750, old = 0;
+
+            $next.addEventListener('click', e => {
+                $bannerli.forEach(item => {
+                    item.style.left = '750px';
+                    item.style.zIndex = '1';
+                })
+                $bannerli[current].style.zIndex = '10';
+                $bannerli[current].style.left = '0px';
+
+                current++;
+                if (current > totalImage - 1) {
+                    current = 0;
+                }
+                banner('-750px', '0px');
+            })
+
+
+            $prev.addEventListener('click', e => {
+                $bannerli.forEach(item => {
+                    item.style.left = '-750px';
+                    item.style.zIndex = '1';
+                })
+                $bannerli[current].style.zIndex = '10';
+                $bannerli[current].style.left = '0px';
+
+                current--;
+                if (current < 1) {
+                    current = totalImage - 1
+                }
+                banner('750px', '0px');
+            })
+
+            function banner(start, end) {
+                $bannerli[old].style.left = start;
+                $bannerli[old].style.zIndex = '1';
+                $bannerli[current].style.left = end;
+                $bannerli[current].style.zIndex = '10';
+                old = current;
+            }
+
+        })()
+    </script>
+</body>
+
+</html>
