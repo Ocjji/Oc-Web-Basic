@@ -51,17 +51,14 @@
     cursor: pointer;
 }
 .qnaVis p button a{
-    display: block;
-    width: 600px;
-    height: 80px;
-    line-height: 80px;
     font-size: 24px;
     font-weight: 700;
 }
-.qnaVis .goto-qna{
+
+.qnaVis .goto-notice{
     background: tan;
 }
-.qnaVis .goto-qna a{
+.qnaVis .goto-notice a{
     color: #FFF;
 }
 
@@ -114,7 +111,7 @@
     justify-content: space-around;
 }
 
-.qna .qna-board .qna-list>li {
+.qna .qna-board .qna-list li {
     width: 100%;
     text-align: center;
     padding: 10px 0;
@@ -162,9 +159,6 @@
     line-height: 40px;
     font-size: 20px;
     margin: 0 5px;
-    background: #FFF;
-    border: 1px solid #DDD;
-    color: #aaa;
 }
 
 .qna-board .qna-table {}
@@ -187,8 +181,6 @@
 .qna-board .qna-table thead {}
 .qna-board .qna-table thead tr {}
 .qna-board .qna-table thead tr th {
-    height: 60px;
-    box-sizing: border-box;
     border-top: 5px solid #ddd;
     border-right: 1px solid #ddd;
     background: #eee;
@@ -202,8 +194,6 @@
 .qna-board .qna-table tbody {}
 .qna-board .qna-table tbody tr {}
 .qna-board .qna-table tbody tr td {
-    height: 60px;
-    box-sizing: border-box;
     border: 1px solid #ddd;
     padding: 10px 0;
     font-size: 18px;
