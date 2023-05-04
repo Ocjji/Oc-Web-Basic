@@ -97,7 +97,8 @@
 
 #header .total-menu-bar {
     position: absolute;
-    width: 800px;
+    width: 645px;
+    left: 120px;
     top: 70px;
     border: 1px solid #000;
     transition: 0.3s;
@@ -115,13 +116,17 @@
 
 #header .total-menu-bar .total-menu-list>li {
     display: flex;
+    justify-content: space-between;
+
 }
 
 #header .total-menu-bar .total-menu-list li ul {
-    width: 100px;
+    width: 110px;
 }
 
-#header .total-menu-bar .total-menu-list li ul li {}
+#header .total-menu-bar .total-menu-list li ul li {
+    margin: 10px 0;
+}
 
 #header .nav .gnb li ul {
     opacity: 0;
@@ -138,30 +143,25 @@
     top: 35px;
 }
 
-#header .nav .gnb li.m0 ul {
+/* #header .nav .gnb li.m0 ul {
     left: 0;
-    /* 사이즈 미정 */
 }
 
 #header .nav .gnb li.m1 ul {
     left: 176px;
-    /* 사이즈 미정 */
 }
 
 #header .nav .gnb li.m2 ul {
     left: 353px;
-    /* 사이즈 미정 */
 }
 
 #header .nav .gnb li.m3 ul {
     left: 530px;
-    /* 사이즈 미정 */
 }
 
 #header .nav .gnb li.m4 ul {
     left: 705px;
-    /* 사이즈 미정 */
-}
+} */
 
 #header .nav .gnb li ul li {
     margin-left: 0;

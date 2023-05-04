@@ -1,0 +1,43 @@
+#header{
+	width: 100%;
+	background: url(../images/common/header/header_bg.jpg) 0 0 repeat-x;
+}
+#header .inner-wrap{	width: 1180px;	height: 140px;	margin: auto;	position: relative;}
+#header .inner-wrap h1{
+	position: absolute; left: 0; top: 15px; 
+}
+#header .inner-wrap .top-menu{
+	position: absolute; right: 0; top: 10px;
+}
+#header .inner-wrap .top-menu dd{float: left; 
+margin-left: 10px;}
+#header .inner-wrap .top-menu dd a{	font-size: 12px;}
+#nav{ position: absolute; right: 0; top: 52px; }
+#gnb{}
+#gnb li{float: left; margin-left: 60px;}
+#gnb li a{display: block;  height: 49px; line-height: 49px;
+          font-size: 18px;text-transform: uppercase;
+          font-weight: 700; color:#fff}
+          
+#container{height: 100%; width: 1180px; margin: auto;}
+#container:after{display:block; content:"";clear:both}
+#footer{width:100%; background: #dcdcdc;
+		margin-top: 50px;}
+#footer .inner-wrap{
+	width:1180px; margin:auto;	position: relative;
+	height: 120px;
+}		          
+#footer address{float: left;}
+#footer .right{float: right;}
+#footer .right form{}
+#footer .right form select{height: 35px;}
+
+
+
+
+          
+          
+          
+          
+          
+

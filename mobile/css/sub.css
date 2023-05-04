@@ -1,0 +1,58 @@
+.webdesign{}
+.webdesign ul{}
+.webdesign ul li{float: left; margin-right: 10px;
+	margin-bottom: 10px;position: relative;
+	width:290px; height:200px;
+}
+.webdesign ul li:nth-child(3n){margin-right: 0;}
+.webdesign ul li img{width:290px; height:200px}
+.webdesign ul li span{
+	display: block; 
+	width: 290px; height: 200px;
+	position: absolute;font-size: 40px;
+	padding-top: 40px; text-indent: 20px;
+	background:rgba(255,255,2550,0.5);
+	color:skyblue; left: 0; top: 0; opacity: 0;
+	transition:0.4s ease-in-out; 
+}
+.webdesign ul li:hover span{
+	opacity: 1
+}
+
+
+/* 페이지 */
+
+.mobile{}
+.mobile ul{}
+.mobile ul li{float: left; margin-right: 10px;
+margin-bottom: 10px;}
+.mobile ul li img{width:290px}
+.mobile ul li p{}
+
+.grapic{}
+
+
+.about{}
+.about dl{width: 900px; height: 600px; 
+          position: relative;}
+.about dl dt{ font-size: 40px;margin-bottom: 40px;
+				margin-left: 300px;}
+.about dl dd.pic{position: absolute; left: 0;top: 0;}
+.about dl dd.txt{margin-left: 300px;
+				font-size: 18px;
+				margin-bottom: 20px;
+				position: relative;}
+.about dl dd span{position: absolute;
+				  left: 150px; top: 0;}
+
+
+
+
+
+
+
+
+
+
+
+
