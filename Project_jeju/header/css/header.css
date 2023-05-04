@@ -15,7 +15,7 @@
 }
 
 #header.on {
-    height: 400px;
+    height: 280px;
     /* 전체메뉴 높이값 */
 }
 
@@ -98,12 +98,9 @@
 
 #header .total-menu-bar {
     position: absolute;
-    <<<<<<< HEAD width: 645px;
-    left: 120px;
-    =======
     /* width: 800px; */
     left: 105px;
-    >>>>>>>768943f2f31042d353ae6a5abe78c0a8accea2d1 top: 70px;
+    top: 70px;
     border: 1px solid #000;
     transition: 0.3s;
     display: none;
@@ -120,20 +117,14 @@
 
 #header .total-menu-bar .total-menu-list>li {
     display: flex;
-    justify-content: space-between;
-
 }
 
 #header .total-menu-bar .total-menu-list li ul {
-    <<<<<<< HEAD width: 110px;
-    =======border: 1px solid #000;
+    border: 1px solid #000;
     width: 135px;
-    >>>>>>>768943f2f31042d353ae6a5abe78c0a8accea2d1
 }
 
-#header .total-menu-bar .total-menu-list li ul li {
-    margin: 10px 0;
-}
+#header .total-menu-bar .total-menu-list li ul li {}
 
 #header .nav .gnb li ul {
     opacity: 0;
@@ -150,6 +141,7 @@
     pointer-events: auto;
     top: 35px;
 }
+
 
 #header .nav .gnb li ul li {
     margin-left: 0;
