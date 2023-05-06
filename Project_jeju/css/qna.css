@@ -50,7 +50,8 @@
     font-size: 24px;
     cursor: pointer;
 }
-.qnaVis p button a{
+
+.qnaVis p button a {
     display: block;
     width: 600px;
     height: 80px;
@@ -58,10 +59,12 @@
     font-size: 24px;
     font-weight: 700;
 }
-.qnaVis .goto-qna{
+
+.qnaVis .goto-qna {
     background: tan;
 }
-.qnaVis .goto-qna a{
+
+.qnaVis .goto-qna a {
     color: #FFF;
 }
 
@@ -132,7 +135,7 @@
     border-bottom: none;
 }
 
-.qna .qna-board .qna-list li div {
+.qna .qna-board .qna-board-content li div {
     position: absolute;
     width: 100%;
     height: 800px;
@@ -140,9 +143,10 @@
     left: 0;
     /* border: 1px solid red; */
     display: none;
+    text-align: center;
 }
 
-.qna .qna-board .qna-list li div.on {
+.qna .qna-board .qna-board-content li div.on {
     display: block;
 }
 
@@ -165,6 +169,7 @@
     background: #FFF;
     border: 1px solid #DDD;
     color: #aaa;
+    cursor: pointer;
 }
 
 .qna-board .qna-table {}
@@ -184,8 +189,11 @@
 .qna-board .qna-table .w4 {
     width: 150px;
 }
+
 .qna-board .qna-table thead {}
+
 .qna-board .qna-table thead tr {}
+
 .qna-board .qna-table thead tr th {
     height: 60px;
     box-sizing: border-box;
@@ -195,21 +203,36 @@
     padding: 10px 0;
     font-size: 20px;
     font-weight: 700;
+    box-sizing: border-box;
 }
+
 .qna-board .qna-table thead tr th:last-child {
     border-right: none;
 }
+
 .qna-board .qna-table tbody {}
+
 .qna-board .qna-table tbody tr {}
+
 .qna-board .qna-table tbody tr td {
     height: 60px;
     box-sizing: border-box;
     border: 1px solid #ddd;
     padding: 10px 0;
     font-size: 18px;
+    line-height: 40px;
 }
-.qna-board .qna-table tbody tr td:first-child {border-left: none;}
+
+.qna-board .qna-table tbody tr td:first-child {
+    border-left: none;
+}
+
 .qna-board .qna-table tbody tr td:nth-child(3) {
-    text-align-last: left;
-    padding-left: 10px;}
-.qna-board .qna-table tbody tr td:last-child {border-right: none;}
+    text-align: left;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.qna-board .qna-table tbody tr td:last-child {
+    border-right: none;
+}

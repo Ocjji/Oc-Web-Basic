@@ -1,0 +1,765 @@
+/* ===================================================공통 */
+
+#wrap {
+    width: 100%;
+}
+
+#header,
+#footer {
+    background: #e4e4e4;
+    width: 100%;
+    height: 200px;
+}
+
+#header .inner,
+#footer .inner {
+    background: #b4b4b4;
+    height: 200px;
+}
+
+#footer {
+    margin-top: 50px
+}
+
+.inner {
+    position: relative;
+    margin: auto;
+    width: 1200px;
+    box-sizing: border-box;
+}
+
+
+
+/* package_visual */
+.packVis {
+    width: 100%;
+    height: 600px;
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/package/pac_main_bg.jpg);
+}
+
+.packVis .inner {
+    height: 600px;
+
+}
+
+.packVis h2 {
+    position: absolute;
+    left: 50%;
+    top: 70px;
+    transform: translateX(-50%);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.packVis p {
+    position: absolute;
+    left: 50%;
+    top: 140px;
+    transform: translateX(-50%);
+    font-size: 20px;
+    text-shadow: 0px 0px 10px white;
+}
+
+.packVis .packV_search {
+    position: absolute;
+    left: 50%;
+    top: 230px;
+    transform: translateX(-50%);
+    width: 1000px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+    padding: 50px 60px;
+    box-sizing: border-box;
+}
+
+.packVis .packV_search ul {
+    display: flex;
+}
+
+.packVis .packV_search ul li {
+    width: 300px;
+}
+
+.packVis .packV_search ul li strong {
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: block;
+    font-weight: 700;
+}
+
+.packVis .packV_search ul li .se {
+    height: 50px;
+    width: 250px;
+    border: none;
+    padding-left: 8px;
+    appearance: none;
+    outline: none;
+}
+
+.packVis .packV_search ul li .se1 {
+    padding-left: 8px;
+    height: 50px;
+    width: 130px;
+    border: none;
+    margin-right: 10px;
+    appearance: none;
+    outline: none;
+}
+
+.packVis button {
+    position: absolute;
+    left: 50%;
+    top: 470px;
+    transform: translateX(-50%);
+    width: 480px;
+    height: 80px;
+    border-radius: 30px;
+    border: none;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    background: skyblue;
+    box-shadow: inset 0px 0px 30px 0px rgba(255, 255, 255, 1);
+}
+.packVis button:hover::after {
+    content: "";
+    display: block;
+    width: 480px;
+    height: 80px;
+    border-radius: 30px;
+    background: #1288ac;
+    opacity: 0.2;
+    box-shadow: inset 0px 0px 30px 0px rgba(255, 255, 255, 1);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.packVis button i {
+    vertical-align: middle;
+}
+
+/* package_main */
+.packCon .packCon_add {
+    width: 1200px;
+    height: 150px;
+    /* background-image: url(../images/package/pac_main_add.jpg); */
+    background: pink;
+    background-position: 20% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 50px auto;
+}
+
+.packCon_main .packCon_main_menu {
+    display: flex;
+}
+
+.packCon_main .packCon_main_menu li {
+    background: #d8f1f1;
+    box-shadow: inset 0px 0px 30px 0px rgba(255, 255, 255, 0.5);
+    width: 400px;
+    height: 60px;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 30px;
+    transition: 0.5s;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+.packCon_main .packCon_main_menu li:hover::after {
+    content: "";
+    width: 396px;
+    height: 56px;
+    border: 2px solid #1288ac;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+}
+
+.packCon_main .packCon_main_menu li.on {
+    background: skyblue;
+    color: #fff;
+}
+
+.packCon_main .packCon_main_con {
+    overflow: hidden;
+}
+
+
+.packCon_main .packCon_main_con .city_jeju li.on {
+    display: block;
+}
+
+.packCon_main .packCon_main_con .city_seo li.on {
+    display: block;
+}
+
+.packCon_main .packCon_main_con ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.packCon_main .packCon_main_con ul li {
+    width: 280px;
+    margin-bottom: 30px;
+    height: 350px;
+    display: none;
+}
+
+.packCon_main .packCon_main_con ul li a {
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.packCon_main .packCon_main_con ul li a div.ho {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 250px;
+    height: 170px;
+}
+
+.packCon_main .packCon_main_con ul li a div.ho i {
+    display: block;
+    text-align: center;
+    padding-top: 45px;
+    font-size: 50px;
+    color: #fff;
+}
+
+.packCon_main .packCon_main_con ul li a div.ho p {
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+
+}
+
+.packCon_main .packCon_main_con ul li a::before {
+    content: "";
+    display: block;
+    width: 280px;
+    height: 180px;
+    background: #000;
+    position: absolute;
+    left: 0px;
+    top: -4px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.packCon_main .packCon_main_con ul li a:hover::before {
+    opacity: 0.6;
+}
+
+.packCon_main .packCon_main_con ul li a::after {
+    content: "";
+    display: block;
+    width: 280px;
+    height: 350px;
+    border: 3px solid #d8f1f1;
+    border-radius: 10px;
+    position: absolute;
+    left: 0px;
+    top: -4px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.packCon_main .packCon_main_con ul li a:hover::after {
+    opacity: 1;
+}
+
+.packCon_main .packCon_main_con ul li img {
+    width: 280px;
+    height: 180px;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+
+.packCon_main .packCon_main_con ul li h3 {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 13px 0px 3px 10px;
+}
+
+.packCon_main .packCon_main_con ul li em {
+    display: block;
+    margin-left: 10px;
+}
+
+.packCon_main .packCon_main_con ul li a div {
+    position: relative;
+    margin: 0px 10px;
+}
+
+.packCon_main .packCon_main_con ul li strong {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    color: tomato;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.packCon_main .packCon_main_con ul li b {
+    position: absolute;
+    left: 55px;
+    top: 0px;
+    color: #999;
+    text-decoration-line: line-through;
+    font-size: 14px;
+}
+
+.packCon_main .packCon_main_con ul li h4 {
+    position: absolute;
+    left: 55px;
+    top: 20px;
+    color: #000;
+    font-size: 20px;
+}
+
+.packCon_main .packCon_main_con ul li button {
+    position: absolute;
+    right: 15px;
+    bottom: -50px;
+    border-radius: 5px;
+    border: 1px dashed skyblue;
+    background: transparent;
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+.packCon_main .more {
+    display: block;
+    margin: auto;
+    width: 280px;
+    height: 60px;
+    border: none;
+    font-size: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    text-shadow: 0px 0px 5px white;
+    box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+    background: skyblue;
+    color: #fff;
+    position: relative;
+}
+.packCon_main .more:hover::after{
+    content:"";
+    display: block;
+    width: 280px;
+    height: 60px;
+    border-radius: 10px;
+    background: #1288ac;
+    opacity: 0.3;
+    box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.packCon_main .more.off {
+    display: none;
+}
+
+.packCon_main .pack_pop_bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.4;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.packCon_main .pack_pop_bg.on {
+    display: block;
+    z-index: 10;
+}
+
+.packCon_main .pack_popup {
+    display: none;
+    width: 800px;
+    height: 700px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    z-index: 20;
+}
+
+.packCon_main .pack_popup.on {
+    display: block;
+}
+
+.packCon_main .pack_popup .pop_bg {
+    width: 800px;
+    height: 80px;
+    background: #e4ffff;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.packCon_main .pack_popup .pop_bg li {
+    display: none;
+}
+
+.packCon_main .pack_popup .pop_bg li.on {
+    display: block;
+}
+
+.packCon_main .pack_popup .pop_bg h3 {
+    font-size: 35px;
+    width: 500px;
+    height: 80px;
+    line-height: 80px;
+    padding-left: 50px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0px 0px 10px #1288ac;
+}
+
+.packCon_main .pack_popup .pop_bg .close {
+    position: absolute;
+    right: 40px;
+    top: 0px;
+    border: none;
+    text-align: center;
+    background: transparent;
+
+}
+.packCon_main .pack_popup .pop_bg .close i:hover{
+    transform: scale(1.4);
+}
+
+.packCon_main .pack_popup .pop_bg .close i {
+    font-size: 30px;
+    line-height: 80px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.packCon_main .pack_popup .pop_in li {
+    display: none;
+    flex-wrap: wrap;
+    padding: 30px 50px;
+    justify-content: space-between;
+}
+
+.packCon_main .pack_popup .pop_in li.on {
+    display: flex;
+}
+
+
+.packCon_main .pack_popup .mainimg img {
+    width: 460px;
+    border-radius: 10px;
+    height: 300px
+}
+
+.packCon_main .pack_popup .subimg img:nth-child(1) {
+    margin-bottom: 33px;
+}
+
+.packCon_main .pack_popup .subimg img {
+    width: 200px;
+    height: 135px;
+    display: block;
+    border-radius: 10px;
+}
+
+.packCon_main .pack_popup .txt {
+    width: 800px;
+}
+
+.packCon_main .pack_popup .txt .info {
+    margin: 0px 50px 0px 50px;
+    padding-top: 15px;
+    border-top: 1px solid #d8f1f1;
+}
+
+.packCon_main .pack_popup .txt .info li {
+    display: none;
+}
+
+.packCon_main .pack_popup .txt .info li.on {
+    display: block;
+}
+
+.packCon_main .pack_popup .txt .info strong {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.packCon_main .pack_popup .txt .info p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.packCon_main .pack_popup .txt button{
+    position: absolute;
+    right: 50px;
+    bottom: 60px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 30px 0px rgba(255, 255, 255, 0.7);
+    font-size: 23px;
+    font-weight: 700;
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+}
+.packCon_main .pack_popup .txt button:nth-of-type(1) {
+    background: #d8f1f1;
+    color: #1288ac;
+}
+.packCon_main .pack_popup .txt button:nth-of-type(2) {
+    background: #1288ac;
+    color: #ffffff;
+}
+
+
+/* ==============================================================tour_visual */
+.tourVis {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tourVis .tour_banner {
+    position: relative;
+}
+
+.tourVis .tour_banner li {
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    left: -100%;
+    z-index: -10;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    transition: 2s
+}
+
+.tourVis .tour_banner li:nth-child(1) {
+    background: pink;
+    left: 0%;
+    z-index: 10;
+}
+
+.tourVis .tour_banner li:nth-child(2) {
+    background: lightblue;
+    left: 100%;
+}
+
+.tourVis .tour_banner li:nth-child(3) {
+    background: lightgoldenrodyellow;
+    left: -100%;
+}
+
+/* jeju_visual버튼 */
+
+.tourVis .tour_paging_bg {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%);
+    z-index: 100;
+}
+
+.tourVis .tour_paging_bg li {
+    width: 100px;
+    height: 10px;
+    background: #d8f1f1;
+    margin-right: 10px;
+    float: left;
+    box-shadow: 0px 0px 3px white;
+}
+.tourVis .tour_paging {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%);
+    z-index: 100;
+}
+.tourVis .tour_paging li {
+    cursor: pointer;
+    width: 100px;
+    height: 10px;
+    background: #d8f1f1;
+    margin-right: 10px;
+    float: left;
+    box-shadow: 0px 0px 3px white;
+}
+.tourVis .tour_paging li.on {
+    background: #1288ac;
+    z-index: 10;
+    animation: stretchRight 3s linear;
+    transform-origin: 0% 0%;
+}
+
+@keyframes stretchRight {
+    0% {transform: scaleX(0); }
+    100% {transform: scaleX(1); }
+}
+
+/* =======================================================tour_main */
+.tour .tour_search{display: none;}
+
+
+.tour .tour_info{
+width: 100%;
+margin-top: 50px;
+overflow: hidden;
+height: 1070px;
+}
+.tour .tour_info li a{
+    border-top: 1px solid skyblue;
+    width: 100%;
+    padding: 30px 0px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.tour .tour_info li:last-child{
+    border-bottom: 1px solid skyblue;
+    margin-bottom: 50px;
+}
+.tour .tour_info li img{
+    width: 280px;
+    height: 200px;
+    border-radius: 10px;
+}
+.tour .tour_info li .tour_txt{
+    width: 650px;
+    margin-top: 20px;
+}
+.tour .tour_info li .tour_txt .txt_span{
+    margin-top: 20px;
+}
+.tour .tour_info li .tour_txt .txt_span span{
+    border: 1px solid #1288ac;
+    color: #1288ac;
+    padding: 5px 10px;
+    border-radius: 5px; 
+    margin-right: 10px;
+}
+.tour .tour_info li .tour_txt strong{
+    display: block;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    transition: 0.5s;
+    transform-origin: 0 0;
+}
+.tour .tour_info li:hover strong{
+    transform: scale(1.2);
+}
+.tour .tour_info li .tour_txt em b{
+    color: tomato;
+}
+.tour .tour_info li .tour_price{
+    width:120px;
+    position: relative;
+}
+.tour .tour_info li .tour_price em{
+    text-align: center;
+    display: block;
+    margin-top: 50px;
+    color: #999;
+    text-decoration-line: line-through;
+}
+.tour .tour_info li .tour_price p{
+    text-align: center;
+    color: tomato;
+    font-weight: 700;
+    font-size: 25px;
+}
+.tour .tour_info li .tour_price strong{
+    position: absolute;
+    left: 50%; 
+    top: 150px; 
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 20px;
+    transition: 0.5s;
+    animation: tour 3s linear infinite;
+    box-shadow: inset 0px 0px 30px 0px rgba(255,255,255, 0.7);
+}
+
+.tour .tour_info li .tour_price strong:nth-of-type(1){
+    background: #d8f1f1;
+    color: #1288ac;
+    animation-duration: 0s;
+}  
+
+.tour .tour_info li .tour_price strong:nth-of-type(2){
+    background: #1288ac;
+    color: #fff;
+    animation-duration: 1.5s;
+}
+@keyframes tour {
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+}
+.tour .tour_main .more{
+    display: block;
+    margin: auto;
+    width: 280px;
+    height: 60px;
+    border: none;
+    font-size: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    text-shadow: 0px 0px 5px white;
+    box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+    background: skyblue;
+    color: #fff;
+    position: relative;
+}
+.tour .tour_main .more:hover::after{
+    content:"";
+    display: block;
+    width: 280px;
+    height: 60px;
+    border-radius: 10px;
+    background: #1288ac;
+    opacity: 0.3;
+    box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
