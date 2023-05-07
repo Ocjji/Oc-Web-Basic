@@ -132,7 +132,6 @@ qnaBoardLi.forEach((element, idx) => {
         e.currentTarget.classList.add('on');
         qnaBoardTable[idx].classList.add('on');
 
-        if ()
     })
 })
 
