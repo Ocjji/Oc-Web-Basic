@@ -101,7 +101,7 @@
     /* width: 800px; */
     left: 105px;
     top: 70px;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     transition: 0.3s;
     display: none;
 }
@@ -112,7 +112,7 @@
 
 #header .total-menu-bar .total-menu-list {
     width: 100%;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
 }
 
 #header .total-menu-bar .total-menu-list>li {
@@ -120,7 +120,7 @@
 }
 
 #header .total-menu-bar .total-menu-list li ul {
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     width: 135px;
 }
 
@@ -129,7 +129,7 @@
 #header .nav .gnb li ul {
     opacity: 0;
     pointer-events: none;
-    transition: 0.3s;
+    transition: 0.4s;
     position: absolute;
     top: 35px;
     display: flex;
