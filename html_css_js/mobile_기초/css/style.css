@@ -1,0 +1,66 @@
+#wrap {
+    width: 700px;
+    height: 500px;
+    border: 1px solid #000;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    width: 500px;
+    margin: 10px auto;
+    border: 1px solid #000;
+}
+
+.left .show {
+    width: 500px;
+    height: 400px;
+}
+
+.left .showText {
+    width: 500px;
+    margin-top: 10px;
+    text-indent: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.right {
+    width: 180px;
+    margin: 10px auto;
+    border: 1px solid #000;
+}
+
+.right .thumList {
+    text-align: center;
+}
+
+.right .thumList li {
+    text-align: center;
+
+    width: 35px;
+    height: 35px;
+    margin: 2px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.right .thumList li img {
+    width: 33px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+}
+
+.right .thumIndex {
+    margin-top: 40px;
+    margin-left: 15px;
+    font-size: 40px;
+}
+
+.right .thumIndex .current {}
+
+.right .thumIndex .total {}

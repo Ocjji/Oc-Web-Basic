@@ -17,9 +17,13 @@ console.log($gnbli);
 $gnbli.forEach(element => {
     element.addEventListener('mouseenter', e => {
         let current = e.currentTarget;
+        $gnbli.forEach(gnbItem => {
+            gnbItem.classList.remove('on');
+        })
         $subli.forEach(subItem => {
             subItem.classList.remove('on');
         })
+        current.classList.add('on');
         $totalMenuBar.classList.remove('on');
         $header.classList.remove('on');
         current.children[1].classList.add('on');
@@ -36,6 +40,9 @@ $totalMenu.addEventListener('mouseenter', e => {
     $subli.forEach(subItem => {
         subItem.classList.remove('on');
     })
+    $gnbli.forEach(gnbItem => {
+        gnbItem.classList.remove('on');
+    })
     $totalMenuBar.classList.add('on');
     $header.classList.add('on');
 })
@@ -43,6 +50,9 @@ $totalMenu.addEventListener('mouseenter', e => {
 $header.addEventListener('mouseleave', e => {
     $subli.forEach(subItem => {
         subItem.classList.remove('on');
+    })
+    $gnbli.forEach(gnbItem => {
+        gnbItem.classList.remove('on');
     })
     $totalMenuBar.classList.remove('on');
     $header.classList.remove('on');

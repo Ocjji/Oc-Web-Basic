@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <style>
+        #visual {
+            width: 100%;
+            position: relative;
+        }
+
+        #visual .main-banner {}
+
+        #visual .main-banner li {}
+
+        #visual .main-banner li img {}
+
+        #visual .slick-arrow {
+            position: absolute;
+            top: 50%;
+            z-index: 10;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            color: transparent;
+        }
+
+        #visual .slick-arrow::after {
+            font-size: 30px;
+            color: black;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #visual .slick-prev::after {
+            font-family: xeicon;
+            content: "\e93d";
+        }
+
+        #visual .slick-prev {
+            left: 50px;
+        }
+
+        #visual .slick-next::after {
+            font-family: xeicon;
+            content: "\e940";
+        }
+
+        #visual .slick-next {
+            right: 50px;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('.banner').slick();
+        })
+    </script>
+</head>
+
+<body>
+    <i class="xi-angle-left-thin"></i>
+    <i class="xi-angle-right-thin"></i>
+    <section id="visual">
+        <ul class="main-banner banner">
+            <li><img src="images/main0.jpg" alt=""></li>
+            <li><img src="images/main1.jpg" alt=""></li>
+            <li><img src="images/main2.jpg" alt=""></li>
+            <li><img src="images/main3.jpg" alt=""></li>
+        </ul>
+    </section>
+</body>
+
+</html>

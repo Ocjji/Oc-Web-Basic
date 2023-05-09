@@ -28,7 +28,6 @@
     border: 1px solid #000;
 }
 
-.noticeVis {}
 
 .noticeVis h2 {
     margin-top: 160px;
@@ -112,6 +111,7 @@
     font-size: 20px;
     background: tan;
     cursor: pointer;
+    border: 1px solid #000;
 }
 
 .notice .notice-board {

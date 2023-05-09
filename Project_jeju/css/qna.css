@@ -101,6 +101,7 @@
     font-size: 20px;
     background: tan;
     cursor: pointer;
+    border: 1px solid #000;
 }
 
 .qna .qna-list {
@@ -116,6 +117,7 @@
     box-sizing: border-box;
     padding: 15px 20px;
     position: relative;
+    cursor: pointer;
 }
 
 .qna .qna-list li:first-child {
@@ -129,7 +131,6 @@
 .qna .qna-list li strong {
     width: 100%;
     display: inline-block;
-    cursor: pointer;
 }
 
 .qna .qna-list li strong::before {

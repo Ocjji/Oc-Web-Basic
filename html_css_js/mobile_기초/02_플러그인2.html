@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <style>
+        .swiper-pagination-bullet {
+            background: #fff;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: mediumaquamarine;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="swiper mySwiper" id="mainVisual">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/main0.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/main1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/main2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/main3.jpg" alt="">
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+
+</html>
