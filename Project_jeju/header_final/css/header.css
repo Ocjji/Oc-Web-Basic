@@ -7,9 +7,9 @@
     width: 100%;
     position: fixed;
     z-index: 100;
-    height: 150px;
+    height: 110px;
     transition: 0.3s;
-    padding-top: 40px;
+    padding: 20px 0 20px 0;
     background: #D8F1F1;
     overflow: hidden;
 }
@@ -37,7 +37,7 @@
 #header .top-menu {
     position: absolute;
     right: 0;
-    top: -20px;
+    top: 0px;
     display: flex;
 }
 
@@ -181,7 +181,7 @@
 #header .nav .gnb li ul.on {
     display: block;
     /* pointer-events: auto; */
-    top: 35px;
+    top: 23px;
 }
 
 
