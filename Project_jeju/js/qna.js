@@ -24,33 +24,22 @@ const qnaArrListAns = [
 ];
 
 const qnaList = document.querySelector('.qna-list'); // 질문 리스트
-// const qnaLi = document.querySelectorAll('.qna-list li');
+const qnaPaging = document.querySelectorAll('.qna-paging span');
+
 let qnaLi = null;
 let old = 0;
-// qnaList.children[0].innerHTML = `<strong>${qnaArrListTitle[0]}</strong><div>${qnaArrListAns[0]}</div></li>`;
-// qnaList.children[1].innerHTML = `<strong>${qnaArrListTitle[1]}</strong><div>${qnaArrListAns[1]}</div></li>`;
-// qnaList.children[2].innerHTML = `<strong>${qnaArrListTitle[2]}</strong><div>${qnaArrListAns[2]}</div></li>`;
-
-// for (let i = 0; i < 10; i++) {
-//     qnaList.children[i].innerHTML = `<strong>${qnaArrListTitle[i]}</strong><div>${qnaArrListAns[i]}</div>`;
-// }
-
-// qnaLi.forEach((element, idx) => {
-//     element.addEventListener('click', e => {
-//         if (e.currentTarget.classList.contains('on')) {
-//             e.currentTarget.classList.remove('on');
-//         } else {
-//             qnaLi.forEach(element => {
-//                 element.classList.remove('on');
-//             })
-//             e.currentTarget.classList.add('on');
-//         }
-//     })
-// })
-
-// let qnaAnsList = [];
 let qnaTitleList = qnaArrListTitle;
 let qnaAnsList = qnaArrListAns;
+let qnaCurrentPage = 0;
+
+qnaPaging.forEach(page => {
+    page.addEventListener('click', e => {
+        qnaPaging.forEach(element => {
+            element.classList.remove('on');
+        });
+        e.currentTarget.classList.add('on');
+    })
+})
 
 function makeqnalist() {
     qnaList.innerHTML = null;
@@ -72,10 +61,5 @@ function makeqnalist() {
     })
 
 }
-// function makeLiEvent() {
-//     qnaLi = document.querySelectorAll('.qna-list li');
-// }
 
 makeqnalist();
-// makeLiEvent();
-// console.log(qnaLi);

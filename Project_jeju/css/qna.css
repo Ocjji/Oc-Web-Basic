@@ -208,3 +208,35 @@
 .qna .qna-list li.on div p {
     word-break: keep-all;
 }
+
+.qna .qna-paging {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.qna .qna-paging button {
+    display: inline-block;
+    background: #fff;
+    border: none;
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    line-height: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.qna .qna-paging span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    line-height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.qna .qna-paging span.on {
+    background: skyblue;
+    border-radius: 50%;
+}
