@@ -41,32 +41,272 @@
                         <ul class="visual-res-tab">
                             <li class="res-tab-pack">
                                 <div>
-                                    <input type="text" name="" id="" placeholder="어디로 떠나세요?">
-                                    <p>
-                                        <button class="start-travel-dep">
-                                            <i class="xi-maker"></i> 인천/김포 출발</button>
+                                    <input type="text" name="" id="" class="whereToGo" placeholder="어디로 떠나세요?">
+                                    <div class="where-to-travel">
+                                        <div class="where-to-jeju">
+                                            <ul>
+                                                <li>제주시</li>
+                                                <li>조천읍</li>
+                                                <li>한림읍</li>
+                                                <li>애월읍</li>
+                                                <li>한경면</li>
+                                            </ul>
+                                        </div>
+                                        <div class="where-to-seogwipo">
+                                            <ul>
+                                                <li>서귀포시</li>
+                                                <li>대정읍</li>
+                                                <li>인덕면</li>
+                                                <li>남원읍</li>
+                                                <li>표선면</li>
+                                                <li>성산읍</li>
+                                                <li>중문</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="depart-start">
+                                        <button class="start-travel-depart">
+                                            <i class="xi-maker"></i><span>서울 출발</span>
+                                        </button>
+                                        <ul class="select-depart">
+                                            <li>서울</li>
+                                            <li>인천/김포</li>
+                                            <li>부산</li>
+                                            <li>대구</li>
+                                            <li>청주</li>
+                                            <li>광주(무안)</li>
+                                            <li>양양</li>
+                                            <li>강원</li>
+                                        </ul>
                                         <button class="start-travel-date">
-                                            <i class="xi-calendar"></i> 여행시작일 선택</button>
-                                    </p>
+                                            <i class="xi-calendar"></i><span>여행시작일 선택</span>
+                                        </button>
+                                        <div class="startTravelCalendar">
+                                            <table class="Calendar">
+                                                <thead>
+                                                    <tr>
+                                                        <td onClick="prevCalendar();" style="cursor:pointer;">&#60;
+                                                        </td>
+                                                        <td colspan="5">
+                                                            <span id="calYear"></span>년
+                                                            <span id="calMonth"></span>월
+                                                        </td>
+                                                        <td onClick="nextCalendar();" style="cursor:pointer;">&#62;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>일</td>
+                                                        <td>월</td>
+                                                        <td>화</td>
+                                                        <td>수</td>
+                                                        <td>목</td>
+                                                        <td>금</td>
+                                                        <td>토</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                     <p class="ban-option">
-                                        <button><i class="xi-coupon"></i>
+                                        <button class="btnHaveAir"><i class="xi-coupon"></i>
                                             <p>항공권은<br>있어요</p>
                                         </button>
-                                        <button><i class="xi-users"></i>
+                                        <button class="btnOnlyTeam"><i class="xi-users"></i>
                                             <p>우리끼리만<br>여행할래요</p>
                                         </button>
                                     </p>
-                                    <button class="res-tab-submit">패키지 검색</button>
+                                    <a href="#"><button class="res-tab-submit">패키지 검색</button></a>
                                 </div>
                             </li>
-                            <li class="res-tab-air" style="display: none;">
+                            <li class="res-tab-air">
                                 <div>
-
+                                    <input type="text" name="" id="" class="howToGo" placeholder="항공사를 선택해주세요">
+                                    <div class="how-to-go">
+                                        <div class="what-is-air1">
+                                            <ul>
+                                                <li>대한항공</li>
+                                                <li>아시아나항공</li>
+                                                <li>제주항공</li>
+                                                <li>에어부산</li>
+                                            </ul>
+                                        </div>
+                                        <div class="what-is-air2">
+                                            <ul>
+                                                <li>티웨이항공</li>
+                                                <li>이스타항공</li>
+                                                <li>진에어항공</li>
+                                                <li>하이에어</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="depart-start">
+                                        <button class="start-travel-depart">
+                                            <i class="xi-maker"></i><span>서울 출발</span>
+                                        </button>
+                                        <ul class="select-depart">
+                                            <li>서울</li>
+                                            <li>인천/김포</li>
+                                            <li>부산</li>
+                                            <li>대구</li>
+                                            <li>청주</li>
+                                            <li>광주(무안)</li>
+                                            <li>양양</li>
+                                            <li>강원</li>
+                                        </ul>
+                                        <button class="start-travel-date">
+                                            <i class="xi-calendar"></i><span>여행시작일 선택</span>
+                                        </button>
+                                        <div class="startTravelCalendarAir">
+                                            <table class="Calendar_Air">
+                                                <thead>
+                                                    <tr>
+                                                        <td onClick="prevCalendar();" style="cursor:pointer;">&#60;
+                                                        </td>
+                                                        <td colspan="5">
+                                                            <span id="calYear_Air"></span>년
+                                                            <span id="calMonth_Air"></span>월
+                                                        </td>
+                                                        <td onClick="nextCalendar();" style="cursor:pointer;">&#62;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>일</td>
+                                                        <td>월</td>
+                                                        <td>화</td>
+                                                        <td>수</td>
+                                                        <td>목</td>
+                                                        <td>금</td>
+                                                        <td>토</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <p class="ban-option">
+                                        <button class="btnHaveAir"><i class="xi-coupon"></i>
+                                            <p>항공권은<br>있어요</p>
+                                        </button>
+                                        <button class="btnOnlyTeam"><i class="xi-users"></i>
+                                            <p>우리끼리만<br>여행할래요</p>
+                                        </button>
+                                    </p>
+                                    <a href="#"><button class="res-tab-submit">항공권 검색</button></a>
                                 </div>
                             </li>
-                            <li class="res-tab-hotel" style="display: none;">
+                            <li class="res-tab-hotel on">
                                 <div>
-                                    /div>
+                                    <input type="text" name="" id="" class="whereToHotel" placeholder="어디로 떠나세요?">
+                                    <div class="where-to-hotel">
+                                        <div class="where-to-jeju">
+                                            <ul>
+                                                <li>제주시</li>
+                                                <li>조천읍</li>
+                                                <li>한림읍</li>
+                                                <li>애월읍</li>
+                                                <li>한경면</li>
+                                            </ul>
+                                        </div>
+                                        <div class="where-to-seogwipo">
+                                            <ul>
+                                                <li>서귀포시</li>
+                                                <li>대정읍</li>
+                                                <li>인덕면</li>
+                                                <li>남원읍</li>
+                                                <li>표선면</li>
+                                                <li>성산읍</li>
+                                                <li>중문</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="depart-start">
+                                        <button class="start-travel-date">
+                                            <i class="xi-calendar"></i><span>여행시작일 선택</span>
+                                        </button>
+                                        <div class="startTravelCalendarStart">
+                                            <table class="Calendar_Start">
+                                                <thead>
+                                                    <tr>
+                                                        <td onClick="prevCalendar();" style="cursor:pointer;">&#60;
+                                                        </td>
+                                                        <td colspan="5">
+                                                            <span id="calYear_Start"></span>년
+                                                            <span id="calMonth_Start"></span>월
+                                                        </td>
+                                                        <td onClick="nextCalendar();" style="cursor:pointer;">&#62;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>일</td>
+                                                        <td>월</td>
+                                                        <td>화</td>
+                                                        <td>수</td>
+                                                        <td>목</td>
+                                                        <td>금</td>
+                                                        <td>토</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <button class="end-travel-date">
+                                            <i class="xi-calendar"></i><span>여행종료일 선택</span>
+                                        </button>
+                                        <div class="startTravelCalendarEnd">
+                                            <table class="Calendar_End">
+                                                <thead>
+                                                    <tr>
+                                                        <td onClick="prevCalendar();" style="cursor:pointer;">&#60;
+                                                        </td>
+                                                        <td colspan="5">
+                                                            <span id="calYear_End"></span>년
+                                                            <span id="calMonth_End"></span>월
+                                                        </td>
+                                                        <td onClick="nextCalendar();" style="cursor:pointer;">&#62;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>일</td>
+                                                        <td>월</td>
+                                                        <td>화</td>
+                                                        <td>수</td>
+                                                        <td>목</td>
+                                                        <td>금</td>
+                                                        <td>토</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <button class="hotel-choose">
+                                        <i class="xi-user-o"></i><span>객실 1 / 성인 2명 / 아동 0명</span>
+                                    </button>
+                                    <div class="hotel-choose-box">
+                                        <ul class="hotel-choose-list">
+                                            <li><i class="xi-close"></i></li>
+                                            <li class="roomCount">
+                                                <div>객실 <i class="xi-hotel"></i></div>
+                                                <div><em> - </em><span>1</span><em> + </em></div>
+                                            </li>
+                                            <li class="adultCount">
+                                                <div>성인 <i class="xi-user"></i></div>
+                                                <div><em> - </em><span>2</span><em> + </em></div>
+                                            </li>
+                                            <li class="childCount">
+                                                <div>객실 <i class="xi-hotel"></i></div>
+                                                <div><em> - </em><span>0</span><em> + </em></div>
+                                            </li>
+                                            <li><b class="hotel-option-submit">설정</b></li>
+                                        </ul>
+                                    </div>
+                                    <a href="#"><button class="res-tab-submit">숙소 검색</button></a>
+                                </div>
                             </li>
                         </ul>
                     </div>
