@@ -1,3 +1,7 @@
+#wrap {
+  width: 100%;
+}
+
 .swiper {
   width: 100%;
   height: 100%;
@@ -5,7 +9,7 @@
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
+  font-size: 5.0000vw;
   background: #fff;
   display: flex;
   justify-content: center;
@@ -21,27 +25,27 @@
 
 #header {
   width: 100%;
-  height: 55px;
+  height: 15.2778vw;
   position: relative;
 }
 
 #header h1 {
   text-align: center;
-  padding-top: 15px;
+  padding-top: 4.1667vw;
 }
 
 #header h1 img {
-  width: 75px;
+  width: 20.8333vw;
 }
 
 #header .all-menu {
   position: absolute;
-  top: 15px;
-  left: 20px;
+  top: 4.1667vw;
+  left: 5.5556vw;
 }
 
 #header .all-menu i {
-  font-size: 25px;
+  font-size: 6.9444vw;
 }
 
 .bg {
@@ -67,7 +71,7 @@
   width: 80%;
   background: tan;
   box-sizing: border-box;
-  padding: 70px 50px;
+  padding: 19.4444vw 13.8889vw;
   z-index: 100;
   height: 100vh;
   transition: 0.3s;
@@ -84,10 +88,10 @@
 #nav .gnb li {}
 
 #nav .gnb li a {
-  font-size: 18px;
+  font-size: 5.0000vw;
   font-weight: 700;
   display: block;
-  line-height: 40px;
+  line-height: 11.1111vw;
   border-bottom: 1px solid #999;
 }
 
@@ -98,41 +102,41 @@
 }
 
 #nav .gnb li.m1 ul.on {
-  height: 180px;
+  height: 50.0000vw;
 }
 
 #nav .gnb li.m2 ul.on {
-  height: 160px;
+  height: 44.4444vw;
 }
 
 #nav .gnb li.m3 ul.on {
-  height: 200px;
+  height: 55.5556vw;
 }
 
 #nav .gnb li.m4 ul.on {
-  height: 140px;
+  height: 38.8889vw;
 }
 
 #nav .gnb li.m5 ul.on {
-  height: 220px;
+  height: 61.1111vw;
 }
 
 #nav .gnb li ul li {}
 
 #nav .gnb li ul li a {
-  font-size: 16px;
+  font-size: 4.4444vw;
   font-weight: normal;
-  text-indent: 15px;
+  text-indent: 4.1667vw;
 }
 
 #nav .close {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 5.5556vw;
+  top: 5.5556vw;
 }
 
 #nav .close i {
-  font-size: 30px;
+  font-size: 8.3333vw;
 }
 
 #container {}
@@ -151,7 +155,7 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: cover;
-  height: 180px;
+  height: 50.0000vw;
   text-align: center;
 }
 
@@ -175,9 +179,9 @@
   display: block;
   box-sizing: border-box;
   color: #fff;
-  padding-top: 120px;
+  padding-top: 33.3333vw;
   background-repeat: no-repeat;
-  background-position-x: 55 %;
+  background-position-x: 55%;
 }
 
 .main .list li:nth-child(1) a {
@@ -202,4 +206,32 @@
   background-image: url(../images/ico_3.png);
   background-size: 30%;
   background-position-y: 40%;
+}
+
+.main .con1 {
+  padding: 11.1111vw 0;
+}
+
+.main .con1 h2 {
+  font-size: 8.3333vw;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 5.5556vw;
+}
+
+.side-bar {
+  height: 36.1111vw;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: url(../images/bom_visual.jpg);
+  background-size: cover;
+}
+
+.side-bar .menu {
+  padding: 8.3333vw 2.7778vw;
+}
+
+.side-bar .menu img {
+  width: 11.1111vw;
 }

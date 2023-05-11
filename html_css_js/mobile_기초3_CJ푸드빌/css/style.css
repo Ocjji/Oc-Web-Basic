@@ -1,0 +1,322 @@
+#wrap {
+  width: 100%;
+}
+
+#header {
+  width: 100%;
+  height: 16.6667vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header h1 {}
+
+#header h1 img {
+  width: 25.0000vw;
+}
+
+#header .all-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 16.6667vw;
+  height: 16.6667vw;
+  text-align: center;
+  background: #e83833;
+}
+
+#header .all-menu i {
+  font-size: 8.3333vw;
+  color: #FFF;
+  line-height: 16.6667vw;
+}
+
+.bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  opacity: 0;
+  z-index: 10;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.bg.on {
+  opacity: 0.7;
+  pointer-events: auto;
+}
+
+#nav {
+  position: fixed;
+  right: -80%;
+  top: 0;
+  width: 80%;
+  background: #e83833;
+  box-sizing: border-box;
+  padding: 22.2222vw 13.8889vw;
+  z-index: 100;
+  height: 100vh;
+  transition: 0.4s;
+  opacity: 0.7;
+}
+
+#nav.on {
+  right: 0;
+  opacity: 1;
+}
+
+#nav .top-menu {
+  position: absolute;
+  left: 5.5556vw;
+  top: 5.5556vw;
+  display: flex;
+}
+
+#nav .top-menu li {
+  margin-right: 5.5556vw;
+  position: relative;
+}
+
+#nav .top-menu li::after {
+  content: "";
+  display: block;
+  width: 0.2778vw;
+  height: 2.7778vw;
+  background: #fff;
+  position: absolute;
+  right: -2.7778vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#nav .top-menu li:last-child:after {
+  display: none;
+}
+
+#nav .top-menu li a {
+  font-size: 5.0000vw;
+  font-weight: 500;
+  color: #fff;
+}
+
+#nav .gnb {
+  width: 100%;
+}
+
+#nav .gnb li {}
+
+#nav .gnb li a {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  display: block;
+  line-height: 50px;
+  border-bottom: 1px solid #999;
+}
+
+#nav .gnb li ul {
+  transition: 0.3s;
+  overflow: hidden;
+  height: 0;
+}
+
+#nav .gnb li.m1 ul.on {
+  height: 250px;
+}
+
+#nav .gnb li.m2 ul.on {
+  height: 165px;
+}
+
+#nav .gnb li.m3 ul.on {
+  height: 165px;
+}
+
+#nav .gnb li.m4 ul.on {
+  height: 85px;
+}
+
+#nav .gnb li.m5 ul.on {}
+
+#nav .gnb li ul li {}
+
+#nav .gnb li ul li a {
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: normal;
+  background: rgba(255, 255, 255, 0.1);
+  text-indent: 20px;
+}
+
+#nav .close {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+}
+
+#nav .close i {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+}
+
+#visual .swiper-slide .visual-txt {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: center;
+  text-align: left;
+  padding-left: 40px;
+}
+
+#visual .swiper-slide .visual-txt h2 {
+  font-size: 50px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+#visual .swiper-slide .visual-txt p {
+  font-size: 20px;
+}
+
+
+
+
+
+
+#container {}
+
+#content {}
+
+.main {}
+
+.main .con-box {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+
+.main .p80 {
+  padding: 80px 0;
+}
+
+.main .con-box h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #e83833;
+  margin-bottom: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.main .about h2::after {
+  content: "";
+  width: 2px;
+  height: 40px;
+  background: #e83833;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main .con-box h2+p {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.main .con-box h2+p span {
+  font-weight: 700;
+}
+
+.main .con-box .more {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 15px;
+  color: #e83833;
+}
+
+.main .con-box .more a {
+  font-size: 14px;
+  color: #e83833;
+  font-weight: 500;
+}
+
+.main .about-img {
+  background-image: url(../images/about_bg1.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  height: 160px;
+  background-attachment: fixed;
+}
+
+.main .brand {
+  width: 100%;
+  overflow: hidden;
+}
+
+.main .brand .brand-logo {}
+
+.main .brand .brand-logo ul {
+  display: flex;
+  position: relative;
+  width: 400%;
+}
+
+.main .brand .brand-logo ul li {
+  width: 25%;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  background: #fff;
+  margin-left: -1px;
+}
+
+.main .brand .brand-logo ul li img {
+  width: 100%;
+}
+
+
+
+.side-bar .menu {
+  padding: 8.3333vw 2.7778vw;
+}
+
+.side-bar .menu img {
+  width: 11.1111vw;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 5.0000vw;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
