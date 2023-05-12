@@ -1,0 +1,1154 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+
+#wrap {
+    width: 100%;
+    min-width: 1200px;
+}
+
+#header,
+#footer,
+#visual,
+#subVisual {
+    width: 100%;
+}
+
+.inner {
+    margin: auto;
+    position: relative;
+    width: 1200px;
+    box-sizing: border-box;
+}
+
+#visual .inner {
+    height: 600px;
+    /* display: none; */
+    /* 숨김 */
+}
+
+.main-visual {
+    background: skyblue;
+}
+
+.main-visual .visualBanner {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.main-visual .visualBanner .mainVisualBanner {
+    display: flex;
+    position: absolute;
+    left: -600px;
+    transition: 0.2s;
+}
+
+.main-visual .visualBanner .mainVisualBanner li {}
+
+.main-visual .visualBanner a img {
+    width: 600px;
+    height: 500px;
+}
+
+.main-visual .visualBanner .visualNavBox {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    z-index: 100;
+}
+
+.main-visual .visualBanner .visualNavBox p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main-visual .visualBanner .visualNavBox .visualNav {
+    width: 130px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    margin-right: 20px;
+}
+
+.main-visual .visualBanner .visualNavBox .visualNav {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 20px;
+}
+
+.main-visual .visualBanner .visualNavBox .visualNav .btn {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    text-indent: -2px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.main-visual .visualBanner .visualNavBox i {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.main-visual .visualBanner .visualNavBox .visualNavPlay button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.main-visual .visualSearchBox {
+    width: 390px;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.main-visual .visualSearchBox strong {
+    display: block;
+    font-size: 26px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.main-visual .visualSearchBox strong em {
+    font-weight: 600;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-sel-tab {
+    display: flex;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-sel-tab li {
+    text-align: center;
+    width: 130px;
+    height: 40px;
+    line-height: 40px;
+    /* border: 1px solid #000; */
+    border-bottom: 1px solid #000;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-sel-tab li.on {
+    border-bottom: 3px solid #000;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab {}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab>li {
+    display: none;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab>li.on {
+    display: block;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div {}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div input {
+    width: 390px;
+    box-sizing: border-box;
+    height: 50px;
+    padding-left: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div input:focus {
+    outline: none;
+    border: 2px solid #1288AC;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .where-to-travel,
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .where-to-hotel {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 390px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    height: 0px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .where-to-travel.on,
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .where-to-hotel.on {
+    height: 351px;
+    pointer-events: auto;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .where-to-jeju {
+    width: 190px;
+    background: #FFF;
+    border: 2px solid #1288AC;
+    border-radius: 5px;
+    margin: 1px;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .where-to-seogwipo {
+    width: 190px;
+    background: #FFF;
+    border: 2px solid #1288AC;
+    border-radius: 5px;
+    margin: 1px;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .where-to-travel ul,
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .where-to-hotel ul {
+    text-align: center;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .where-to-travel ul li,
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .where-to-hotel ul li {
+    height: 50px;
+    border-bottom: 1px solid #1288AC;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 50px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .where-to-travel ul li:first-child,
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .where-to-hotel ul li:first-child {
+    font-size: 22px;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .where-to-travel ul li:hover,
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .where-to-hotel ul li:hover {
+    background: skyblue;
+}
+
+/* tab메뉴2 항공 */
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .how-to-go {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 390px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    height: 0px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .how-to-go.on {
+    height: 200px;
+    pointer-events: auto;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .what-is-air1 {
+    width: 190px;
+    background: #FFF;
+    border: 2px solid #1288AC;
+    border-radius: 5px;
+    margin: 1px;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .what-is-air2 {
+    width: 190px;
+    background: #FFF;
+    border: 2px solid #1288AC;
+    border-radius: 5px;
+    margin: 1px;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .how-to-go ul {
+    text-align: center;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .how-to-go ul li {
+    height: 50px;
+    border-bottom: 1px solid #1288AC;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 50px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .how-to-go ul li:hover {
+    background: skyblue;
+}
+
+/* tab메뉴2 끝 */
+
+
+
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .depart-start {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div>p {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .start-travel-depart,
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .hotel-choose {
+    width: 190px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 15px;
+    background: #fff;
+    text-align: left;
+    font-size: 14px;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div button.hotel-choose {
+    width: 390px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 15px;
+    background: #fff;
+    text-align: left;
+    font-size: 14px;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li .start-travel-depart.off {
+    background: #333;
+    pointer-events: none;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .start-travel-depart i,
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .hotel-choose i {
+    margin-right: 10px;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .start-travel-date,
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .end-travel-date {
+    width: 190px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 15px;
+    background: #fff;
+    text-align: left;
+    font-size: 14px;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .start-travel-date i,
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .end-travel-date i {
+    margin-right: 10px;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div button {
+    width: 190px;
+    height: 60px;
+    border-radius: 5px;
+    border: none;
+    background: #fff;
+    cursor: pointer;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .hotel-choose-box {
+    width: 390px;
+    position: absolute;
+    margin-top: -40px;
+    background: #FFF;
+    border-radius: 5px;
+    box-shadow: 0px 40px 30px -20px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .hotel-choose-box.on {
+    display: block;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .hotel-choose-box ul {}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .hotel-choose-box ul li:first-child {
+    display: block;
+    text-align: right;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .hotel-choose-box ul li:first-child i {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .hotel-choose-box ul li {
+    height: 50px;
+    box-sizing: border-box;
+    padding: 5px 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .hotel-choose-box ul li div i {
+    margin-left: 10px;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .hotel-choose-box ul li:last-child {
+    display: block;
+    text-align: right;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .hotel-choose-box ul li:last-child b {
+    display: inline-block;
+    text-align: center;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    border-radius: 15px;
+    background: skyblue;
+    /* color: #fff; */
+    cursor: pointer;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .hotel-choose-box ul li:last-child b:hover {
+    background: #1288AC;
+    color: #fff;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .hotel-choose-box ul li div {
+    display: inline-block;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .hotel-choose-box ul li div em {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .hotel-choose-box ul li div span {
+    margin: 0 10px;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div button.on {
+    border: 2px solid #1288AC;
+}
+
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li .ban-option button {
+    width: 190px;
+    height: 60px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li .ban-option button i {
+    font-size: 30px;
+    margin: 0 20px;
+    color: #999;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li .ban-option button p {
+    color: #999;
+}
+
+
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li .ban-option button.off {
+    border: 1px solid #333;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li .ban-option button.off i {
+    color: #333;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li .ban-option button.off p {
+    color: #333;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .res-tab-submit {
+    margin: 20px 0;
+    width: 390px;
+    background: #333;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.main-visual .visualSearchBox .visual-res .visual-res-tab li div .res-tab-submit:hover {
+    background: #000;
+}
+
+.main .discount-package {}
+
+.main .discount-package.package1 {
+    padding: 50px 0;
+}
+
+.main .discount-package h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.main .discount-package ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .discount-package ul li {}
+
+.main .discount-package ul li a {}
+
+.main .discount-package ul li a div {}
+
+.main .discount-package.package1 ul li a div img {
+    width: 285px;
+    height: 285px;
+    margin-bottom: 20px;
+}
+
+.main .discount-package ul li a div img {
+    width: 285px;
+    height: 210px;
+    margin-bottom: 20px;
+}
+
+.main .discount-package ul li a div strong {
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    color: #222;
+    line-height: 27px;
+}
+
+.main .discount-package ul li a div span {
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.main .discount-package ul li a div .price {
+    margin: 10px 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.main .discount-package ul li a div .price em {
+    font-size: 16px;
+}
+
+.main .discount-package ul li a div .tag {}
+
+.main .discount-package ul li a div .tag span {
+    display: inline-block;
+    border: 1px solid #999;
+    padding: 0 5px;
+    margin-right: 10px;
+}
+
+.main .package2 {
+    height: 600px;
+    box-sizing: border-box;
+    padding: 60px 0;
+    /* background: #d1e3ff; */
+    /* border: 1px solid #000; */
+}
+
+
+.main .package2 h2 {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.main .package2 .free-travel-flow {
+    position: relative;
+    width: 1200px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.main .package2 .free-travel-list {
+    position: absolute;
+    /* left: -305px;
+    left: -610px; */
+    left: 0;
+    width: 1200px;
+    display: flex;
+    transition: 0.3s;
+}
+
+.main .package2 .free-travel-list li {
+    /* border: 1px solid #000; */
+    margin-right: 20px;
+    box-sizing: border-box;
+}
+
+.main .package2 .free-travel-list .free-travel-package {
+    text-align: center;
+}
+
+.main .package2 ul li {}
+
+.main .package2 ul li a strong {
+    text-align: center;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.main .package2 ul li a span {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.main .package2 ul li a .more {
+    width: 220px;
+    height: 35px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    background: #333;
+    color: #fff;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.main .package2 .more:hover {
+    background: #000;
+}
+
+.main .package2 .btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.main .package2 .btn:hover {
+    background: skyblue;
+}
+
+.main .package2 .btn:hover i {
+    color: #fff;
+}
+
+.main .package2 .btn i {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1288AC;
+}
+
+.main .package2 .free-travel-prev {
+    left: -20px;
+    top: 200px;
+}
+
+.main .package2 .free-travel-next {
+    right: -20px;
+    top: 200px;
+}
+
+.main .recommend {
+    /* background: #ccc; */
+    height: 700px;
+    box-sizing: border-box;
+}
+
+.main .recommend .left-side-nav {
+    background: #ddd;
+    width: 450px;
+    height: 570px;
+    /* border: 1px solid #000; */
+    position: absolute;
+    left: 0;
+    top: 60px;
+    /* transform: translateY(-50%); */
+    padding: 80px 60px;
+    box-sizing: border-box;
+    background-image: url(../images/main/contents/con3_left_img.jpg);
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main .recommend .left-side-nav h3 {
+    font-size: 36px;
+    color: #fff;
+    line-height: 1.3;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.main .recommend .left-side-nav ul {
+    display: inline-block;
+}
+
+.main .recommend .left-side-nav ul li {
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.main .recommend .left-side-nav ul li span {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    height: 35px;
+    line-height: 35px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 0 15px;
+    margin: 5px 0;
+}
+
+.main .recommend .left-side-nav ul li:hover span {
+    background: #000;
+    color: #fff;
+}
+
+.main .recommend .left-side-nav ul li.on span {
+    background: #000;
+    color: #fff;
+}
+
+.main .recommend .right-side-content {
+    position: absolute;
+    right: 0;
+    top: 140px;
+}
+
+.main .recommend .right-side-content ul {
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    display: none;
+}
+
+.main .recommend .right-side-content ul.on {
+    display: flex;
+}
+
+.main .recommend .right-side-content ul li {
+    background: #fff;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgb(234, 234, 234)
+}
+
+.main .recommend .right-side-content .pack3-txt {
+    margin-left: 20px;
+}
+
+.main .discount-package b {
+    display: block;
+    color: #9ca5bc;
+    margin-top: -10px;
+    margin-bottom: 5px;
+}
+
+.main .recommend .right-side-content strong {
+    margin-bottom: 5px;
+}
+
+.main .recommend .right-side-content .price {
+    margin-bottom: 70px;
+}
+
+.main .best-goods {
+    height: 800px;
+    /* border: 1px solid #000; */
+    box-sizing: border-box;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.main .best-goods h3 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.main .best-goods .goods-nav {
+    width: 300px;
+    margin: auto;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.main .best-goods .goods-nav li {
+    width: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.main .best-goods .goods-nav li:hover span {
+    color: #1288AC;
+    border-bottom: 1px solid #1288AC;
+}
+
+.main .best-goods .goods-nav li.on span {
+    color: #1288AC;
+    border-bottom: 1px solid #1288AC;
+}
+
+.main .best-goods .goods-view {}
+
+.main .best-goods .goods-view li {
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+
+.main .best-goods .goods-view li.on {
+    display: flex;
+}
+
+.main .best-goods .goods-view li div {
+    /* border: 1px solid #000; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    box-sizing: border-box;
+}
+
+.main .best-goods .goods-view li .first {
+    width: 580px;
+    height: 580px;
+    position: relative;
+}
+
+.main .best-goods .goods-view li .first p {
+    padding: 0 10px;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    position: absolute;
+    width: 580px;
+    height: 80px;
+    line-height: 80px;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+.main .best-goods .goods-view .view-right div p {
+    padding: 0 10px;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    position: absolute;
+    width: 580px;
+    height: 60px;
+    line-height: 60px;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+.main .best-goods .goods-view li .badge {
+    margin: 15px;
+    width: 50px;
+    height: 80px;
+    background-image: url(../images/main/contents/bg_badge_first.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #fff;
+}
+
+.main .best-goods .goods-view li .badge span {
+    display: block;
+    padding-top: 20px;
+}
+
+.main .best-goods .goods-view li .badge em {
+    display: block;
+    font-size: 28px;
+    line-height: 20px;
+}
+
+.main .best-goods .goods-view li .view-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main .best-goods .goods-view li .second {
+    width: 580px;
+    height: 270px;
+    position: relative;
+}
+
+.main .best-goods .goods-view li .third {
+    width: 580px;
+    height: 270px;
+    position: relative;
+}
+
+.main .best-goods .goods-view .goods-hotel .first {
+    background-image: url(../images/main/contents/img_best_01.jpg);
+}
+
+.main .best-goods .goods-view .goods-hotel .second {
+    background-image: url(../images/main/contents/img_best_02.jpg);
+}
+
+.main .best-goods .goods-view .goods-hotel .third {
+    background-image: url(../images/main/contents/img_best_03.jpg);
+}
+
+.main .best-goods .goods-view .goods-rentcar .first {
+    background-image: url(../images/main/contents/img_best_ren01.jpg);
+}
+
+.main .best-goods .goods-view .goods-rentcar .second {
+    background-image: url(../images/main/contents/img_best_ren02.jpg);
+}
+
+.main .best-goods .goods-view .goods-rentcar .third {
+    background-image: url(../images/main/contents/img_best_ren03.jpg);
+}
+
+.main .best-goods .goods-view .goods-place .first {
+    background-image: url(../images/main/contents/img_best_ss01.jpg);
+}
+
+.main .best-goods .goods-view .goods-place .second {
+    background-image: url(../images/main/contents/img_best_ss02.jpg);
+}
+
+.main .best-goods .goods-view .goods-place .third {
+    background-image: url(../images/main/contents/img_best_ss03.jpg);
+}
+
+.main .jeju-hotplace {
+    height: 600px;
+}
+
+.main .jeju-hotplace h3 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+.main .jeju-hotplace ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .jeju-hotplace ul li {
+    width: 200px;
+    text-align: center;
+}
+
+.main .jeju-hotplace ul li:nth-child(3) {
+    margin: 0 50px;
+}
+
+.main .jeju-hotplace ul li:nth-child(3) a img {
+    transform: scale(1.5);
+    margin-bottom: 60px;
+}
+
+.main .jeju-hotplace ul li:nth-child(3) a strong {
+    font-size: 24px;
+}
+
+.main .jeju-hotplace ul li a {}
+
+.main .jeju-hotplace ul li a img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.main .jeju-hotplace ul li a strong {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.main .jeju-hotplace ul li a p {
+    font-size: 13px;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+.main-visual .visualSearchBox .select-depart {
+    position: absolute;
+    margin-top: 40px;
+    border: 2px solid #1288AC;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: none;
+}
+
+.main-visual .visualSearchBox .select-depart.on {
+    display: block;
+}
+
+.main-visual .visualSearchBox .select-depart li {
+    width: 186px;
+    height: 40px;
+    padding-left: 15px;
+    background: #fff;
+    text-align: left;
+    font-size: 14px;
+    line-height: 40px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.main-visual .visualSearchBox .select-depart li:hover {
+    background: skyblue;
+}
+
+
+.main-visual .visualSearchBox .startTravelCalendar,
+.main-visual .visualSearchBox .startTravelCalendarAir,
+.main-visual .visualSearchBox .startTravelCalendarEnd {
+    position: absolute;
+    left: 200px;
+    background-color: white;
+    height: auto;
+    width: 400px;
+    margin: 0;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0px 40px 30px -20px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.main-visual .visualSearchBox .startTravelCalendarStart {
+    position: absolute;
+    left: 0px;
+    background-color: white;
+    height: auto;
+    width: 400px;
+    margin: 0;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0px 40px 30px -20px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.main-visual .visualSearchBox .startTravelCalendar.on,
+.main-visual .visualSearchBox .startTravelCalendarAir.on,
+.main-visual .visualSearchBox .startTravelCalendarStart.on,
+.main-visual .visualSearchBox .startTravelCalendarEnd.on {
+    display: block;
+}
+
+.main-visual .visualSearchBox td {
+    width: 50px;
+    height: 50px;
+}
+
+.main-visual .visualSearchBox .Calendar,
+.main-visual .visualSearchBox .Calendar_Air,
+.main-visual .visualSearchBox .Calendar_Start,
+.main-visual .visualSearchBox .Calendar_End {
+    text-align: center;
+}
+
+.main-visual .visualSearchBox .Calendar>thead>tr:first-child>td,
+.main-visual .visualSearchBox .Calendar_Air>thead>tr:first-child>td,
+.main-visual .visualSearchBox .Calendar_Start>thead>tr:first-child>td,
+.main-visual .visualSearchBox .Calendar_End>thead>tr:first-child>td {
+    font-family: 'Questrial', sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.main-visual .visualSearchBox .Calendar>thead>tr:last-child>td,
+.main-visual .visualSearchBox .Calendar_Air>thead>tr:last-child>td,
+.main-visual .visualSearchBox .Calendar_Start>thead>tr:last-child>td,
+.main-visual .visualSearchBox .Calendar_End>thead>tr:last-child>td {
+    font-family: 'Questrial', sans-serif;
+    font-weight: 600;
+}
+
+.main-visual .visualSearchBox .Calendar>tbody>tr>td>p,
+.main-visual .visualSearchBox .Calendar_Air>tbody>tr>td>p,
+.main-visual .visualSearchBox .Calendar_Start>tbody>tr>td>p,
+.main-visual .visualSearchBox .Calendar_End>tbody>tr>td>p {
+    font-family: 'Montserrat', sans-serif;
+    height: 45px;
+    width: 45px;
+    border-radius: 45px;
+    transition-duration: .2s;
+    line-height: 45px;
+    margin: 2.5px;
+    display: block;
+    text-align: center;
+}
+
+.main-visual .visualSearchBox .pastDay {
+    color: lightgray;
+}
+
+.main-visual .visualSearchBox .today {
+    background-color: #F5D042;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.main-visual .visualSearchBox .futureDay {
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.main-visual .visualSearchBox .futureDay:hover {
+    background: #eee;
+}
+
+.main-visual .visualSearchBox .futureDay.choiceDay,
+.main-visual .visualSearchBox .today.choiceDay {
+    background: #0A174E;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}

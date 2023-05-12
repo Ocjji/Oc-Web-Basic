@@ -1,0 +1,1003 @@
+/* ===================================================공통 */
+
+#wrap {
+    width: 100%;
+}
+
+.inner {
+    position: relative;
+    margin: auto;
+    width: 1200px;
+    box-sizing: border-box;
+}
+
+/* package_visual */
+.packVis {
+    width: 100%;
+    height: 600px;
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/package/pac_main_bg.jpg);
+}
+
+.packVis .inner {
+    height: 600px;
+
+}
+
+.packVis h2 {
+    position: absolute;
+    left: 50%;
+    top: 70px;
+    transform: translateX(-50%);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.packVis h2+p {
+    position: absolute;
+    left: 50%;
+    top: 140px;
+    transform: translateX(-50%);
+    font-size: 20px;
+    text-shadow: 0px 0px 10px white;
+}
+
+.packVis .packV_search {
+    position: absolute;
+    left: 50%;
+    top: 230px;
+    transform: translateX(-50%);
+    width: 1000px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+    padding: 50px 60px;
+    box-sizing: border-box;
+}
+
+.packVis .packV_search ul {
+    display: flex;
+}
+
+.packVis .packV_search ul li {
+    width: 300px;
+}
+
+.packVis .packV_search ul li strong {
+    font-size: 22px;
+    margin-bottom: 20px;
+    display: block;
+    font-weight: 700;
+}
+
+.packVis .packV_search ul li .go {
+    background: #fff;
+    width: 250px;
+    height: 50px;
+    color: #999;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.packVis .packV_search ul li .date {
+    background: #fff;
+    width: 250px;
+    height: 50px;
+    color: #999;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.packVis .packV_search ul li .people {
+    background: #fff;
+    width: 250px;
+    height: 50px;
+    color: #999;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+.packVis .packV_search ul li .go i, .packVis .packV_search ul li .date i, .packVis .packV_search ul li .people i{
+    font-size: 20px;
+    color: black;
+    transition: all 0.3s linear;
+}
+.packVis .packV_spop_go{
+    background: #fff;
+    height: 0px;
+    width: 440px;
+    box-shadow: 0px 0px 5px black;
+    text-align: center;
+    position: absolute;
+    left: 160px;top: 400px;
+    overflow: hidden;
+    z-index: 10;
+    transition: all linear 0.2s;
+}
+.packVis .packV_spop_go td {
+    width: 50px;
+    height: 50px;
+}
+
+.packVis .packV_spop_go .packV_calendar {
+    /* text-align: center; */
+}
+
+.packVis .packV_spop_go .packV_calendar thead tr:first-child td {
+    font-weight: bold;
+    padding-top: 30px;
+}
+.packVis .packV_spop_go .packV_calendar thead tr:last-child td{
+    font-weight: bold;
+}
+
+.packVis .packV_spop_go .packV_calendar tbody tr td p {
+    height: 45px;
+    width: 45px;
+    border-radius: 45px;
+    transition-duration: .2s;
+    line-height: 45px;
+    margin: 2.5px;
+    display: block;
+    text-align: center;
+}        
+
+.packVis .packV_spop_go .packV_calendar .pastDay {
+    color: #999;
+}
+
+.packVis .packV_spop_go .packV_calendar .pack_today {
+    background-color: #eecd49;            
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.packVis .packV_spop_go .packV_calendar .futureDay {
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+.packVis .packV_spop_go .packV_calendar .futureDay:hover{
+    background:#eee;
+}
+
+.packVis .packV_spop_go .packV_calendar .futureDay.pack_choiceDay,
+.packVis .packV_spop_go .packV_calendar .today.pack_choiceDay {
+    background-color: #1288AC;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.packVis .btt {
+    position: absolute;
+    left: 50%;
+    top: 470px;
+    transform: translateX(-50%);
+    width: 480px;
+    height: 80px;
+    border-radius: 30px;
+    border: none;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    background: #1288AC;
+    line-height: 80px;
+}
+
+.packVis .btt:hover::after {
+    content: "";
+    display: block;
+    width: 480px;
+    height: 80px;
+    border-radius: 30px;
+    background: #fff;
+    opacity: 0.3;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.packVis .btt i {
+    vertical-align: top;
+    font-size: 28px;
+    line-height: 80px;
+    padding-right: 15px;
+}
+
+.packVis .packV_spop_date {
+    z-index: 20;
+    position: absolute;
+    left: 455px;
+    top: 400px;
+    background: #fff;
+    width: 250px;
+    height: 0px;
+    overflow: hidden;
+    transition: all linear 0.2s;
+    box-shadow: 0px 0px 5px black;
+
+}
+
+.packVis .packV_spop_date li {
+    position: relative;
+    cursor: pointer;
+    line-height: 50px;
+    padding-left: 15px;
+    z-index: 20;
+}
+
+.packVis .packV_spop_date li::after {
+    content: "";
+    background: lightgray;
+    width: 240px;
+    height: 1px;
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: 50px;
+}
+
+.packVis .packV_spop_date li:last-child::after {
+    display: none;
+}
+
+.packVis .packV_spop_people {
+    z-index: 20;
+    position: absolute;
+    left: 750px;
+    top: 400px;
+    background: #fff;
+    width: 250px;
+    height: 0px;
+    line-height: 50px;
+    padding-left: 15px;
+    overflow: hidden;
+    transition: all linear 0.2s;
+    box-shadow: 0px 0px 5px black;
+    box-sizing: border-box;
+}
+
+.packVis .packV_spop_people p {
+    position: relative;
+}
+
+.packVis .packV_spop_people p em {
+    color: black;
+}
+.packVis .packV_spop_people .ol , .packVis .packV_spop_people .yo{
+    padding: 0px 10px;
+}
+
+.packVis .packV_spop_people .packV_btn_o {
+    cursor: pointer;
+    border: none;
+    vertical-align: middle;
+}
+.packVis .packV_spop_people .packV_btn_o_prev, .packVis .packV_spop_people .packV_btn_y_prev {
+    margin-left: 90px;
+}
+
+.packVis .packV_spop_people .packV_btn_o i {
+    font-size: 18px;
+}
+
+.packVis .packV_spop_people .packV_btn_y {
+    cursor: pointer;
+    border: none;
+    vertical-align: middle;
+}
+.packVis .packV_spop_people .packV_btn_y i {
+    font-size: 18px;
+}
+.packVis .packV_spop_people p:first-child::after {
+    content: "";
+    background: lightgray;
+    width: 240px;
+    height: 1px;
+    display: block;
+    position: absolute;
+    left: -10px;
+    top: 50px;
+}
+
+/* ==========================================package_main */
+.packCon .packCon_add {
+    width: 1200px;
+    height: 200px;
+    background-image: url(../images/package/pack_main_bn.png);
+    background-position: 20% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 50px auto;
+}
+
+.packCon_main .packCon_main_menu {
+    display: flex;
+}
+
+.packCon_main .packCon_main_menu li {
+    background: #D8F1F1;
+    width: 400px;
+    height: 60px;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 30px;
+    transition: 0.5s;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+.packCon_main .packCon_main_menu li:hover::after {
+    content: "";
+    width: 396px;
+    height: 56px;
+    border: 2px solid #1288AC;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+}
+
+.packCon_main .packCon_main_menu li.on {
+    background: #1288AC;
+    color: #fff;
+}
+
+.packCon_main .packCon_main_con {
+    overflow: hidden;
+    height: 760px;
+}
+
+
+.packCon_main .packCon_main_con .city_jeju li.on {
+    display: block;
+}
+
+.packCon_main .packCon_main_con .city_seo li.on {
+    display: block;
+}
+
+.packCon_main .packCon_main_con ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.packCon_main .packCon_main_con ul li {
+    width: 280px;
+    margin-bottom: 30px;
+    height: 350px;
+    display: none;
+}
+.packCon_main .packCon_main_con ul li a {
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.packCon_main .packCon_main_con ul li a div.ho {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 250px;
+    height: 170px;
+}
+
+.packCon_main .packCon_main_con ul li a div.ho i {
+    display: block;
+    text-align: center;
+    padding-top: 45px;
+    font-size: 50px;
+    color: #fff;
+}
+
+.packCon_main .packCon_main_con ul li a div.ho p {
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+
+}
+
+.packCon_main .packCon_main_con ul li a::before {
+    content: "";
+    display: block;
+    width: 280px;
+    height: 180px;
+    background: #000;
+    position: absolute;
+    left: 0px;
+    top: -3px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.packCon_main .packCon_main_con ul li a:hover::before {
+    opacity: 0.6;
+}
+
+
+.packCon_main .packCon_main_con ul li img {
+    width: 280px;
+    height: 180px;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+
+.packCon_main .packCon_main_con ul li h3 {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 13px 0px 3px 10px;
+}
+
+.packCon_main .packCon_main_con ul li em {
+    display: block;
+    margin-left: 10px;
+}
+
+.packCon_main .packCon_main_con ul li a div {
+    margin: 0px 10px;
+}
+
+.packCon_main .packCon_main_con ul li div strong {
+    color: tomato;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.packCon_main .packCon_main_con ul li div b {
+margin-left: 10px;
+    color: #999;
+    text-decoration-line: line-through;
+    font-size: 14px;
+}
+
+.packCon_main .packCon_main_con ul li div h4 {
+margin-left: 10px;
+display: inline-block;
+    color: #000;
+    font-size: 20px;
+}
+
+.packCon_main .packCon_main_con ul li button {
+    position: absolute;
+    right: 15px;
+    bottom: -50px;
+    border-radius: 5px;
+    border: 1px dashed #1288AC;
+    background: transparent;
+    font-size: 18px;
+    padding: 5px 10px;
+    color: #1288AC;;
+}
+
+.packCon_main .more {
+    display: block;
+    margin: auto;
+    width: 280px;
+    height: 60px;
+    border: none;
+    font-size: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    text-shadow: 0px 0px 5px white;
+    background: #1288AC;
+    color: #fff;
+    position: relative;
+}
+
+.packCon_main .more:hover::after {
+    content: "";
+    display: block;
+    width: 280px;
+    height: 60px;
+    border-radius: 10px;
+    background: #fff;
+    opacity: 0.3;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.packCon_main .more.off {
+    display: none;
+}
+
+.packCon_main .pack_pop_bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.4;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.packCon_main .pack_pop_bg.on {
+    display: block;
+    z-index: 50;
+}
+
+.packCon_main .pack_popup {
+    display: none;
+    width: 800px;
+    height: 700px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    z-index: 100;
+}
+
+.packCon_main .pack_popup.on {
+    display: block;
+}
+
+.packCon_main .pack_popup .pop_bg {
+    width: 800px;
+    height: 80px;
+    border-radius: 15px 15px 0px 0px;
+    background: skyblue;
+}
+
+.packCon_main .pack_popup .pop_bg li {
+    display: none;
+}
+
+.packCon_main .pack_popup .pop_bg li.on {
+    display: block;
+}
+
+.packCon_main .pack_popup .pop_bg h3 {
+    font-size: 35px;
+    width: 500px;
+    height: 80px;
+    line-height: 80px;
+    padding-left: 50px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.packCon_main .pack_popup .pop_bg .close {
+    position: absolute;
+    right: 40px;
+    top: 0px;
+    border: none;
+    text-align: center;
+    background: transparent;
+
+}
+
+.packCon_main .pack_popup .pop_bg .close i:hover {
+    transform: scale(1.3);
+}
+
+.packCon_main .pack_popup .pop_bg .close i {
+    font-size: 33px;
+    line-height: 80px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #fff;
+}
+
+.packCon_main .pack_popup .pop_in li {
+    display: none;
+    flex-wrap: wrap;
+    padding: 30px 50px;
+    justify-content: space-between;
+}
+
+.packCon_main .pack_popup .pop_in li.on {
+    display: flex;
+}
+
+
+.packCon_main .pack_popup .mainimg img {
+    width: 460px;
+    border-radius: 10px;
+    height: 300px
+}
+
+.packCon_main .pack_popup .subimg img:nth-child(1) {
+    margin-bottom: 33px;
+}
+
+.packCon_main .pack_popup .subimg img {
+    width: 200px;
+    height: 135px;
+    display: block;
+    border-radius: 10px;
+}
+
+.packCon_main .pack_popup .txt {
+    width: 800px;
+}
+
+.packCon_main .pack_popup .txt .info {
+    margin: 0px 50px 0px 50px;
+    padding-top: 15px;
+    border-top: 1px solid skyblue;
+}
+
+.packCon_main .pack_popup .txt .info li {
+    display: none;
+}
+
+.packCon_main .pack_popup .txt .info li.on {
+    display: block;
+}
+
+.packCon_main .pack_popup .txt .info strong {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.packCon_main .pack_popup .txt .info p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.packCon_main .pack_popup .txt button {
+    position: absolute;
+    right: 50px;
+    bottom: 60px;
+    border: none;
+    border-radius: 10px;
+    font-size: 23px;
+    font-weight: 700;
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.packCon_main .pack_popup .txt button:nth-of-type(1) {
+    background: #bce6f0;
+}
+
+.packCon_main .pack_popup .txt button:nth-of-type(2) {
+    background: #cbe9f1;
+}
+#pack_group_sale {
+    background-position: 0 0;
+    background-image: url(../images/package/bg-banner-car.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    margin-top: 50px;
+}
+#pack_group_sale h2{font-size: 30px; color:#fff; padding: 40px 0px; text-shadow: 0px 0px 5px #777;}
+#pack_group_sale h2 span{ font-weight: 700;}
+#pack_group_sale ul{ display: flex; justify-content: space-between; }
+#pack_group_sale ul li{display: flex;}
+#pack_group_sale ul li i{width: 80px; height: 80px; font-size: 50px; color: #fff; border-radius: 50%; border: 3px solid #fff; text-align: center; line-height: 80px; }
+#pack_group_sale ul li div{ margin-left: 30px;}
+#pack_group_sale ul li div strong{font-size: 18px; color: #fff;text-shadow: 0px 0px 5px #777; display: block; font-weight: 700;}
+#pack_group_sale ul li div p{  color: #fff;text-shadow: 0px 0px 5px #777;}
+/* ==============================================================tour_visual */
+.tourVis {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tourVis .tour_banner {
+    position: relative;
+}
+
+.tourVis .tour_banner li {
+    width: 100%;
+    height: 700px;
+    position: absolute;
+    left: -100%;
+    z-index: -10;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    transition: 2s
+}
+
+.tourVis .tour_banner li:nth-child(1) {
+    background-image: url(../images/tour_banner/tour_banner2.png);
+    left: 0%;
+    z-index: 10;
+}
+
+.tourVis .tour_banner li:nth-child(2) {
+    background-image: url(../images/tour_banner/tour_banner3.png);
+    left: 100%;
+}
+
+.tourVis .tour_banner li:nth-child(3) {
+    background-image: url(../images/tour_banner/tour_banner4.png);
+    left: -100%;
+}
+.tourVis .tour_banner li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* jeju_visual버튼 */
+.tourVis .tour_paging_bg {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%);
+    z-index: 100;
+}
+
+.tourVis .tour_paging_bg li {
+    width: 100px;
+    height: 10px;
+    background: #fff;
+    margin-right: 10px;
+    float: left;
+    border-radius: 5px;
+
+}
+
+.tourVis .tour_paging {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%);
+    z-index: 100;
+}
+
+.tourVis .tour_paging li {
+    cursor: pointer;
+    width: 100px;
+    height: 10px;
+    background: #fff;
+    margin-right: 10px;
+    float: left;
+    z-index: 100;
+    border-radius: 5px;
+
+}
+
+.tourVis .tour_paging li.on {
+    background: skyblue;
+    z-index: 10;
+    animation: stretchRight 3s linear;
+    transform-origin: 0% 0%;
+}
+
+@keyframes stretchRight {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+/* =======================================================tour_main */
+.tour .tour_search {
+    margin-top: 50px;
+    width: 1200px;
+    height: 150px;
+    /* border-radius: 5px; */
+    border-top: 2px solid #1288AC;
+    background: #D8F1F1;
+    box-sizing: border-box;
+}
+
+.tour .tour_search ul{
+    width: 100%;
+    height: 140px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.tour .tour_search ul li label{
+    display: block;
+    font-size: 23px; 
+    width: 100px;
+    height: 20px;
+    margin: 25px 0px 25px 0;
+    font-weight: 700;
+}
+.tour .tour_search ul li input[type=text]{
+    width: 450px; height: 40px; outline: none;
+    padding-left: 10px; border: 1px solid #1288AC;
+    border-radius: 5px;
+    
+}
+.tour .tour_search ul li input[type=submit]{
+    color:#fff;
+    background: #1288AC;
+    font-weight: 700;
+    border-radius: 5px;
+    width: 150px; height: 45px;
+    cursor: pointer;
+    margin-top: 70px;
+    border: none;
+    font-size: 20px;
+    text-indent: 25px;
+}
+.tour .tour_search ul li:last-child{
+    position: relative;
+}
+.tour .tour_search ul li i{
+    color:#fff;
+    font-size: 25px;
+    position: absolute;
+    top: 80px;
+    left: 35px;
+}
+
+
+.tour .tour_info {
+    width: 100%;
+    margin-top: 50px;
+    overflow: hidden;
+    height: 1070px;
+}
+
+.tour .tour_info li a {
+    border-top: 1px solid #999;
+    width: 100%;
+    padding: 30px 0px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tour .tour_info li:last-child {
+    border-bottom: 1px solid #999;
+    margin-bottom: 50px;
+}
+
+.tour .tour_info li img {
+    width: 280px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.tour .tour_info li .tour_txt {
+    width: 650px;
+    margin-top: 20px;
+}
+
+.tour .tour_info li .tour_txt .txt_span {
+    margin-top: 20px;
+}
+
+.tour .tour_info li .tour_txt .txt_span span {
+    border: 1px solid #1288AC;
+    color: #1288AC;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.tour .tour_info li .tour_txt strong {
+    display: block;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    transition: 0.5s;
+    transform-origin: 0 0;
+}
+.foodCon .tour_info li .tour_txt strong {
+    margin-bottom: 10px;
+}
+
+.tour .tour_info li:hover strong {
+    transform: scale(1.2);
+}
+
+.tour .tour_info li .tour_txt em b {
+    color: tomato;
+}
+
+.tour .tour_info li .tour_price {
+    width: 120px;
+    position: relative;
+}
+
+.tour .tour_info li .tour_price em {
+    text-align: center;
+    display: block;
+    margin-top: 50px;
+    color: #999;
+    text-decoration-line: line-through;
+}
+
+.tour .tour_info li .tour_price p {
+    text-align: center;
+    color: tomato;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.tour .tour_info li .tour_price strong {
+    position: absolute;
+    left: 49%;
+    top: 150px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 20px;
+    border: 1px dashed #1288AC;
+}
+
+
+.tour .tour_main .more {
+    display: block;
+    margin: auto;
+    width: 280px;
+    height: 60px;
+    border: none;
+    font-size: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: #1288AC;
+    color: #fff;
+    position: relative;
+}
+
+.tour .tour_main .more:hover {
+    opacity: 0.6;
+}
+
+.tour_bottom{
+    background-position: 0 0;
+    background-image: url(../images/tour_banner/bg-re.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 100%;
+    margin: 50px 0px;
+}
+.tour_bottom h2{font-size: 40px; text-align: center; color: #fff ;font-weight: 700; padding-top: 70px;}
+.tour_bottom ul{display: flex; width: 1200px; height: 330px; justify-content: space-between; align-items: center;margin-top: 50px; }
+.tour_bottom ul li{width: 250px; height: 330px; background: rgba(255,255,255,0.5); border-radius: 10px; transition: 0.2s;}
+.tour_bottom ul li:hover{transform: scale(1.1);}
+.tour_bottom ul li img{width: 250px; height: 180px; border-radius: 10px 10px 0px 0px;}
+.tour_bottom ul li h3{text-align: center; font-weight: 700; font-size: 20px; margin-top: 20px;}
+.tour_bottom ul li p{text-align: center; font-size: 15px; margin-bottom: 10px;}
+.tour_bottom ul li div{ text-align: center;}
+.tour_bottom ul li div span{ color: #999; text-decoration: line-through;font-size: 15px;}
+.tour_bottom ul li div strong{ padding-left: 20px; color: tomato; font-size: 20px;}
+
+
+

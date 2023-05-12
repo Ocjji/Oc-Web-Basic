@@ -1,0 +1,507 @@
+#wrap {
+    width: 100%;
+}
+
+#header {
+    width: 100%;
+    height: 15.3846vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header h1 {}
+
+#header h1 img {
+    width: 23.0769vw;
+}
+
+#header .all-menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 15.3846vw;
+    height: 15.3846vw;
+    text-align: center;
+    background: tomato;
+}
+
+#header .all-menu i {
+    font-size: 7.6923vw;
+    color: white;
+    line-height: 15.3846vw;
+}
+
+.bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #000;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    z-index: 10;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.bg.on {
+    opacity: 0.7;
+    pointer-events: auto;
+}
+
+#nav {
+    width: 80%;
+    height: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    right: -80%;
+    top: 0;
+    z-index: 100;
+    background: tan;
+    padding: 20.5128vw 12.8205vw;
+    transition: 0.3s;
+}
+
+#nav.on {
+    right: 0;
+}
+
+#nav .top-menu {
+    position: absolute;
+    left: 5.1282vw;
+    top: 5.1282vw;
+    display: flex;
+}
+
+#nav .top-menu li {
+    margin-right: 5.1282vw;
+    position: relative;
+}
+
+#nav .top-menu li::after {
+    content: "";
+    width: 0.2564vw;
+    display: block;
+    height: 4.6154vw;
+    background: white;
+    position: absolute;
+    right: -2.5641vw;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#nav .top-menu li:last-child::after {
+    display: none;
+}
+
+#nav .top-menu li a {
+    font-size: 4.6154vw;
+    font: 641.0256vw;
+    color: white;
+}
+
+#nav .top-menu li a {}
+
+#nav .gnb {}
+
+#nav .gnb li {}
+
+#nav .gnb li a {
+    display: block;
+    font-size: 5.5556vw;
+    font-weight: 500;
+    color: white;
+    line-height: 13.8889vw;
+    border-bottom: 0.2778vw solid gray;
+}
+
+#nav .gnb li ul {
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+#nav .gnb li.m1 ul.on {
+    height: 83.3333vw;
+}
+
+#nav .gnb li.m2 ul.on {
+    height: 55.5556vw;
+}
+
+#nav .gnb li.m3 ul.on {
+    height: 55.5556vw;
+}
+
+#nav .gnb li.m4 ul.on {
+    height: 27.7778vw;
+}
+
+#nav .gnb li.m5 ul.on {
+    height: 0.0000vw;
+}
+
+#nav .gnb li ul li a {
+    font-size: 4.4444vw;
+    list-style: 11.1111vw;
+    background: rgba(255, 255, 255, 0.1);
+    text-indent: 5.5556vw;
+}
+
+#nav .close {
+    position: absolute;
+    right: 5.5556vw;
+    top: 5.5556vw;
+}
+
+#nav .close i {
+    font-size: 9.7222vw;
+    color: white;
+}
+
+#visual .swiper-slide .visual-txt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align-last: left;
+    padding-left: 11.1111vw;
+}
+
+#visual .swiper-slide .visual-txt h2 {
+    font-size: 13.8889vw;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 8.3333vw;
+}
+
+#visual .swiper-slide .visual-txt p {
+    font-size: 5.5556vw;
+}
+
+#container {}
+
+#content {}
+
+.main .con-box {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    width: 100%;
+}
+
+.main .p80 {
+    padding: 22.2222vw 0;
+}
+
+.main .con-box h2 {
+    font-size: 5.5556vw;
+    font-weight: 700;
+    color: tomato;
+    margin-bottom: 4.1667vw;
+    text-align: center;
+    position: relative;
+}
+
+.main .about h2::after {
+    content: "";
+    width: 0.5556vw;
+    height: 11.1111vw;
+    background: tomato;
+    position: absolute;
+    top: -13.8889vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main .con-box h2+p {
+    font-size: 5.0000vw;
+    text-align: center;
+    margin-bottom: 8.3333vw;
+}
+
+.main .con-box .more {
+    text-align: center;
+    margin-top: 8.3333vw;
+    font-size: 4.1667vw;
+    color: tomato;
+}
+
+.main .con-box .more a {
+    font-size: 3.8889vw;
+    color: tomato;
+    font-weight: 500;
+}
+
+.main .about-img {
+    height: 44.4444vw;
+    background-position: 0 0;
+    background-size: cover;
+    background-image: url(../images/about_bg1.png);
+    background-attachment: fixed;
+}
+
+.main .brand {
+    width: 100%;
+    overflow: hidden;
+}
+
+.main .brand .brand-logo ul {
+    display: flex;
+    position: relative;
+    width: 400%;
+}
+
+.main .brand .brand-logo ul li {
+    width: 25%;
+    border: 0.2778vw solid gray;
+    box-sizing: border-box;
+    background: white;
+    margin-left: -0.2778vw;
+    transition: 1s;
+}
+
+.main .brand .brand-logo ul li img {
+    width: 100%;
+}
+
+.main .brand .brand-article {
+    width: 100%;
+}
+
+.main .brand .brand-article .swiper-slide {
+    display: block;
+    /* margin-bottom: 11.1111vw; */
+}
+
+.main .brand .brand-article img {
+    width: 88.8889vw;
+    margin: 0 auto;
+}
+
+.main .brand .brand-article .brand-txt {
+    margin-top: 22.2222vw;
+}
+
+.main .brand .brand-article .brand-txt strong {
+    font-size: 6.9444vw;
+    font-weight: 700;
+    color: tomato;
+}
+
+.main .brand .brand-article .brand-txt p {
+    font-size: 4.1667vw;
+    margin-bottom: 6.9444vw;
+    margin-top: 4.1667vw;
+}
+
+.main .brand .brand-article .brand-txt p {}
+
+.main .brand .brand-list .swiper-pagination {
+    bottom: 47.2222vw;
+}
+
+.main .store {
+    height: 50.0000vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    background-image: url(../images/store_bg.png);
+    margin-top: 22.2222vw;
+    box-sizing: border-box;
+    padding: 6.9444vw;
+}
+
+.main .store strong {
+    color: tomato;
+    font-weight: 700;
+    text-align: right;
+    margin-bottom: 5.5556vw;
+    font-size: 4.4444vw;
+}
+
+.main .store strong+p {
+    color: white;
+    text-align: right;
+    font-size: 4.4444vw;
+}
+
+.main .store .more {
+    text-align: right;
+    margin-top: 4.1667vw;
+    font-size: 5.0000vw;
+}
+
+.main .store .more i {
+    color: white;
+}
+
+.main .news {}
+
+.main .news .news-tab {
+    margin: 11.1111vw 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main .news .news-tab li {
+    font-size: 5.0000vw;
+    margin-right: 4.1667vw;
+    font-weight: 700;
+}
+
+.main .news .news-tab li.on {
+    color: tomato;
+}
+
+.main .news .box {
+    width: 91.6667vw;
+    box-sizing: border-box;
+    margin: auto;
+    border: 0.2778vw solid lightgray;
+    padding: 4.1667vw;
+    position: relative;
+    box-shadow: 1.3889vw 1.3889vw 1.3889vw lightgray;
+    display: none;
+}
+
+.main .news .box.on {
+    display: block;
+}
+
+.main .news .box ul {}
+
+.main .news .box ul li {
+    border-bottom: 0.2778vw solid lightgray;
+    display: flex;
+    height: 16.6667vw;
+    position: relative;
+    flex-direction: column;
+    margin-top: 2.7778vw;
+}
+
+.main .news .box ul li:last-child {
+    border-bottom: none;
+}
+
+.main .news .box ul li span {}
+
+.main .news .box ul li p {
+    width: 90%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+.main .news .box ul li i {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.main .news .more {
+    position: absolute;
+    right: 0;
+    top: -16.6667vw;
+}
+
+.main .news .more i {
+    font-size: 5.5556vw;
+}
+
+.main .esg {
+    width: 100%;
+    height: 50.0000vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/esg_bg.png);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.site {
+    background: black;
+    border-bottom: 0.5556vw solid white;
+}
+
+.site .inner {
+    padding: 0 5.5556vw;
+    height: 16.6667vw;
+    position: relative;
+}
+
+.site .inner .title {
+    display: flex;
+    height: 16.6667vw;
+    color: white;
+    line-height: 16.6667vw;
+    font-size: 4.4444vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site .inner ul {
+    position: absolute;
+    background: #000;
+    left: 0;
+    bottom: 16.6667vw;
+    transition: 0.3s;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+}
+
+.site .inner ul.on {
+    height: 113.3333vw;
+}
+
+.site .inner ul li a {
+    display: block;
+    line-height: 13.8889vw;
+    color: white;
+    border-bottom: 0.2778vw solid gray;
+    font-size: 4.4444vw;
+    box-sizing: border-box;
+    padding: 0 5.5556vw;
+}
+
+
+
+.top {
+    position: fixed;
+    right: 5.5556vw;
+    bottom: 5.5556vw;
+    width: 11.1111vw;
+    height: 11.1111vw;
+    border-radius: 50%;
+    background: tomato;
+    text-align: center;
+    z-index: 80;
+}
+
+.top i {
+    color: white;
+    line-height: 11.1111vw;
+    font-size: 5.5556vw;
+}
+
+#footer {
+    width: 100%;
+    height: 88.8889vw;
+    background: #000;
+}
