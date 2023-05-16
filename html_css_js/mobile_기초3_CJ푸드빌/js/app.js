@@ -9,7 +9,7 @@ const getAll = (target) => {
     return document.querySelectorAll(target);
 }
 const common = () => {
-    let $links = getAll('a[href="#]');
+    let $links = getAll('a[href="#"]');
     $links.forEach(link => {
         link.addEventListener('click', e => {
             e.preventDefault();

@@ -3415,6 +3415,7 @@ function qna() {
         '저는 여행계약서가 왔는데 동행자는 문자나 이메일 등 아무것도 받지 못했습니다. 어떻게 확인할 수 있나요?',
         '저는 확정이라 여행계약서를 동의했는데 동행자는 대기입니다. 여행계약서를 어떻게 확인할 수 있나요?'
     ];
+    // 자주찾는질문 제목 배열
     const qnaArrListAns = [
         '<p>대부분의 여행 지역은 탑승일 기준으로 여권의 유효기간이 6개월 이상 남아있도록 하는 것을 권장하고 있습니다.&nbsp;</p><p><br></p><p>여권의 유효기간이 여유 있지 않은 경우 현지 공항의 출입국 사무소 직원의 판단 하에 입국에 문제가 생길 수 있는 등,</p><p>예상치 못한 문제들이 발생될 수 있으므로 문제의 소지 없도록 당사에서는 6개월 이상으로 안내 드리고 있는 점 참고 부탁드리겠습니다.</p>',
         '<p><span style="color: rgb(184, 49, 47);">여행계약서는 여행 출발전까지 동의해야 합니다.</span></p><p><br></p><p>또한 예약한 여행 상품에 변경 사항이 발생할 경우 재발송 되며 수신한 여행계약서는 모두 여행자 본인의 확인 및 동의가 필요합니다.</p><p><br></p><p>동의한 여행계약서는 여행이 종료되는 귀국일까지 언제든지 확인이 가능합니다.</p>',
@@ -3427,6 +3428,7 @@ function qna() {
         '<p>대표적으로 다음의 2가지 경우에 해당합니다.</p><p><br></p><p><span style="font-weight: 600;">1) 예약이 확정 되지 않은 경우</span></p><p><span style="color: rgb(184, 49, 47);">예약 대기 상태일 경우 여행계약서가 발송되지 않습니다.</span> 예약이 확정되면 확정 후 익일에 카카오 알림톡으로 여행계약서가 발송됩니다.</p><p><br></p><p><span style="font-weight: 600;">2) 정확한 고객 정보가 입력되지 않은 경우</span></p><p><span style="color: rgb(184, 49, 47);">예약 시 고객의 정확한 휴대폰 번호 또는 이메일 주소가 입력되지 않았을 경우</span>여행계약서를 수신할 수 없습니다.&nbsp;</p><p><br></p><p><span style="font-weight: 600;">하나투어 홈페이지 또는 앱을 통해 예약 상태 및 여행자 정보를 확인하여 주시고 고객 정보 변경 등 예약 관련 각종 문의 사항은 예약 담당자를 통해 확인해 주시기 바랍니다.</span></p>',
         '<p>여행계약서는 예약상태가 [예약확정]일 때만 발송됩니다.&nbsp;</p><p><span style="color: rgb(184, 49, 47);">[대기예약]인 경우 예약 상태가 [예약확정]이 변경되면 해당 여행자의 입력된 휴대폰 번호로 여행계약서 알림톡이 발송</span>되며, 받으신 알림톡 내 링크 주소로 접속하면 여행계약서 내용 확인 및 동의를 하실 수 있습니다.</p>'
     ];
+    // 자주찾는질문 내용 배열
 
     const qnaList = document.querySelector('.qna-list'); // 질문 리스트
     const qnaPaging = document.querySelectorAll('.qna-paging span');
@@ -3464,9 +3466,7 @@ function qna() {
                 }
             })
         })
-
     }
-
     makeqnalist();
 }
 
@@ -3693,6 +3693,8 @@ function index() {
         }
     })
 
+
+    /// 자유여행 추천
     btnFreeTravelNext.addEventListener('click', e => {
         FreeTravelListLeft -= 305;
         if (FreeTravelListLeft < -2460) { FreeTravelListLeft = -2440; }
@@ -3823,7 +3825,8 @@ function index() {
             let nowColumn = nowRow.insertCell();        // 열 추가
         }
 
-        for (let nowDay = firstDate; nowDay <= lastDate; nowDay.setDate(nowDay.getDate() + 1)) {   // day는 날짜를 저장하는 변수, 이번달 마지막날까지 증가시키며 반복  
+        for (let nowDay = firstDate; nowDay <= lastDate; nowDay.setDate(nowDay.getDate() + 1)) {
+            // day는 날짜를 저장하는 변수, 이번달 마지막날까지 증가시키며 반복  
 
             let nowColumn = nowRow.insertCell();        // 새 열을 추가하고
 
@@ -3843,7 +3846,9 @@ function index() {
             if (nowDay < today) {                       // 지난날인 경우
                 newDIV.className = "pastDay";
             }
-            else if (nowDay.getFullYear() == today.getFullYear() && nowDay.getMonth() == today.getMonth() && nowDay.getDate() == today.getDate()) { // 오늘인 경우           
+            else if (nowDay.getFullYear() == today.getFullYear()
+                && nowDay.getMonth() == today.getMonth()
+                && nowDay.getDate() == today.getDate()) { // 오늘인 경우           
                 newDIV.className = "today";
                 console.log(this);
                 newDIV.onclick = function () { choiceDate(this); }
@@ -3856,164 +3861,20 @@ function index() {
         }
     }
 
-    function buildCalendar_Air() {
-        let firstDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 1);     // 이번달 1일
-        let lastDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, 0);  // 이번달 마지막날
-
-        let tbody_Calendar = document.querySelector(".Calendar_Air > tbody");
-        document.getElementById("calYear_Air").innerText = nowMonth.getFullYear();             // 연도 숫자 갱신
-        document.getElementById("calMonth_Air").innerText = leftPad(nowMonth.getMonth() + 1);  // 월 숫자 갱신
-
-        while (tbody_Calendar.rows.length > 0) {                        // 이전 출력결과가 남아있는 경우 초기화
-            tbody_Calendar.deleteRow(tbody_Calendar.rows.length - 1);
-        }
-
-        let nowRow = tbody_Calendar.insertRow();        // 첫번째 행 추가           
-
-        for (let j = 0; j < firstDate.getDay(); j++) {  // 이번달 1일의 요일만큼
-            let nowColumn = nowRow.insertCell();        // 열 추가
-        }
-
-        for (let nowDay = firstDate; nowDay <= lastDate; nowDay.setDate(nowDay.getDate() + 1)) {   // day는 날짜를 저장하는 변수, 이번달 마지막날까지 증가시키며 반복  
-
-            let nowColumn = nowRow.insertCell();        // 새 열을 추가하고
-
-            if (nowDay.getDay() == 0) {
-                nowColumn.style.color = 'red';
-            }
-
-            let newDIV = document.createElement("p");
-            newDIV.innerHTML = leftPad(nowDay.getDate());        // 추가한 열에 날짜 입력
-            nowColumn.appendChild(newDIV);
-
-            if (nowDay.getDay() == 6) {
-                nowColumn.style.color = 'blue';             // 토요일인 경우
-                nowRow = tbody_Calendar.insertRow();    // 새로운 행 추가
-            }
-
-            if (nowDay < today) {                       // 지난날인 경우
-                newDIV.className = "pastDay";
-            }
-            else if (nowDay.getFullYear() == today.getFullYear() && nowDay.getMonth() == today.getMonth() && nowDay.getDate() == today.getDate()) { // 오늘인 경우           
-                newDIV.className = "today";
-                console.log(this);
-                newDIV.onclick = function () { choiceDate(this); }
-            }
-            else {
-                console.log(this);                           // 미래인 경우
-                newDIV.className = "futureDay";
-                newDIV.onclick = function () { choiceDate(this); }
-            }
-        }
-    }
-    function buildCalendar_Start() {
-        let firstDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 1);     // 이번달 1일
-        let lastDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, 0);  // 이번달 마지막날
-
-        let tbody_Calendar = document.querySelector(".Calendar_Start > tbody");
-        document.getElementById("calYear_Start").innerText = nowMonth.getFullYear();             // 연도 숫자 갱신
-        document.getElementById("calMonth_Start").innerText = leftPad(nowMonth.getMonth() + 1);  // 월 숫자 갱신
-
-        while (tbody_Calendar.rows.length > 0) {                        // 이전 출력결과가 남아있는 경우 초기화
-            tbody_Calendar.deleteRow(tbody_Calendar.rows.length - 1);
-        }
-
-        let nowRow = tbody_Calendar.insertRow();        // 첫번째 행 추가           
-
-        for (let j = 0; j < firstDate.getDay(); j++) {  // 이번달 1일의 요일만큼
-            let nowColumn = nowRow.insertCell();        // 열 추가
-        }
-
-        for (let nowDay = firstDate; nowDay <= lastDate; nowDay.setDate(nowDay.getDate() + 1)) {   // day는 날짜를 저장하는 변수, 이번달 마지막날까지 증가시키며 반복  
-
-            let nowColumn = nowRow.insertCell();        // 새 열을 추가하고
-
-            if (nowDay.getDay() == 0) {
-                nowColumn.style.color = 'red';
-            }
-
-            let newDIV = document.createElement("p");
-            newDIV.innerHTML = leftPad(nowDay.getDate());        // 추가한 열에 날짜 입력
-            nowColumn.appendChild(newDIV);
-
-            if (nowDay.getDay() == 6) {
-                nowColumn.style.color = 'blue';             // 토요일인 경우
-                nowRow = tbody_Calendar.insertRow();    // 새로운 행 추가
-            }
-
-            if (nowDay < today) {                       // 지난날인 경우
-                newDIV.className = "pastDay";
-            }
-            else if (nowDay.getFullYear() == today.getFullYear() && nowDay.getMonth() == today.getMonth() && nowDay.getDate() == today.getDate()) { // 오늘인 경우           
-                newDIV.className = "today";
-                console.log(this);
-                newDIV.onclick = function () { choiceDate(this); }
-            }
-            else {
-                console.log(this);                           // 미래인 경우
-                newDIV.className = "futureDay";
-                newDIV.onclick = function () { choiceDate(this); }
-            }
-        }
-    }
-    function buildCalendar_End() {
-        let firstDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 1);     // 이번달 1일
-        let lastDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, 0);  // 이번달 마지막날
-
-        let tbody_Calendar = document.querySelector(".Calendar_End > tbody");
-        document.getElementById("calYear_End").innerText = nowMonth.getFullYear();             // 연도 숫자 갱신
-        document.getElementById("calMonth_End").innerText = leftPad(nowMonth.getMonth() + 1);  // 월 숫자 갱신
-
-        while (tbody_Calendar.rows.length > 0) {                        // 이전 출력결과가 남아있는 경우 초기화
-            tbody_Calendar.deleteRow(tbody_Calendar.rows.length - 1);
-        }
-
-        let nowRow = tbody_Calendar.insertRow();        // 첫번째 행 추가           
-
-        for (let j = 0; j < firstDate.getDay(); j++) {  // 이번달 1일의 요일만큼
-            let nowColumn = nowRow.insertCell();        // 열 추가
-        }
-
-        for (let nowDay = firstDate; nowDay <= lastDate; nowDay.setDate(nowDay.getDate() + 1)) {   // day는 날짜를 저장하는 변수, 이번달 마지막날까지 증가시키며 반복  
-
-            let nowColumn = nowRow.insertCell();        // 새 열을 추가하고
-
-            if (nowDay.getDay() == 0) {
-                nowColumn.style.color = 'red';
-            }
-
-            let newDIV = document.createElement("p");
-            newDIV.innerHTML = leftPad(nowDay.getDate());        // 추가한 열에 날짜 입력
-            nowColumn.appendChild(newDIV);
-
-            if (nowDay.getDay() == 6) {
-                nowColumn.style.color = 'blue';             // 토요일인 경우
-                nowRow = tbody_Calendar.insertRow();    // 새로운 행 추가
-            }
-
-            if (nowDay < today) {                       // 지난날인 경우
-                newDIV.className = "pastDay";
-            }
-            else if (nowDay.getFullYear() == today.getFullYear() && nowDay.getMonth() == today.getMonth() && nowDay.getDate() == today.getDate()) { // 오늘인 경우           
-                newDIV.className = "today";
-                console.log(this);
-                newDIV.onclick = function () { choiceDateEnd(this); }
-            }
-            else {
-                console.log(this);                           // 미래인 경우
-                newDIV.className = "futureDay";
-                newDIV.onclick = function () { choiceDateEnd(this); }
-            }
-        }
-    }
-
+    // 달력 보이기 or 안보이기 패키지
+    startTravelDate.addEventListener('click', e => {
+        startTravelDate.classList.toggle('on');
+        startTravelCalendar.classList.toggle('on');
+    })
 
     let packageStartDate = null;
-    let packageEndDate = null;
+
     // 날짜 선택
     function choiceDate(newDIV) {
-        if (document.getElementsByClassName("choiceDay")[0]) {                              // 기존에 선택한 날짜가 있으면
-            document.getElementsByClassName("choiceDay")[0].classList.remove("choiceDay");  // 해당 날짜의 "choiceDay" class 제거
+        if (document.getElementsByClassName("choiceDay")[0]) {
+            // 기존에 선택한 날짜가 있으면
+            document.getElementsByClassName("choiceDay")[0].classList.remove("choiceDay");
+            // 해당 날짜의 "choiceDay" class 제거
         }
         console.log(newDIV);
         newDIV.classList.add("choiceDay");           // 선택된 날짜에 "choiceDay" class 추가
@@ -4046,6 +3907,174 @@ function index() {
         startTravelCalendarHotel.classList.remove('on');
     }
 
+
+
+
+    function buildCalendar_Air() {
+        let firstDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 1);     // 이번달 1일
+        let lastDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, 0);  // 이번달 마지막날
+
+        let tbody_Calendar = document.querySelector(".Calendar_Air > tbody");
+        document.getElementById("calYear_Air").innerText = nowMonth.getFullYear();             // 연도 숫자 갱신
+        document.getElementById("calMonth_Air").innerText = leftPad(nowMonth.getMonth() + 1);  // 월 숫자 갱신
+
+        while (tbody_Calendar.rows.length > 0) {                        // 이전 출력결과가 남아있는 경우 초기화
+            tbody_Calendar.deleteRow(tbody_Calendar.rows.length - 1);
+        }
+
+        let nowRow = tbody_Calendar.insertRow();        // 첫번째 행 추가           
+
+        for (let j = 0; j < firstDate.getDay(); j++) {  // 이번달 1일의 요일만큼
+            let nowColumn = nowRow.insertCell();        // 열 추가
+        }
+
+        for (let nowDay = firstDate; nowDay <= lastDate; nowDay.setDate(nowDay.getDate() + 1)) {
+            // day는 날짜를 저장하는 변수, 이번달 마지막날까지 증가시키며 반복  
+
+            let nowColumn = nowRow.insertCell();        // 새 열을 추가하고
+
+            if (nowDay.getDay() == 0) {
+                nowColumn.style.color = 'red';
+            }
+
+            let newDIV = document.createElement("p");
+            newDIV.innerHTML = leftPad(nowDay.getDate());        // 추가한 열에 날짜 입력
+            nowColumn.appendChild(newDIV);
+
+            if (nowDay.getDay() == 6) {
+                nowColumn.style.color = 'blue';             // 토요일인 경우
+                nowRow = tbody_Calendar.insertRow();    // 새로운 행 추가
+            }
+
+            if (nowDay < today) {                       // 지난날인 경우
+                newDIV.className = "pastDay";
+            }
+            else if (nowDay.getFullYear() == today.getFullYear()
+                && nowDay.getMonth() == today.getMonth()
+                && nowDay.getDate() == today.getDate()) { // 오늘인 경우           
+                newDIV.className = "today";
+                console.log(this);
+                newDIV.onclick = function () { choiceDate(this); }
+            }
+            else {
+                console.log(this);                           // 미래인 경우
+                newDIV.className = "futureDay";
+                newDIV.onclick = function () { choiceDate(this); }
+            }
+        }
+    }
+    function buildCalendar_Start() {
+        let firstDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 1);     // 이번달 1일
+        let lastDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, 0);  // 이번달 마지막날
+
+        let tbody_Calendar = document.querySelector(".Calendar_Start > tbody");
+        document.getElementById("calYear_Start").innerText = nowMonth.getFullYear();             // 연도 숫자 갱신
+        document.getElementById("calMonth_Start").innerText = leftPad(nowMonth.getMonth() + 1);  // 월 숫자 갱신
+
+        while (tbody_Calendar.rows.length > 0) {                        // 이전 출력결과가 남아있는 경우 초기화
+            tbody_Calendar.deleteRow(tbody_Calendar.rows.length - 1);
+        }
+
+        let nowRow = tbody_Calendar.insertRow();        // 첫번째 행 추가           
+
+        for (let j = 0; j < firstDate.getDay(); j++) {  // 이번달 1일의 요일만큼
+            let nowColumn = nowRow.insertCell();        // 열 추가
+        }
+
+        for (let nowDay = firstDate; nowDay <= lastDate; nowDay.setDate(nowDay.getDate() + 1)) {
+            // day는 날짜를 저장하는 변수, 이번달 마지막날까지 증가시키며 반복  
+
+            let nowColumn = nowRow.insertCell();        // 새 열을 추가하고
+
+            if (nowDay.getDay() == 0) {
+                nowColumn.style.color = 'red';
+            }
+
+            let newDIV = document.createElement("p");
+            newDIV.innerHTML = leftPad(nowDay.getDate());        // 추가한 열에 날짜 입력
+            nowColumn.appendChild(newDIV);
+
+            if (nowDay.getDay() == 6) {
+                nowColumn.style.color = 'blue';             // 토요일인 경우
+                nowRow = tbody_Calendar.insertRow();    // 새로운 행 추가
+            }
+
+            if (nowDay < today) {                       // 지난날인 경우
+                newDIV.className = "pastDay";
+            }
+            else if (nowDay.getFullYear() == today.getFullYear()
+                && nowDay.getMonth() == today.getMonth()
+                && nowDay.getDate() == today.getDate()) { // 오늘인 경우           
+                newDIV.className = "today";
+                console.log(this);
+                newDIV.onclick = function () { choiceDate(this); }
+            }
+            else {
+                console.log(this);                           // 미래인 경우
+                newDIV.className = "futureDay";
+                newDIV.onclick = function () { choiceDate(this); }
+            }
+        }
+    }
+    function buildCalendar_End() {
+        let firstDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 1);     // 이번달 1일
+        let lastDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, 0);  // 이번달 마지막날
+
+        let tbody_Calendar = document.querySelector(".Calendar_End > tbody");
+        document.getElementById("calYear_End").innerText = nowMonth.getFullYear();             // 연도 숫자 갱신
+        document.getElementById("calMonth_End").innerText = leftPad(nowMonth.getMonth() + 1);  // 월 숫자 갱신
+
+        while (tbody_Calendar.rows.length > 0) {                        // 이전 출력결과가 남아있는 경우 초기화
+            tbody_Calendar.deleteRow(tbody_Calendar.rows.length - 1);
+        }
+
+        let nowRow = tbody_Calendar.insertRow();        // 첫번째 행 추가           
+
+        for (let j = 0; j < firstDate.getDay(); j++) {  // 이번달 1일의 요일만큼
+            let nowColumn = nowRow.insertCell();        // 열 추가
+        }
+
+        for (let nowDay = firstDate; nowDay <= lastDate; nowDay.setDate(nowDay.getDate() + 1)) {
+            // day는 날짜를 저장하는 변수, 이번달 마지막날까지 증가시키며 반복  
+
+            let nowColumn = nowRow.insertCell();        // 새 열을 추가하고
+
+            if (nowDay.getDay() == 0) {
+                nowColumn.style.color = 'red';
+            }
+
+            let newDIV = document.createElement("p");
+            newDIV.innerHTML = leftPad(nowDay.getDate());        // 추가한 열에 날짜 입력
+            nowColumn.appendChild(newDIV);
+
+            if (nowDay.getDay() == 6) {
+                nowColumn.style.color = 'blue';             // 토요일인 경우
+                nowRow = tbody_Calendar.insertRow();    // 새로운 행 추가
+            }
+
+            if (nowDay < today) {                       // 지난날인 경우
+                newDIV.className = "pastDay";
+            }
+            else if (nowDay.getFullYear() == today.getFullYear()
+                && nowDay.getMonth() == today.getMonth()
+                && nowDay.getDate() == today.getDate()) { // 오늘인 경우           
+                newDIV.className = "today";
+                console.log(this);
+                newDIV.onclick = function () { choiceDateEnd(this); }
+            }
+            else {
+                console.log(this);                           // 미래인 경우
+                newDIV.className = "futureDay";
+                newDIV.onclick = function () { choiceDateEnd(this); }
+            }
+        }
+    }
+
+
+
+
+    let packageEndDate = null;
+
     function choiceDateEnd(newDIV) {
         if (document.getElementsByClassName("choiceDay")[0]) {                              // 기존에 선택한 날짜가 있으면
             document.getElementsByClassName("choiceDay")[0].classList.remove("choiceDay");  // 해당 날짜의 "choiceDay" class 제거
@@ -4076,11 +4105,8 @@ function index() {
         endTravelCalendarHotel.classList.remove('on');
     }
 
-    // 달력 보이기 or 안보이기 패키지
-    startTravelDate.addEventListener('click', e => {
-        startTravelDate.classList.toggle('on');
-        startTravelCalendar.classList.toggle('on');
-    })
+
+
     // 달력 보이기 or 안보이기 항공
     startTravelDateAir.addEventListener('click', e => {
         startTravelDate.classList.toggle('on');
@@ -4165,8 +4191,6 @@ function index() {
         startSelectDepartUl.classList.remove('on');
         startTravelDate.classList.remove('on');
         startTravelCalendar.classList.remove('on');
-        // startTravelDate.classList.remove('on');
-        // 리무브 all 함수 제작 필요 예상
     })
 
     whereToTravelulLi.forEach(element => {
