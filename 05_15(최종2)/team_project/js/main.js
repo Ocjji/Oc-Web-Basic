@@ -688,15 +688,27 @@ function join() {
     const userPassword = document.querySelector(".userPassword");
     const userRePassword = document.querySelector(".userRePassword");
     const NotCollectPassword = document.querySelector(".NotCollectPassword");
-    checkPassword();
-    function checkPassword() {
+    // checkPassword();
+    userRePassword.addEventListener('keyup', e => {
         if (userPassword.value != userRePassword.value) {
             NotCollectPassword.textContent = "비밀번호가 일치하지 않습니다.";
         } else {
             NotCollectPassword.textContent = "비밀번호가 일치합니다.";
         }
-    }
+    })
+    /* function checkPassword() {
+        if (userPassword.value != userRePassword.value) {
+            NotCollectPassword.textContent = "비밀번호가 일치하지 않습니다.";
+        } else {
+            NotCollectPassword.textContent = "비밀번호가 일치합니다.";
+        }
+    } */
+
     // 우편번호
+    const findAddrbtn = document.querySelector('.zipCode td input[type=button]');
+    console.log(findAddrbtn);
+    findAddrbtn.addEventListener('click', e => { sample4_execDaumPostcode(); })
+
     function sample4_execDaumPostcode() {
         new daum.Postcode({
             oncomplete: function (data) {
