@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        body {
+            margin: 50px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 20px 40px;
+        }
+
+        .my-video {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+        }
+
+        .my-video span {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: block;
+            border: 1px solid #fff;
+            text-align: center;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            z-index: 10
+        }
+
+        .my-video span i {
+            font-size: 40px;
+            line-height: 80px;
+            color: #fff
+        }
+
+        .my-video span.on {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con-box">
+        <div class="my-video">
+            <span>
+                <i class="xi-play"></i>
+            </span>
+
+            <video id="vid" src="asset/video1.mp4"></video>
+        </div>
+    </div>
+
+    <script>
+        let vid = document.querySelector('#vid');
+        let btnTogglePlay = document.querySelector('.my-video span');
+
+        btnTogglePlay.addEventListener('click', e => {
+            btnTogglePlay.classList.add('on');
+            vid.play();
+        })
+        vid.addEventListener('click', e => {
+            vid.pause();
+            btnTogglePlay.classList.remove('on');
+        })
+    </script>
+
+
+</body>
+
+</html>

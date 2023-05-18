@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <button class="openPC">PC 화면</button>
+    <button class="openTAB">테블릿 화면</button>
+    <button class="openPHONE">스마트폰 화면</button>
+
+    <script>
+        let openPC = document.querySelector('.openPC');
+        let openTAB = document.querySelector('.openTAB');
+        let openPHONE = document.querySelector('.openPHONE');
+
+        openPC.addEventListener('click', e => {
+            window.open('http://www.naver.com', "_blank", "width=1900, height=1000");
+        })
+        openTAB.addEventListener('click', e => {
+            window.open('http://www.naver.com', "_blank", "width=1024, height=1000");
+        })
+        openPHONE.addEventListener('click', e => {
+            window.open('http://www.naver.com', "_blank", "width=480, height=800");
+        })
+
+
+
+    </script>
+</body>
+
+</html>

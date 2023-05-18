@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        body {
+            margin: 30px;
+        }
+
+        div {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">xxx</div>
+    <div class="box2">xxx</div>
+    <div class="box3">xxx</div>
+    <div class="box4">xxx</div>
+    <script>
+        const dom1 = document.querySelector('.box1');
+        const dom2 = document.querySelector('.box2');
+        const dom3 = document.querySelector('.box3');
+        const dom4 = document.querySelector('.box4');
+
+        dom1.style.width = "200px";
+        dom1.style.height = "50px";
+        dom1.style.fontSize = "15px";
+        dom1.style.border = "1px solid #000";
+        dom1.style.textAlign = "center";
+        dom1.style.lineHeight = "50px";
+
+        const css1 = {
+            width: "250px",
+            height: "50px",
+            fontSize: "15px",
+            border: "1px solid #000",
+            textAlign: "center",
+            lineHeight: "50px"
+        }
+
+        Object.assign(dom2.style, css1);
+
+        const obj1 = {
+            id: 'box',
+            style: `
+            background-color : pink;
+            width : 250px;
+            height : 60px;
+            line-height : 60px;
+            text-align : center;
+            `
+        }
+
+        Object.assign(dom3, obj1);
+
+        const obj2 = {
+            id: 'box',
+            css: {
+                width: "250px",
+                height: "50px",
+                fontSize: "15px",
+                border: "1px solid #000",
+                textAlign: "center",
+                lineHeight: "50px"
+            }
+        }
+
+        Object.assign(dom4, obj2);
+        Object.assign(dom4.style, obj2.css);
+
+    </script>
+</body>
+
+</html>

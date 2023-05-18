@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        div {
+            height: 1000px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2 {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 100px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.5;
+            width: 100%;
+            word-wrap: none;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div>
+        <h2>
+            vanillascript , javascript , vanillascript , javascript , vanillascript , javascript
+        </h2>
+    </div>
+
+    <script>
+        let h2 = document.querySelector('h2');
+        window.addEventListener('scroll', e => {
+            let ty = window.scrollY;
+            h2.style.left = -ty + 'px';
+        })
+    </script>
+
+</body>
+
+</html>

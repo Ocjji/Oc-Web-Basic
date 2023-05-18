@@ -669,8 +669,17 @@ function join() {
         birthMonth.options[index] = new Option(m, m);
         index++;
     }
-    lastday();
-    function lastday() {
+    last_day();
+
+    birthYear.addEventListener('change', e => {
+        console.log('year')
+        last_day();
+    })
+    birthMonth.addEventListener('change', e => {
+        console.log('month')
+        last_day();
+    })
+    function last_day() {
         let Year = birthYear.value;
         let Month = birthMonth.value;
         let day = new Date(new Date(Year, Month, 1) - 86400000).getDate();

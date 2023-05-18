@@ -1,0 +1,26 @@
+#wrap { width: 100%; min-width: 1600px; }
+.inner { width: 1600px; margin: auto; position: relative; box-sizing: border-box;}
+#header { width: 100%;  position: absolute; left: 0; top: 0; z-index: 100; }
+#header .inner{ height: 100px; }
+#header h1 { position: absolute; left: 0; top: 25px; }
+#header .nav {position: absolute; right: 0; top: 40px; }
+#header .nav .gnb {display: flex; }
+#header .nav .gnb li{margin-left: 60px;}
+#header .nav .gnb li a{font-size: 18px; }
+#container {}
+#content {}
+.main {}
+.main .con-box { width: 100%; }
+.main .con-box .inner { padding: 150px 0; height: 1000px; }
+.main .con-box h2.content { text-align: center; font-size: 80px; opacity: 0; transform: scale(0); transition: 1s;}
+.main .con-box h2.content.on {opacity: 1; transform: scale(1); }
+
+.main .con0 { background: beige;}
+.main .con1 { background: pink;}
+.main .con2 { background: salmon;}
+.main .con3 { background: skyblue;}
+.main .con4 { background: tomato;}
+
+.menu { position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 50 }
+.menu li { width: 20px; height: 20px; border-radius: 50%; margin-bottom: 10px; background: #999; cursor: pointer;}
+.menu li.on { background: blueviolet;}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        body {
+            margin: 50px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 20px 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con-box">
+        <p>
+            <button class="play">play</button>
+            <button class="pause">pause</button>
+        </p>
+        <div class="my-video">
+            <video src="asset/video1.mp4"></video>
+        </div>
+    </div>
+
+    <script>
+        let vid = document.querySelector('.my-video video');
+        let arrVid = ['asset/video1.mp4', 'asset/video2.mp4'];
+        let cnt = 0;
+
+        vid.muted = true;
+        vid.play();
+
+        vid.addEventListener('ended', e => {
+            cnt++;
+            if (cnt > arrVid.length - 1) cnt = 0;
+            e.currentTarget.setAttribute('src', arrVid[cnt]);
+            vid.play();
+        })
+    </script>
+
+
+</body>
+
+</html>
