@@ -1,0 +1,12 @@
+.banner-wrap { width: 600px;height: 600px; margin:30px auto; position: relative;  overflow: hidden;}
+.banner-wrap .banner { width: 600px; height: 600px;display: flex; transition: 0.4s; }
+.banner-wrap .banner li { }
+.banner-wrap .banner li img { width: 600px; height: 600px; }
+.banner-wrap .paging { display: flex;position: absolute; left: 50%; bottom: 20px;transform: translateX(-50%); }
+.banner-wrap .paging li { width: 15px; height: 15px; background: orange; border-radius: 50%; margin-right: 10px; }
+.banner-wrap .paging li.on { background: hotpink;} 
+.banner-wrap .btn-wrap {  }
+.banner-wrap .btn-wrap .btn { position: absolute; top: 50%; transform: translateY(-50%); border: none; cursor: pointer; background:rgba(255,255,255,0.5); width: 50px; height: 50px; text-align: center;    }
+.banner-wrap .btn-wrap .btn i{ font-size: 25px; line-height: 50px; margin-left: -5px;}
+.banner-wrap .btn-wrap .prev { left: 0; }
+.banner-wrap .btn-wrap .next { right: 0; }

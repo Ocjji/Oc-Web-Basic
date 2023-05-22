@@ -1,0 +1,8 @@
+.wrap { width: 600px; height: 600px; margin: auto; position: relative; }
+.wrap .photo-wrap img {width: 600px; }
+.wrap .photo-wrap p {font-size: 30px;margin-bottom: 10px;}
+
+.wrap .btn-wrap .btn { position: absolute; top: 50%; transform: translateY(-50%); border: none; cursor: pointer; background:rgba(255,255,255,0.5); width: 50px; height: 50px; text-align: center;    }
+.wrap .btn-wrap .btn i{ font-size: 25px; line-height: 50px; margin-left: -5px;}
+.wrap .btn-wrap .prev { left: 0; }
+.wrap .btn-wrap .next { right: 0; }
