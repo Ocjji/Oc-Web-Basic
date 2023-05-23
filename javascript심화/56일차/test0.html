@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        body {
+            margin: 30px;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            width: 400px;
+            border: 1px solid #000;
+            padding: 20px;
+        }
+
+        .content .box {
+            background: #eee;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .content .box h2 {
+            color: tomato;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .content .box.off {
+            background: #999;
+        }
+
+        .content .box.on {
+            background: yellow;
+        }
+
+        .content .info {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>test</h1>
+    <div class="content">
+        <!-- <div class="info">
+            일정관리 세부리스트
+        </div>
+        <div class="box">
+            <h2>일정관리</h2>
+            <strong>세부 타이틀</strong>
+        </div>
+        <div class="box">
+            <h2>일정관리</h2>
+            <strong>세부 타이틀</strong>
+        </div>
+        <div class="box on">
+            <h2>일정관리</h2>
+            <strong>세부 타이틀</strong>
+        </div>
+        <div class="box off">
+            <h2>일정관리</h2>
+            <strong>세부 타이틀</strong>
+        </div> -->
+    </div>
+    <script>
+        const content = document.querySelector('.content');
+        const make = (element, title = 'Info') => {
+            element.innerHTML += `
+            <div class="box">
+                <h2>${title}</h2>
+                <strong>세부 타이틀</strong>
+            </div>`;
+        } // end make
+
+        const getInfo = () => {
+            return `
+            <div class="info">
+                일정관리 세부리스트
+            </div>`;
+        } // end getInfo
+
+        content.innerHTML += getInfo();
+
+        for (let i = 1; i <= 3; i++) {
+            make(content, `일정관리 ${i}`);
+        }
+
+        // 클래스
+        class BoxList {
+            constructor(element, title) {
+                this.element = element;
+                this.title = title;
+                this.state = 'off';
+            }
+            show() {
+                this.element.innerHTML += `
+                <div class="box ${this.state}">
+                    <h2>일정관리</h2>
+                    <p>세부 타이틀</p>
+                    <p>상태 : ${this.state}</p>
+                    <p>${this.state === 'on' ? '데이터 사용 가능' : '데이터 사용 불가능'}</p>
+                </div>`;
+            }
+        }
+
+        const boxlist = new BoxList(content, '클래스 할일');
+        boxlist.state = 'on';
+        boxlist.show();
+    </script>
+</body>
+
+</html>

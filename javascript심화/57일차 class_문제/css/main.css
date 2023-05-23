@@ -1,0 +1,67 @@
+.banner {
+    margin: 10px auto;
+    width: 600px;
+}
+
+.banner .big-img {
+    width: 600px;
+    margin-bottom: 20px;
+    height: 650px;
+    overflow: hidden;
+}
+
+.banner .big-img img {
+    width: 600px;
+    cursor: pointer;
+}
+
+.banner .big-img p {
+    font-size: 18px;
+    padding: 15px;
+}
+
+.banner .list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.banner .list li {
+    margin-right: 15px;
+    margin-bottom: 15px;
+    padding: 3px;
+    background: #dcdcdc;
+    cursor: pointer;
+}
+
+.banner .list li:nth-child(5) {
+    margin-right: 0;
+}
+
+.banner .list li.on {
+    background: pink;
+}
+
+.banner .list li img {
+    width: 100px;
+    vertical-align: top;
+}
+
+.banner>p {
+    margin-top: 20px;
+}
+
+.banner button {
+    border-radius: 50%;
+    border: 1px solid #000;
+    background: #fff;
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.banner button i {
+    font-size: 25px;
+    line-height: 80px;
+}
