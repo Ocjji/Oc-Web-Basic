@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <style>
+        .gallery {
+            width: 750px;
+            height: 750px;
+            position: relative;
+            margin: 50px auto;
+        }
+
+        .gallery ul {}
+
+        .gallery ul .slide {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+            transition-delay: 0.3s;
+        }
+
+        .gallery ul .slide[data-active] {
+            opacity: 1;
+            transition-delay: 0s;
+        }
+
+        .gallery button {
+            position: absolute;
+            z-index: 10;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            background: #000;
+        }
+
+        .gallery .prev {
+            left: 20px;
+        }
+
+        .gallery .next {
+            right: 20px;
+        }
+
+        .gallery button i {
+            font-size: 30px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="gallery" data-gallery>
+        <ul data-slides>
+            <li class="slide" data-active>
+                <img src="images/img0.jpg" alt="Image #1">
+            </li>
+            <li class="slide">
+                <img src="images/img1.jpg" alt="Image #2">
+            </li>
+            <li class="slide">
+                <img src="images/img2.jpg" alt="Image #3">
+            </li>
+            <li class="slide">
+                <img src="images/img3.jpg" alt="Image #3">
+            </li>
+
+        </ul>
+        <p class="btn-wrap">
+            <button class="gallery-button prev" data-gallery-button="prev"><i class="xi-arrow-left"></i></button>
+            <button class="gallery-button next" data-gallery-button="next"><i class="xi-arrow-right"></i></button>
+        </p>
+    </section>
+    <script>
+        const buttons = document.querySelectorAll('[data-gallery-button]');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', e => {
+                let cnt = btn.dataset.galleryButton === 'next' ? 1 : -1;
+                // let slides = document.querySelector('ul');
+                let slides = btn.closest('[data-gallery]').querySelector('[data-slides]');
+                console.log(slides);
+
+                let dataActive = slides.querySelector('[data-active]');
+                // console.log(...slides);
+                // console.log(...slides.children);
+                console.log([...slides.children].indexOf(dataActive));
+
+                // newCnt = ?
+                let newCnt = [...slides.children].indexOf(dataActive) + cnt;
+                console.log(newCnt);
+
+                if (newCnt < 0) newCnt = slides.children.length - 1;
+                if (newCnt > [...slides.children].length - 1) newCnt = 0;
+                console.log(newCnt);
+
+                slides.children[newCnt].dataset.active = true;
+                delete dataActive.dataset.active;
+            })
+        })
+    </script>
+</body>
+
+</html>
