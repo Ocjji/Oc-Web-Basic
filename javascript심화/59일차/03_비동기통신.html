@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        body {
+            margin: 50px;
+        }
+
+        button {
+            width: 120px;
+            height: 40px;
+        }
+
+        .box {
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #000;
+            margin-top: 20px;
+        }
+
+        .box h1 {
+            font-size: 30px;
+            color: red;
+        }
+
+        .box h2 {
+            font-size: 25px;
+            color: green;
+        }
+
+        .box h3 {
+            font-size: 20px;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn">문서 불러오기</button>
+    <div class="box">
+        <p>데이터 불러오기</p>
+    </div>
+
+    <script>
+        const btn = document.querySelector('.btn');
+        const box = document.querySelector('.box');
+
+        btn.addEventListener('click', e => {
+            const url = './data/data2.html';
+            fetch(url)
+                .then(res => res.text())
+                .then(text => box.insertAdjacentHTML('beforeend', text))
+        })
+    </script>
+</body>
+
+</html>

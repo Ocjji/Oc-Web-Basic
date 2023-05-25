@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <style>
+    </style>
+</head>
+
+<body>
+    <script>
+        // console.log(fetch('./data/data1.json'));
+        fetch('./data/data1.json')
+            .then(res => res.json())
+            .then(res => console.log(res));
+    </script>
+    <pre>
+        fetch('파일경로', 옵션)
+        .then((응답완료) => 응답완료.json())
+        .then((JSON받고) => console.log(받은 json파일 출력));
+    </pre>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        .box {
+            width: 600px;
+            margin: 20px auto;
+        }
+
+        .box table {
+            width: 100%;
+        }
+
+        .box .w1 {
+            width: 20%;
+        }
+
+        .box .w2 {
+            width: 30%;
+        }
+
+        .box .w3 {
+            width: auto;
+        }
+
+        .box .w4 {
+            width: 30%;
+        }
+
+        .box th,
+        .box td {
+            text-align: center;
+            vertical-align: middle;
+            height: 40px;
+            border: 1px solid #000;
+            font-size: 20px;
+        }
+
+        .box th {
+            border-bottom-width: 3px;
+        }
+
+        .box tbody tr:nth-child(odd) td {
+            background: lightblue;
+        }
+
+        .box tbody tr:nth-child(even) td {
+            background: lightskyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <table>
+            <caption>학생명단</caption>
+            <colgroup>
+                <col class="w1">
+                <col class="w2">
+                <col class="w3">
+                <col class="w4">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>이름</th>
+                    <th>나이</th>
+                    <th>주소</th>
+                </tr>
+            </thead>
+            <tbody class="table-tbody">
+                <!-- 생성해서 붙이기 -->
+            </tbody>
+        </table>
+    </div>
+    <script>
+        const tbody = document.querySelector('.table-tbody');
+        const url = './data/data3.json';
+        console.log(url);
+
+        axios.get(url)
+            .then(res => maketbody(res.data.item));
+
+        function maketbody(dataItem) {
+            for (const obj of dataItem) {
+                const tr = document.createElement('tr');
+                tbody.append(tr);
+                const td_id = document.createElement('td');
+                const td_name = document.createElement('td');
+                const td_age = document.createElement('td');
+                const td_addr = document.createElement('td');
+                td_id.textContent = obj.id;
+                td_name.textContent = obj.name;
+                td_age.textContent = obj.age;
+                td_addr.textContent = obj.addr;
+                tr.append(td_id, td_name, td_age, td_addr);
+            }
+        }
+    </script>
+</body>
+
+</html>

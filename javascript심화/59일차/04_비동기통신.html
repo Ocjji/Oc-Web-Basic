@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        body {
+            margin: 50px;
+        }
+
+        button {
+            width: 120px;
+            height: 40px;
+        }
+
+        .box {
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #000;
+            margin-top: 20px;
+        }
+
+        .box ul {}
+
+        .box ul li {
+            border: 1px solid #000;
+            padding: 5px 0;
+            margin: 5px 0;
+            font-size: 15px;
+        }
+
+        .box ul li:nth-child(odd) {
+            background: tan;
+        }
+
+        .box ul li:nth-child(even) {
+            background: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn">문서 불러오기</button>
+    <div class="box">
+        <p>데이터 불러오기</p>
+        <ul></ul>
+    </div>
+
+    <script>
+        const btn = document.querySelector('.btn');
+        const box = document.querySelector('.box');
+        const ul = document.querySelector('ul');
+
+        let cnt = 1;
+        btn.addEventListener('click', e => {
+            const url = `https://jsonplaceholder.typicode.com/todos/${cnt}`;
+
+            /* fetch(url)
+                .then(res => res.json())
+                .then(res => {
+                    const li = document.createElement('li');
+                    li.textContent = res.title;
+                    ul.append(li);
+                }); */
+
+            axios.get(url)
+                .then(res => {
+                    make(res.data);
+                });
+
+            function make(data) {
+                const li = document.createElement('li');
+                li.textContent = data.title;
+                ul.append(li);
+            }
+
+            cnt++;
+        })
+
+    </script>
+</body>
+
+</html>

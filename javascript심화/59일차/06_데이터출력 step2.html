@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        .box {
+            width: 600px;
+            margin: 20px auto;
+        }
+
+        .box table {
+            width: 100%;
+        }
+
+        .box .w1 {
+            width: 15%;
+        }
+
+        .box .w2 {
+            width: 20%;
+        }
+
+        .box .w3 {
+            width: 20%;
+        }
+
+        .box .w4 {
+            width: 20%;
+        }
+
+        .box .w5 {
+            width: 25%;
+        }
+
+        .box th,
+        .box td {
+            text-align: center;
+            vertical-align: middle;
+            height: 40px;
+            border: 1px solid #000;
+            font-size: 18px;
+        }
+
+        .box th {
+            border-bottom-width: 3px;
+        }
+
+        .box tbody tr:nth-child(odd) td {
+            background: lightblue;
+        }
+
+        .box tbody tr:nth-child(even) td {
+            background: lightskyblue;
+        }
+
+        .box tbody td .del {
+            width: 60px;
+            height: 30px;
+            background: #000;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .del_all,
+        .recovery_all {
+            width: 150px;
+            height: 40px;
+            background: #000;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            margin: 20px 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <table>
+            <caption>학생명단</caption>
+            <colgroup>
+                <col class="w1">
+                <col class="w2">
+                <col class="w3">
+                <col class="w4">
+                <col class="w5">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>이름</th>
+                    <th>나이</th>
+                    <th>주소</th>
+                    <th>관리</th>
+                </tr>
+            </thead>
+            <tbody class="table-tbody">
+                <!-- 생성해서 붙이기 -->
+            </tbody>
+        </table>
+        <p class="btn-wrap">
+            <button class="del_all">전체 삭제</button>
+            <button class="recovery_all">전체 복구</button>
+        </p>
+    </div>
+    <script>
+        const tbody = document.querySelector('.table-tbody');
+        const btnDeleteAll = document.querySelector('.del_all');
+        const btnRecoveryAll = document.querySelector('.recovery_all');
+        const url = './data/data3.json';
+
+        axios.get(url)
+            .then(res => maketbody(res.data.item));
+
+        btnDeleteAll.addEventListener('click', e => {
+            deleteAll();
+        })
+        btnRecoveryAll.addEventListener('click', e => {
+            recoveryAll();
+        })
+
+        function maketbody(dataItem) {
+            for (const obj of dataItem) {
+                const tr = document.createElement('tr');
+                tbody.append(tr);
+                const td_id = document.createElement('td');
+                const td_name = document.createElement('td');
+                const td_age = document.createElement('td');
+                const td_addr = document.createElement('td');
+                const td_del = document.createElement('td');
+                const del_btn = document.createElement('button');
+                td_id.textContent = obj.id;
+                td_name.textContent = obj.name;
+                td_age.textContent = obj.age;
+                td_addr.textContent = obj.addr;
+                del_btn.textContent = '삭제';
+                del_btn.classList.add('del');
+                td_del.append(del_btn);
+                del_btn.addEventListener('click', e => {
+                    deleteList(e);
+                })
+                tr.append(td_id, td_name, td_age, td_addr, td_del);
+            }
+        }
+        function deleteList(e) {
+            e.currentTarget.parentElement.parentElement.remove();
+        }
+        function deleteAll() {
+            tbody.innerHTML = null;
+        }
+        function recoveryAll() {
+            tbody.innerHTML = null;
+            axios.get(url)
+                .then(res => maketbody(res.data.item));
+        }
+    </script>
+</body>
+
+</html>
