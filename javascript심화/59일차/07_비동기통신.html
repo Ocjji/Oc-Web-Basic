@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        body {
+            margin: 30px;
+        }
+
+        .con-box {
+            width: 300px;
+            border: 1px solid #000;
+            padding: 20px;
+        }
+
+        .con-box p {
+            font-size: 50px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con-box">
+        <p class="a1">javascript</p>
+        <p class="a2">Vanilla JS</p>
+        <p class="a3">React</p>
+    </div>
+    <button class="btn">확인</button>
+
+    <script>
+        let a1 = document.querySelector('.a1');
+        let a2 = document.querySelector('.a2');
+        let a3 = document.querySelector('.a3');
+        let btn = document.querySelector('.btn');
+
+        btn.addEventListener('click', e => {
+            showColor();
+        })
+
+        const addColor = (interval, element, color) => {
+            return new Promise((resolve, reject) => {
+                if (element) {
+                    setTimeout(() => {
+                        element.style.color = color;
+                        resolve();
+                    }, interval);
+                } else {
+                    reject(new Error(`${element} 에러`));
+                }
+            })
+        }
+
+        function showColor() {
+            addColor(2000, a1, 'red')
+                .then(res => addColor(2000, a2, 'blue'))
+                .then(res => addColor(2000, a3, 'green'))
+                .catch(error => console.log(error))
+                .finally(() => console.log('컬러변경완료'));
+        }
+
+    </script>
+
+</body>
+
+</html>

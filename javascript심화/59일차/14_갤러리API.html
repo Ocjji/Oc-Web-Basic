@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        .gallery {
+            width: 1400px;
+            margin: auto;
+        }
+
+        #form {
+            text-align: center;
+            padding: 50px;
+        }
+
+        #form input {
+            width: 400px;
+            height: 50px;
+            box-sizing: border-box;
+            padding: 10px;
+            font-size: 16px;
+            vertical-align: top;
+        }
+
+        #form input[type=button] {
+            background: #000;
+            width: 120px;
+            height: 50px;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .gallery .con-box {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .gallery .con-box article {
+            width: 420px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            padding: 10px;
+            box-shadow: 5px 5px 5px #dcdcdc;
+            margin-bottom: 30px;
+        }
+
+        .gallery .con-box article div {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .gallery .con-box article div img {
+            width: 100%;
+        }
+
+        .gallery .con-box article h3 {
+            font-size: 40px;
+            font-weight: 700;
+            color: lightseagreen;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .gallery .con-box article ul {}
+
+        .gallery .con-box article ul li {
+            font-size: 20px;
+        }
+
+        .gallery .con-box article ul li span {
+            display: inline-block;
+            width: 100px;
+            margin-right: 5px;
+        }
+
+        .gallery .con-box article ul li em {
+            margin-left: 5px;
+        }
+
+        .gallery .con-box article p {
+            margin-top: 15px;
+        }
+
+        .gallery .con-box article p span {
+            display: inline-block;
+            border-radius: 25px;
+            background: #dcdcdc;
+            padding: 10px 20px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content" class="gallery">
+        <form action="" id="form">
+            <input type="text" id="text">
+            <input type="button" value="확인" class="search"></input>
+        </form>
+        <div class="con-box">
+            <article>
+                <div>
+                    <img src="" alt="">
+                </div>
+                <h3>타이틀</h3>
+                <ul>
+                    <li><span>조회수</span>:<em>000</em></li>
+                    <li><span>다운로드</span>:<em>1111</em></li>
+                    <li><span>좋아요</span>:<em>222</em></li>
+                </ul>
+                <p>
+                    <span>#xxx</span>
+                    <span>#xxx</span>
+                    <span>#xxx</span>
+                </p>
+            </article>
+        </div>
+    </div>
+
+    <script>
+        const conBox = document.querySelector('.con-box');
+
+        const form = document.querySelector('#form');
+        const text = document.querySelector('#text');
+        const btnSearch = document.querySelector('.search');
+
+
+        const getData = async (keyword = '') => {
+            // let keyword = 'dog';
+
+            const url = `https://pixabay.com/api/?key=36875440-c83fd8a4ba9fe6a2af99c35a6&q=${keyword}&image_type=photo`;
+
+            const res = await fetch(url);
+            const myJson = await res.json();
+            imgData = myJson;
+
+            makeGallery(imgData.hits);
+        }
+
+        function makeGallery(imgData) {
+            let row = '';
+
+            for (let i = 0; i < imgData.length; i++) {
+                let tags = imgData[i].tags.split(',');
+                row += `
+                <article>
+                    <div>
+                        <img src="${imgData[i].webformatURL}" alt="">
+                    </div>
+                    <h3>${imgData[i].user}</h3>
+                    <ul>
+                        <li><span>조회수</span>:<em>${imgData[i].views.toLocaleString('ko-KR')}</em></li>
+                        <li><span>다운로드</span>:<em>${imgData[i].downloads.toLocaleString('ko-KR')}</em></li>
+                        <li><span>좋아요</span>:<em>${imgData[i].likes.toLocaleString('ko-KR')}</em></li>
+                    </ul>
+                    <p>
+                        <span>#${tags[0]}</span>
+                        <span>#${tags[1]}</span>
+                        <span>#${tags[2]}</span>
+                    </p>
+                </article>
+                `
+            }
+            conBox.innerHTML = row;
+        }
+
+        getData();
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            let txt = text.value;
+            getData(txt);
+            console.log(txt);
+            text.value = '';
+        })
+
+        btnSearch.addEventListener('click', e => {
+            e.preventDefault();
+            let txt = text.value;
+            getData(txt);
+            console.log(txt);
+        })
+
+    </script>
+</body>
+
+</html>

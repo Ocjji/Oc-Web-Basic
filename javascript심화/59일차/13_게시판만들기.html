@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        .board {
+            width: 1200px;
+            margin: 80px auto;
+        }
+
+        .board table {}
+
+        .board table .id {
+            width: 5%;
+        }
+
+        .board table .title {
+            width: 30%;
+        }
+
+        .board table th,
+        .board table td {
+            border: 1px solid #000;
+            vertical-align: middle;
+            padding: 10px;
+        }
+
+        .board table td:nth-child(1) {
+            text-align: center;
+        }
+
+        .board .paging {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .board .paging a {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #000;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+        }
+
+        .board .paging a.on {
+            background: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <main id="container" class="board">
+        <section id="content">
+            <table>
+                <caption>게시판</caption>
+                <colgroup>
+                    <col class="id">
+                    <col class="title">
+                    <col class="body">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>타이틀</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody class="table-body">
+                    <!-- 추가 -->
+                </tbody>
+            </table>
+
+            <p class="paging">
+                <!-- <a href="">d</a> -->
+            </p>
+        </section>
+    </main>
+    <script>
+        // https://jsonplaceholder.typicode.com/posts
+        // async ~ await fetch 사용  , getData()
+
+        const tbody = document.querySelector('.board .table-body');
+        const paging = document.querySelector('.board .paging');
+        let pagingA = '';
+
+        const url = 'https://jsonplaceholder.typicode.com/posts';
+
+        let posts, postsPerPage = 15, currentPage = 1;
+        let firstPost, lastPost, postMod, pageNumber, totalPage;
+        let a = '';
+
+        const getData = async () => {
+            const res = await fetch(url);
+            const myJson = await res.json();
+
+            posts = myJson;
+            totalPage = posts.length;
+            postMod = totalPage % postsPerPage;
+            pageNumber = Math.ceil(totalPage / postsPerPage);
+
+            tableIn(currentPage);
+
+            for (let i = 1; i <= pageNumber; i++) {
+                a += `<a>${i}</a>`;
+            }
+            paging.innerHTML = a;
+            pagingA = document.querySelectorAll('.board .paging a');
+            pagingA[0].classList.add('on');
+            pagingA.forEach((ele, idx) => {
+                ele.addEventListener('click', e => {
+                    pagingA.forEach(ele => {
+                        ele.classList.remove('on');
+                    })
+                    e.currentTarget.classList.add('on');
+                    tableIn(idx + 1);
+                    console.log(e.currentTarget.innerHTML);
+                })
+            })
+        }
+
+        function tableIn(page) {
+            let row = '';
+            lastPost = page * postsPerPage;
+            firstPost = lastPost - postsPerPage;
+
+            for (let i = firstPost; i < Math.min(lastPost, totalPage); i++) {
+                row += `<tr>
+                    <td>${posts[i].id}</td>
+                    <td>${posts[i].title}</td>
+                    <td>${posts[i].body}</td>
+                    </tr>`;
+            }
+            tbody.innerHTML = row;
+        }
+
+        getData();
+
+    </script>
+</body>
+
+</html>

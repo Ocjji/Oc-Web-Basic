@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- main#container.news>section#content>div.inner>article>a>h2{타이틀}+img+p -->
+    <main id="container" class="news">
+        <section id="content">
+            <div class="inner">
+                <article>
+                    <a href="url">
+                        <h2>title</h2>
+                        <img src="urlToImage" alt="title">
+                        <p>description</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+    <script>
+        const title = document.querySelector('h2');
+
+
+        const url = 'https://newsapi.org/v2/top-headlines?country=kr&apiKey=bdc31af56010498faaec1407e3f2cf34';
+
+        fetch(url)
+            .then(res => res.json())
+            .then(res => {
+                console.log(res.articles);
+                title.textContent = res.articles[0].title;
+            })
+
+
+    </script>
+</body>
+
+</html>
