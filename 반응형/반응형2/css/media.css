@@ -1,0 +1,12 @@
+@media screen and (max-width:1023px) {
+    .inner {width: 95%;}
+    #header .nav {position: fixed; right: -100%; top: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.7); z-index: 100;}
+    #header .nav .gnb {display: block; padding: 6rem; }
+    #header .nav .gnb li{}
+    #header .nav .gnb li a{color: #fff; font-size: 2rem; border-bottom: 1px solid #dcdcdc; padding: 0; line-height: 3;}
+    #header .nav .close {display: block;}
+    #header .all-menu {display: block;}
+}
+@media screen and (max-width:600px) {
+    
+}

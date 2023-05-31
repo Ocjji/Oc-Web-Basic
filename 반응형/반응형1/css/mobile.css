@@ -1,0 +1,8 @@
+#header .inner {width: 100%;}
+#header .nav {padding-bottom: 0; display: none;}
+#header .nav .gnb{ flex-direction: column; }
+#header .nav .gnb li{width: 100%;}
+#header .all-menu {display: block;}
+
+#container .inner {width: 100%;}
+#content article {width: 100%;}

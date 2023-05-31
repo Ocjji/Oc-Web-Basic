@@ -1,0 +1,58 @@
+#wrap {width: 100%;}
+#header {width: 100%; background: #eee;}
+#header .inner {width: 1200px; background: #ddd;margin: auto; position: relative;
+display: flex; justify-content: space-between;}
+#header h1 {padding: 4rem 0;}
+#header .nav {width: 65%; padding-top: 4rem; padding-bottom: 4rem;}
+#header .nav .gnb{display: flex;}
+#header .nav .gnb li{width: 20%; text-align: center; height: 5rem; line-height: 5rem;}
+#header .nav .gnb li:nth-child(odd){background: orange;}
+#header .nav .gnb li:nth-child(even){background: skyblue;}
+#header .all-menu {position: absolute; right: 0; top: 5rem; transform: translateY(-50%); display: none;}
+#header .all-menu i {font-size: 3.5rem; }
+
+#container {width: 100%;}
+#container .inner {width: 1200px; display: flex; margin: auto; position: relative;}
+#content {width: 60%; display: flex; flex-wrap: wrap;}
+#content article {width: 25%; height: 20rem; box-sizing: border-box; padding: 1.5rem;}
+#content article h2 {font-size: 2rem;}
+#content article:nth-child(1){background: #f2fde4;}
+#content article:nth-child(2){background: #defabb;}
+#content article:nth-child(3){background: #c6f68d;}
+#content article:nth-child(4){background: #aaf255;}
+#content article:nth-child(5){background: #90ee02;}
+#content article:nth-child(6){background: #75e900;}
+#content article:nth-child(7){background: #61d800;}
+#content article:nth-child(8){background: #41c300;}
+#content article:nth-child(9){background: #09af00;}
+#content article:nth-child(10){background: #008b00;}
+#sideBar {width: 40%; background: yellow; padding: 2rem 1rem;box-sizing: border-box;}
+
+
+
+@media screen and (max-width:1200px) {
+    
+}
+@media screen and (max-width:1023px) {
+    #header .inner {
+        width: 95%;
+        flex-direction: column;
+    }    
+    #header h1 {width: 100%; text-align: center;}
+    #header .nav {width: 100%; padding-top: 0; }
+
+    #container .inner { width: 95%; flex-direction: column; }
+    #content {width: 100%;}
+    #content article {width: 50%;}
+    #sideBar {width: 100%;}
+}
+@media screen and (max-width:600px) {
+    #header .inner {width: 100%;}
+    #header .nav {padding-bottom: 0; display: none;}
+    #header .nav .gnb{ flex-direction: column; }
+    #header .nav .gnb li{width: 100%;}
+    #header .all-menu {display: block;}
+    
+    #container .inner {width: 100%;}
+    #content article {width: 100%;}
+}

@@ -1,0 +1,11 @@
+#header .inner {
+    width: 95%;
+    flex-direction: column;
+}    
+#header h1 {width: 100%; text-align: center;}
+#header .nav {width: 100%; padding-top: 0; }
+
+#container .inner { width: 95%; flex-direction: column; }
+#content {width: 100%;}
+#content article {width: 50%;}
+#sideBar {width: 100%;}

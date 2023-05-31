@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        div {
+            width: 1400px;
+            margin: auto;
+            height: 200px;
+            background: tan;
+        }
+
+        /* 영역별로 스타일을 각각 만들어서 작업해야한다 - 추천하지 않는다 */
+        @media screen and (min-width: 1500px) {
+            div {
+                background: yellow;
+                width: 90%;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1499px) {
+            div {
+                width: 70%;
+                height: 300px;
+                background: greenyellow;
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            div {
+                width: 100%;
+                background: blue;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div></div>
+
+</body>
+
+</html>

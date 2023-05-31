@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .con-box {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+        }
+
+        .con-box .box {
+            width: 400px;
+            height: 200px;
+        }
+
+        .con-box .box1 {
+            background: red;
+        }
+
+        .con-box .box2 {
+            background: blue;
+        }
+
+        .con-box .box3 {
+            background: green;
+        }
+
+        /* 0 ~ 1400 */
+        @media screen and (max-width:1400px) {
+            .con-box {
+                width: 90%;
+            }
+
+            /* 자신너비 / 부모너비 * 100 */
+            .con-box .box {
+                width: 33.333%;
+            }
+        }
+
+        @media screen and (max-width:1023px) {
+            .con-box .box1 {
+                width: 50%;
+            }
+
+            .con-box .box2 {
+                width: 25%;
+            }
+
+            .con-box .box3 {
+                width: 25%;
+                background: yellow;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            .con-box {
+                width: 100%;
+                /* flex-direction: column; */
+                flex-wrap: wrap;
+            }
+
+            .con-box .box {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="con-box">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+    </div>
+
+</body>
+
+</html>

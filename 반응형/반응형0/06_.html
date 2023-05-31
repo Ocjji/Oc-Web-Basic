@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        html,
+        body {
+            font-size: 10px;
+            /* rem 기준 사이즈 */
+        }
+
+        .box {
+            width: 600px;
+            height: 25rem;
+            background: tan;
+            text-align: center;
+            margin: auto;
+        }
+
+        .box h2 {
+            font-size: 5.5rem;
+            font-weight: 700;
+            line-height: 25rem;
+        }
+
+        @media screen and (max-width:1200px) {
+            .box {
+                width: 70%;
+                background: burlywood;
+                height: 15rem;
+            }
+        }
+
+        @media screen and (max-width:1023px) {
+            .box h2 {
+                font-size: 3rem;
+            }
+        }
+
+        @media screen and (max-width:600px) {}
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        <h2>안녕하세요</h2>
+    </div>
+
+</body>
+
+</html>
