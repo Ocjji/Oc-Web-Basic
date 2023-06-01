@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <style>
+        button {
+            width: 150px;
+            height: 40px;
+        }
+
+        .container {
+            width: 300px;
+            border: 1px solid #000;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        .container p {
+            font-size: 18px;
+        }
+
+        .container p strong {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button class="btn">출력</button>
+    <div class="container">
+        <!-- <p>이름 : <strong>홍길동</strong>, 직업 : <strong>프론트</strong></p> -->
+    </div>
+    <script type="module" src="./app.js">
+        // const obj = [
+        //     { name: '홍길동', job: '프론트' },
+        //     { name: '김개똥', job: '백엔드' },
+        //     { name: '콩쥐', job: '풀스택' },
+        //     { name: '팥쥐', job: '디자인' },
+        //     { name: '두꺼비', job: '백엔드' }
+        // ]
+        // const btn = document.querySelector('.btn');
+        // const container = document.querySelector('.container');
+        // const showList = () => {
+        //     const newObj = obj.map(element => {
+        //         // 비구조 할당
+        //         const { name, job } = element;
+        //         // 리턴
+        //         return `<p>이름 : <strong>${name}</strong>, 직업 : <strong>${job}</strong></p>`;
+        //     }).join('');
+        //     console.log(newObj);
+        //     container.innerHTML = newObj;
+        // }
+        // btn.addEventListener('click', e => {
+        //     showList();
+        // })
+    </script>
+</body>
+
+</html>

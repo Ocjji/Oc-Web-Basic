@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+    <script type="module">
+        import make1, {num,make2,Person,obj,arr} from "./module/test3.js";
+        // default는 중괄호 영역 안에 넣지 않는다
+
+        console.log(num);
+        console.log(make1);
+        console.log(make1());
+        console.log(make2(10,20));
+        const man = new Person();
+        man.name = "홍길동";
+        console.log(man.name);
+        console.log(obj.name, obj["age"], obj['addr']);
+        console.log(arr[2]);
+    </script>
+</body>
+
+</html>
