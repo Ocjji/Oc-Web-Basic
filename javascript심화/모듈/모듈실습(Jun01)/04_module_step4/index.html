@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        #wrap {
+            width: 400px;
+            padding: 30px;
+            margin: 0 auto;
+            border: 1px solid #999;
+        }
+
+        .btn-wrap {
+            width: 100%;
+            /* border: 1px solid #000; */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn-wrap .btn {
+            width: 150px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            background: #fff;
+            color: tan;
+            border: 1px solid tan;
+        }
+
+        .btn-wrap .btn:hover {
+            background: tan;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .container {}
+
+        .container .view-box {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #aaa;
+            margin-top: 20px;
+        }
+
+        .container .view-box .img-box {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 1px solid #aaa;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .container .view-box .img-box img {
+            width: 100px;
+            height: 100px;
+            box-sizing: border-box;
+        }
+
+        .container .view-box .btn-like {
+            background: none;
+            width: 30px;
+            height: 30px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .container .view-box .btn-like i {
+            font-size: 30px;
+            line-height: 30px;
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="btn-wrap">
+            <button class="btn remove">명단삭제</button>
+            <button class="btn reset">명단보기</button>
+        </div>
+        <div class="container">
+            <!-- content -->
+        </div>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+</body>
+
+</html>
