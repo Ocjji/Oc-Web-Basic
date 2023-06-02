@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        ul {
+            width: 300px;
+            margin-top: 10px;
+        }
+
+        ul li {
+            font-size: 20px;
+            border-bottom: 1px solid #000;
+            line-height: 45px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        <input type="text">
+        <button class="btn">추가</button>
+    </div>
+    <p></p>
+    <ul class="output">
+        <!-- <li>값</li> -->
+    </ul>
+
+    <script>
+        let btn = document.querySelector('.btn');
+        let txt = document.querySelector('input');
+        let out = document.querySelector('.output');
+        let p = document.querySelector('p');
+        let obj = [
+            // { id: 1, text: "안녕하세요" },
+        ];
+        let no = obj.length; // id 번호 증가 사용
+
+        // localStorage.clear();
+
+        // 출력
+        const show = () => {
+            out.innerHTML = '';
+            obj.forEach(item => {
+                const { id, text } = item;
+                let li = document.createElement('li');
+                li.textContent = `${id} / ${text}`;
+                out.append(li);
+            })
+            txt.value = '';
+            txt.focus();
+        }
+        show();
+        // 추가
+        const add = () => {
+            obj = [
+                ...obj,
+                { id: ++no, text: txt.value }
+            ];
+            console.log(obj);
+        }
+
+        btn.addEventListener('click', e => {
+            add();
+            show();
+        })
+    </script>
+</body>
+
+</html>

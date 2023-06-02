@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        ul {
+            width: 300px;
+            margin-top: 10px;
+        }
+
+        ul li {
+            font-size: 20px;
+            border-bottom: 1px solid #000;
+            line-height: 45px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        <input type="text">
+        <button class="btn">추가</button>
+    </div>
+    <p></p>
+    <ul class="output">
+        <!-- <li>값</li> -->
+    </ul>
+
+    <script>
+        let btn = document.querySelector('.btn');
+        let txt = document.querySelector('input');
+        let out = document.querySelector('.output');
+        let p = document.querySelector('p');
+        let obj = [
+            // { id: 1, text: "안녕하세요" },
+        ];
+        let no = 1; // id 번호 증가 사용
+
+        // localStorage.clear();
+
+        obj = JSON.parse(localStorage.getItem("obj")) || [];
+
+        // 삭제
+        const delShow = () => {
+            let delBtns = document.querySelectorAll('.del');
+            delBtns.forEach(delBtn => {
+                delBtn.addEventListener('click', e => {
+                    e.currentTarget.parentElement.remove();
+
+                    obj = obj.filter(item => item.id != e.currentTarget.parentElement.dataset.id);
+
+                    localStorage.setItem("obj", JSON.stringify(obj));
+                })
+            });
+        }
+
+        // 출력
+        const show = () => {
+            out.innerHTML = '';
+            obj.forEach(item => {
+                const { id, text } = item;
+                let li = document.createElement('li');
+                let delBtn = document.createElement('button');
+                li.dataset.id = id;
+                li.textContent = `${id} / ${text}`;
+                delBtn.textContent = '삭제';
+                delBtn.classList.add('del');
+                li.append(delBtn);
+                out.append(li);
+            })
+            txt.value = '';
+            txt.focus();
+        }
+        show();
+        delShow();
+
+        // 추가
+        const add = () => {
+            no = obj.length;
+            obj = [
+                ...obj,
+                { id: ++no, text: txt.value }
+            ];
+            localStorage.setItem("obj", JSON.stringify(obj));
+        }
+
+        btn.addEventListener('click', e => {
+            add();
+            show();
+            delShow();
+        })
+    </script>
+</body>
+
+</html>

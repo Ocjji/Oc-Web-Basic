@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+
+    <style>
+        #wrap {
+            border: 1px solid #000;
+            margin: auto;
+            width: 400px;
+            box-sizing: border-box;
+        }
+
+        .todo-box {
+            box-sizing: border-box;
+            width: 400px;
+        }
+
+        .todo-box h2 {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+
+        .todo-box form {
+            text-align: center;
+        }
+
+        .todo-box form input {
+            width: 200px;
+            height: 30px;
+            margin-bottom: 20px;
+        }
+
+        .todo-box .todo-list {
+            margin: auto;
+            width: 300px;
+            /* border: 1px solid #000; */
+            padding: 10px 30px 0 30px;
+            box-sizing: border-box;
+        }
+
+        .todo-box .todo-list li {
+            width: 100%;
+            margin-bottom: 10px;
+            font-size: 18px;
+            line-height: 24px;
+            padding: 5px 0;
+            border-bottom: 1px solid #000;
+            vertical-align: middle;
+        }
+
+        .todo-box .todo-list li i {
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .todo-box .todo-list li strong {
+            display: inline-block;
+            width: 150px;
+            line-height: 24px;
+            height: 20px;
+            cursor: pointer;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .todo-box .todo-list li button {
+            width: 50px;
+            height: 24px;
+            border-radius: 0%;
+            border: 1px solid #999;
+            cursor: pointer;
+        }
+
+        .todo-box .todo-list li.checked {}
+
+        .todo-box .todo-list li.checked i {
+            color: red;
+        }
+
+        .todo-box .todo-list li.checked strong {
+            color: red;
+            text-decoration: line-through;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="todo-box">
+            <h2>일정관리 앱</h2>
+            <form action="" id="form">
+                <input type="text" id="text" placeholder="일정을 입력해주세요">
+            </form>
+            <ul class="todo-list">
+                <!-- <li class="checked">
+                    <i>✓</i><strong>운동하기</strong><button class="del">삭제</button>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const form = document.querySelector('#form');
+        const text = document.querySelector('#text');
+        const todoList = document.querySelector('.todo-list');
+
+        let obj = [];
+        obj = JSON.parse(localStorage.getItem("obj")) || [];
+
+        const toggleChecked = (element) => {
+            element.addEventListener('click', e => {
+                console.log(e.currentTarget.parentElement);
+                e.currentTarget.parentElement.classList.toggle('checked');
+                console.log(e.currentTarget.parentElement.children[1]);
+                obj = obj.map((item) => {
+                    let temp = item;
+                    if (e.currentTarget.parentElement.classList.contains('checked') && item.todo === e.currentTarget.parentElement.children[1].textContent && item.state === false) {
+                        temp.state = true;
+                    } else if (!e.currentTarget.parentElement.classList.contains('checked') && item.todo === e.currentTarget.parentElement.children[1].textContent && item.state === true) {
+                        temp.state = false;
+                    }
+                    return temp;
+
+                });
+                localStorage.setItem("obj", JSON.stringify(obj));
+            })
+        }
+        const delTodo = (delBtn) => {
+            delBtn.addEventListener('click', e => {
+                // console.log(e.currentTarget.parentElement);
+                e.currentTarget.parentElement.remove();
+                // console.log(e.currentTarget.previousSibling.textContent);
+                obj = obj.filter(item => item.todo !== e.currentTarget.previousSibling.textContent);
+                localStorage.setItem("obj", JSON.stringify(obj));
+                text.focus();
+            })
+        }
+        const showTodo = () => {
+            todoList.innerHTML = '';
+            obj.forEach(todoItem => {
+                const { state, todo } = todoItem;
+                let li = document.createElement('li');
+                let icon = document.createElement('i');
+                let strong = document.createElement('strong');
+                let delBtn = document.createElement('button');
+                if (state) {
+                    li.classList.add('checked');
+                }
+                icon.textContent = '✓';
+                strong.textContent = todo;
+                toggleChecked(icon);
+                toggleChecked(strong);
+                delBtn.textContent = '삭제';
+                delBtn.classList.add('del');
+                delTodo(delBtn);
+
+                li.append(icon, strong, delBtn);
+                todoList.append(li);
+            })
+            text.value = '';
+            text.focus();
+        }
+        const addTodo = () => {
+            obj = [
+                ...obj,
+                { state: false, todo: text.value }
+            ];
+            localStorage.setItem("obj", JSON.stringify(obj));
+        }
+
+        form.addEventListener('submit', e => {
+            let isDup = true;
+            e.preventDefault();
+            obj.forEach(todoItem => {
+                if (todoItem.todo === text.value) {
+                    isDup = false;
+                    alert('중복값 입력이 불가합니다.');
+                    showTodo();
+                }
+            })
+            if (isDup && text.value) {
+                addTodo();
+                showTodo();
+            }
+        })
+
+        showTodo();
+    </script>
+</body>
+
+</html>

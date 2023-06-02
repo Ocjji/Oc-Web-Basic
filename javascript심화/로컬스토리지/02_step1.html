@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        ul {
+            width: 300px;
+            margin-top: 10px;
+        }
+
+        ul li {
+            font-size: 20px;
+            border-bottom: 1px solid #000;
+            line-height: 45px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        <input type="text">
+        <button class="btn">추가</button>
+    </div>
+    <p></p>
+    <ul class="output">
+        <!-- <li>값</li> -->
+    </ul>
+
+    <script>
+        let btn = document.querySelector('.btn');
+        let txt = document.querySelector('input');
+        let out = document.querySelector('.output');
+        let p = document.querySelector('p');
+
+        // localStorage.clear();
+
+        let name = localStorage.getItem('name');
+        p.innerHTML += `<span>${name}</span>`;
+
+        btn.addEventListener('click', e => {
+            let li = document.createElement('li');
+            li.textContent = txt.value;
+            // out.innerHTML += `<li>${txt.value}</li>`;
+            txt.value = '';
+            txt.focus();
+
+            out.append(li);
+
+            localStorage.setItem('name', li.textContent);
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <div class="output">
+
+    </div>
+    <script>
+        let out = document.querySelector('.output');
+
+        let obj = [
+            { name: "보라돌이" },
+            { name: "뚜비" },
+            { name: "나나" },
+            { name: "뽀" }
+        ]
+
+        let newObj = [...obj];
+
+        // localStorage JSON 형식 {"name":"홍길동"}
+        localStorage.setItem("newObj", JSON.stringify(newObj));
+
+        const showView = () => {
+            newObj = localStorage.getItem("newObj");
+            newObj = JSON.parse(newObj);
+
+            newObj.forEach(item => {
+                let p = document.createElement('p');
+                p.textContent = item["name"];
+                out.append(p);
+            })
+        }
+        showView();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        div {
+            border: 1px solid #000;
+            padding: 20px;
+            margin: 20px;
+            font-size: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+
+    </div>
+
+    <script>
+        let div = document.querySelector('div');
+
+        window.localStorage.setItem('name', '홍길동');
+        window.localStorage.setItem('age', '20');
+
+        const name = localStorage.getItem('name');
+        const age = localStorage.getItem('age');
+        const len = localStorage.length;
+        const key = localStorage.key(0);
+
+        div.innerHTML += '이름 : ' + name;
+        div.innerHTML += '<br>나이 : ' + age;
+        div.innerHTML += '<br>개수 : ' + len;
+        div.innerHTML += '<br>key : ' + key;
+    </script>
+</body>
+
+</html>
