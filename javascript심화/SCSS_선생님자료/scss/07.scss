@@ -1,0 +1,38 @@
+.con-box {
+    display: flex;
+    margin: 30px;
+    border: 1px solid #000;
+
+    div {
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+    }
+
+    .box {
+        &-small {
+            width: 100px;
+            background: red;
+        }
+
+        &-middle {
+            width: 200px;
+            background: green;
+        }
+
+        &-big {
+            width: 300px;
+            background: blue;
+        }
+
+        &-yellow {
+            width: 300px;
+            background: yellow;
+        }
+
+        &-pink {
+            width: 300px;
+            background: pink;
+        }
+    }
+}

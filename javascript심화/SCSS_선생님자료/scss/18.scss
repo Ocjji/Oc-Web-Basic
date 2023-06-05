@@ -1,0 +1,20 @@
+// 함수 - 공통부분
+@mixin make {
+    width: 400px;
+    height: 100px;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 100px;
+    font-size: 25px;
+}
+
+h1 {
+    background: lightgoldenrodyellow;
+    @include make();
+}
+
+span {
+    display: block;
+    background: tomato;
+    @include make();
+}

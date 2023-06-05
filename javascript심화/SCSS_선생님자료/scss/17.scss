@@ -1,0 +1,20 @@
+$w : 800px;
+
+.con-box {
+    div {
+        background: red;
+        margin-bottom: 10px;
+
+        &:nth-child(1) {
+            width: ($w/2);
+        }
+
+        &:last-child {
+            width: ($w/3+200px);
+        }
+    }
+}
+
+p::after {
+    content: "연습" +"SCSS" + 10 + $w;
+}

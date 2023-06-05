@@ -1,0 +1,11 @@
+.list {
+  margin: 20px;
+}
+.list li {
+  width: 100px;
+  text-align: center;
+}
+.list li.on {
+  font-size: 30px;
+  color: red;
+}/*# sourceMappingURL=05.css.map */

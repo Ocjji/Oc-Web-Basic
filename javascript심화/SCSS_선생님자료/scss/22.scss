@@ -1,0 +1,22 @@
+@mixin make($bg: pink, $w: null, $h: null) {
+    background: $bg;
+    width: $w;
+    height: $h;
+}
+
+.wrap {
+    @include make(skyblue, 600px, 400px);
+    margin: 50px;
+
+    .box1 {
+        @include make(red, 300px, 200px);
+    }
+
+    .box2 {
+        @include make(green, 300px, 200px);
+    }
+
+    .box3 {
+        @include make(blue, 300px, 200px);
+    }
+}

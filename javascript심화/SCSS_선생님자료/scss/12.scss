@@ -1,0 +1,18 @@
+$color: tomato;
+
+body {
+    font-size: 50px;
+}
+
+span {
+    color: $color;
+}
+
+h1 {
+    $color : skyblue !global;
+    color: $color;
+}
+
+p {
+    color: $color;
+}

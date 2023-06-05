@@ -1,0 +1,47 @@
+.nav {
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+        a {
+            font-size: 25px;
+            display: block;
+            padding: 20px;
+            background: pink;
+            transition: 0.5s;
+
+            &:hover {
+                background: skyblue;
+                padding: 30px;
+            }
+        }
+
+        &.active {
+            a {
+                background: lawngreen;
+                color: red;
+                border: 5px solid blueviolet;
+            }
+        }
+    }
+}
+
+.btn-wrap {
+    button {
+        border: none;
+        width: 150px;
+        height: 40px;
+        transition: 0.4s;
+
+        &.on {
+            background: #000;
+            color: #fff;
+        }
+
+        &:hover {
+            background: yellow;
+        }
+    }
+}

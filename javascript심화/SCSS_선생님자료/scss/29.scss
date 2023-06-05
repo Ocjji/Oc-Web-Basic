@@ -1,0 +1,16 @@
+$w : 1000;
+
+.box {
+    width: 200px;
+    border: 1px solid #000;
+
+    @if ($w >=600) {
+        width: $w + px;
+        background: orange;
+    }
+
+    @else {
+        width: 100%;
+        background: skyblue;
+    }
+}

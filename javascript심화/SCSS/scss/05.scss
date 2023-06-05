@@ -1,0 +1,13 @@
+.list {
+    margin: 20px;
+
+    li {
+        width: 100px;
+        text-align: center;
+
+        &.on {
+            font-size: 30px;
+            color: red;
+        }
+    }
+}

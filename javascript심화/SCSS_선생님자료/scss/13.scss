@@ -1,0 +1,19 @@
+$fz50 : 50px;
+$red : red;
+$pink : pink;
+$blue : blue;
+$w600 : 600px;
+// 변수에 변수를 넣어준다
+$re-red: $red;
+$re-pink: $pink;
+
+h1 {
+    width: $w600;
+    font-size: $fz50;
+    color: $re-red;
+    background: $pink;
+}
+
+p {
+    color: $blue;
+}

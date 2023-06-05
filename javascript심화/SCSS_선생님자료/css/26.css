@@ -1,0 +1,19 @@
+.box1, .box2, .box3 {
+  border: 1px solid #000;
+  width: 300px;
+  line-height: 80px;
+  font-size: 20px;
+  margin: 30px auto;
+}
+
+.box2, .box3 {
+  border-width: 5px;
+  border-color: red;
+  background: pink;
+  text-align: center;
+}
+
+.box3 {
+  border-color: #000;
+  background: orange;
+}/*# sourceMappingURL=26.css.map */

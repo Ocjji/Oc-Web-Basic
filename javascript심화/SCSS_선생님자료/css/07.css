@@ -1,0 +1,30 @@
+.con-box {
+  display: flex;
+  margin: 30px;
+  border: 1px solid #000;
+}
+.con-box div {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+.con-box .box-small {
+  width: 100px;
+  background: red;
+}
+.con-box .box-middle {
+  width: 200px;
+  background: green;
+}
+.con-box .box-big {
+  width: 300px;
+  background: blue;
+}
+.con-box .box-yellow {
+  width: 300px;
+  background: yellow;
+}
+.con-box .box-pink {
+  width: 300px;
+  background: pink;
+}/*# sourceMappingURL=07.css.map */

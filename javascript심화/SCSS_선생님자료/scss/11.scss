@@ -1,0 +1,30 @@
+// 전역변수
+$color1 : #336699;
+$color2 : pink;
+$color3 : skyblue;
+$color4 : #000;
+$width : 1200px;
+$height : 100px;
+
+header {
+    width: $width;
+    height: $height;
+    background: $color1;
+}
+
+#container {
+    // 변수 재설정
+    $height : 450px;
+
+    section {
+        width: $width;
+        height: $height;
+        background-color: $color2;
+    }
+}
+
+footer {
+    width: $width;
+    height: $height;
+    background: $color3;
+}

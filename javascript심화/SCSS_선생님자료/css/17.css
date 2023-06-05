@@ -1,0 +1,15 @@
+@charset "UTF-8";
+.con-box div {
+  background: red;
+  margin-bottom: 10px;
+}
+.con-box div:nth-child(1) {
+  width: 400px;
+}
+.con-box div:last-child {
+  width: 466.6666666667px;
+}
+
+p::after {
+  content: "연습SCSS10800px";
+}/*# sourceMappingURL=17.css.map */

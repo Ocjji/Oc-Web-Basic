@@ -1,0 +1,15 @@
+ul {
+  display: flex;
+  margin: 30px;
+}
+ul li {
+  width: 300px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  text-align: center;
+  margin-right: 15px;
+  line-height: 40px;
+}
+ul li a {
+  color: tomato;
+}/*# sourceMappingURL=20.css.map */

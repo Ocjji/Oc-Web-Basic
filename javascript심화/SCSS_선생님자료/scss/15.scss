@@ -1,0 +1,30 @@
+/*
+    `${변수, 수식}` : JS - 보간법 
+    #{변수} : SCSS 
+*/
+$color1 : pink;
+$color2 : green;
+$bot : bottom;
+
+.bg-#{$color1} {
+    background: $color1;
+    margin-bottom: 30px;
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        padding: 15px;
+        border-#{$bot}: 3px solid #000;
+    }
+}
+
+.bg-#{$color2} {
+    background: $color2;
+
+    h2 {
+        font-size: 40px;
+        margin-bottom: 20px;
+        padding: 15px;
+        border-#{$bot}: 10px solid $color1;
+    }
+}

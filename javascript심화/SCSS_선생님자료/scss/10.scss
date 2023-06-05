@@ -1,0 +1,27 @@
+$red : red;
+$green : green;
+$blue : blue;
+$fz30 : 30px;
+$w1200 : 1200px;
+
+header {
+    width: $w1200;
+    background: $red;
+    border-bottom: 3px solid $green;
+
+    #nav {
+        display: flex;
+
+        li {
+            margin-right: 20px;
+
+            a {
+                font-size: $fz30;
+
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+    }
+}

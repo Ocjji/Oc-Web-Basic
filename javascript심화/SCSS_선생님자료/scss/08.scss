@@ -1,0 +1,26 @@
+.list {
+    margin: 30px;
+
+    li {
+        width: 300px;
+        margin-bottom: 10px;
+
+        a {
+            display: block;
+            text-align: center;
+            line-height: 34px;
+            transition: 0.3s;
+            border: 1px solid #000;
+
+            &:hover {
+                background: #444;
+                color: #fff;
+            }
+
+            // 최상위로부터 경로 설정
+            .wrap & {
+                background: tomato;
+            }
+        }
+    }
+}

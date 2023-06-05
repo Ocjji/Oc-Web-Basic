@@ -1,0 +1,28 @@
+#header {
+  width: 100%;
+}
+#header .inner {
+  width: 1200px;
+  height: 150px;
+  margin: auto;
+  position: relative;
+}
+#header .inner h1 {
+  position: absolute;
+  left: 0;
+  top: 50px;
+}
+#header .inner .nav {
+  position: absolute;
+  right: 0;
+  top: 65px;
+}
+#header .inner .nav .gnb {
+  display: flex;
+}
+#header .inner .nav .gnb > li {
+  margin-left: 60px;
+}
+#header .inner .nav .gnb > li > a {
+  font-size: 20px;
+}/*# sourceMappingURL=02.css.map */

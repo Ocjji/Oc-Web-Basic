@@ -1,0 +1,17 @@
+.con-box .list + ul {
+  display: flex;
+}
+.con-box .list + ul li {
+  margin: 15px;
+}
+.con-box .list + ul li a {
+  font-size: 18px;
+  color: red;
+}
+#wrap .box {
+  background: pink;
+  width: 400px;
+  height: 150px;
+  margin: auto;
+  text-align: center;
+}/*# sourceMappingURL=09.css.map */

@@ -1,0 +1,23 @@
+.box1 {
+    border: 1px solid #000;
+    width: 300px;
+    line-height: 80px;
+    font-size: 20px;
+    margin: 30px auto;
+}
+
+// 상속
+.box2 {
+    @extend .box1;
+    border-width: 5px;
+    border-color: red;
+    background: pink;
+    text-align: center;
+}
+
+// 상속, 상속
+.box3 {
+    @extend .box2;
+    border-color: #000;
+    background: orange;
+}

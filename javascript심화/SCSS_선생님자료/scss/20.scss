@@ -1,0 +1,22 @@
+@mixin make ($w, $bdrd, $color) {
+    width: $w;
+    border: 1px solid #000;
+    border-radius: $bdrd;
+
+    a {
+        color: $color;
+    }
+
+    text-align: center;
+    margin-right: 15px;
+    line-height: 40px;
+}
+
+ul {
+    display: flex;
+    margin: 30px;
+
+    li {
+        @include make(300px, 10px, tomato)
+    }
+}

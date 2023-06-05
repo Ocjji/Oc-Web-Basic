@@ -1,0 +1,25 @@
+.con-box {
+  width: 500px;
+  display: flex;
+  margin: 50px auto;
+  border: 1px solid #000;
+  justify-content: space-between;
+}
+.con-box p {
+  font-size: 25px;
+  width: 20%;
+  height: 60px;
+  cursor: pointer;
+  line-height: 60px;
+  text-align: center;
+}
+.con-box p:nth-child(odd) {
+  background: pink;
+}
+.con-box p:nth-child(even) {
+  background: yellow;
+}
+.con-box p:hover {
+  background: green;
+  color: #fff;
+}/*# sourceMappingURL=04.css.map */

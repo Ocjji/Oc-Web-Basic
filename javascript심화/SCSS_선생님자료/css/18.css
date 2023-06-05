@@ -1,0 +1,20 @@
+h1 {
+  background: lightgoldenrodyellow;
+  width: 400px;
+  height: 100px;
+  border: 1px solid #000;
+  text-align: center;
+  line-height: 100px;
+  font-size: 25px;
+}
+
+span {
+  display: block;
+  background: tomato;
+  width: 400px;
+  height: 100px;
+  border: 1px solid #000;
+  text-align: center;
+  line-height: 100px;
+  font-size: 25px;
+}/*# sourceMappingURL=18.css.map */

@@ -1,0 +1,21 @@
+.con-box {
+  background: tan;
+  padding: 20px;
+}
+.con-box div {
+  background: pink;
+  margin-bottom: 15px;
+  line-height: 50px;
+}
+.con-box div.box1 {
+  width: 200px;
+}
+.con-box div.box2 {
+  width: 300px;
+}
+.con-box div.box3 {
+  width: 200px;
+}
+.con-box div.box4 {
+  width: 150px;
+}/*# sourceMappingURL=16.css.map */

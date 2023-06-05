@@ -1,0 +1,18 @@
+.con-box {
+    width: 500px; display: flex; margin:50px auto; border: 1px solid #000; justify-content: space-between;
+    p {
+        font-size: 25px; 
+        width: 20%; height: 60px; cursor: pointer;
+        line-height: 60px;
+        text-align: center;
+        &:nth-child(odd) {
+            background: pink;
+        }
+        &:nth-child(even) {
+            background: yellow;
+        }
+        &:hover {
+            background: green; color:#fff;
+        }
+    }
+}

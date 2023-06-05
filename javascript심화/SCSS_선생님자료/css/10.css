@@ -1,0 +1,17 @@
+header {
+  width: 1200px;
+  background: red;
+  border-bottom: 3px solid green;
+}
+header #nav {
+  display: flex;
+}
+header #nav li {
+  margin-right: 20px;
+}
+header #nav li a {
+  font-size: 30px;
+}
+header #nav li a:hover {
+  color: blue;
+}/*# sourceMappingURL=10.css.map */

@@ -1,0 +1,17 @@
+// 기본연습
+.con-box {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #000;
+    .box {
+        background: pink;
+        span {
+            font-size: 25px;
+            font-weight: 700;
+        }
+        p {
+            background: hotpink;
+            text-indent: 20px;
+        }
+    }
+}

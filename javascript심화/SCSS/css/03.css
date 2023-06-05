@@ -1,0 +1,43 @@
+@charset "UTF-8";
+h1 {
+  color: tan;
+  background: #000;
+  padding: 15px;
+  font-family: "궁서체";
+  font-size: 50px;
+  font-width: 700px;
+  font-style: italic;
+}
+
+.wrap {
+  width: 600px;
+  height: 300px;
+  margin: 50px auto;
+  border: 1px solid #000;
+  background-repeat: no-repeat;
+  background-image: url(../images/img0.jpg);
+  background-size: cover;
+  background-position: 0 0;
+}
+.wrap .box {
+  width: 300px;
+  height: 100px;
+  background: green;
+  text-align: center;
+  line-height: 100px;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  margin-right: 50px;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  padding-right: 10px;
+}
+.wrap p {
+  font: 30px/50px "굴림체";
+  font-weight: 700;
+  font-style: italic;
+  background-color: pink;
+  padding: 20px;
+}/*# sourceMappingURL=03.css.map */

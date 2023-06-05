@@ -1,0 +1,63 @@
+h1 {
+    color: tan;
+    background: #000;
+    padding: 15px;
+
+    font : {
+        family: '궁서체';
+        size: 50px;
+        width: 700px;
+        style: italic;
+    }
+
+    ;
+}
+
+.wrap {
+    width: 600px;
+    height: 300px;
+    margin: 50px auto;
+    border: 1px solid #000;
+
+    background: {
+        repeat: no-repeat;
+        image: url(../images/img0.jpg);
+        size: cover;
+        position: 0 0;
+    }
+
+
+
+    .box {
+        width: 300px;
+        height: 100px;
+        background: green;
+        text-align: center;
+        line-height: 100px;
+
+        margin: {
+            top: 20px;
+            left: 30px;
+            bottom: 20px;
+            right: 50px;
+        }
+
+        padding: {
+            top: 20px;
+            left: 30px;
+            bottom: 30px;
+            right: 10px;
+        }
+    }
+
+    p {
+        font: 30px/50px "굴림체" {
+            weight: 700;
+            style: italic;
+        }
+
+        background-color: pink;
+        padding: 20px;
+
+    }
+}

@@ -1,94 +1,131 @@
-;( () => {
-    const get  = target =>  document.querySelector(target); 
-    const getAll  = target => document.querySelectorAll(target); 
+; (() => {
+    const get = target => document.querySelector(target);
+    const getAll = target => document.querySelectorAll(target);
 
     // 기본경로
-    const $mainbook = get('.main-book'); 
-    const $title = get('#title'); 
-    const $author = get('#author'); 
-    const $bookcode = get('#bookcode'); 
-    const $tbody = get('.book-tbody'); 
-    const $form = get('form'); 
+    const $mainbook = get('.main-book');
+    const $title = get('#title');
+    const $author = get('#author');
+    const $bookcode = get('#bookcode');
+    const $tbody = get('.book-tbody');
+    const $form = get('form');
+    let data = [];
 
     //클래스 
     class Book {
-        constructor( title, author , bookcode ){
-            this.title = title 
-            this.author = author 
-            this.bookcode = bookcode 
+        constructor(title, author, bookcode) {
+            this.title = title
+            this.author = author
+            this.bookcode = bookcode
         }
     }
 
 
+
     class BookUI {
         //추가
-        add( item ){
-            if( !item.title || !item.author || !item.bookcode ) return 
+        static add(item) {
+            const { title, author, bookcode } = item;
+            if (!title || !author || !bookcode) return
 
             const tr = document.createElement('tr');
             tr.innerHTML = `
-                    <td>${item.title}</td>
-                    <td>${item.author}</td>
-                    <td>${item.bookcode} </td>
+                    <td>${title}</td>
+                    <td>${author}</td>
+                    <td>${bookcode} </td>
                     <td><button class="delete">X</button></td>
             `;
-            $tbody.append( tr );
-            this.reset()            
+            $tbody.append(tr);
+            BookUI.reset()
         }
+
         //삭제
-        del( target ){          
-            if (target.classList.contains('delete')) {                
+        static del(target) {
+            if (target.classList.contains('delete')) {
                 target.parentElement.parentElement.remove();
-                this.showMessage('북리스트에 정상삭제완료' , 'on') 
+                BookUI.showMessage('북리스트에 정상삭제완료', 'on');
             }
         }
-        
+
         //메세지
-        showMessage( msg , calssName ) {
+        static showMessage(msg, calssName) {
             const div = document.createElement('div')
-            div.textContent  = msg 
-            div.className = `show ${calssName}` 
+            div.textContent = msg
+            div.className = `show ${calssName}`
             $mainbook.append(div)
 
             //2초후 삭제 
-            setTimeout( () => {
+            setTimeout(() => {
                 document.querySelector('.show').remove();
-            }, 1000 )
+            }, 1000)
         }
 
 
         //텍스트지우기
-        reset(){
+        static reset() {
             $title.value = ''
             $author.value = ''
             $bookcode.value = ''
             $title.focus()
         }
     }
-    
-    $form.addEventListener('submit',e => {
+
+    // LocalStorage class 만들기
+    class LocalData {
+        static getData() {
+            data = JSON.parse(localStorage.getItem("data")) || [];
+            return data;
+        }
+
+        static addData(book) {
+            let data = LocalData.getData();
+            // data에 추가
+            data = [...data, book];
+            localStorage.setItem("data", JSON.stringify(data));
+        }
+        static removeData(bookcode) {
+            let data = LocalData.getData();
+            // data에서 삭제
+            data = data.filter(item => item.bookcode !== bookcode);
+            localStorage.setItem("data", JSON.stringify(data));
+        }
+
+        static showData() {
+            let data = LocalData.getData();
+            // localStorage.clear();
+            data.map(item => {
+                BookUI.add(item);
+            })
+        }
+    }
+
+
+    // 화면에 출력
+    LocalData.showData()
+
+    $form.addEventListener('submit', e => {
         e.preventDefault();
-        
-        const title = $title.value 
-        const author = $author.value 
-        const bookcode = $bookcode.value 
 
-        const book  = new Book( title , author , bookcode )
-        const bookUI = new BookUI()
+        const title = $title.value
+        const author = $author.value
+        const bookcode = $bookcode.value
 
-        if( !title || !author || !bookcode ) {
-            bookUI.showMessage('값을 넣으세요' , 'off')
-        }else {
-            bookUI.add( book )
-            bookUI.reset()      
-            bookUI.showMessage('북리스트에 추가완료' , 'on')      
+        if (!title || !author || !bookcode) {
+            BookUI.showMessage('값을 넣으세요', 'off')
+        } else {
+            const book = new Book(title, author, bookcode)
+            BookUI.add(book)
+            BookUI.reset()
+            BookUI.showMessage('북리스트에 추가완료', 'on')
+            LocalData.addData(book);
         }
     })
 
     $tbody.addEventListener('click', e => {
-        const bookUI = new BookUI()
-        bookUI.del( e.target )
+        BookUI.del(e.target)
         // bookUI.showMessage('북리스트에 정상삭제완료' , 'on') 
+        let bookcode = e.target.parentElement.previousElementSibling.textContent.trim();
+        LocalData.removeData(bookcode);
     })
 
 })();

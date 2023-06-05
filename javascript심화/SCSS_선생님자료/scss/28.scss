@@ -1,0 +1,7 @@
+// 삼항 연산자
+$w : 1000;
+
+.con-box {
+    // if (조건 , 참 , 거짓 );
+    background: if($w > 600, pink, skyblue);
+}

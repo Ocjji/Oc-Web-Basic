@@ -1,0 +1,28 @@
+.con-box {
+    background: tan;
+    padding: 20px;
+
+    div {
+        background: pink;
+        margin-bottom: 15px;
+        line-height: 50px;
+
+        &.box1 {
+            width: 100px + 100px;
+        }
+
+        &.box2 {
+            width: 500px - 200px;
+        }
+
+        &.box3 {
+            width: 20px * 10;
+        }
+
+        &.box4 {
+            // / 나누기는 단독으로 사용할 수 없다
+            // 괄호를 사용해야 한다
+            width: (300px / 2);
+        }
+    }
+}

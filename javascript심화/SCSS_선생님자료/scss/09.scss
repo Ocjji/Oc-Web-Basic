@@ -1,0 +1,23 @@
+.con-box {
+    .list+ul {
+        display: flex;
+
+        li {
+            margin: 15px;
+
+            a {
+                font-size: 18px;
+                color: red;
+
+                // 다른 경로를 최상위부터 설정
+                @at-root #wrap .box {
+                    background: pink;
+                    width: 400px;
+                    height: 150px;
+                    margin: auto;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

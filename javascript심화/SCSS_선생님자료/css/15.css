@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/*
+    `${변수, 수식}` : JS - 보간법 
+    변수 : SCSS 
+*/
+.bg-pink {
+  background: pink;
+  margin-bottom: 30px;
+}
+.bg-pink h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-bottom: 3px solid #000;
+}
+
+.bg-green {
+  background: green;
+}
+.bg-green h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-bottom: 10px solid pink;
+}/*# sourceMappingURL=15.css.map */
