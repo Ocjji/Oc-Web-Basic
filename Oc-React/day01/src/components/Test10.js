@@ -6,7 +6,7 @@ import './Test10.scss';
 const Test10 = () => {
 
     return (
-        <div>
+        <div className='table-box'>
             <table>
                 <Test10Info />
                 <Test10Thead />
