@@ -1,4 +1,7 @@
 {
     "liveServer.settings.port": 5501,
-    "liveSassCompile.settings.showOutputWindowOn": "None"
+    "liveSassCompile.settings.showOutputWindowOn": "None",
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    }
 }

@@ -1,0 +1,25 @@
+.con-box {
+    width:500px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    .box {
+        width: 100px; height: 100px; line-height: 100px;
+        font-size: 20px;text-align: center;font-weight: 700;
+        &.red {
+            background:red;
+        }
+        &.green {
+            background:green;
+        }
+        &.blue {
+            background:blue;
+        }
+        &.yellow {
+            background:yellow;
+        }
+        &:hover {
+            transform: scale(1.5);
+        }
+    }
+}
