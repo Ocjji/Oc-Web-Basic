@@ -1,0 +1,49 @@
+caption {
+    position: absolute;
+    text-indent: -9999em;
+}
+
+.list {
+    width: 600px;
+    margin: 10px auto;
+
+    .num {
+        width: 10%;
+    }
+
+    .name {
+        width: 20%;
+    }
+
+    .age {
+        width: 23%;
+    }
+
+    .addr {
+        width: 20%;
+    }
+
+    .consent {
+        width: auto;
+    }
+
+    th,
+    td {
+        border: 1px solid #000;
+        height: 40px;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    tbody {
+        tr {
+            &:nth-child(odd) {
+                background: beige;
+            }
+
+            &:nth-child(even) {
+                background: bisque;
+            }
+        }
+    }
+}
