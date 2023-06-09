@@ -1,0 +1,66 @@
+.wrap {
+    width: 400px;
+    border: 1px solid #000;
+    padding: 30px;
+    margin: 30px auto;
+
+    p {
+        margin-bottom: 10px;
+
+        label {
+            display: inline-block;
+            width: 80px;
+        }
+
+        input {
+            margin-left: 10px;
+            height: 30px;
+            width: 200px;
+            padding: 0 15px;
+            border: 1px solid #999;
+        }
+
+        &:last-child {
+            margin-top: 30px;
+        }
+
+        button {
+            width: 150px;
+            height: 40px;
+            background: #333;
+            color: #fff;
+            border: none;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    }
+
+    ul {
+        li {
+            border-bottom: 1px dotted #dcdcdc;
+            line-height: 3;
+
+            span {
+                display: inline-block;
+                width: 80px;
+            }
+
+            em {
+                margin-left: 10px;
+                height: 30px;
+                width: 200px;
+                padding: 0 15px;
+            }
+        }
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 500;
+
+        span {
+            display: block;
+        }
+    }
+}
