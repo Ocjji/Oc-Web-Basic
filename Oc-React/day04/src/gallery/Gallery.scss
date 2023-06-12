@@ -1,0 +1,57 @@
+.wrap {
+    width: 1000px;
+    margin: 30px auto;
+    display: flex;
+
+    .bigview {
+        width: 600px;
+
+        .bigimg {
+            width: 600px;
+            height: 400px;
+            position: relative;
+            margin-bottom: 20px;
+
+            h2 {
+                position: absolute;
+                left: 30px;
+                top: 30px;
+                font-size: 30px;
+                color: #fff;
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                width: 110px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+
+                img {
+                    width: 110px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .text {
+        width: 400px;
+        background: #efefef;
+        box-sizing: border-box;
+        padding: 30px;
+
+        strong {
+            font-size: 30px;
+            margin-bottom: 40px;
+            display: block;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+}
