@@ -1,11 +1,11 @@
 import React from 'react';
-import Friend from './friend/Friend';
+import Doctor from './doctor/Doctor';
 import './assets/css/reset.css';
 
 const App = () => {
   return (
     <div>
-      <Friend />
+      <Doctor />
     </div>
   );
 };
