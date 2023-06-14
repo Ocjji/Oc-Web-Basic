@@ -1,0 +1,72 @@
+.doctor {
+    width: 1200px;
+    margin: auto;
+
+    h1 {
+        font-size: 40px;
+        text-align: center;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin: 20px 0;
+        padding: 20px 0;
+    }
+
+    .doctor-list {
+        margin: 30px 0;
+        display: flex;
+        justify-content: space-between;
+
+        .doctor-item {
+            cursor: pointer;
+            position: relative;
+
+            .item-box {
+                &::after {
+                    content: attr(data-id);
+                    width: 25px;
+                    height: 25px;
+                    line-height: 25px;
+                    border: 1px solid #555;
+                    transform: translate(-50%, -50%);
+                    border-radius: 50%;
+                    background: #fff;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+
+                }
+
+                width: 140px;
+                padding: 40px 20px;
+                border: 1px solid #666;
+                text-align: center;
+
+                .img-wrap {
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin: auto;
+                    padding: 5px;
+                    background: lightgray;
+
+                    &.on {
+                        background: #555;
+                    }
+
+                    img {
+                        width: 120px;
+                        height: 120px;
+                        border-radius: 50%;
+                    }
+                }
+
+                p {
+                    font-size: 20px;
+                    margin-top: 30px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

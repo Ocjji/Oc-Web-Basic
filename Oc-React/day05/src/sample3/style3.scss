@@ -1,0 +1,66 @@
+.wrap {
+    width: 600px;
+    margin: auto;
+
+    h2 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    dl {
+        dt {
+            width: 100%;
+            position: relative;
+            line-height: 45px;
+            background: #999;
+            text-indent: 20px;
+            border-bottom: 1px solid #DCDCDC;
+            cursor: pointer;
+
+            &.on {
+                background: pink;
+            }
+
+            &::after {
+                content: "\e941";
+                font-family: xeicon !important;
+                position: absolute;
+                right: 20px;
+                top: 3px;
+                transition: 0.3s;
+                font-size: 20px;
+                transition: 0.3s;
+                transform-origin: 75% 50%;
+            }
+
+            &.on::after {
+                transform: rotate(180deg);
+            }
+        }
+
+        dd {
+            box-sizing: border-box;
+            width: 100%;
+            overflow: hidden;
+            transition: 0.4s;
+            height: 0;
+            background: bisque;
+
+            h3 {
+                font-size: 20px;
+                padding: 20px;
+            }
+
+            p {
+                font-size: 18px;
+                padding: 20px;
+            }
+
+            &.on {
+                display: block;
+                height: 150px;
+            }
+        }
+    }
+}

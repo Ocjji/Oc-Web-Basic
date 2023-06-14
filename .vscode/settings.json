@@ -3,5 +3,6 @@
     "liveSassCompile.settings.showOutputWindowOn": "None",
     "emmet.includeLanguages": {
         "javascript": "javascriptreact"
-    }
+    },
+    "javascript.preferences.quoteStyle": "double"
 }

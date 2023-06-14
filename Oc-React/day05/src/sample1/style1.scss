@@ -1,0 +1,46 @@
+.tabs {
+    width: 500px;
+
+    ul {
+        display: flex;
+
+        li {
+            line-height: 45px;
+            width: 150px;
+            border: 1px solid #000;
+            text-align: center;
+            user-select: none;
+            cursor: pointer;
+
+            &.on {
+                background: pink;
+            }
+        }
+    }
+
+    .con-box {
+        width: 100%;
+        position: relative;
+        margin-top: 20px;
+
+        article {
+            padding: 20px;
+            background: #eee;
+            height: 250px;
+            display: none;
+
+            h3 {
+                font-size: 30px;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            &.on {
+                display: block;
+            }
+        }
+    }
+}
