@@ -1,13 +1,12 @@
 import React from 'react';
 
-const DrBigView = (thumnail) => {
-    console.log(thumnail);
-    const { id, thums } = thumnail;
-    console.log(id);
+const DrBigView = ({ thumnail, viewThumNo }) => {
+    const { thums } = thumnail;
+
     return (
-        <>
-            <img src="" alt="" />
-        </>
+        <div className="dr-big-view">
+            <img src={thums[viewThumNo].img} alt="" />
+        </div>
     );
 };
 

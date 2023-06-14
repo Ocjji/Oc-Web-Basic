@@ -3,4 +3,39 @@
     height: 500px;
     border: 1px solid #000;
 
+    .dr-big-view {
+        text-align: center;
+        padding: 30px;
+        box-sizing: border-box;
+
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    .thumList {
+        margin: auto;
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+        // border: 1px solid #000;
+        box-sizing: border-box;
+
+        li {
+            width: 90px;
+            height: 90px;
+            cursor: pointer;
+
+            img {
+                width: 90px;
+                height: 90px;
+
+                &.on {
+                    box-shadow: 0px 0px 4px 3px tomato;
+                }
+            }
+
+        }
+    }
 }

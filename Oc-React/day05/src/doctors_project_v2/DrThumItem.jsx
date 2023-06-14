@@ -1,9 +1,10 @@
 import React from 'react';
 
-const DrThumItem = () => {
+const DrThumItem = ({ item, onBigView }) => {
+    const { thumNo, img, bigView } = item;
     return (
-        <li>
-
+        <li onClick={() => onBigView(thumNo)}>
+            <img className={bigView ? "on" : ""} src={img} alt="" />
         </li>
     );
 };

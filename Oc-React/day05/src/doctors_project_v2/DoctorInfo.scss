@@ -1,6 +1,97 @@
 .dr-info {
-    width: 500px;
+    width: 600px;
     height: 500px;
     border: 1px solid #000;
 
+    .info-menu-list {
+        display: flex;
+        border: 1px solid #000;
+        margin-bottom: 20px;
+
+        li {
+            width: 200px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 24px;
+            font-weight: 500;
+            border: 1px solid #000;
+            text-align: center;
+            cursor: pointer;
+
+            &.on {
+                background: lightblue;
+            }
+        }
+    }
+
+    .dr-profile {
+        // border: 1px solid red;
+        padding: 10px 20px;
+
+        strong {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        em {
+            margin-left: 10px;
+            font-size: 24px;
+            color: #888;
+        }
+
+        b {
+            font-size: 20px;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 22px;
+        }
+    }
+
+    .dr-people {
+        // border: 1px solid red;
+        padding: 10px 20px;
+
+        li {
+            height: 130px;
+            line-height: 100px;
+
+            dl {
+                dt {
+                    font-size: 32px;
+                    cursor: pointer;
+                    font-weight: 600;
+
+                    &::after {
+                        font-size: 24px;
+                        content: " 알고 싶다면? Click";
+                    }
+                }
+
+                dd {
+                    display: none;
+                }
+            }
+
+            &.on {
+                line-height: 1.6;
+
+                dl {
+                    dt {
+                        font-size: 32px;
+
+                        &::after {
+                            display: none;
+                        }
+                    }
+
+                    dd {
+                        display: block;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
 }
