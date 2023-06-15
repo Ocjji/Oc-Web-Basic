@@ -21,6 +21,7 @@ const Doctor = () => {
         setThumNail(imgdata[id - 1]);
         setThumNo(0);
         setSelectDr(data[id - 1]);
+        setInfoMenuList(drInfoMenuList);
     }
 
     const onBigView = (thumNo) => {
@@ -28,6 +29,7 @@ const Doctor = () => {
     }
     const onSelectInfo = (infoID) => {
         setInfoMenuList(drinfomenulist.map(item => item.infoID === infoID ? { ...item, isShow: true } : { ...item, isShow: false }));
+
     }
 
     return (

@@ -27,7 +27,23 @@ export default [
         profile: {
             realname: "안효섭",
             desc: "돈이 없던 그는 환자들을 위해서가 아닌, 먹고 살기 위해 써전이 됐다. 내부고발자라는 소문이 돌면서 페이닥으로 있던 거대병원에서도 쫒겨나고 갈 곳 없이 방황하던 그에게 손을 내민 이가 바로 김사부였다. 서우진은 김사부를 만나 사람 살리는 진짜 의사가 되고 싶어졌다. "
-        }
+        },
+        people: [{
+            peoID: 1,
+            person: "김사부",
+            txt: "김사부를 좋아함",
+            isView: true
+        }, {
+            peoID: 2,
+            person: "차은재",
+            txt: "차은재를 좋아함",
+            isView: false
+        }, {
+            peoID: 3,
+            person: "정인수",
+            txt: "정인수를 좋아함",
+            isView: false
+        }]
     },
     {
         id: 3, name: "차은재", position: "흉부외과 전문의", tel: "010-1234-5678", image: "./images/차은재.jpg", isSelected: false,

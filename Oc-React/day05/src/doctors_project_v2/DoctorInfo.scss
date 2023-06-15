@@ -5,7 +5,7 @@
 
     .info-menu-list {
         display: flex;
-        border: 1px solid #000;
+        // border: 1px solid #000;
         margin-bottom: 20px;
 
         li {
@@ -14,9 +14,14 @@
             line-height: 60px;
             font-size: 24px;
             font-weight: 500;
-            border: 1px solid #000;
+            border-bottom: 1px solid #000;
+            border-right: 1px solid #000;
             text-align: center;
             cursor: pointer;
+
+            &:nth-child(3) {
+                border-right: none;
+            }
 
             &.on {
                 background: lightblue;
@@ -62,10 +67,12 @@
                     font-size: 32px;
                     cursor: pointer;
                     font-weight: 600;
+                    color: #666;
 
                     &::after {
                         font-size: 24px;
                         content: " 알고 싶다면? Click";
+                        color: tomato;
                     }
                 }
 
@@ -80,6 +87,7 @@
                 dl {
                     dt {
                         font-size: 32px;
+                        color: #000;
 
                         &::after {
                             display: none;
