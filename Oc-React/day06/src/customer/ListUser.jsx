@@ -1,7 +1,7 @@
 import React from 'react';
 import ItemUser from "./ItemUser";
 
-const ListUser = ({ data, onDel }) => {
+const ListUser = ({ data, onDel, onEdit }) => {
     return (
         <div>
             <h2 className="users">고객 리스트</h2>
@@ -20,7 +20,7 @@ const ListUser = ({ data, onDel }) => {
                 </thead>
                 <tbody>
                     {
-                        data.map(item => <ItemUser key={item.id} item={item} onDel={onDel} />)
+                        data.map(item => <ItemUser key={item.id} item={item} onDel={onDel} onEdit={onEdit} />)
                     }
                 </tbody>
             </table>

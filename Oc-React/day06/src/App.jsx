@@ -1,5 +1,5 @@
 import React from 'react';
-import Customer from "./customer/Customer";
+import Cart from "./cart/Cart";
 import './assets/css/reset.css';
 
 // import './assets/css/reset.css';
@@ -7,7 +7,7 @@ import './assets/css/reset.css';
 const App = () => {
   return (
     <div>
-      <Customer />
+      <Cart />
     </div>
   );
 };
