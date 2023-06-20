@@ -1,0 +1,24 @@
+.formadd {
+    padding: 20px;
+    background: beige;
+    margin-top: 20px;
+}
+
+.formadd p {
+    margin-bottom: 5px;
+}
+
+.formadd p label {
+    display: inline-block;
+    width: 80px;
+}
+
+.formadd p:nth-child(3) input {
+    width: 270px;
+}
+
+.formadd button {
+    width: 100%;
+    margin-top: 15px;
+    height: 50px;
+}

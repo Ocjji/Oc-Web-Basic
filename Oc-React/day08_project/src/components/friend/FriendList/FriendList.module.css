@@ -1,0 +1,7 @@
+.list { margin-bottom: 20px;}
+.list li {display: flex; padding-bottom: 5px; padding-top: 5px; border-bottom: 1px solid #efefef;}
+.list li p { width: 60px; height: 60px; border-radius: 50%; overflow: hidden; position: relative; }
+.list li p img{position: absolute; left: -5px; width: 70px;}
+.list li div { width: 160px; margin-left: 40px; padding-top: 5px;}
+.list li div strong { display: block; font-size: 15px;}
+.list li div span { display: block; font-size: 14px;margin-top: 5px; }

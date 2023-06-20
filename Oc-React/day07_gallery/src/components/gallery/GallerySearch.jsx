@@ -26,10 +26,10 @@ const GallerySearchForm = styled.form`
     }
 `;
 
-const GallerySearch = ({ onSubmit, onChangeInput, text }) => {
+const GallerySearch = ({ onSubmit, onChangeInput, text, txtRef }) => {
     return (
         <GallerySearchForm onSubmit={onSubmit}>
-            <input type="text" name="text" value={text} onChange={onChangeInput} />
+            <input type="text" ref={txtRef} value={text} onChange={onChangeInput} />
             <button type="submit">검색</button>
         </GallerySearchForm>
     );

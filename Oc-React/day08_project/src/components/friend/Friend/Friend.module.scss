@@ -1,0 +1,42 @@
+.wrap {
+    width: 400px;
+    margin: 20px auto;
+    border: 1px solid #999;
+    padding: 25px;
+    position: relative;
+
+    h1 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        text-align: center;
+    }
+
+    .btn button {
+        padding: 10px 45px;
+        border: none;
+        background: #b2ebf2;
+        outline: none;
+        margin-right: 10px;
+    }
+
+    .btn button:last-child {
+        margin-right: 0;
+    }
+
+    .chk {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        border-radius: 20px;
+        display: block;
+        background: #333;
+        color: #fff;
+        width: 150px;
+        text-align: center;
+        padding: 6px 0;
+        font-size: 12px;
+    }
+}

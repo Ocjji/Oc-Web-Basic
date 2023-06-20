@@ -5,12 +5,13 @@ const GalleryItemBox = styled.article`
 margin: 30px 20px;
     padding: 50px;
     text-align: center;
-    background: lightcoral;
+    background: #e6b2b2;
     img {
-        width: 240px;
+        width: 300px;
     }
     h2 {
-        font-size: 24px;
+        font-size: 30px;
+        font-weight: 700;
         margin: 10px 0;
     }
     ul {
@@ -30,9 +31,9 @@ const GalleryItem = ({ item }) => {
             <img src={previewURL} alt="" />
             <h2>{user}</h2>
             <ul>
-                <li>조회수 : {views}</li>
-                <li>좋아요 : {likes}</li>
-                <li>다운로드 : {downloads}</li>
+                <li>조회수 : {views.toLocaleString('ko-KR')}</li>
+                <li>좋아요 : {likes.toLocaleString('ko-KR')}</li>
+                <li>다운로드 : {downloads.toLocaleString('ko-KR')}</li>
             </ul>
             <p>
                 {
