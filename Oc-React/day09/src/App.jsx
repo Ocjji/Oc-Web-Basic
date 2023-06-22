@@ -1,10 +1,10 @@
 import React from 'react';
-import Test8 from "./components/Test8";
+import Test21Board from "./components/Test21Board";
 
 const App = () => {
   return (
     <div>
-      <Test8 />
+      <Test21Board />
     </div>
   );
 };
