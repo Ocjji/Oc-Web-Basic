@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="inner">
+                <h1><a href="index.html"><img src="images/logo.png" alt="sk 주식회사"></a></h1>
+                <nav class="nav">
+                    <ul class="gnb">
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">투자정보</a></li>
+                        <li><a href="#">사회적가치</a></li>
+                        <li><a href="#">미디어센터</a></li>
+                    </ul>
+
+                    <p class="close"><i class="xi-close"></i></p>
+                </nav>
+
+                <p class="all-menu"><i class="xi-bars"></i></p>
+            </div>
+        </header>
+        <!-- header -->
+
+        <section id="visual">
+            <div class="swiper myVisual">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/visual.jpg" alt="">
+                        <div class="txt-box">
+                            <h2>111 새롭게 시작하는<br class="pc_no">회사소개 입니다 111</h2>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/visual.jpg" alt="">
+                        <div class="txt-box">
+                            <h2>222 새롭게 시작하는<br class="pc_no">회사소개 입니다 222</h2>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/visual.jpg" alt="">
+                        <div class="txt-box">
+                            <h2>333 새롭게 시작하는<br class="pc_no">회사소개 입니다 333</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <!-- visual -->
+
+        <main id="container" class="main">
+            <section id="content">
+                <div class="con-box con1">
+                    <div class="inner">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="images/sec1.jpg" alt="회사개요">
+                                    <div>
+                                        <h2>회사개요</h2>
+                                        <p>행복한 미래를 위해<br>끊임없이 도전합니다.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/sec2.jpg" alt="사업소개">
+                                    <div>
+                                        <h2>사업소개</h2>
+                                        <p>투명한 경영을 통해<br>성장하고 있습니다.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/sec3.jpg" alt="사회적가치">
+                                    <div>
+                                        <h2>사회적가치</h2>
+                                        <p>지속가능한 행복을<br>꿈꾸며 나아갑니다.</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- con1 -->
+
+                <div class="con-box con2">
+                    <div class="inner">
+                        <h2>미디어 센터</h2>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="images/con2-1.jpg" alt="">
+                                    <p>SK(주) 세계적 유전자 세포 치료제 CEO의 글로벌한 전문 투자자 쾌속주행</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/con2-2.jpg" alt="">
+                                    <p>SK(주) 세계적 유전자 세포 치료제 CEO의 글로벌한 전문 투자자 쾌속주행</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- con2 -->
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".myVisual", {
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
+</body>
+
+</html>
