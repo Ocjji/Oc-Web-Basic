@@ -1,0 +1,69 @@
+.page {
+    width: 100%;
+    height: 1000px
+}
+
+.page h2 {
+    font-size: 40px;
+    padding: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: tomato
+}
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    background: #000;
+}
+
+.navbar .all-menu {
+    color: #fff;
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    cursor:
+        pointer;
+    padding: 10px;
+}
+
+nav {
+    position: fixed;
+    left: -310px;
+    top: 100px;
+    width: 300px;
+    height: 100vh;
+    background: #000;
+    transition: 0.4s;
+}
+
+nav ul {
+    padding-top: 30px;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+nav ul li a {
+    font-size: 20px;
+    color: #fff;
+    line-height: 40px;
+}
+
+nav.on {
+    left: 0;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
