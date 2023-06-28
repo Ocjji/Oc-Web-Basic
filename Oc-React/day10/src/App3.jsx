@@ -6,7 +6,7 @@ import Profile from './pages/Profile';
 import Project from './pages/Project';
 import Notfiles from './pages/Notfiles';
 import "./pages/style.css";
-import "./assets/css/reset.css";
+// import "./assets/css/reset.css";
 import Navbar from './pages/Navbar';
 
 const data = [
@@ -25,6 +25,7 @@ const App = () => {
           <li><Link to="/about">About</Link></li>
           <li><Link to="/profile">Profile</Link></li>
           <hr />
+
           <li><Link to="/project/html">html</Link></li>
           <li><Link to="/project/js">js</Link></li>
           <li><Link to="/project/react">react</Link></li>

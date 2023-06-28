@@ -10,12 +10,13 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/profile">Profile</Link></li>
-        <li><Link to="/project">Project</Link></li>
-      </ul>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/profile">Profile</Link></li>
+          <li><Link to="/project">Project</Link></li>
+        </ul>
+        {/* 화면에 보이는 영역 작업 */}
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
