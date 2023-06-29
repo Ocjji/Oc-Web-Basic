@@ -110,14 +110,14 @@ export const MainVisual = styled.div`
 .main_key_visual .main_title h2 {
     display: inline-block;
     color: #fff;
-    font-family: 'hh_m';
+    font-weight: 700;
     font-size: 56px;
 }
 
 .main_key_visual .main_title h3 {
     display: inline-block;
     color: #fff;
-    font-family: 'ht_m';
+    /* font-family: 'ht_m'; */
     font-size: 21px;
     line-height: 35px;
     margin-top: 20px

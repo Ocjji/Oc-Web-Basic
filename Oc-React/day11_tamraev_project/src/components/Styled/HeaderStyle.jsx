@@ -42,7 +42,7 @@ export const Header = styled.header`
     }
   }
 
-  .blue .btn_total i {
+  &.blue .btn_total i {
     background: #002c5f;
   }
 
