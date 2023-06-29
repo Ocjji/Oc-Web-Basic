@@ -101,9 +101,10 @@ export const MainVisual = styled.div`
     z-index: 9999;
     display: inline-block;
     position: absolute;
+    pointer-events: none;
     left: 50%;
     top: 180px;
-    width: 1000px;
+    width: 500px;
     margin-left: -600px;
 }
 

@@ -11,10 +11,10 @@ const NoticeList = () => {
                     <table>
                         <caption>NO, 제목, 작성일, 조회수에 대한 내용</caption>
                         <colgroup>
-                            {/* <col style="width:13%" />
+                            <col style={{ width: "13%" }} />
                             <col />
-                            <col style="width:13%" />
-                            <col style="width:13%" /> */}
+                            <col style={{ width: "13%" }} />
+                            <col style={{ width: "13%" }} />
                         </colgroup>
                         <thead>
                             <tr>
