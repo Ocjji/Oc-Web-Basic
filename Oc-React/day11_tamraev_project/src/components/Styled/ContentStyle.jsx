@@ -97,7 +97,9 @@ export const ContentContainer = styled.div`
       text-align: center;
       padding: 45px 0;
       background: #e4dcd3;
-
+      &.on {
+        display: block;
+      }
       .input_box {
         position: relative;
         display: inline-block;
@@ -149,9 +151,9 @@ export const ContentContainer = styled.div`
               color: #007fa8;
             }
           }
-        }
-
-        .btn_search_result {
+        }        
+      }
+      .btn_search_result {
           display: inline-block;
           width: 60px;
           height: 60px;
@@ -159,7 +161,6 @@ export const ContentContainer = styled.div`
           vertical-align: top;
           background: #007fa8 url(../images/main/btn_search_result.png) center center no-repeat;
         }
-      }
     }
 
     .total_count {
