@@ -1,9 +1,7 @@
-import React, { createContext, useContext, useMemo, useState } from 'react';
+import React, { createContext, useState } from 'react';
 
 // 관리자 생성
-const ColorContext = createContext();
-// 사용자 정의 훅처럼 함수 선언
-export const useColor = () => useContext(ColorContext);
+export const ColorContext = createContext();
 
 const ColorProvider = (props) => {
     // 모든 state , function
@@ -13,10 +11,8 @@ const ColorProvider = (props) => {
     const onBlue = () => setColor("blue");
     const onYellow = () => setColor("yellow");
 
-    const value = useMemo(() => ({ color, onRed, onGreen, onBlue, onYellow }), [color, onRed, onGreen, onBlue, onYellow])
-
     return (
-        <ColorContext.Provider value={value}>
+        <ColorContext.Provider value={{ color, onRed, onGreen, onBlue, onYellow }}>
             {/* 컴포넌트 안에 컬러 디자인 */}
             {/* <Color /> */}
             {props.children}

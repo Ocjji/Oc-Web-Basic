@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
-import { ColorContext } from "../../contexts/colorContext";
+import { useColor } from "../../contexts/colorContext";
 
 const Color = () => {
-
-    const { color, onRed, onGreen, onBlue, onYellow } = useContext(ColorContext);
+    const { color, onRed, onGreen, onBlue, onYellow } = useColor();
     return (
         <div>
             <h2 style={{ color: color }}>디자인 담당 색상 : {color}</h2>
