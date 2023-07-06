@@ -1,0 +1,23 @@
+
+.ColorList {	 
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.ColorList input {
+	height: 45px;
+	border: 1px solid #999;
+	outline-width: 0;
+	width:100%;
+	padding:0 15px;
+	box-sizing: border-box;
+}
+
+.color-box  {display: flex; flex-wrap: wrap;}
+.color-box li {
+	width: 25%; height: 50px; border: 1px solid #dcdcdc;
+	text-align: center; font-size: 12px; line-height: 50px;
+	color:#999; cursor: pointer; box-sizing: border-box;
+	user-select: none;  
+}
