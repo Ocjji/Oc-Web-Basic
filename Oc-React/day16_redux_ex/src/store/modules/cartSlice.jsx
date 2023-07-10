@@ -1,17 +1,21 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    cart: []
+    carts: [],
+    cartTotal: 0
 };
 export const cartSlice = createSlice({
-    name: "cart",
+    name: "carts",
     initialState,
     reducers: {
         addCart(state, action) {
-            state.cart.push(action.payload);
+            state.carts.push(action.payload);
         },
         removeCart(state, action) {
-
+            state.carts = state.carts.filter(item => item.id !== action.payload);
+        },
+        totalPrice(state, action) {
+            state.cartTotal = state.carts.reduce((acc, curr) => acc + curr.price, 0);
         }
     }
 })

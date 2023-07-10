@@ -1,0 +1,10 @@
+.header { width: 100%; background: #dcdcdc;}
+.header .inner { height: 100px;  }
+.header h1 { position: absolute; left: 0; top: 40px; }
+.header h1 img { width: 200px;  }
+.header .nav { position: absolute; right:0; top: 30px; }
+.header .nav ul { display: flex; }
+.header .nav ul li {margin-left: 50px; position: relative; }
+.header .nav ul li a {font-size: 18px; font-weight: bold; }
+.header .nav ul li a i  { font-size: 30px;}
+.header .nav ul li a span  { position: absolute; right: -15px; display: block; top: -5px; width: 25px; height: 25px; border-radius: 50%; background: tomato; text-align: center; line-height: 25px; font-size: 15px; color:#fff }
