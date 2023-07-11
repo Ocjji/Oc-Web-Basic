@@ -10,6 +10,7 @@ import NoticeDetail from "./components/NoticeDetail";
 import Customer from "./pages/Customer";
 import CustomerAdd from "./components/CustomerAdd";
 import CustomerDetail from "./components/CustomerDetail";
+import CustomerEdit from "./components/CustomerEdit";
 
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/customer">
             <Route index element={<Customer />} />
             <Route path="customeradd" element={<CustomerAdd />} />
+            <Route path="customeredit" element={<CustomerEdit />} />
             <Route path=":customerID" element={<CustomerDetail />} />
           </Route>
 

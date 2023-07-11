@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { add, addSort } from "../store/modules/customerSlice";
+import { add, edit, update } from "../store/modules/customerSlice";
 
 
-const CustomerAdd = () => {
-    const [user, setUser] = useState({ id: null, author: "", title: "", content: "", date: "" });
+const CustomerEdit = () => {
+    const { current } = useSelector(state => state.customerR);
+    const [user, setUser] = useState(current);
     const { author, title, content } = user;
     const changeInput = e => {
         const { name, value } = e.target;
@@ -22,8 +23,7 @@ const CustomerAdd = () => {
             alert("빈 칸 없이 작성해주세요");
             return
         }
-        dispatch(add(user));
-        dispatch(addSort());
+        dispatch(update(user));
         navigate("/customer");
     }
     return (
@@ -39,7 +39,7 @@ const CustomerAdd = () => {
                             onChange={(e) => changeInput(e)}></textarea></p>
                     <p className="customer-btn">
                         <button onClick={() => navigate("/customer")}>목록으로</button>
-                        <button type="submit">저장하기</button>
+                        <button type="submit">수정하기</button>
                         <button onClick={() => navigate("/customer")}>취소하기</button>
                     </p>
                 </form>
@@ -48,4 +48,4 @@ const CustomerAdd = () => {
     );
 };
 
-export default CustomerAdd;
+export default CustomerEdit;
