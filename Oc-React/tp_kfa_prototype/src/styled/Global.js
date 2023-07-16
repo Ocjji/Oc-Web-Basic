@@ -15,5 +15,9 @@ const GlobalStyle = createGlobalStyle`
     color: #333;
   }
   li {list-style: none;}
+  .inner {
+    width: 1400px;
+    margin: auto;
+  }
 `
 export default GlobalStyle;
