@@ -1,5 +1,40 @@
 import styled from 'styled-components';
 
+export const GoodsPopupStyle = styled.div`
+    &.goodsPopup {
+        width: 100%;
+        height: 100%;
+        /* position: fixed; */
+        position: absolute;
+        background: rgba(0,0,0,0.3);
+        /* background: #eee; */
+        .inner {
+            background: #fff;            
+        }
+        .goodsDetail {
+            position: relative;
+            padding: 50px;
+            box-sizing: border-box;
+            margin-top: 120px;
+            display: flex;
+            .btnPopupClose{
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                width: 30px;
+                height: 30px;
+            }
+            .goodsLeftImg {
+                img{
+                    width: 500px;
+                    height: 500px;
+                }
+            }
+            .goodsRightInfo {}
+        }
+    }
+`;
+
 export const GoodsNavStyle = styled.nav`
     margin-top: 130px;
     ul {
@@ -9,20 +44,21 @@ export const GoodsNavStyle = styled.nav`
             height: 40px;
             font-weight: 600;
             font-size: 16px;
+            line-height: 40px;
             &.kfaSelect {
-                height: 150px;
+                height: 160px;
             }
             &.wearSelect {
-                height: 180px;
+                height: 190px;
             }
 
-            ul{  
-                margin-top: 5px;              
+            ul{              
                 li{
                     height: 30px;
                     margin-left: 10px;
                     font-weight: 400;
                     font-size: 14px;
+                    line-height: 30px;
                 }
             }
         }
@@ -30,9 +66,30 @@ export const GoodsNavStyle = styled.nav`
 `;
 export const CategoryInfoStyle = styled.div`
     margin-top: 100px;
+    margin-bottom: 20px;
     &.categoryInfo {
         display: flex;
         justify-content:space-between;
+        span {
+            font-weight: 700;
+            font-size: 18px;
+            b{
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+        select {
+            display: block;
+            width: 180px;
+            height: 30px;
+            font-size: 18px;
+            padding-left: 10px;
+            border: none;
+            background: #ddd;
+            option{
+
+            }
+        }
     }
 `;
 export const GoodsListStyle = styled.ul`
@@ -40,9 +97,9 @@ export const GoodsListStyle = styled.ul`
         width: 1100px;
         margin: auto;
         /* height: 1250px; */
-        border: 1px solid #000;
+        /* border: 1px solid #000; */
         display: flex;
-        justify-content:space-between;
+        /* justify-content:space-between; */
         flex-wrap: wrap;
     }
     
@@ -50,8 +107,10 @@ export const GoodsListStyle = styled.ul`
 export const GoodsItemStyle = styled.li`
     &.goodsitem {
         /* border: 1px solid #000; */
+        cursor: pointer;
         width: 250px;
-        height: 430px;        
+        height: 430px;
+        margin-right: 25px;        
         div{
             text-align: center;
             img{                
@@ -87,6 +146,7 @@ export const PagingStyle = styled.p`
         margin: 20px 0;
         text-align: center;
         button{
+            cursor: pointer;
             display: inline-block;
             width: 30px;
             height: 30px;
@@ -94,6 +154,10 @@ export const PagingStyle = styled.p`
             border: none;
             border-radius : 50%;
             margin-right: 10px;
+            &:hover, &.on {
+                background: tomato;
+                color:#fff;
+            }
         }
     }
 `;

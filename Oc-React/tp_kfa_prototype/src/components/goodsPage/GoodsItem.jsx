@@ -1,10 +1,13 @@
 import React from 'react';
 import { GoodsItemStyle } from "../../styled/GoodsStyle";
+import { useDispatch } from "react-redux";
+import { onGoodsPopup } from "../../store/modules/goodsSlice";
 
 const GoodsItem = ({ item }) => {
     const { id, img, brand, name, price, extension, discount } = item
+    const dispatch = useDispatch();
     return (
-        <GoodsItemStyle className="goodsitem">
+        <GoodsItemStyle className="goodsitem" onClick={() => dispatch(onGoodsPopup(id))}>
             <div>
                 <img src={`./images/goods/${img}.${extension}`} alt={name} />
             </div>

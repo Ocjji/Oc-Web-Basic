@@ -4,10 +4,13 @@ import GoodsNav from "./GoodsNav";
 
 const GoodsLayout = () => {
     return (
-        <div className="goodslayout" style={{ display: "flex" }}>
-            <GoodsNav />
-            <GoodsList />
+        <div className="inner">
+            <div className="goodslayout" style={{ display: "flex" }}>
+                <GoodsNav />
+                <GoodsList />
+            </div>
         </div>
+
     );
 };
 
