@@ -4,7 +4,10 @@
 }
 
 .header .inner {
+    width: 1400px;
+    margin: auto;
     height: 100px;
+    position: relative;
 }
 
 .header h1 {

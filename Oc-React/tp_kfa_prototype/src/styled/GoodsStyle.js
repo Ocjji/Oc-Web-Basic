@@ -80,6 +80,7 @@ export const CategoryInfoStyle = styled.div`
         }
         select {
             display: block;
+            margin-right: 25px;
             width: 180px;
             height: 30px;
             font-size: 18px;
