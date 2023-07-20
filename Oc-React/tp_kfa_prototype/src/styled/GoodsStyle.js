@@ -4,8 +4,8 @@ export const GoodsPopupStyle = styled.div`
     &.goodsPopup {
         width: 100%;
         height: 100%;
-        /* position: fixed; */
-        position: absolute;
+        position: fixed;
+        /* position: absolute; */
         background: rgba(0,0,0,0.3);
         /* background: #eee; */
         .inner {
