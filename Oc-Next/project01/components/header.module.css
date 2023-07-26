@@ -1,0 +1,24 @@
+.header {
+    background: #ededed;
+}
+
+.header h1 {
+    position: absolute;
+    left: 0;
+    top: 60px;
+}
+
+.top_menu {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    display: flex;
+}
+
+.top_menu li {
+    margin-left: 15px;
+}
+
+.top_menu li a {
+    font-size: 15px;
+}

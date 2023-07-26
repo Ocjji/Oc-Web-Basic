@@ -1,0 +1,23 @@
+.nav {
+    position: absolute;
+    right: 0;
+    top: 65px;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav ul li {
+    margin-left: 80px;
+}
+
+.nav ul li a {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.nav ul li a:hover {
+    color: tomato;
+    border-bottom: 1px solid tomato;
+}

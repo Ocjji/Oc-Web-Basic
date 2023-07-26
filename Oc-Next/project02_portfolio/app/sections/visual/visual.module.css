@@ -1,0 +1,27 @@
+.visual {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/visual/main01.jpg);
+    height: 1080px;
+}
+
+.visual_inner {
+    height: 1080px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.visual_inner h2 {
+    line-height: 1.2;
+    font-size: 120px;
+    font-weight: 700;
+}
+
+.visual_inner span {}
+
+.visual_inner p {
+    font-size: 30px;
+    color: #fff;
+    opacity: 0.7;
+}

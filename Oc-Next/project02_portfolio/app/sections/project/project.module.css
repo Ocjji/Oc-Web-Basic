@@ -1,0 +1,80 @@
+.project {}
+
+.project article {
+    display: flex;
+    border: 1px solid #DCDCDC;
+    padding: 50px;
+    box-sizing: border-box;
+    box-shadow: 0 0 30px #DCDCDC;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.view {
+    width: 55%;
+}
+
+.view div {
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #000;
+}
+
+.view div img {
+    width: 100%;
+}
+
+.view ul {
+    display: flex;
+    margin-top: 40px;
+}
+
+.view ul li {
+    margin-right: 20px;
+}
+
+.view ul li img {
+    width: 150px;
+}
+
+.detail {
+    width: 40%;
+}
+
+.detail h3 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.detail h4 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.detail p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.detail ul {}
+
+.detail ul li {
+    font-size: 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    line-height: 50px;
+}
+
+.detail ul li b {
+    display: inline-block;
+    width: 100px;
+    font-weight: 500;
+    margin-right: 15px;
+}
+
+.detail ul li:first-child strong {
+    display: inline-block;
+    line-height: 1.6;
+    width: 390px;
+}

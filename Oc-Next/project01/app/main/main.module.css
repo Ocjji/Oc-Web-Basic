@@ -1,0 +1,18 @@
+.main {}
+
+.main ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main ul li {
+    width: 23%;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    padding: 20px;
+    height: 200px;
+}
+
+.main ul li h3 {
+    font-size: 24px;
+}

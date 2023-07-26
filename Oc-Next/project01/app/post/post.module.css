@@ -1,0 +1,27 @@
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.list li {
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.list li h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.list li p {
+    font-size: 16px;
+}

@@ -1,0 +1,15 @@
+.sns {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    display: flex;
+}
+
+.sns li {
+    margin-left: 15px;
+}
+
+.sns li a {
+    font-size: 25px;
+    color: #fff;
+}

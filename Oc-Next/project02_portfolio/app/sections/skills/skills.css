@@ -1,0 +1,29 @@
+.css {
+    width: 95%;
+    animation-delay: 0.1s;
+}
+
+.javascript {
+    width: 90%;
+    animation-delay: 0.2s;
+}
+
+.react {
+    width: 90%;
+    animation-delay: 0.2s;
+}
+
+.nodejs {
+    width: 40%;
+    animation-delay: 0.3s;
+}
+
+.reactjs {
+    width: 70%;
+    animation-delay: 0.3s;
+}
+
+.expressjs {
+    width: 75%;
+    animation-delay: 0.3s;
+}
