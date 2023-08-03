@@ -1,0 +1,6 @@
+#wrap, #header, #footer,.main { width: 100%; }
+.inner { width: 1400px; margin: auto; position: relative; box-sizing: border-box; }
+.main .inner { padding: 100px 0;}
+
+#header { border-bottom: 1px solid #000;}
+#main{ border-bottom: 1px solid #000;}

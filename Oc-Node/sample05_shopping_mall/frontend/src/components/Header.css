@@ -1,0 +1,8 @@
+.header { width: 100%; background: #dcdcdc;}
+.header .inner { height: 100px;  }
+.header h1 { position: absolute; left: 0; top: 40px; }
+.header h1 img { width: 200px;  }
+.header .nav { position: absolute; right:0; top: 30px; }
+.header .nav ul { display: flex; }
+.header .nav ul li {margin-left: 50px; }
+.header .nav ul li a {font-size: 18px; font-weight: bold; }

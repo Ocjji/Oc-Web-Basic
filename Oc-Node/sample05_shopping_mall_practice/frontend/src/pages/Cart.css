@@ -1,0 +1,17 @@
+.cart-wrap{ margin-top: 50px; }
+.cart-wrap h2 { text-align: center; font-size: 50px; margin-bottom: 40px;  }
+.cart-wrap .cart-list {  width: 100%;  }
+.cart-wrap .cart-list article { display: flex; border: 1px solid #000; align-items: center; justify-content: space-between; margin-bottom: 15px; padding: 10px; font-size: 20px; width: 100%; }
+.cart-wrap .cart-list article img { width: 120px; }
+.cart-wrap .cart-list article div { display: flex; width: 60%;}
+.cart-wrap .cart-list article div h3 {margin-right: 30px; }
+.cart-wrap .cart-list article button { width: 150px; border: 1px solid #000; height: 50px; transition: 0.3s; }
+.cart-wrap .cart-list article button:hover {background: #000; color:#fff} 
+.cart-wrap .cart-bottom { margin-top: 50px; display: flex; font-size: 18px;  } 
+.cart-wrap .cart-bottom p {  } 
+.cart-wrap .cart-bottom p strong { margin-right: 20px; } 
+.cart-wrap .cart-bottom + button { margin-top: 30px; width: 300px; height: 40px; background: #000; color:#fff } 
+
+.cart-empty { text-align: center; margin-top: 200px; }
+.cart-empty h2 { font-size: 60px; margin-bottom: 100px;  }
+.cart-empty a {width: 250px; background: #000; display: inline-block; height: 50px; line-height: 50px; color:#fff}
