@@ -1,0 +1,29 @@
+.message { position: absolute; left: 50%; top: -50px; transform: translateX(-50%); width: 100%; padding: 5px; background: yellow; box-sizing: border-box; text-align: center; transition: 0.5s; opacity: 0;
+    &.on { opacity: 1;} 
+}
+
+.Customer { width: 450px; border: 1px solid #000; margin:60px auto; padding: 20px; position: relative;
+    h2 { text-align: center; font-size: 35px; font-weight: 600;margin-bottom: 20px;}
+    button {width: 150px; height: 40px; background: #000; color:#fff; border:none; margin-right: 15px;
+    &:last-child { margin-right: 0; }
+    }
+    p { margin-bottom: 15px; 
+        label {display: inline-block; width: 100px;}
+        input[type=text] { width: 300px; height: 30px; padding: 0 15px; outline:none }
+    }
+    .users { color:tomato; margin-top: 50px; }
+    table {width: 100%;
+        .w1 {width: 120px;}
+        .w2 { width: 145px;}
+        .w3 {}
+        th,  td { text-align: center;padding: 10px 0; border-bottom: 1px dotted #dcdcdc;}
+        th { border-top: 2px solid #000; background: tomato; color:#fff}
+        td{
+            &:nth-child(1),
+            &:nth-child(2) { text-align: left;}
+            &:nth-child(1) { text-indent: 15px;}
+            button {width: 90px; height: 35px; background: #000; color:#fff; border:none; margin-right: 5px;}
+        }
+        tr:last-child td { border-bottom: 1px solid rgb(187, 187, 187);}
+    }
+}
