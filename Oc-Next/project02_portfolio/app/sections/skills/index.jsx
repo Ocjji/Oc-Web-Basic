@@ -15,6 +15,46 @@ export const Skills = () => {
                                 </span>
                             </div>
                         </div>
+                        <div className={styles.skill_box}>
+                            <span className={styles.title}>CSS</span>
+                            <div className={styles.skill_bar}>
+                                <span className={`${styles.skill_per} css`}>
+                                    <span className={styles.tooltip}>80%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div className={styles.skill_box}>
+                            <span className={styles.title}>JavaScript</span>
+                            <div className={styles.skill_bar}>
+                                <span className={`${styles.skill_per} javascript`}>
+                                    <span className={styles.tooltip}>90%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div className={styles.skill_box}>
+                            <span className={styles.title}>React</span>
+                            <div className={styles.skill_bar}>
+                                <span className={`${styles.skill_per} react`}>
+                                    <span className={styles.tooltip}>85%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div className={styles.skill_box}>
+                            <span className={styles.title}>Nodejs</span>
+                            <div className={styles.skill_bar}>
+                                <span className={`${styles.skill_per} nodejs`}>
+                                    <span className={styles.tooltip}>70%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div className={styles.skill_box}>
+                            <span className={styles.title}>Nextjs</span>
+                            <div className={styles.skill_bar}>
+                                <span className={`${styles.skill_per} nextjs`}>
+                                    <span className={styles.tooltip}>50%</span>
+                                </span>
+                            </div>
+                        </div>
                     </article>
                     <article>
                         <ul className={styles.list}>

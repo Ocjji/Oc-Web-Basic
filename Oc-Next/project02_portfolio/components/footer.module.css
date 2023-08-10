@@ -1,0 +1,17 @@
+.footer {
+    height: 250px;
+    background: #EFEFEF;
+}
+
+.footer button {
+    border: 1px solid #bbb;
+    border-radius: 20px;
+    width: 150px;
+    height: 60px;
+    font-size: 30px;
+    line-height: 30px;
+
+    position: absolute;
+    right: 0;
+    top: 20%;
+}

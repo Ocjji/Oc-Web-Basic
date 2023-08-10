@@ -10,15 +10,20 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 }
 
 .visual_inner h2 {
+    text-align: right;
+    color: #fff;
     line-height: 1.2;
     font-size: 120px;
     font-weight: 700;
 }
 
-.visual_inner span {}
+.visual_inner span {
+    text-align: right;
+}
 
 .visual_inner p {
     font-size: 30px;

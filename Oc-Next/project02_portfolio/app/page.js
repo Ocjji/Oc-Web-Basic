@@ -9,7 +9,7 @@ export default function Home() {
       <About />
       <Skills />
       <Project />
-      <Career />
+      {/* <Career /> */}
     </main>
   )
 }
